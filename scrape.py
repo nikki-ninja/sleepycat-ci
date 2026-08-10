@@ -126,13 +126,13 @@ def diff(prev, cur):
         # new SKUs
         new = [t for t in cb.get("products", {}) if t not in pb.get("products", {})]
         for t in new[:5]:
-            entries.append((key, "new-product", f"new SKU live — "{t}" at ₹{cb['products'][t]:,}"))
+            entries.append((key, "new-product", f"new SKU live - '{t}' at Rs {cb['products'][t]:,}"))
         # price moves on matched SKUs
         for t, price in cb.get("products", {}).items():
             old = pb.get("products", {}).get(t)
             if old and old != price:
                 arrow = "↓" if price < old else "↑"
-                entries.append((key, "price", f""{t}" ₹{old:,} {arrow} ₹{price:,}"))
+                entries.append((key, "price", f"'{t}' Rs {old:,} {arrow} Rs {price:,}"))
         # sale flip
         if pb.get("on_sale") is not None and cb.get("on_sale") != pb.get("on_sale"):
             entries.append((key, "sale", "site-wide sale " + ("ON" if cb["on_sale"] else "OFF")))
@@ -143,7 +143,7 @@ def diff(prev, cur):
         for s, val in cb.get("signals", {}).items():
             oldv = pb.get("signals", {}).get(s)
             if oldv is not None and val != oldv:
-                entries.append((key, "ux", f"{'added' if val else 'removed'} homepage "{s}" signal"))
+                entries.append((key, "ux", f"{'added' if val else 'removed'} homepage '{s}' signal"))
     return entries
 
 
