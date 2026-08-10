@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sleepycat · Competitor Intelligence Cockpit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F5F6F8; --surface:#FFFFFF; --ink:#181A20; --muted:#6B7280; --faint:#9AA1AB;
+    --line:#E6E8EC; --line2:#EEF0F3;
+    --accent:#4F46E5; --accent-soft:#EEF0FF; --accent-ink:#3730A3;
+    --sc:#0E9F8E; --sc-soft:#E4F6F3;           /* sleepycat column tint */
+    --y:#1B7A44; --y-bg:#E7F5EC;
+    --p:#B45309; --p-bg:#FBF0DF;
+    --n:#B4384A; --n-bg:#FBE9EC;
+    --u:#7A828D; --u-bg:#EDEFF2;
+    --radius:12px;
+    --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);
+    font-size:14px;line-height:1.45;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1280px;margin:0 auto;padding:22px 20px 60px;}
+
+  /* header */
+  header.top{display:flex;flex-wrap:wrap;align-items:flex-end;gap:16px;
+    justify-content:space-between;margin-bottom:6px;}
+  .brand h1{font-size:19px;font-weight:700;letter-spacing:-.01em;margin:0;}
+  .brand .sub{font-size:12px;color:var(--muted);margin-top:3px;
+    font-family:var(--mono);letter-spacing:.02em;}
+  .headmeta{display:flex;gap:8px;align-items:center;}
+  .pill-btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);
+    font-size:12px;font-weight:500;padding:7px 12px;border-radius:99px;cursor:pointer;
+    font-family:var(--sans);transition:.12s;white-space:nowrap;}
+  .pill-btn:hover{border-color:var(--accent);color:var(--accent);}
+  .pill-btn.danger:hover{border-color:var(--n);color:var(--n);}
+
+  .disclaim{background:var(--accent-soft);border:1px solid #DDE0FA;color:var(--accent-ink);
+    font-size:12px;padding:9px 13px;border-radius:10px;margin:14px 0 16px;
+    display:flex;gap:9px;align-items:flex-start;line-height:1.5;}
+  .disclaim b{font-weight:600;}
+  .disclaim .x{margin-left:auto;cursor:pointer;color:var(--accent);font-weight:600;
+    background:none;border:none;font-size:13px;padding:0 2px;}
+
+  /* tabs */
+  .tabs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:16px;
+    border-bottom:1px solid var(--line);}
+  .tab{background:none;border:none;border-bottom:2px solid transparent;
+    padding:9px 13px 11px;font-size:13px;font-weight:500;color:var(--muted);
+    cursor:pointer;font-family:var(--sans);margin-bottom:-1px;transition:.12s;
+    display:flex;align-items:center;gap:7px;}
+  .tab:hover{color:var(--ink);}
+  .tab.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:600;}
+  .tab .gapdot{background:var(--n);color:#fff;font-size:10px;font-weight:600;
+    font-family:var(--mono);min-width:16px;height:16px;border-radius:8px;
+    display:inline-flex;align-items:center;justify-content:center;padding:0 4px;}
+
+  /* toolbar */
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px;}
+  .search{flex:1;min-width:180px;position:relative;}
+  .search input{width:100%;border:1px solid var(--line);border-radius:9px;
+    padding:8px 12px 8px 32px;font-size:13px;font-family:var(--sans);background:var(--surface);}
+  .search input:focus{outline:none;border-color:var(--accent);}
+  .search svg{position:absolute;left:10px;top:9px;color:var(--faint);}
+  .seg{display:inline-flex;border:1px solid var(--line);border-radius:9px;overflow:hidden;
+    background:var(--surface);}
+  .seg button{border:none;background:none;padding:8px 12px;font-size:12px;font-weight:500;
+    color:var(--muted);cursor:pointer;font-family:var(--sans);}
+  .seg button.on{background:var(--accent);color:#fff;}
+  .seg button+button{border-left:1px solid var(--line);}
+  .toggle{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink);
+    cursor:pointer;user-select:none;font-weight:500;border:1px solid var(--line);
+    background:var(--surface);padding:7px 11px;border-radius:9px;}
+  .toggle input{accent-color:var(--accent);width:14px;height:14px;margin:0;}
+
+  /* matrix */
+  .board{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    overflow:auto;max-height:none;}
+  table{border-collapse:separate;border-spacing:0;width:100%;min-width:840px;}
+  th,td{padding:0;text-align:center;}
+  thead th{position:sticky;top:0;z-index:5;background:var(--surface);
+    border-bottom:1px solid var(--line);padding:11px 6px 12px;
+    font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.02em;
+    vertical-align:bottom;}
+  thead th .cw{writing-mode:horizontal-tb;font-size:11.5px;line-height:1.2;
+    display:block;max-width:82px;margin:0 auto;}
+  thead th.sc-col{color:var(--sc);}
+  th.feat-h,td.feat{position:sticky;left:0;z-index:4;background:var(--surface);
+    text-align:left;min-width:210px;max-width:230px;
+    border-right:1px solid var(--line);}
+  thead th.feat-h{z-index:6;}
+  td.feat{padding:11px 12px;font-size:13px;font-weight:500;line-height:1.35;
+    border-bottom:1px solid var(--line2);vertical-align:middle;}
+  td.feat .fnote{font-size:11px;color:var(--faint);font-weight:400;margin-top:2px;}
+  tbody tr:hover td{background:#FBFBFC;}
+  tbody tr:hover td.feat{background:#FBFBFC;}
+  td.cell{border-bottom:1px solid var(--line2);border-left:1px solid var(--line2);
+    padding:6px 5px;min-width:70px;}
+  td.cell.sc-col{background:var(--sc-soft);}
+  tbody tr:hover td.sc-col{background:#DBF2EE;}
+
+  .chip{width:100%;border:none;border-radius:7px;padding:7px 4px;font-size:11px;
+    font-weight:600;font-family:var(--mono);cursor:pointer;position:relative;
+    letter-spacing:.02em;transition:.1s;line-height:1.1;}
+  .chip:hover{filter:brightness(.97);}
+  .chip.y{background:var(--y-bg);color:var(--y);}
+  .chip.p{background:var(--p-bg);color:var(--p);}
+  .chip.n{background:var(--n-bg);color:var(--n);}
+  .chip.u{background:var(--u-bg);color:var(--u);}
+  .chip .nd{position:absolute;top:3px;right:3px;width:5px;height:5px;border-radius:50%;
+    background:currentColor;opacity:.85;}
+
+  /* legend */
+  .legend{display:flex;flex-wrap:wrap;gap:14px;margin:14px 2px 0;font-size:11.5px;
+    color:var(--muted);align-items:center;}
+  .legend .k{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);
+    font-weight:600;}
+  .legend .sw{width:22px;height:16px;border-radius:5px;display:inline-block;}
+  .legend .hint{margin-left:auto;color:var(--faint);font-style:italic;}
+
+  .addrow{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap;}
+  .addrow input{flex:1;min-width:180px;border:1px solid var(--line);border-radius:9px;
+    padding:8px 12px;font-size:13px;font-family:var(--sans);}
+  .addrow input:focus{outline:none;border-color:var(--accent);}
+  .addrow button{background:var(--accent);color:#fff;border:none;border-radius:9px;
+    padding:8px 16px;font-size:13px;font-weight:600;cursor:pointer;font-family:var(--sans);}
+
+  /* daily log */
+  .logwrap{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:18px;}
+  .logadd{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
+  .logadd select,.logadd input{border:1px solid var(--line);border-radius:9px;
+    padding:9px 12px;font-size:13px;font-family:var(--sans);background:var(--surface);}
+  .logadd input{flex:1;min-width:220px;}
+  .logadd button{background:var(--accent);color:#fff;border:none;border-radius:9px;
+    padding:9px 18px;font-weight:600;cursor:pointer;font-size:13px;}
+  .logitem{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line2);
+    align-items:flex-start;}
+  .logitem:last-child{border-bottom:none;}
+  .logitem .tag{font-family:var(--mono);font-size:10.5px;font-weight:600;padding:3px 8px;
+    border-radius:6px;background:var(--accent-soft);color:var(--accent-ink);white-space:nowrap;
+    margin-top:1px;}
+  .logitem .body{flex:1;}
+  .logitem .date{font-family:var(--mono);font-size:11px;color:var(--faint);margin-top:3px;}
+  .logitem .del{background:none;border:none;color:var(--faint);cursor:pointer;font-size:15px;
+    padding:0 4px;line-height:1;}
+  .logitem .del:hover{color:var(--n);}
+  .empty{color:var(--faint);font-size:13px;text-align:center;padding:30px 10px;font-style:italic;}
+
+  .storeflag{font-size:11px;color:var(--faint);margin-top:10px;font-family:var(--mono);
+    display:flex;align-items:center;gap:6px;}
+  .storeflag .dot{width:7px;height:7px;border-radius:50%;background:var(--y);}
+  .storeflag.off .dot{background:var(--p);}
+
+  /* lightweight modal (replaces window.prompt, which sandboxed iframes block) */
+  .modal-backdrop{position:fixed;inset:0;background:rgba(24,26,32,.45);z-index:50;
+    display:flex;align-items:center;justify-content:center;padding:20px;}
+  .modal-box{background:var(--surface);border-radius:var(--radius);padding:20px;
+    max-width:440px;width:100%;box-shadow:0 20px 50px rgba(0,0,0,.2);}
+  .modal-box h3{margin:0 0 6px;font-size:15px;font-weight:700;}
+  .modal-box p{margin:0 0 12px;font-size:12.5px;color:var(--muted);line-height:1.5;}
+  .modal-box input,.modal-box textarea{width:100%;border:1px solid var(--line);border-radius:9px;
+    padding:9px 12px;font-size:13px;font-family:var(--sans);margin-bottom:14px;}
+  .modal-box textarea{min-height:70px;resize:vertical;}
+  .modal-box input:focus,.modal-box textarea:focus{outline:none;border-color:var(--accent);}
+  .modal-actions{display:flex;gap:8px;justify-content:flex-end;}
+  .modal-actions button{border:none;border-radius:9px;padding:8px 16px;font-size:13px;
+    font-weight:600;cursor:pointer;font-family:var(--sans);}
+  .modal-actions .cancel{background:var(--u-bg);color:var(--muted);}
+  .modal-actions .confirm{background:var(--accent);color:#fff;}
+  .modal-actions .clear{background:var(--n-bg);color:var(--n);margin-right:auto;}
+
+  @media(max-width:640px){
+    .wrap{padding:16px 12px 50px;}
+    .brand h1{font-size:17px;}
+    th.feat-h,td.feat{min-width:150px;max-width:160px;}
+    td.feat{font-size:12px;padding:9px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <h1>Competitor Intelligence Cockpit</h1>
+      <div class="sub">SLEEPYCAT · benchmark across 8 rivals · updated <span id="today"></span></div>
+    </div>
+    <div class="headmeta">
+      <button class="pill-btn" id="feedBtn">⚡ Live feed</button>
+      <button class="pill-btn" id="exportBtn">Export snapshot</button>
+      <button class="pill-btn danger" id="resetBtn">Reset</button>
+    </div>
+  </header>
+
+  <div class="disclaim" id="disclaim">
+    <span>💡</span>
+    <span><b>Pre-fills are a starting hypothesis, not verified fact.</b> The category is near-identical on trial / EMI / warranty / stores — rivals split on core tech, quiz &amp; finder tooling, and PDP merchandising. Tap any cell to correct it. Your edits save automatically.</span>
+    <button class="x" onclick="document.getElementById('disclaim').style.display='none'">✕</button>
+  </div>
+
+  <nav class="tabs" id="tabs"></nav>
+
+  <!-- MATRIX VIEW -->
+  <section id="matrixView">
+    <div class="toolbar">
+      <div class="search">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4-4"/></svg>
+        <input type="text" id="search" placeholder="Filter features…">
+      </div>
+      <div class="seg" id="editSeg">
+        <button data-mode="status" class="on">Set status</button>
+        <button data-mode="notes">Add notes</button>
+      </div>
+      <label class="toggle"><input type="checkbox" id="gapsOnly"> Gaps vs Sleepycat only</label>
+    </div>
+
+    <div class="board">
+      <table id="grid">
+        <thead id="ghead"></thead>
+        <tbody id="gbody"></tbody>
+      </table>
+    </div>
+
+    <div class="legend">
+      <span class="k"><span class="sw" style="background:var(--y-bg)"></span>HAS · fully present</span>
+      <span class="k"><span class="sw" style="background:var(--p-bg)"></span>SOME · exists but limited</span>
+      <span class="k"><span class="sw" style="background:var(--n-bg)"></span>NONE · absent</span>
+      <span class="k"><span class="sw" style="background:var(--u-bg)"></span>TBD · not checked yet</span>
+      <span class="hint" id="modeHint">Tap a cell to cycle HAS → SOME → NONE → TBD</span>
+    </div>
+
+    <div class="addrow">
+      <input type="text" id="newFeat" placeholder="Add a feature to track on this page type…">
+      <button id="addFeatBtn">Add feature</button>
+    </div>
+
+    <div class="storeflag" id="storeflag"><span class="dot"></span><span id="storetxt"></span></div>
+  </section>
+
+  <!-- DAILY LOG VIEW -->
+  <section id="logView" style="display:none;">
+    <div class="logwrap">
+      <div class="logadd">
+        <select id="logTag">
+          <option>Offer/Price</option><option>Homepage</option><option>PDP</option>
+          <option>PLP/Collections</option><option>Content/Tools</option>
+          <option>Checkout/Trust</option><option>New product</option><option>Other</option>
+        </select>
+        <input type="text" id="logText" placeholder="What changed today? e.g. 'TSC dropped festive banner to 45% + added new quiz step'">
+        <button id="logAddBtn">Log it</button>
+      </div>
+      <div id="logList"></div>
+    </div>
+  </section>
+</div>
+
+<div id="modalRoot"></div>
+
+<script>
+/* ---------- data model ---------- */
+const COMPETITORS = [
+  {k:'tsc', n:'Sleep Company', url:'thesleepcompany.in'},
+  {k:'flo', n:'Flo', url:'flomattress.com'},
+  {k:'wakefit', n:'Wakefit', url:'wakefit.co'},
+  {k:'duroflex', n:'Duroflex', url:'duroflexworld.com'},
+  {k:'emma', n:'Emma Sleep', url:'emma-sleep.in'},
+  {k:'sleepyhead', n:'Sleepyhead', url:'mysleepyhead.com'},
+  {k:'kurlon', n:'Kurlon', url:'kurlon.com'},
+  {k:'springtek', n:'Springtek', url:'springtek.in'},
+  {k:'sleepycat', n:'Sleepycat', url:'you', sc:true},
+];
+
+// status codes: y=has, p=partial, n=none, u=unknown
+// order of statuses per feature: [tsc,flo,wakefit,duroflex,emma,sleepyhead,kurlon,springtek,sleepycat]
+const TABS = [
+  {id:'home', label:'Homepage'},
+  {id:'pdp', label:'PDP'},
+  {id:'plp', label:'PLP & Collections'},
+  {id:'content', label:'Content & Tools'},
+  {id:'cross', label:'Offers · Trust · Delivery'},
+];
+
+const FEATURES = {
+  home:[
+    ['Sleep quiz / mattress finder entry','Guided "find your mattress" CTA', 'y,p,y,p,y,u,u,u,u'],
+    ['Hero offer / festive sale banner','', 'y,y,y,y,y,y,y,y,y'],
+    ['Trust strip (trial · EMI · warranty badges)','', 'y,y,y,y,y,y,p,p,y'],
+    ['Social proof (rating count / reviews)','e.g. "4.9★ by 17,800+"', 'y,y,y,y,y,p,p,p,p'],
+    ['Store locator / "find a store"','', 'y,p,y,y,p,p,y,p,p'],
+    ['WhatsApp / live chat launcher','', 'y,y,y,y,y,y,p,p,p'],
+    ['Category tiles (mattress · bedding · furniture)','', 'y,p,y,y,p,p,y,p,y'],
+    ['Sticky announcement / offer bar','', 'y,y,y,y,y,y,y,y,y'],
+    ['Brand / tech storytelling video','', 'y,p,y,y,y,p,p,p,u'],
+    ['Comparison / "which mattress" guide entry','', 'p,p,y,p,y,u,u,u,u'],
+    ['Logged-in / personalised offers','', 'p,u,p,u,p,u,u,u,u'],
+  ],
+  pdp:[
+    ['Firmness / feel selector','soft·medium·firm', 'y,y,y,y,p,y,p,p,u'],
+    ['Size selector + dimensions guide','', 'y,y,y,y,y,y,y,y,y'],
+    ['Price + strikethrough + discount %','', 'y,y,y,y,y,y,y,y,y'],
+    ['No-cost EMI widget (partners shown)','', 'y,y,y,y,y,p,p,p,y'],
+    ['100-night trial messaging on PDP','', 'y,y,y,y,y,y,p,y,y'],
+    ['Warranty badge (yrs)','', 'y,y,y,y,y,y,y,y,y'],
+    ['Delivery estimate by pincode','', 'p,p,y,p,p,u,p,u,u'],
+    ['Reviews widget (verified · photos)','', 'y,y,y,y,y,y,p,p,y'],
+    ['Comparison table (own models / rivals)','', 'p,p,y,p,y,u,u,u,u'],
+    ['Cross-sell / bundle (protector · pillows)','', 'y,y,y,y,y,p,p,p,p'],
+    ['Sticky add-to-cart (mobile)','', 'y,y,y,y,y,p,p,p,u'],
+    ['Core-tech explainer (grid / foam / coil)','SmartGRID·XpertGRID·Ergo etc.', 'y,y,y,y,y,p,p,p,u'],
+    ['Product video / 3D / cutaway','', 'y,p,y,y,y,p,p,p,u'],
+    ['COD available','', 'p,y,y,y,p,y,y,y,y'],
+    ['Coupons / offers surfaced on PDP','', 'y,y,y,y,y,y,y,y,y'],
+  ],
+  plp:[
+    ['Filters (type · firmness · size · price)','', 'y,y,y,y,y,p,p,p,p'],
+    ['Sort options','', 'y,y,y,y,y,y,p,p,y'],
+    ['Quick add / quick view','', 'p,p,y,p,p,u,u,u,u'],
+    ['Compare-select (2–3 side by side)','', 'p,p,y,p,y,u,u,u,u'],
+    ['Card badges (bestseller · new · offer)','', 'y,y,y,y,y,p,p,p,p'],
+    ['Card shows rating + price + EMI','', 'y,y,y,y,y,p,p,p,p'],
+    ['Collection storytelling / editorial','', 'y,p,y,y,p,p,p,p,u'],
+    ['Inline "help me choose" CTA','', 'p,p,y,p,y,u,u,u,u'],
+  ],
+  content:[
+    ['Sleep quiz / recommendation engine','', 'y,p,y,p,y,u,u,u,u'],
+    ['Mattress comparison / buying guide','', 'y,p,y,y,y,p,p,p,u'],
+    ['Size guide page','', 'y,y,y,y,y,y,y,y,p'],
+    ['Blog / sleep-science content hub','', 'y,y,y,y,y,p,y,p,y'],
+    ['Store locator page','', 'y,p,y,y,p,p,y,p,p'],
+    ['Trial & warranty policy pages','', 'y,y,y,y,y,y,y,y,y'],
+    ['FAQ / support hub','', 'y,y,y,y,y,y,y,y,y'],
+    ['Loyalty / referral programme','', 'p,p,y,p,p,u,p,u,u'],
+  ],
+  cross:[
+    ['No-cost EMI (multiple partners)','', 'y,y,y,y,y,p,p,p,y'],
+    ['COD','', 'p,y,y,y,p,y,y,y,y'],
+    ['Free shipping','', 'y,y,y,y,y,y,y,y,y'],
+    ['100-night trial','TSC excl. some models', 'y,y,y,y,y,y,p,y,y'],
+    ['Warranty ≥10 yrs on flagship','', 'y,y,y,y,y,y,y,p,y'],
+    ['Offline store network','TSC 190+ · Kurlon huge retail', 'y,p,y,y,p,p,y,p,y'],
+    ['Reviews platform integrated','Judge.me / Yotpo etc.', 'y,y,y,y,y,y,p,p,y'],
+    ['WhatsApp support','', 'y,y,y,y,y,y,p,p,p'],
+    ['Old-mattress exchange','', 'p,u,p,y,u,u,p,u,u'],
+    ['Express / fast-track delivery','', 'p,p,y,p,p,u,p,u,u'],
+    ['Marketplace presence (Amazon/Flipkart)','', 'y,y,y,y,y,y,y,y,y'],
+  ],
+};
+
+/* ---------- state + storage ---------- */
+const KEY='sleepycat_ci_v1';
+let STATE={overrides:{},notes:{},custom:{},log:[],feedUrl:'',autoSeen:[],hiddenDisclaim:false};
+let hasClaudeStorage = !!(window.storage && window.storage.get);
+let hasLocalStorage = (function(){ try{ localStorage.setItem('__t','1'); localStorage.removeItem('__t'); return true; }catch(e){ return false; } })();
+let hasPersist = hasClaudeStorage || hasLocalStorage;
+
+async function load(){
+  if(hasClaudeStorage){
+    try{ const r=await window.storage.get(KEY); if(r&&r.value){STATE=JSON.parse(r.value);} }
+    catch(e){ /* first run / missing key */ }
+  } else if(hasLocalStorage){
+    try{ const raw=localStorage.getItem(KEY); if(raw){STATE=JSON.parse(raw);} }
+    catch(e){ /* first run / missing key */ }
+  }
+}
+async function save(){
+  if(hasClaudeStorage){
+    try{ await window.storage.set(KEY, JSON.stringify(STATE)); }catch(e){}
+  } else if(hasLocalStorage){
+    try{ localStorage.setItem(KEY, JSON.stringify(STATE)); }catch(e){}
+  }
+}
+
+/* ---------- inline modal (replaces window.prompt) ---------- */
+function showModal({title,desc,value='',placeholder='',multiline=false,onConfirm,onClear}){
+  const root=document.getElementById('modalRoot');
+  const inputTag = multiline
+    ? `<textarea id="modalInput" placeholder="${placeholder}"></textarea>`
+    : `<input type="text" id="modalInput" placeholder="${placeholder}">`;
+  root.innerHTML = `
+    <div class="modal-backdrop" id="modalBackdrop">
+      <div class="modal-box">
+        <h3>${title}</h3>
+        ${desc?`<p>${desc}</p>`:''}
+        ${inputTag}
+        <div class="modal-actions">
+          ${onClear?'<button class="clear" id="modalClear">Clear</button>':''}
+          <button class="cancel" id="modalCancel">Cancel</button>
+          <button class="confirm" id="modalConfirm">Save</button>
+        </div>
+      </div>
+    </div>`;
+  const input=document.getElementById('modalInput');
+  input.value=value;
+  setTimeout(()=>input.focus(),0);
+  const close=()=>{root.innerHTML='';};
+  document.getElementById('modalCancel').onclick=close;
+  document.getElementById('modalBackdrop').onclick=(e)=>{if(e.target.id==='modalBackdrop')close();};
+  document.getElementById('modalConfirm').onclick=()=>{const v=input.value;close();onConfirm(v);};
+  if(onClear) document.getElementById('modalClear').onclick=()=>{close();onClear();};
+  if(!multiline) input.addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('modalConfirm').click();});
+}
+
+/* ---------- helpers ---------- */
+const CYCLE={y:'p',p:'n',n:'u',u:'y'};
+const LABEL={y:'HAS',p:'SOME',n:'NONE',u:'TBD'};
+function cellId(tab,fi,ck){return tab+'|'+fi+'|'+ck;}
+function baseStatus(tab,fi,idx){
+  const arr=FEATURES[tab][fi][2].split(',');
+  return (arr[idx]||'u').trim();
+}
+function getStatus(tab,fi,ck,idx){
+  const id=cellId(tab,fi,ck);
+  if(STATE.overrides[id]) return STATE.overrides[id];
+  return baseStatus(tab,fi,idx);
+}
+function allFeatures(tab){
+  const base=FEATURES[tab].map((f,i)=>({label:f[0],note:f[1],i,custom:false}));
+  const cust=(STATE.custom[tab]||[]).map((c,j)=>({label:c,note:'',i:1000+j,custom:true}));
+  return base.concat(cust);
+}
+function custStatus(tab,fi,ck){
+  const id=cellId(tab,fi,ck);
+  return STATE.overrides[id]||'u';
+}
+
+/* ---------- render matrix ---------- */
+let activeTab='home', editMode='status';
+
+function render(){
+  const head=document.getElementById('ghead');
+  const body=document.getElementById('gbody');
+  const q=document.getElementById('search').value.toLowerCase().trim();
+  const gapsOnly=document.getElementById('gapsOnly').checked;
+
+  // header
+  head.innerHTML='';
+  const hr=document.createElement('tr');
+  hr.innerHTML='<th class="feat-h">Feature</th>';
+  COMPETITORS.forEach(c=>{
+    hr.innerHTML+=`<th class="${c.sc?'sc-col':''}"><span class="cw">${c.n}</span></th>`;
+  });
+  head.appendChild(hr);
+
+  // rows
+  body.innerHTML='';
+  const feats=allFeatures(activeTab);
+  const scIdx=COMPETITORS.length-1;
+  feats.forEach(f=>{
+    if(q && !f.label.toLowerCase().includes(q)) return;
+    // gap filter: sleepycat behind (n/p/u) while any rival has y
+    if(gapsOnly){
+      const sc = f.custom?custStatus(activeTab,f.i,'sleepycat'):getStatus(activeTab,f.i,'sleepycat',scIdx);
+      const rivalHas = COMPETITORS.slice(0,8).some((c,ix)=>{
+        const s=f.custom?custStatus(activeTab,f.i,c.k):getStatus(activeTab,f.i,c.k,ix);
+        return s==='y';
+      });
+      if(!(rivalHas && sc!=='y')) return;
+    }
+    const tr=document.createElement('tr');
+    const fcell=document.createElement('td');
+    fcell.className='feat';
+    fcell.innerHTML=`${f.label}${f.note?`<div class="fnote">${f.note}</div>`:''}${f.custom?'<div class="fnote">✎ custom</div>':''}`;
+    tr.appendChild(fcell);
+    COMPETITORS.forEach((c,ix)=>{
+      const td=document.createElement('td');
+      td.className='cell'+(c.sc?' sc-col':'');
+      const s=f.custom?custStatus(activeTab,f.i,c.k):getStatus(activeTab,f.i,c.k,ix);
+      const nId=cellId(activeTab,f.i,c.k);
+      const hasNote=!!STATE.notes[nId];
+      const btn=document.createElement('button');
+      btn.className='chip '+s;
+      btn.innerHTML=LABEL[s]+(hasNote?'<span class="nd"></span>':'');
+      if(hasNote) btn.title=STATE.notes[nId];
+      btn.onclick=()=>cellClick(activeTab,f.i,c.k,f.custom,ix);
+      td.appendChild(btn);
+      tr.appendChild(td);
+    });
+    body.appendChild(tr);
+  });
+  if(!body.children.length){
+    body.innerHTML=`<tr><td class="feat" style="color:var(--faint);font-style:italic">No features match.</td>${'<td class="cell"></td>'.repeat(9)}</tr>`;
+  }
+  renderTabs();
+  updateStoreFlag();
+}
+
+function cellClick(tab,fi,ck,isCustom,idx){
+  const id=cellId(tab,fi,ck);
+  if(editMode==='notes'){
+    const cur=STATE.notes[id]||'';
+    showModal({
+      title:'Note for this cell',
+      placeholder:'e.g. confirmed on PDP as of 10 Aug',
+      value:cur,
+      multiline:true,
+      onConfirm:(v)=>{
+        if(v.trim()==='') delete STATE.notes[id]; else STATE.notes[id]=v.trim();
+        save(); render();
+      },
+      onClear:()=>{ delete STATE.notes[id]; save(); render(); }
+    });
+    return;
+  } else {
+    const cur = isCustom ? custStatus(tab,fi,ck) : getStatus(tab,fi,ck,idx);
+    STATE.overrides[id]=CYCLE[cur];
+  }
+  save(); render();
+}
+
+/* gap count per tab for tab badges */
+function gapCount(tab){
+  const scIdx=COMPETITORS.length-1;
+  let n=0;
+  allFeatures(tab).forEach(f=>{
+    const sc=f.custom?custStatus(tab,f.i,'sleepycat'):getStatus(tab,f.i,'sleepycat',scIdx);
+    const rivalHas=COMPETITORS.slice(0,8).some((c,ix)=>{
+      const s=f.custom?custStatus(tab,f.i,c.k):getStatus(tab,f.i,c.k,ix);
+      return s==='y';
+    });
+    if(rivalHas && sc!=='y') n++;
+  });
+  return n;
+}
+function renderTabs(){
+  const el=document.getElementById('tabs');
+  el.innerHTML='';
+  TABS.forEach(t=>{
+    const g=gapCount(t.id);
+    const b=document.createElement('button');
+    b.className='tab'+(activeTab===t.id&&curView==='matrix'?' active':'');
+    b.innerHTML=t.label+(g?`<span class="gapdot">${g}</span>`:'');
+    b.onclick=()=>{curView='matrix';activeTab=t.id;switchView();render();};
+    el.appendChild(b);
+  });
+  const b=document.createElement('button');
+  b.className='tab'+(curView==='log'?' active':'');
+  b.textContent='Daily log';
+  b.onclick=()=>{curView='log';switchView();};
+  el.appendChild(b);
+}
+
+let curView='matrix';
+function switchView(){
+  document.getElementById('matrixView').style.display=curView==='matrix'?'':'none';
+  document.getElementById('logView').style.display=curView==='log'?'':'none';
+  if(curView==='log') renderLog();
+  renderTabs();
+}
+
+function updateStoreFlag(){
+  const el=document.getElementById('storeflag');
+  const txt=document.getElementById('storetxt');
+  if(hasPersist){el.classList.remove('off');txt.textContent='Edits save automatically across sessions.';}
+  else{el.classList.add('off');txt.textContent='Session-only: this preview can’t persist — export a snapshot before closing.';}
+}
+
+/* ---------- daily log ---------- */
+function renderLog(){
+  const list=document.getElementById('logList');
+  if(!STATE.log.length){list.innerHTML='<div class="empty">No entries yet. Log what moved today — offers, new PDP modules, quiz changes.</div>';return;}
+  list.innerHTML='';
+  STATE.log.forEach((e,i)=>{
+    const d=document.createElement('div');
+    d.className='logitem';
+    d.innerHTML=`<span class="tag">${e.tag}</span><div class="body">${e.text}<div class="date">${e.date}</div></div><button class="del" title="delete">✕</button>`;
+    d.querySelector('.del').onclick=()=>{STATE.log.splice(i,1);save();renderLog();};
+    list.appendChild(d);
+  });
+}
+function addLog(){
+  const t=document.getElementById('logText');
+  const tag=document.getElementById('logTag').value;
+  if(!t.value.trim())return;
+  const now=new Date();
+  const date=now.toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'})+' · '+now.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});
+  STATE.log.unshift({tag,text:t.value.trim(),date});
+  t.value='';save();renderLog();
+}
+
+/* ---------- toolbar wiring ---------- */
+document.getElementById('search').oninput=render;
+document.getElementById('gapsOnly').onchange=render;
+document.getElementById('editSeg').querySelectorAll('button').forEach(b=>{
+  b.onclick=()=>{
+    editMode=b.dataset.mode;
+    document.getElementById('editSeg').querySelectorAll('button').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');
+    document.getElementById('modeHint').textContent = editMode==='notes'
+      ? 'Tap a cell to add / edit a note'
+      : 'Tap a cell to cycle HAS → SOME → NONE → TBD';
+  };
+});
+document.getElementById('addFeatBtn').onclick=()=>{
+  const inp=document.getElementById('newFeat');
+  if(!inp.value.trim())return;
+  STATE.custom[activeTab]=STATE.custom[activeTab]||[];
+  STATE.custom[activeTab].push(inp.value.trim());
+  inp.value='';save();render();
+};
+document.getElementById('newFeat').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('addFeatBtn').click();});
+document.getElementById('logAddBtn').onclick=addLog;
+document.getElementById('logText').addEventListener('keydown',e=>{if(e.key==='Enter')addLog();});
+
+/* ---------- live feed (auto-detected changes from the watcher) ---------- */
+const BRANDNAME={tsc:'Sleep Company',flo:'Flo',wakefit:'Wakefit',duroflex:'Duroflex',emma:'Emma',sleepyhead:'Sleepyhead',kurlon:'Kurlon',springtek:'Springtek',sleepycat:'Sleepycat'};
+document.getElementById('feedBtn').onclick=()=>{
+  showModal({
+    title:'Connect live feed',
+    desc:'Paste the RAW url of your watcher\u2019s changelog.json (GitHub repo \u2192 data/changelog.json \u2192 Raw button \u2192 copy the URL).',
+    value:STATE.feedUrl||'',
+    placeholder:'https://raw.githubusercontent.com/you/sleepycat-ci/main/data/changelog.json',
+    onConfirm:async(v)=>{
+      STATE.feedUrl=v.trim();
+      await save();
+      if(STATE.feedUrl) syncFeed(true); else setFeedStatus('Live feed disconnected.');
+    },
+    onClear:async()=>{
+      STATE.feedUrl='';
+      await save();
+      setFeedStatus('Live feed disconnected.');
+    }
+  });
+};
+function setFeedStatus(msg){
+  const b=document.getElementById('feedBtn');
+  b.textContent=msg;setTimeout(()=>b.textContent='\u26A1 Live feed',1800);
+}
+async function syncFeed(explicit){
+  if(!STATE.feedUrl)return;
+  try{
+    const r=await fetch(STATE.feedUrl,{cache:'no-store'});
+    if(!r.ok)throw new Error(r.status);
+    const arr=await r.json();
+    let added=0;
+    // oldest first so newest ends up on top after unshift
+    arr.slice().reverse().forEach(e=>{
+      const key=(e.brand||'')+'|'+(e.date||'')+'|'+(e.text||'');
+      if(STATE.autoSeen.includes(key))return;
+      STATE.autoSeen.push(key);
+      STATE.log.unshift({tag:'Auto',text:(BRANDNAME[e.brand]||e.brand||'?')+' \u2014 '+e.text,date:(e.date||'')+' \u00b7 auto'});
+      added++;
+    });
+    if(STATE.autoSeen.length>1200)STATE.autoSeen=STATE.autoSeen.slice(-1200);
+    await save();
+    if(curView==='log')renderLog();renderTabs();
+    setFeedStatus(added?('+'+added+' auto \u2713'):'Feed synced \u2713');
+  }catch(err){ if(explicit)setFeedStatus('Feed error \u2014 check url'); }
+}
+
+document.getElementById('resetBtn').onclick=()=>{
+  const root=document.getElementById('modalRoot');
+  root.innerHTML=`
+    <div class="modal-backdrop" id="modalBackdrop">
+      <div class="modal-box">
+        <h3>Reset everything?</h3>
+        <p>This clears all edits, notes, custom features and the log back to the seeded defaults. This can't be undone.</p>
+        <div class="modal-actions">
+          <button class="cancel" id="modalCancel">Cancel</button>
+          <button class="clear" id="modalConfirm" style="margin-left:auto">Reset</button>
+        </div>
+      </div>
+    </div>`;
+  const close=()=>{root.innerHTML='';};
+  document.getElementById('modalCancel').onclick=close;
+  document.getElementById('modalBackdrop').onclick=(e)=>{if(e.target.id==='modalBackdrop')close();};
+  document.getElementById('modalConfirm').onclick=async()=>{
+    close();
+    STATE={overrides:{},notes:{},custom:{},log:[],feedUrl:STATE.feedUrl||'',autoSeen:[],hiddenDisclaim:false};
+    await save();render();
+  };
+};
+document.getElementById('exportBtn').onclick=()=>{
+  const data=JSON.stringify(STATE,null,2);
+  navigator.clipboard.writeText(data).then(
+    ()=>{const b=document.getElementById('exportBtn');b.textContent='Copied ✓';setTimeout(()=>b.textContent='Export snapshot',1400);},
+    ()=>{showModal({title:'Snapshot JSON',desc:'Clipboard access was blocked \u2014 copy this manually.',value:data,multiline:true,onConfirm:()=>{}});}
+  );
+};
+
+/* ---------- boot ---------- */
+document.getElementById('today').textContent=new Date().toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'});
+(async()=>{ await load(); render(); switchView(); if(STATE.feedUrl) syncFeed(false); })();
+</script>
+</body>
+</html>
