@@ -1,1 +1,170 @@
-[]
+[
+  {
+    "date": "2026-08-11",
+    "brand": "sleepycat",
+    "type": "ux",
+    "text": "added homepage 'finance' signal"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "sleepycat",
+    "type": "ux",
+    "text": "added homepage 'store' signal"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "sleepycat",
+    "type": "ux",
+    "text": "added homepage 'whatsapp' signal"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "sleepycat",
+    "type": "ux",
+    "text": "added homepage 'reviews' signal"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "sleepycat",
+    "type": "ux",
+    "text": "added homepage 'trial' signal"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "sleepycat",
+    "type": "ux",
+    "text": "added homepage 'emi' signal"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "sleepycat",
+    "type": "ux",
+    "text": "added homepage 'quiz' signal"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "sleepycat",
+    "type": "offer",
+    "text": "headline offer now 20% off"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "springtek",
+    "type": "ux",
+    "text": "added homepage 'finance' signal"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "springtek",
+    "type": "ux",
+    "text": "added homepage 'whatsapp' signal"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "springtek",
+    "type": "ux",
+    "text": "added homepage 'reviews' signal"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "springtek",
+    "type": "ux",
+    "text": "added homepage 'emi' signal"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "springtek",
+    "type": "offer",
+    "text": "headline offer now 70% off"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "flo",
+    "type": "ux",
+    "text": "added homepage 'finance' signal"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "flo",
+    "type": "ux",
+    "text": "added homepage 'whatsapp' signal"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "flo",
+    "type": "ux",
+    "text": "added homepage 'trial' signal"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "flo",
+    "type": "ux",
+    "text": "added homepage 'emi' signal"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "flo",
+    "type": "offer",
+    "text": "headline offer now 40% off"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "flo",
+    "type": "new-product",
+    "text": "new SKU live - 'Flo Wave™ Mattress' at Rs 3,416"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "flo",
+    "type": "new-product",
+    "text": "new SKU live - 'Flo Anti-Gravity™ Natural Latex Mattress' at Rs 6,228"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "flo",
+    "type": "new-product",
+    "text": "new SKU live - 'Back Support Cushion' at Rs 1,299"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "flo",
+    "type": "new-product",
+    "text": "new SKU live - 'Ergonomic Seat Cushion' at Rs 1,624"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "flo",
+    "type": "new-product",
+    "text": "new SKU live - '360° Neck Support Pillow' at Rs 877"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'WaveX Full Body Massager' at Rs 189,900"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'AeroPro Adjustable Desk' at Rs 16,999"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'SnowTec Cooling Comforter' at Rs 3,899"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'SnowTec Flat Sheet' at Rs 3,999"
+  },
+  {
+    "date": "2026-08-11",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'SnowTec Quilted Flat Sheet' at Rs 5,999"
+  }
+]
