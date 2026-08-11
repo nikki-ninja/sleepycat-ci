@@ -97,6 +97,10 @@
   td.feat{padding:11px 12px;font-size:13px;font-weight:500;line-height:1.35;
     border-bottom:1px solid var(--line2);vertical-align:middle;}
   td.feat .fnote{font-size:11px;color:var(--faint);font-weight:400;margin-top:2px;}
+  .tierchip{display:inline-block;font-family:var(--mono);font-size:9.5px;font-weight:700;
+    letter-spacing:.03em;padding:2px 6px;border-radius:5px;margin-right:7px;vertical-align:1px;}
+  .tierchip.adv{background:var(--accent-soft);color:var(--accent-ink);}
+  .tierchip.basic{background:var(--u-bg);color:var(--faint);}
   tbody tr:hover td{background:#FBFBFC;}
   tbody tr:hover td.feat{background:#FBFBFC;}
   td.cell{border-bottom:1px solid var(--line2);border-left:1px solid var(--line2);
@@ -142,6 +146,14 @@
   .logitem{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line2);
     align-items:flex-start;}
   .logitem:last-child{border-bottom:none;}
+  .loggroup{margin-bottom:18px;}
+  .loggroup:last-child{margin-bottom:0;}
+  .loggrouphead{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.04em;
+    text-transform:uppercase;color:var(--faint);padding-bottom:6px;border-bottom:1px solid var(--line);
+    margin-bottom:2px;display:flex;align-items:center;gap:8px;}
+  .loggroupcount{background:var(--u-bg);color:var(--muted);border-radius:20px;padding:1px 8px;
+    font-size:10px;}
+  .loggroup .logitem:last-child{border-bottom:none;}
   .logitem .tag{font-family:var(--mono);font-size:10.5px;font-weight:600;padding:3px 8px;
     border-radius:6px;background:var(--accent-soft);color:var(--accent-ink);white-space:nowrap;
     margin-top:1px;}
@@ -151,6 +163,17 @@
     padding:0 4px;line-height:1;}
   .logitem .del:hover{color:var(--n);}
   .empty{color:var(--faint);font-size:13px;text-align:center;padding:30px 10px;font-style:italic;}
+  .recointro{font-size:12.5px;color:var(--muted);margin:0 0 16px;line-height:1.5;}
+  .reccard{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:10px;}
+  .rechead{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;}
+  .rectab{font-family:var(--mono);font-size:10.5px;font-weight:600;color:var(--accent-ink);
+    background:var(--accent-soft);padding:3px 8px;border-radius:6px;cursor:pointer;}
+  .rectab:hover{opacity:.8;}
+  .recrivals{font-family:var(--mono);font-size:11px;color:var(--faint);margin-left:auto;}
+  .recwho{font-size:11.5px;color:var(--muted);margin-bottom:8px;}
+  .reclabel{font-size:14px;font-weight:600;margin-bottom:4px;}
+  .recstatus{font-size:12px;color:var(--muted);margin-bottom:6px;}
+  .recwhy{font-size:12.5px;color:var(--muted);line-height:1.5;border-top:1px solid var(--line2);padding-top:8px;}
 
   .storeflag{font-size:11px;color:var(--faint);margin-top:10px;font-family:var(--mono);
     display:flex;align-items:center;gap:6px;}
@@ -199,7 +222,7 @@
 
   <div class="disclaim" id="disclaim">
     <span>💡</span>
-    <span><b>Pre-fills are a starting hypothesis, not verified fact.</b> The category is near-identical on trial / EMI / warranty / stores — rivals split on core tech, quiz &amp; finder tooling, and PDP merchandising. Tap any cell to correct it. Your edits save automatically.</span>
+    <span><b>9 rows corrected from the live scraper's real homepage scan (11 Aug 2026)</b> — quiz, WhatsApp, store locator, EMI, trial, and reviews signals across all 9 sites. Everything else is still a starting hypothesis — tap any cell to correct it. Wakefit's signal scan looks blocked (all-false, unlikely to be real) so those cells are marked TBD, not NONE, until verified manually. Your edits save automatically.</span>
     <button class="x" onclick="document.getElementById('disclaim').style.display='none'">✕</button>
   </div>
 
@@ -217,6 +240,7 @@
         <button data-mode="notes">Add notes</button>
       </div>
       <label class="toggle"><input type="checkbox" id="gapsOnly"> Gaps vs Sleepycat only</label>
+      <label class="toggle"><input type="checkbox" id="advOnly"> Advanced only</label>
     </div>
 
     <div class="board">
@@ -257,6 +281,14 @@
       <div id="logList"></div>
     </div>
   </section>
+
+  <!-- RECOMMENDATIONS VIEW -->
+  <section id="recoView" style="display:none;">
+    <div class="logwrap">
+      <p class="recointro">Advanced (CRO-differentiating) features where Sleepycat is behind and multiple rivals already have it. Ranked by how many rivals have it — a rough proxy for how table-stakes it's becoming.</p>
+      <div id="recoList"></div>
+    </div>
+  </section>
 </div>
 
 <div id="modalRoot"></div>
@@ -277,6 +309,9 @@ const COMPETITORS = [
 
 // status codes: y=has, p=partial, n=none, u=unknown
 // order of statuses per feature: [tsc,flo,wakefit,duroflex,emma,sleepyhead,kurlon,springtek,sleepycat]
+// row shape: [label, note, statuses, tier]  tier: 'basic' = table-stakes | 'adv' = CRO-differentiating
+// rows marked "verified" in their note were corrected from the live scraper's homepage-signal scan
+// (data/competitors.json, run 2026-08-11) — everything else is still the original hypothesis, tap to correct.
 const TABS = [
   {id:'home', label:'Homepage'},
   {id:'pdp', label:'PDP'},
@@ -287,68 +322,90 @@ const TABS = [
 
 const FEATURES = {
   home:[
-    ['Sleep quiz / mattress finder entry','Guided "find your mattress" CTA', 'y,p,y,p,y,u,u,u,u'],
-    ['Hero offer / festive sale banner','', 'y,y,y,y,y,y,y,y,y'],
-    ['Trust strip (trial · EMI · warranty badges)','', 'y,y,y,y,y,y,p,p,y'],
-    ['Social proof (rating count / reviews)','e.g. "4.9★ by 17,800+"', 'y,y,y,y,y,p,p,p,p'],
-    ['Store locator / "find a store"','', 'y,p,y,y,p,p,y,p,p'],
-    ['WhatsApp / live chat launcher','', 'y,y,y,y,y,y,p,p,p'],
-    ['Category tiles (mattress · bedding · furniture)','', 'y,p,y,y,p,p,y,p,y'],
-    ['Sticky announcement / offer bar','', 'y,y,y,y,y,y,y,y,y'],
-    ['Brand / tech storytelling video','', 'y,p,y,y,y,p,p,p,u'],
-    ['Comparison / "which mattress" guide entry','', 'p,p,y,p,y,u,u,u,u'],
-    ['Logged-in / personalised offers','', 'p,u,p,u,p,u,u,u,u'],
+    ['Sleep quiz / mattress finder entry','Guided "find your mattress" CTA · verified via scraper', 'y,n,u,y,y,y,n,n,y', 'adv'],
+    ['Hero offer / festive sale banner','', 'y,y,y,y,y,y,y,y,y', 'basic'],
+    ['Trust strip (trial · EMI · warranty badges)','', 'y,y,y,y,y,y,p,p,y', 'basic'],
+    ['Social proof (rating count / reviews)','e.g. "4.9★ by 17,800+"', 'y,y,y,y,y,p,p,p,p', 'basic'],
+    ['Store locator / "find a store"','verified via scraper', 'y,n,u,y,n,y,y,n,y', 'basic'],
+    ['WhatsApp / live chat launcher','verified via scraper', 'y,y,u,y,y,y,y,y,y', 'basic'],
+    ['Category tiles (mattress · bedding · furniture)','', 'y,p,y,y,p,p,y,p,y', 'basic'],
+    ['Sticky announcement / offer bar','', 'y,y,y,y,y,y,y,y,y', 'basic'],
+    ['Brand / tech storytelling video','', 'y,p,y,y,y,p,p,p,u', 'adv'],
+    ['Comparison / "which mattress" guide entry','', 'p,p,y,p,y,u,u,u,u', 'adv'],
+    ['Logged-in / personalised offers','', 'p,u,p,u,p,u,u,u,u', 'adv'],
   ],
   pdp:[
-    ['Firmness / feel selector','soft·medium·firm', 'y,y,y,y,p,y,p,p,u'],
-    ['Size selector + dimensions guide','', 'y,y,y,y,y,y,y,y,y'],
-    ['Price + strikethrough + discount %','', 'y,y,y,y,y,y,y,y,y'],
-    ['No-cost EMI widget (partners shown)','', 'y,y,y,y,y,p,p,p,y'],
-    ['100-night trial messaging on PDP','', 'y,y,y,y,y,y,p,y,y'],
-    ['Warranty badge (yrs)','', 'y,y,y,y,y,y,y,y,y'],
-    ['Delivery estimate by pincode','', 'p,p,y,p,p,u,p,u,u'],
-    ['Reviews widget (verified · photos)','', 'y,y,y,y,y,y,p,p,y'],
-    ['Comparison table (own models / rivals)','', 'p,p,y,p,y,u,u,u,u'],
-    ['Cross-sell / bundle (protector · pillows)','', 'y,y,y,y,y,p,p,p,p'],
-    ['Sticky add-to-cart (mobile)','', 'y,y,y,y,y,p,p,p,u'],
-    ['Core-tech explainer (grid / foam / coil)','SmartGRID·XpertGRID·Ergo etc.', 'y,y,y,y,y,p,p,p,u'],
-    ['Product video / 3D / cutaway','', 'y,p,y,y,y,p,p,p,u'],
-    ['COD available','', 'p,y,y,y,p,y,y,y,y'],
-    ['Coupons / offers surfaced on PDP','', 'y,y,y,y,y,y,y,y,y'],
+    ['Firmness / feel selector','soft·medium·firm', 'y,y,y,y,p,y,p,p,u', 'basic'],
+    ['Size selector + dimensions guide','', 'y,y,y,y,y,y,y,y,y', 'basic'],
+    ['Price + strikethrough + discount %','', 'y,y,y,y,y,y,y,y,y', 'basic'],
+    ['No-cost EMI widget (partners shown)','verified via scraper', 'y,y,u,n,n,n,n,y,y', 'basic'],
+    ['100-night trial messaging on PDP','verified via scraper', 'y,y,u,y,y,y,y,n,y', 'basic'],
+    ['Warranty badge (yrs)','', 'y,y,y,y,y,y,y,y,y', 'basic'],
+    ['Delivery estimate by pincode','', 'p,p,y,p,p,u,p,u,u', 'adv'],
+    ['Reviews widget (verified · photos)','verified via scraper — checks judge.me/yotpo/stamped/okendo/reviews.io only, custom widgets may be missed', 'n,n,u,y,y,y,y,y,y', 'basic'],
+    ['Comparison table (own models / rivals)','', 'p,p,y,p,y,u,u,u,u', 'adv'],
+    ['Cross-sell / bundle (protector · pillows)','', 'y,y,y,y,y,p,p,p,p', 'adv'],
+    ['Sticky add-to-cart (mobile)','', 'y,y,y,y,y,p,p,p,u', 'basic'],
+    ['Core-tech explainer (grid / foam / coil)','SmartGRID·XpertGRID·Ergo etc.', 'y,y,y,y,y,p,p,p,u', 'adv'],
+    ['Product video / 3D / cutaway','', 'y,p,y,y,y,p,p,p,u', 'adv'],
+    ['COD available','', 'p,y,y,y,p,y,y,y,y', 'basic'],
+    ['Coupons / offers surfaced on PDP','', 'y,y,y,y,y,y,y,y,y', 'basic'],
   ],
   plp:[
-    ['Filters (type · firmness · size · price)','', 'y,y,y,y,y,p,p,p,p'],
-    ['Sort options','', 'y,y,y,y,y,y,p,p,y'],
-    ['Quick add / quick view','', 'p,p,y,p,p,u,u,u,u'],
-    ['Compare-select (2–3 side by side)','', 'p,p,y,p,y,u,u,u,u'],
-    ['Card badges (bestseller · new · offer)','', 'y,y,y,y,y,p,p,p,p'],
-    ['Card shows rating + price + EMI','', 'y,y,y,y,y,p,p,p,p'],
-    ['Collection storytelling / editorial','', 'y,p,y,y,p,p,p,p,u'],
-    ['Inline "help me choose" CTA','', 'p,p,y,p,y,u,u,u,u'],
+    ['Filters (type · firmness · size · price)','', 'y,y,y,y,y,p,p,p,p', 'basic'],
+    ['Sort options','', 'y,y,y,y,y,y,p,p,y', 'basic'],
+    ['Quick add / quick view','', 'p,p,y,p,p,u,u,u,u', 'adv'],
+    ['Compare-select (2–3 side by side)','', 'p,p,y,p,y,u,u,u,u', 'adv'],
+    ['Card badges (bestseller · new · offer)','', 'y,y,y,y,y,p,p,p,p', 'basic'],
+    ['Card shows rating + price + EMI','', 'y,y,y,y,y,p,p,p,p', 'basic'],
+    ['Collection storytelling / editorial','', 'y,p,y,y,p,p,p,p,u', 'adv'],
+    ['Inline "help me choose" CTA','', 'p,p,y,p,y,u,u,u,u', 'adv'],
   ],
   content:[
-    ['Sleep quiz / recommendation engine','', 'y,p,y,p,y,u,u,u,u'],
-    ['Mattress comparison / buying guide','', 'y,p,y,y,y,p,p,p,u'],
-    ['Size guide page','', 'y,y,y,y,y,y,y,y,p'],
-    ['Blog / sleep-science content hub','', 'y,y,y,y,y,p,y,p,y'],
-    ['Store locator page','', 'y,p,y,y,p,p,y,p,p'],
-    ['Trial & warranty policy pages','', 'y,y,y,y,y,y,y,y,y'],
-    ['FAQ / support hub','', 'y,y,y,y,y,y,y,y,y'],
-    ['Loyalty / referral programme','', 'p,p,y,p,p,u,p,u,u'],
+    ['Sleep quiz / recommendation engine','', 'y,p,y,p,y,u,u,u,u', 'adv'],
+    ['Mattress comparison / buying guide','', 'y,p,y,y,y,p,p,p,u', 'adv'],
+    ['Size guide page','', 'y,y,y,y,y,y,y,y,p', 'basic'],
+    ['Blog / sleep-science content hub','', 'y,y,y,y,y,p,y,p,y', 'basic'],
+    ['Store locator page','verified via scraper', 'y,n,u,y,n,y,y,n,y', 'basic'],
+    ['Trial & warranty policy pages','', 'y,y,y,y,y,y,y,y,y', 'basic'],
+    ['FAQ / support hub','', 'y,y,y,y,y,y,y,y,y', 'basic'],
+    ['Loyalty / referral programme','', 'p,p,y,p,p,u,p,u,u', 'adv'],
   ],
   cross:[
-    ['No-cost EMI (multiple partners)','', 'y,y,y,y,y,p,p,p,y'],
-    ['COD','', 'p,y,y,y,p,y,y,y,y'],
-    ['Free shipping','', 'y,y,y,y,y,y,y,y,y'],
-    ['100-night trial','TSC excl. some models', 'y,y,y,y,y,y,p,y,y'],
-    ['Warranty ≥10 yrs on flagship','', 'y,y,y,y,y,y,y,p,y'],
-    ['Offline store network','TSC 190+ · Kurlon huge retail', 'y,p,y,y,p,p,y,p,y'],
-    ['Reviews platform integrated','Judge.me / Yotpo etc.', 'y,y,y,y,y,y,p,p,y'],
-    ['WhatsApp support','', 'y,y,y,y,y,y,p,p,p'],
-    ['Old-mattress exchange','', 'p,u,p,y,u,u,p,u,u'],
-    ['Express / fast-track delivery','', 'p,p,y,p,p,u,p,u,u'],
-    ['Marketplace presence (Amazon/Flipkart)','', 'y,y,y,y,y,y,y,y,y'],
+    ['No-cost EMI (multiple partners)','verified via scraper', 'y,y,u,n,n,n,n,y,y', 'basic'],
+    ['COD','', 'p,y,y,y,p,y,y,y,y', 'basic'],
+    ['Free shipping','', 'y,y,y,y,y,y,y,y,y', 'basic'],
+    ['100-night trial','TSC excl. some models · verified via scraper', 'y,y,u,y,y,y,y,n,y', 'basic'],
+    ['Warranty ≥10 yrs on flagship','', 'y,y,y,y,y,y,y,p,y', 'basic'],
+    ['Offline store network','TSC 190+ · Kurlon huge retail', 'y,p,y,y,p,p,y,p,y', 'basic'],
+    ['Reviews platform integrated','Judge.me / Yotpo etc. · verified via scraper', 'n,n,u,y,y,y,y,y,y', 'basic'],
+    ['WhatsApp support','verified via scraper', 'y,y,u,y,y,y,y,y,y', 'basic'],
+    ['Old-mattress exchange','', 'p,u,p,y,u,u,p,u,u', 'adv'],
+    ['Express / fast-track delivery','', 'p,p,y,p,p,u,p,u,u', 'adv'],
+    ['Marketplace presence (Amazon/Flipkart)','', 'y,y,y,y,y,y,y,y,y', 'basic'],
   ],
+};
+
+/* per-feature "why this matters" for the Recommendations tab — only needed for tier:'adv' rows */
+const REASONS = {
+  'home|0':'Quiz/finder tools cut decision paralysis and let you branch users into firmness-matched PDPs — usually one of the highest-leverage CRO levers in mattress e-comm.',
+  'home|8':'Explainer video builds trust in the core tech claim before price becomes the deciding factor — helps justify premium AOV.',
+  'home|9':'A visible "which mattress" comparison entry pre-qualifies traffic and reduces bounce from indecisive first-time visitors.',
+  'home|10':'Personalised/logged-in offers increase perceived relevance and repeat-visit conversion — most rivals haven\u2019t built this yet, real whitespace.',
+  'pdp|6':'Pincode-level delivery estimates reduce last-mile anxiety at the exact moment of purchase intent — directly addresses cart-to-checkout drop.',
+  'pdp|8':'A comparison table on PDP keeps comparison-shoppers on-site instead of tab-switching to a rival — protects against leakage mid-funnel.',
+  'pdp|9':'Cross-sell/bundle widgets are a direct AOV lever at the highest-intent moment on the page.',
+  'pdp|11':'Core-tech explainers turn a generic "foam mattress" purchase into a justified premium one — supports price anchoring.',
+  'pdp|12':'3D/cutaway or video content substitutes for the in-store "feel it" experience that online buyers lack most.',
+  'plp|2':'Quick add/quick view shortens the path to cart from a listing page, especially useful for repeat/lower-consideration SKUs (pillows, protectors).',
+  'plp|3':'Compare-select directly on PLP removes a full page-load step from the comparison journey.',
+  'plp|6':'Editorial storytelling on collection pages helps differentiate near-identical SKUs and can lift time-on-page before drop-off.',
+  'plp|7':'An inline "help me choose" CTA on PLP catches indecisive browsers before they leave the category entirely.',
+  'content|0':'Same lever as the homepage quiz, but captures organic/content-entry traffic that skips the homepage.',
+  'content|1':'A buying guide is strong for SEO-driven top-of-funnel traffic and pre-frames the comparison in your favour.',
+  'content|7':'Loyalty/referral programmes lower CAC on repeat and word-of-mouth purchases — high-ticket, infrequent-purchase categories benefit disproportionately.',
+  'cross|8':'Old-mattress exchange removes a real physical/logistical objection (what do I do with the old one) that is unique to this category.',
+  'cross|9':'Express delivery is a differentiator most rivals haven\u2019t solved — can justify a premium tier or reduce COD-driven RTO by shortening decision windows.',
 };
 
 /* ---------- state + storage ---------- */
@@ -419,8 +476,8 @@ function getStatus(tab,fi,ck,idx){
   return baseStatus(tab,fi,idx);
 }
 function allFeatures(tab){
-  const base=FEATURES[tab].map((f,i)=>({label:f[0],note:f[1],i,custom:false}));
-  const cust=(STATE.custom[tab]||[]).map((c,j)=>({label:c,note:'',i:1000+j,custom:true}));
+  const base=FEATURES[tab].map((f,i)=>({label:f[0],note:f[1],i,custom:false,tier:f[3]||'basic'}));
+  const cust=(STATE.custom[tab]||[]).map((c,j)=>({label:c,note:'',i:1000+j,custom:true,tier:'basic'}));
   return base.concat(cust);
 }
 function custStatus(tab,fi,ck){
@@ -436,6 +493,7 @@ function render(){
   const body=document.getElementById('gbody');
   const q=document.getElementById('search').value.toLowerCase().trim();
   const gapsOnly=document.getElementById('gapsOnly').checked;
+  const advOnly=document.getElementById('advOnly').checked;
 
   // header
   head.innerHTML='';
@@ -452,6 +510,7 @@ function render(){
   const scIdx=COMPETITORS.length-1;
   feats.forEach(f=>{
     if(q && !f.label.toLowerCase().includes(q)) return;
+    if(advOnly && f.tier!=='adv') return;
     // gap filter: sleepycat behind (n/p/u) while any rival has y
     if(gapsOnly){
       const sc = f.custom?custStatus(activeTab,f.i,'sleepycat'):getStatus(activeTab,f.i,'sleepycat',scIdx);
@@ -464,7 +523,8 @@ function render(){
     const tr=document.createElement('tr');
     const fcell=document.createElement('td');
     fcell.className='feat';
-    fcell.innerHTML=`${f.label}${f.note?`<div class="fnote">${f.note}</div>`:''}${f.custom?'<div class="fnote">✎ custom</div>':''}`;
+    const tierBadge = f.tier==='adv' ? '<span class="tierchip adv">ADV</span>' : '<span class="tierchip basic">BASIC</span>';
+    fcell.innerHTML=`${tierBadge}${f.label}${f.note?`<div class="fnote">${f.note}</div>`:''}${f.custom?'<div class="fnote">✎ custom</div>':''}`;
     tr.appendChild(fcell);
     COMPETITORS.forEach((c,ix)=>{
       const td=document.createElement('td');
@@ -542,13 +602,20 @@ function renderTabs(){
   b.textContent='Daily log';
   b.onclick=()=>{curView='log';switchView();};
   el.appendChild(b);
+  const rb=document.createElement('button');
+  rb.className='tab'+(curView==='reco'?' active':'');
+  rb.textContent='Recommendations';
+  rb.onclick=()=>{curView='reco';switchView();};
+  el.appendChild(rb);
 }
 
 let curView='matrix';
 function switchView(){
   document.getElementById('matrixView').style.display=curView==='matrix'?'':'none';
   document.getElementById('logView').style.display=curView==='log'?'':'none';
+  document.getElementById('recoView').style.display=curView==='reco'?'':'none';
   if(curView==='log') renderLog();
+  if(curView==='reco') renderRecommendations();
   renderTabs();
 }
 
@@ -559,17 +626,69 @@ function updateStoreFlag(){
   else{el.classList.add('off');txt.textContent='Session-only: this preview can’t persist — export a snapshot before closing.';}
 }
 
-/* ---------- daily log ---------- */
+/* ---------- recommendations ---------- */
+function renderRecommendations(){
+  const list=document.getElementById('recoList');
+  const scIdx=COMPETITORS.length-1;
+  const cards=[];
+  TABS.forEach(t=>{
+    FEATURES[t.id].forEach((f,i)=>{
+      if((f[3]||'basic')!=='adv') return;
+      const statuses=f[2].split(',').map(s=>s.trim());
+      const scStatus=STATE.overrides[cellId(t.id,i,'sleepycat')]||statuses[scIdx];
+      if(scStatus==='y') return; // already have it
+      let rivalCount=0; const rivalNames=[];
+      COMPETITORS.slice(0,8).forEach((c,ix)=>{
+        const s=STATE.overrides[cellId(t.id,i,c.k)]||statuses[ix];
+        if(s==='y'){rivalCount++;rivalNames.push(c.n);}
+      });
+      if(rivalCount<2) return; // need signal from at least 2 rivals to be worth flagging
+      cards.push({
+        tab:t.label, tabId:t.id, idx:i, label:f[0], rivalCount, rivalNames,
+        scStatus, reason:REASONS[t.id+'|'+i]||''
+      });
+    });
+  });
+  cards.sort((a,b)=>b.rivalCount-a.rivalCount);
+  if(!cards.length){ list.innerHTML='<div class="empty">No open recommendations right now — Sleepycat is at parity on tracked advanced features, or not enough rival signal yet.</div>'; return; }
+  list.innerHTML='';
+  cards.forEach(c=>{
+    const d=document.createElement('div');
+    d.className='reccard';
+    d.innerHTML=`
+      <div class="rechead">
+        <span class="tierchip adv">ADV</span>
+        <span class="rectab">${c.tab}</span>
+        <span class="recrivals">${c.rivalCount}/8 rivals have this</span>
+      </div>
+      <div class="recwho">${c.rivalNames.join(' · ')}</div>
+      <div class="reclabel">${c.label}</div>
+      <div class="recstatus">Sleepycat: <b>${LABEL[c.scStatus]||'TBD'}</b></div>
+      ${c.reason?`<div class="recwhy">${c.reason}</div>`:''}
+    `;
+    d.querySelector('.rectab').onclick=()=>{curView='matrix';activeTab=c.tabId;switchView();render();};
+    list.appendChild(d);
+  });
+}
+const LOG_CATEGORIES=['Offer/Price','Homepage','PDP','PLP/Collections','Content/Tools','Checkout/Trust','New product','Other'];
 function renderLog(){
   const list=document.getElementById('logList');
   if(!STATE.log.length){list.innerHTML='<div class="empty">No entries yet. Log what moved today — offers, new PDP modules, quiz changes.</div>';return;}
   list.innerHTML='';
-  STATE.log.forEach((e,i)=>{
-    const d=document.createElement('div');
-    d.className='logitem';
-    d.innerHTML=`<span class="tag">${e.tag}</span><div class="body">${e.text}<div class="date">${e.date}</div></div><button class="del" title="delete">✕</button>`;
-    d.querySelector('.del').onclick=()=>{STATE.log.splice(i,1);save();renderLog();};
-    list.appendChild(d);
+  LOG_CATEGORIES.forEach(cat=>{
+    const items=STATE.log.map((e,i)=>({e,i})).filter(x=>x.e.tag===cat);
+    if(!items.length)return;
+    const grp=document.createElement('div');
+    grp.className='loggroup';
+    grp.innerHTML=`<div class="loggrouphead">${cat}<span class="loggroupcount">${items.length}</span></div>`;
+    items.forEach(({e,i})=>{
+      const d=document.createElement('div');
+      d.className='logitem';
+      d.innerHTML=`<span class="tag">${e.tag}</span><div class="body">${e.text}<div class="date">${e.date}</div></div><button class="del" title="delete">✕</button>`;
+      d.querySelector('.del').onclick=()=>{STATE.log.splice(i,1);save();renderLog();};
+      grp.appendChild(d);
+    });
+    list.appendChild(grp);
   });
 }
 function addLog(){
@@ -585,6 +704,7 @@ function addLog(){
 /* ---------- toolbar wiring ---------- */
 document.getElementById('search').oninput=render;
 document.getElementById('gapsOnly').onchange=render;
+document.getElementById('advOnly').onchange=render;
 document.getElementById('editSeg').querySelectorAll('button').forEach(b=>{
   b.onclick=()=>{
     editMode=b.dataset.mode;
@@ -608,6 +728,17 @@ document.getElementById('logText').addEventListener('keydown',e=>{if(e.key==='En
 
 /* ---------- live feed (auto-detected changes from the watcher) ---------- */
 const BRANDNAME={tsc:'Sleep Company',flo:'Flo',wakefit:'Wakefit',duroflex:'Duroflex',emma:'Emma',sleepyhead:'Sleepyhead',kurlon:'Kurlon',springtek:'Springtek',sleepycat:'Sleepycat'};
+// maps a scraper-detected homepage signal to the matrix cell(s) it corresponds to,
+// so an auto-detected change updates the feature matrix, not just the log text.
+const SIGNAL_MAP={
+  quiz:   [{tab:'home',idx:0},{tab:'content',idx:0}],
+  whatsapp:[{tab:'home',idx:5},{tab:'cross',idx:7}],
+  store:  [{tab:'home',idx:4},{tab:'content',idx:4}],
+  emi:    [{tab:'pdp',idx:3},{tab:'cross',idx:0}],
+  trial:  [{tab:'pdp',idx:4},{tab:'cross',idx:3}],
+  reviews:[{tab:'pdp',idx:7},{tab:'cross',idx:6}],
+};
+const TYPE_TAG={ 'new-product':'New product', price:'Offer/Price', sale:'Offer/Price', offer:'Offer/Price', ux:'Homepage' };
 document.getElementById('feedBtn').onclick=()=>{
   showModal({
     title:'Connect live feed',
@@ -636,19 +767,36 @@ async function syncFeed(explicit){
     const r=await fetch(STATE.feedUrl,{cache:'no-store'});
     if(!r.ok)throw new Error(r.status);
     const arr=await r.json();
-    let added=0;
+    let added=0, linked=0;
     // oldest first so newest ends up on top after unshift
     arr.slice().reverse().forEach(e=>{
       const key=(e.brand||'')+'|'+(e.date||'')+'|'+(e.text||'');
       if(STATE.autoSeen.includes(key))return;
       STATE.autoSeen.push(key);
-      STATE.log.unshift({tag:'Auto',text:(BRANDNAME[e.brand]||e.brand||'?')+' \u2014 '+e.text,date:(e.date||'')+' \u00b7 auto'});
+      const tag=TYPE_TAG[e.type]||'Other';
+      STATE.log.unshift({tag,text:(BRANDNAME[e.brand]||e.brand||'?')+' \u2014 '+e.text,date:(e.date||'')+' \u00b7 auto'});
       added++;
+      // auto-link ux signal changes straight into the matrix
+      if(e.type==='ux'){
+        const m=/^(added|removed) homepage '(\w+)' signal$/.exec(e.text||'');
+        if(m && SIGNAL_MAP[m[2]] && e.brand){
+          const isAdded = m[1]==='added';
+          SIGNAL_MAP[m[2]].forEach(({tab,idx})=>{
+            const id=cellId(tab,idx,e.brand);
+            STATE.overrides[id]=isAdded?'y':'n';
+            STATE.notes[id]=`Auto-detected ${m[1]} on ${e.date||'?'} (daily scrape)`;
+            linked++;
+          });
+        }
+      }
     });
     if(STATE.autoSeen.length>1200)STATE.autoSeen=STATE.autoSeen.slice(-1200);
     await save();
-    if(curView==='log')renderLog();renderTabs();
-    setFeedStatus(added?('+'+added+' auto \u2713'):'Feed synced \u2713');
+    if(curView==='log')renderLog();
+    if(curView==='reco')renderRecommendations();
+    if(curView==='matrix')render();
+    renderTabs();
+    setFeedStatus(added?('+'+added+' auto'+(linked?', '+linked+' matrix updates \u2713':' \u2713')):'Feed synced \u2713');
   }catch(err){ if(explicit)setFeedStatus('Feed error \u2014 check url'); }
 }
 
