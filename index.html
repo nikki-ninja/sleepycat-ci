@@ -675,7 +675,10 @@ function renderLog(){
   const list=document.getElementById('logList');
   if(!STATE.log.length){list.innerHTML='<div class="empty">No entries yet. Log what moved today — offers, new PDP modules, quiz changes.</div>';return;}
   list.innerHTML='';
-  LOG_CATEGORIES.forEach(cat=>{
+  // known categories first, then any other tag actually present (e.g. legacy 'Auto' entries) so nothing is ever silently dropped
+  const extra=[...new Set(STATE.log.map(e=>e.tag))].filter(t=>!LOG_CATEGORIES.includes(t));
+  const cats=LOG_CATEGORIES.concat(extra);
+  cats.forEach(cat=>{
     const items=STATE.log.map((e,i)=>({e,i})).filter(x=>x.e.tag===cat);
     if(!items.length)return;
     const grp=document.createElement('div');
