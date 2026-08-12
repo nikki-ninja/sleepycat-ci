@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-08-12",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'The Founder's Mattress' Rs 30,200 ↓ Rs 28,690"
+  },
+  {
+    "date": "2026-08-12",
+    "brand": "emma",
+    "type": "price",
+    "text": "'Emma Teak Bed' Rs 31,999 ↑ Rs 48,990"
+  },
+  {
     "date": "2026-08-11",
     "brand": "sleepycat",
     "type": "ux",
