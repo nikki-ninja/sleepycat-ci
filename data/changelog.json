@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-08-13",
+    "brand": "sleepycat",
+    "type": "new-product",
+    "text": "new SKU live - 'child sku' at Rs 0"
+  },
+  {
     "date": "2026-08-12",
     "brand": "sleepycat",
     "type": "price",

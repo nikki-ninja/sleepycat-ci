@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-12T08:03:27.890494Z",
-  "date": "2026-08-12",
+  "generated": "2026-08-13T08:05:19.119477Z",
+  "date": "2026-08-13",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -1052,6 +1052,7 @@
     "sleepycat": {
       "platform": "shopify",
       "products": {
+        "child sku": 0,
         "Lycra Mattress Protector": 799,
         "300 TC Cotton-soft Microfiber Sheet Set": 1025,
         "Noa Recliner": 15999,
@@ -1136,7 +1137,7 @@
         "Hybrid Latex Mattress": 8799
       },
       "on_sale": true,
-      "count": 82,
+      "count": 83,
       "offer": 20,
       "signals": {
         "quiz": true,
