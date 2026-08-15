@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sleepycat · Product Analytics</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+  :root {
+    --surface-0: #f6f1e7; --surface-1: #fbf8f1; --surface-2: #ffffff;
+    --text-primary: #2b2018; --text-secondary: #5e5040; --text-muted: #948572;
+    --border: rgba(43,32,24,0.10); --border-strong: rgba(43,32,24,0.18);
+    --plum: #6b4226; --plum-light: #8a5a36; --mustard: #e0b64a; --mustard-light: #faf1da; --mustard-dark: #8a6a1f;
+    --bg-accent: #f2e9de; --text-accent: #6b4226;
+    --bg-success: #e6f2e2; --text-success: #2f6b1f;
+    --bg-danger: #fbe8e4; --text-danger: #a5401f;
+    --bg-warning: #fbf0d9; --text-warning: #8a5f0c;
+    --radius: 8px; --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --surface-0: #17130f; --surface-1: #1d1813; --surface-2: #262019;
+      --text-primary: #f3ede2; --text-secondary: #cbbfa9; --text-muted: #948572;
+      --border: rgba(255,255,255,0.10); --border-strong: rgba(255,255,255,0.18);
+      --plum: #b08a5f; --plum-light: #c9a679; --mustard: #dcbb63; --mustard-light: #332c17; --mustard-dark: #e8d29a;
+      --bg-accent: #2e2620; --text-accent: #c9a679;
+      --bg-success: #1c3213; --text-success: #a8d99a;
+      --bg-danger: #3a1e17; --text-danger: #f5a58c;
+      --bg-warning: #3a2c0f; --text-warning: #f0c674;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-sans); background: var(--surface-0); color: var(--text-primary); font-size: 14px; line-height: 1.5; }
+  .app { display: flex; height: 100vh; overflow: hidden; }
+  .sidebar { width: 228px; flex-shrink: 0; background: var(--plum); color: #f3ede8; display: flex; flex-direction: column; overflow-y: auto; }
+  .sidebar-header { padding: 18px 16px 14px; border-bottom: 1px solid rgba(255,255,255,0.14); }
+  .brand-row { display: flex; align-items: center; gap: 8px; }
+  .brand-mark { width: 26px; height: 26px; border-radius: 7px; background: var(--mustard); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; color: #2b2018; flex-shrink: 0; }
+  .brand { font-size: 14px; font-weight: 500; color: #fff; letter-spacing: -0.2px; }
+  .brand-sub { font-size: 10.5px; color: rgba(243,237,232,0.6); margin-top: 3px; }
+  .nav-section { padding: 13px 8px 2px; }
+  .nav-label { font-size: 9.5px; font-weight: 500; color: rgba(243,237,232,0.42); text-transform: uppercase; letter-spacing: 0.7px; padding: 0 8px; margin-bottom: 4px; }
+  .nav-item { display: flex; align-items: center; gap: 8px; padding: 7px 8px; border-radius: 6px; cursor: pointer; font-size: 12.5px; color: rgba(243,237,232,0.8); transition: background 0.12s; border: none; background: none; width: 100%; text-align: left; }
+  .nav-item:hover { background: rgba(255,255,255,0.08); color: #fff; }
+  .nav-item.active { background: var(--mustard); color: #2b2018; font-weight: 500; }
+  .nav-icon { width: 16px; text-align: center; font-size: 14px; flex-shrink: 0; }
+  .updated-badge { margin-top: auto; padding: 12px 16px; font-size: 10px; color: rgba(243,237,232,0.42); border-top: 1px solid rgba(255,255,255,0.14); line-height: 1.5; }
+  .site-link { display: block; padding: 8px 16px 4px; font-size: 11px; color: rgba(243,237,232,0.65); text-decoration: none; }
+  .site-link:hover { color: #fff; }
+  .main { flex: 1; overflow-y: auto; background: var(--surface-0); }
+  .topbar { position: sticky; top: 0; z-index: 10; background: var(--surface-0); border-bottom: 0.5px solid var(--border); padding: 0 24px; height: 52px; display: flex; align-items: center; justify-content: space-between; }
+  .page-title { font-size: 15px; font-weight: 500; }
+  .topbar-right { display: flex; align-items: center; gap: 8px; }
+  .chip { font-size: 11.5px; padding: 4px 10px; border-radius: 20px; background: var(--bg-success); color: var(--text-success); font-weight: 500; }
+  .chip.warn { background: var(--bg-warning); color: var(--text-warning); }
+  .chip.danger { background: var(--bg-danger); color: var(--text-danger); }
+  .date-label { font-size: 11.5px; color: var(--text-muted); }
+  .content { padding: 20px 24px 44px; display: none; }
+  .content.active { display: block; }
+  .kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(148px, 1fr)); gap: 10px; margin-bottom: 18px; }
+  .kpi-card { background: var(--surface-2); border: 0.5px solid var(--border); border-radius: 12px; padding: 13px 15px; }
+  .kpi-card.neg-flag { border-color: var(--text-danger); border-width: 1px; }
+  .kpi-label { font-size: 10.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+  .kpi-value { font-size: 21px; font-weight: 500; color: var(--text-primary); line-height: 1; margin-bottom: 4px; }
+  .kpi-delta { font-size: 11.5px; display: flex; align-items: center; gap: 3px; }
+  .kpi-delta.pos { color: var(--text-success); } .kpi-delta.neg { color: var(--text-danger); } .kpi-delta.neu { color: var(--text-muted); }
+  .analyst-note { background: var(--plum); color: #f3ede8; border-radius: 12px; padding: 14px 18px; margin-bottom: 18px; }
+  .analyst-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+  .analyst-head-left { display: flex; align-items: center; gap: 8px; }
+  .analyst-avatar { width: 22px; height: 22px; border-radius: 6px; background: var(--mustard); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500; color: #2b2018; flex-shrink: 0; }
+  .analyst-title { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; color: rgba(243,237,232,0.65); }
+  .roadmap-ref { font-size: 9.5px; font-weight: 500; padding: 3px 8px; border-radius: 10px; background: rgba(255,255,255,0.14); color: #f3ede8; white-space: nowrap; }
+  .analyst-body { font-size: 13px; line-height: 1.65; color: #f3ede8; }
+  .analyst-body b { font-weight: 500; color: #fff; }
+  .analyst-body .rec { display: block; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.18); color: var(--mustard); }
+  .analyst-body .decision { font-size: 11px; color: rgba(243,237,232,0.55); margin-top: 6px; }
+  .insight-banner { background: var(--bg-accent); border: 0.5px solid var(--border); border-radius: 12px; padding: 12px 16px; margin-bottom: 18px; font-size: 12.5px; color: var(--text-accent); line-height: 1.55; }
+  .insight-banner.warn { background: var(--bg-warning); color: var(--text-warning); }
+  .insight-banner.success { background: var(--bg-success); color: var(--text-success); }
+  .insight-banner.danger { background: var(--bg-danger); color: var(--text-danger); }
+  .insight-label { font-size: 9.5px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 4px; opacity: 0.75; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  @media (max-width: 900px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+  .chart-card { background: var(--surface-2); border: 0.5px solid var(--border); border-radius: 12px; padding: 16px; }
+  .chart-card.full { margin-bottom: 14px; }
+  .card-title { font-size: 12.5px; font-weight: 500; color: var(--text-primary); margin-bottom: 2px; }
+  .card-sub { font-size: 10.5px; color: var(--text-muted); margin-bottom: 12px; }
+  .card-take { font-size: 11.5px; color: var(--text-accent); background: var(--bg-accent); border-radius: 6px; padding: 7px 10px; margin-top: 10px; line-height: 1.5; }
+  .chart-wrap { position: relative; width: 100%; }
+  .legend { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 10px; }
+  .legend-item { display: flex; align-items: center; gap: 5px; font-size: 11.5px; color: var(--text-secondary); }
+  .legend-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+  .table-scroll { max-height: 560px; overflow-y: auto; border: 0.5px solid var(--border); border-radius: 12px; }
+  .data-table { width: 100%; border-collapse: collapse; font-size: 11.5px; }
+  .data-table thead th { position: sticky; top: 0; background: var(--surface-1); z-index: 2; text-align: right; color: var(--text-muted); font-weight: 500; font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.4px; padding: 8px 10px; border-bottom: 1px solid var(--border-strong); white-space: nowrap; cursor: help; }
+  .data-table thead th:first-child { text-align: left; }
+  .data-table td { padding: 6px 10px; border-bottom: 0.5px solid var(--border); color: var(--text-secondary); text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .data-table td:first-child { text-align: left; color: var(--text-primary); font-weight: 500; }
+  .data-table tr:hover td { background: var(--surface-1); }
+  .cell-neg { color: var(--text-danger) !important; font-weight: 500; background: var(--bg-danger); }
+  .cell-warn { color: var(--text-warning) !important; background: var(--bg-warning); }
+  .cell-pos { color: var(--text-success) !important; }
+  .row-flag { border-left: 2px solid var(--text-danger); }
+  .table-legend { display: flex; gap: 16px; font-size: 10.5px; color: var(--text-muted); margin: 8px 2px 14px; flex-wrap: wrap; }
+  .table-legend span { display: flex; align-items: center; gap: 5px; }
+  .dot-sq { width: 9px; height: 9px; border-radius: 2px; display: inline-block; }
+  .funnel-steps { display: flex; flex-direction: column; gap: 0; }
+  .funnel-step { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 0.5px solid var(--border); }
+  .funnel-step:last-child { border-bottom: none; }
+  .f-label { width: 130px; font-size: 12px; color: var(--text-secondary); flex-shrink: 0; }
+  .f-bar-wrap { flex: 1; } .f-bar { height: 22px; border-radius: 4px; background: var(--plum); opacity: 0.88; transition: width 0.4s; display: flex; align-items: center; padding-left: 8px; }
+  .f-bar-val { font-size: 11px; font-weight: 500; color: white; white-space: nowrap; }
+  .f-meta { width: 100px; text-align: right; flex-shrink: 0; }
+  .f-pct { font-size: 12px; font-weight: 500; color: var(--text-primary); } .f-drop { font-size: 10px; color: var(--text-danger); } .f-drop.ok { color: var(--text-success); }
+  .section-title { font-size: 11.5px; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; margin: 22px 0 10px; }
+  .sprint-card { background: var(--surface-2); border: 0.5px solid var(--border); border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; display: flex; gap: 12px; }
+  .sprint-priority { width: 36px; height: 20px; border-radius: 4px; font-size: 10px; font-weight: 500; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+  .p0 { background: var(--bg-danger); color: var(--text-danger); } .p1 { background: var(--bg-warning); color: var(--text-warning); } .p2 { background: var(--bg-accent); color: var(--text-accent); }
+  .sprint-body { flex: 1; } .sprint-title { font-size: 13px; font-weight: 500; color: var(--text-primary); margin-bottom: 3px; }
+  .sprint-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+  .sprint-tags { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
+  .tag { font-size: 10px; padding: 2px 8px; border-radius: 10px; background: var(--surface-1); color: var(--text-muted); border: 0.5px solid var(--border); }
+  .gap-card { background: var(--surface-1); border: 1px dashed var(--border-strong); border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; }
+  .gap-title { font-size: 12.5px; font-weight: 500; color: var(--text-primary); margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+  .gap-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.55; }
+  .cross-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+  .cross-table th { background: var(--surface-1); padding: 7px 8px; font-size: 10px; text-transform: uppercase; color: var(--text-muted); font-weight: 500; text-align: right; border-bottom: 1px solid var(--border-strong); cursor: help; }
+  .cross-table th:first-child { text-align: left; }
+  .cross-table td { padding: 6px 8px; text-align: right; border-bottom: 0.5px solid var(--border); color: var(--text-secondary); font-variant-numeric: tabular-nums; }
+  .cross-table td:first-child { text-align: left; color: var(--text-primary); font-weight: 500; }
+  .heat-cell { border-radius: 4px; padding: 3px 8px; display: inline-block; min-width: 46px; cursor: help; }
+  .cro-matrix { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .cro-matrix th { background: var(--surface-1); padding: 8px; font-size: 10px; text-transform: uppercase; color: var(--text-muted); font-weight: 500; text-align: left; border-bottom: 1px solid var(--border-strong); }
+  .cro-matrix td { padding: 9px 8px; border-bottom: 0.5px solid var(--border); vertical-align: top; }
+  .prio-pill { font-size: 10px; font-weight: 500; padding: 3px 9px; border-radius: 10px; display: inline-block; white-space: nowrap; }
+  .prio-high { background: var(--bg-danger); color: var(--text-danger); }
+  .prio-med { background: var(--bg-warning); color: var(--text-warning); }
+  .prio-low { background: var(--bg-success); color: var(--text-success); }
+  .explain-box { background: var(--surface-1); border-left: 3px solid var(--mustard); border-radius: 0 8px 8px 0; padding: 10px 14px; margin-bottom: 12px; font-size: 12px; color: var(--text-secondary); line-height: 1.55; }
+  .explain-box b { color: var(--text-primary); }
+</style>
+</head>
+<body>
+<div class="app">
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <div class="brand-row"><div class="brand-mark">SC</div><div class="brand">Sleepycat</div></div>
+    <div class="brand-sub">Product Analytics · D2C + Store</div>
+  </div>
+  <div class="nav-section"><div class="nav-label">Overview</div>
+    <button class="nav-item active" onclick="showPage('daily', this)"><span class="nav-icon">◆</span> Daily funnel table</button>
+    <button class="nav-item" onclick="showPage('healthdash', this)"><span class="nav-icon">◈</span> Health dashboard</button>
+    <button class="nav-item" onclick="showPage('anomalylog', this)"><span class="nav-icon">⚠</span> Anomaly log</button>
+  </div>
+  <div class="nav-section"><div class="nav-label">Funnel & GA4</div>
+    <button class="nav-item" onclick="showPage('funnel', this)"><span class="nav-icon">▽</span> Funnel & checkout</button>
+    <button class="nav-item" onclick="showPage('ga4cro', this)"><span class="nav-icon">◉</span> GA4 & CRO diagnostics</button>
+    <button class="nav-item" onclick="showPage('payments', this)"><span class="nav-icon">₹</span> Payment health</button>
+    <button class="nav-item" onclick="showPage('microfunnel', this)"><span class="nav-icon">✦</span> Micro-funnel backlog</button>
+  </div>
+  <div class="nav-section"><div class="nav-label">Customer</div>
+    <button class="nav-item" onclick="showPage('behaviour', this)"><span class="nav-icon">↻</span> Cart recovery</button>
+    <button class="nav-item" onclick="showPage('cohorts', this)"><span class="nav-icon">⊙</span> New vs returning</button>
+    <button class="nav-item" onclick="showPage('crosssell', this)"><span class="nav-icon">⇄</span> Cross-sell & basket</button>
+  </div>
+  <div class="nav-section"><div class="nav-label">Products & Geo</div>
+    <button class="nav-item" onclick="showPage('products', this)"><span class="nav-icon">▤</span> Product mix</button>
+    <button class="nav-item" onclick="showPage('geo', this)"><span class="nav-icon">⊕</span> State x product</button>
+  </div>
+  <div class="nav-section"><div class="nav-label">Performance</div>
+    <button class="nav-item" onclick="showPage('ads', this)"><span class="nav-icon">▲</span> Meta ads</button>
+    <button class="nav-item" onclick="showPage('competitor', this)"><span class="nav-icon">◫</span> Competitor analysis (draft)</button>
+    <button class="nav-item" onclick="showPage('roadmap', this)"><span class="nav-icon">⚑</span> Roadmap signals</button>
+  </div>
+  <a class="site-link" href="https://sleepycat.in" target="_blank">↗ sleepycat.in</a>
+  <div class="updated-badge">Shopify sessions/ATC/orders: daily<br>GA4 + Razorpay: live sync<br>Last pull · Aug 15, 2026</div>
+</nav>
+
+<div class="main">
+  <div class="topbar">
+    <div class="page-title" id="page-title">Daily funnel table</div>
+    <div class="topbar-right">
+      <span class="chip danger" id="topChip1">—</span>
+      <span class="date-label">as of Aug 15, 2026</span>
+    </div>
+  </div>
+
+  <!-- DAILY -->
+  <div class="content active" id="page-daily">
+    <div class="insight-banner">
+      POS excluded — D2C online only, same filter as your SQL (<code>ORDER_NAME NOT ILIKE '%POS%'</code>). ATC→Order % = orders÷ATC×100. CVR = orders÷sessions×100.
+    </div>
+
+    <p class="section-title">CVR trend — last 75 days</p>
+    <div class="chart-card full">
+      <div class="card-title">Daily CVR (orders ÷ sessions × 100)</div>
+      <div class="chart-wrap" style="height:180px"><canvas id="cvrTrendChart" role="img" aria-label="Daily CVR trend line chart over last 75 days"></canvas></div>
+    </div>
+
+    <p class="section-title">Daily consolidated funnel — last 75 days (Shopify, D2C online only, excl. POS)</p>
+    <div class="table-legend">
+      <span><span class="dot-sq" style="background:var(--bg-danger)"></span>CVR &lt; 0.4% (critical)</span>
+      <span><span class="dot-sq" style="background:var(--bg-warning)"></span>CVR 0.4–0.55% (watch)</span>
+      <span><span class="dot-sq" style="background:var(--bg-success)"></span>CVR ≥ 0.9% (strong day)</span>
+    </div>
+    <div class="table-scroll">
+      <table class="data-table" id="dailyTable">
+        <thead><tr>
+          <th>Date</th><th>Sessions</th><th>ATC</th><th title="ATC ÷ sessions × 100">ATC %</th><th>Orders</th><th>Revenue (₹)</th><th>AOV (₹)</th><th title="orders ÷ ATC × 100 — Shopify native, same-system ratio">ATC→Order %</th><th title="orders ÷ sessions × 100">CVR %</th><th title="Today's CVR minus yesterday's CVR, in percentage points">CVR Δ vs prev day</th>
+        </tr></thead>
+        <tbody id="dailyTableBody"></tbody>
+      </table>
+    </div>
+
+    <p class="section-title">Weekly checkout-stage view</p>
+    <div class="card-take" style="margin-bottom:10px">GA4 logs 3-15x more "checkout clicks" than Shopify records as actual checkouts — even the more conservative of two GA4 signals shows a real, widening 3-8x gap. Means people are clicking checkout but the server-side record isn't always created.</div>
+    <div class="table-scroll" style="max-height:380px">
+      <table class="data-table">
+        <thead><tr><th>Week of</th><th>Shopify checkout started</th><th>Shopify orders</th><th title="From magic_checkout_requested per your original file">GA4 Signal 1 (magic_checkout)</th><th title="Ratio of Signal 1 to Shopify checkout started">Ratio 1</th><th title="From GA4_SESSIONS_BY_DATE_SOURCE.CHECKOUTS — likely begin_checkout">GA4 Signal 2 (begin_checkout)</th><th title="Ratio of Signal 2 to Shopify checkout started">Ratio 2</th></tr></thead>
+        <tbody>
+          <tr><td>Aug 10</td><td>3,120</td><td>1,536</td><td>23,533</td><td class="cell-warn">7.5x</td><td>9,699</td><td>3.1x</td></tr>
+          <tr><td>Aug 3</td><td>3,767</td><td>1,818</td><td>40,584</td><td class="cell-warn">10.8x</td><td>14,110</td><td>3.7x</td></tr>
+          <tr><td>Jul 27</td><td>2,107</td><td>1,124</td><td>30,103</td><td class="cell-neg">14.3x</td><td>9,948</td><td>4.7x</td></tr>
+          <tr><td>Jul 20</td><td>1,870</td><td>1,052</td><td>17,970</td><td>9.6x</td><td>6,347</td><td>3.4x</td></tr>
+          <tr><td>Jul 13</td><td>1,661</td><td>1,164</td><td>19,441</td><td class="cell-warn">11.7x</td><td>6,865</td><td>4.1x</td></tr>
+          <tr><td>Jul 6</td><td>1,553</td><td>1,366</td><td>23,866</td><td class="cell-neg">15.4x</td><td>8,442</td><td class="cell-warn">5.4x</td></tr>
+          <tr><td>Jun 29</td><td>1,632</td><td>1,419</td><td>25,396</td><td class="cell-neg">15.6x</td><td>8,660</td><td class="cell-warn">5.3x</td></tr>
+          <tr><td>Jun 22</td><td>859</td><td>852</td><td>17,464</td><td class="cell-neg">20.3x</td><td>6,821</td><td class="cell-neg">7.9x</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- HEALTH DASHBOARD -->
+  <div class="content" id="page-healthdash">
+    <div class="insight-banner">
+      Sleepycat sells through the D2C website and physical stores (POS) — shown separately below, and combined in the weekly table further down.
+    </div>
+
+    <div class="analyst-note">
+      <div class="analyst-head"><div class="analyst-head-left"><div class="analyst-avatar">A</div><div class="analyst-title">Analyst read — today vs yesterday</div></div><span class="roadmap-ref">Roadmap: see "Store parity" P2</span></div>
+      <div class="analyst-body" id="todayAnalystBody">Loading…</div>
+    </div>
+
+    <p class="section-title">D2C website — today's KPIs</p>
+    <div class="kpi-row" id="todayKpiRow"></div>
+
+    <p class="section-title">Store (physical retail) — today's KPIs</p>
+    <div class="kpi-row">
+      <div class="kpi-card"><div class="kpi-label">Store orders (Aug 14)</div><div class="kpi-value">275</div><div class="kpi-delta pos">↑ +58.1% vs Aug 13 (174)</div></div>
+      <div class="kpi-card"><div class="kpi-label">Store revenue</div><div class="kpi-value">₹44.5L</div><div class="kpi-delta pos">↑ +45.8% vs Aug 13</div></div>
+      <div class="kpi-card"><div class="kpi-label">Store AOV</div><div class="kpi-value">₹16,186</div><div class="kpi-delta neg">↓ −7.8% vs Aug 13</div></div>
+      <div class="kpi-card"><div class="kpi-label">Store AOV vs D2C AOV</div><div class="kpi-value">+76%</div><div class="kpi-delta neu">Consistently higher</div></div>
+    </div>
+
+    <p class="section-title">Daily — Online vs POS, last 14 days</p>
+    <div class="table-scroll" style="max-height:340px">
+      <table class="data-table">
+        <thead><tr><th>Date</th><th>Online orders</th><th>Online revenue (₹)</th><th>POS orders</th><th>POS revenue (₹)</th></tr></thead>
+        <tbody id="dailyOnlinePosBody"></tbody>
+      </table>
+    </div>
+
+    <p class="section-title">7-day daily orders & revenue trend — D2C only</p>
+    <div class="chart-card full">
+      <div class="card-title">Orders & revenue — last 7 days</div>
+      <div class="card-sub">D2C online only (excludes POS)</div>
+      <div class="legend"><span class="legend-item"><span class="legend-dot" style="background:#6b4226"></span>Orders</span><span class="legend-item"><span class="legend-dot" style="background:#e0b64a"></span>Revenue (₹L)</span></div>
+      <div class="chart-wrap" style="height:220px"><canvas id="dailyChart" role="img" aria-label="Bar chart of daily orders and revenue for last 7 days"></canvas></div>
+    </div>
+
+    <p class="section-title">Weekly consolidated table — Online (D2C) vs POS (store)</p>
+    <div class="table-scroll" style="max-height:380px">
+      <table class="data-table">
+        <thead><tr><th>Week of</th><th>Online orders</th><th>Online revenue (₹)</th><th>Online AOV (₹)</th><th>POS orders</th><th>POS revenue (₹)</th><th>POS AOV (₹)</th></tr></thead>
+        <tbody id="weeklyHealthBody"></tbody>
+      </table>
+    </div>
+    <div class="chart-card full">
+      <div class="card-title">Online vs POS revenue — weekly, combined</div>
+      <div class="chart-wrap" style="height:220px"><canvas id="weeklyCombinedChart" role="img" aria-label="Weekly combined online and POS revenue chart"></canvas></div>
+    </div>
+    <div class="insight-banner">
+      POS revenue runs consistently 1.3-1.7x online revenue on similar or lower order counts — store AOV is structurally higher every single week, not a one-day fluke.
+      <span class="rec">→ Pull the promo calendar for Aug 3 week specifically — online orders peaked (1,817) but AOV bottomed out — check if it was a store-wide discount vs SKU-specific.</span>
+    </div>
+
+    <p class="section-title">D2C vs store — side by side</p>
+    <div class="chart-card full">
+      <div class="card-title">Orders comparison — Aug 14</div><div class="card-sub">Two separate channels, shown together for scale comparison only</div>
+      <div class="chart-wrap" style="height:140px"><canvas id="channelChart" role="img" aria-label="Comparison of D2C online and store orders"></canvas></div>
+      <div class="card-take">Orders are near parity (282 vs 275) but revenue isn't: D2C ₹25.95L vs Store ₹44.51L — store makes almost 1.7x the money from roughly the same order count, because store AOV (₹16,186) runs 76% above D2C (₹9,203). For method-level payment detail (UPI/Card/EMI/Netbanking), see the Payment Health tab — that's where the real CRO finding lives.</div>
+    </div>
+  </div>
+
+  <!-- FUNNEL -->
+  <div class="content" id="page-funnel">
+    <div class="card-take" style="margin-bottom:14px">Cart abandonment improved 76.9%→70.1%. Checkout-click-to-checkout-created gap widened to 10x+ — the highest-leverage CRO fix on this dashboard.</div>
+
+    <div class="kpi-row">
+      <div class="kpi-card"><div class="kpi-label">Sessions (wk Aug 10)</div><div class="kpi-value">156,554</div><div class="kpi-delta neg">↓ −39% vs prev wk</div></div>
+      <div class="kpi-card"><div class="kpi-label">ATC rate</div><div class="kpi-value">6.7%</div><div class="kpi-delta pos">↑ from 6.3%</div></div>
+      <div class="kpi-card neg-flag"><div class="kpi-label">Cart abandonment</div><div class="kpi-value">70.1%</div><div class="kpi-delta pos">↑ improved vs 76.9%</div></div>
+      <div class="kpi-card neg-flag"><div class="kpi-label">Checkout drop-off</div><div class="kpi-value">50.8%</div><div class="kpi-delta neg">High</div></div>
+      <div class="kpi-card"><div class="kpi-label">CVR (orders/sessions)</div><div class="kpi-value">0.98%</div><div class="kpi-delta pos">↑ from 0.71%</div></div>
+      <div class="kpi-card"><div class="kpi-label">AOV (wk)</div><div class="kpi-value">₹8,372</div><div class="kpi-delta pos">↑ from ₹7,947</div></div>
+    </div>
+
+    <p class="section-title">Where 100 sessions go (week of Aug 10)</p>
+    <div class="chart-card full">
+      <div class="card-title">Session outcome breakdown</div><div class="card-sub">Out of every 100 sessions, how many reach each stage — and how many are lost at each one</div>
+      <div class="chart-wrap" style="height:120px"><canvas id="sessionOutcomeChart" role="img" aria-label="Session outcome breakdown as stacked horizontal bar"></canvas></div>
+      <div class="card-take">93 of 100 sessions leave without adding anything to cart — that's the biggest single lever on this page. Of the ~7 who add to cart, only ~2 reach checkout, and roughly 1 completes an order. Two very different problems: getting people to add to cart (PDP/product discovery) vs getting people who already added to cart through checkout (the intent/checkout gap below).</div>
+    </div>
+
+    <p class="section-title">Funnel drop-off waterfall (week of Aug 10)</p>
+    <div class="chart-card full">
+      <div class="card-title">Stage-by-stage drop</div><div class="card-sub">Each bar = volume reaching that stage — Shopify-native, single system</div>
+      <div class="funnel-steps">
+        <div class="funnel-step"><div class="f-label">Sessions</div><div class="f-bar-wrap"><div class="f-bar" style="width:100%"><span class="f-bar-val">156,554</span></div></div><div class="f-meta"><span class="f-pct">100%</span></div></div>
+        <div class="funnel-step"><div class="f-label">Add to cart</div><div class="f-bar-wrap"><div class="f-bar" style="width:6.7%;background:#e0b64a"><span class="f-bar-val">10,442</span></div></div><div class="f-meta"><span class="f-pct">6.7%</span><br><span class="f-drop">−93.3%</span></div></div>
+        <div class="funnel-step"><div class="f-label">Checkout started</div><div class="f-bar-wrap"><div class="f-bar" style="width:2%;background:#3a8a6b"><span class="f-bar-val">3,120</span></div></div><div class="f-meta"><span class="f-pct">29.9%</span><br><span class="f-drop">of ATC</span></div></div>
+        <div class="funnel-step"><div class="f-label">Orders</div><div class="f-bar-wrap"><div class="f-bar" style="width:1%;background:#c9962a"><span class="f-bar-val">1,536</span></div></div><div class="f-meta"><span class="f-pct">49.2%</span><br><span class="f-drop ok">of checkout</span></div></div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="chart-card">
+        <div class="card-title">Cart abandonment % — weekly trend</div><div class="card-sub">Lower is better</div>
+        <div class="chart-wrap" style="height:180px"><canvas id="cartAbChart" role="img" aria-label="Cart abandonment trend"></canvas></div>
+        <div class="card-take">Improving steadily since Jun 22 (89%→70%). Whatever changed mid-July, keep doing it.</div>
+      </div>
+      <div class="chart-card">
+        <div class="card-title">GA4 checkout intent vs Shopify checkouts</div><div class="card-sub">Gap = potential technical loss point</div>
+        <div class="chart-wrap" style="height:180px"><canvas id="ga4Chart" role="img" aria-label="GA4 vs Shopify checkout comparison"></canvas></div>
+        <div class="card-take">Gap widening, not shrinking — this is getting worse, not self-correcting. See explanation on Daily Funnel tab.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GA4 & CRO DIAGNOSTICS -->
+  <div class="content" id="page-ga4cro">
+    <p class="section-title">Traffic source × revenue — monthly</p>
+    <div class="table-scroll" style="max-height:380px">
+      <table class="data-table">
+        <thead><tr><th>Month</th><th>Source / Medium</th><th>Orders</th><th>Revenue (₹)</th><th title="Revenue ÷ orders">AOV (₹)</th></tr></thead>
+        <tbody id="utmRevenueBody"></tbody>
+      </table>
+    </div>
+    <div class="card-take">Google (cpc + organic) drives ~70% of tracked revenue every month, consistently. Facebook BOFU revenue share has been shrinking since April even as Facebook TOFU held steady — retargeting spend isn't converting as well as prospecting right now.</div>
+
+    <p class="section-title">New vs returning revenue by channel — monthly</p>
+    <div class="table-scroll" style="max-height:380px">
+      <table class="data-table">
+        <thead><tr><th>Month</th><th>Channel</th><th>New orders</th><th>New revenue (₹)</th><th>Repeat orders</th><th>Repeat revenue (₹)</th><th title="New revenue ÷ total channel revenue">New share %</th></tr></thead>
+        <tbody id="channelNewRepeatMonthlyBody"></tbody>
+      </table>
+    </div>
+    <div class="card-take">Facebook's new-customer share has been climbing every month (April: 66% new → August: 73% new) — it's becoming a pure acquisition channel, contributing less repeat revenue over time. Google and Direct hold steady around 78-82% new across all 5 months — stable channel character, not drifting.</div>
+
+    <p class="section-title">New vs returning revenue by channel — last 90 days (summary)</p>
+    <div class="table-scroll" style="max-height:320px">
+      <table class="data-table">
+        <thead><tr><th>Channel</th><th>New orders</th><th>New revenue (₹)</th><th>Repeat orders</th><th>Repeat revenue (₹)</th><th title="New revenue ÷ total channel revenue">New share %</th></tr></thead>
+        <tbody id="channelNewRepeatBody"></tbody>
+      </table>
+    </div>
+    <div class="card-take">Direct and Google are both ~78-82% new-customer revenue — mostly acquisition channels. Organic search stands out: 86% new — almost nobody comes back through organic search specifically, they come back direct or via WhatsApp/email instead. Facebook is the most balanced at 79% new / 21% repeat, closest to a healthy full-funnel channel.</div>
+
+    <p class="section-title">PDP performance — where carts leak</p>
+    <div class="table-scroll" style="max-height:380px">
+      <table class="data-table">
+        <thead><tr><th>Product</th><th>Views</th><th>ATC</th><th>Checkout</th><th title="ATC ÷ views">View→ATC %</th><th title="Checkout ÷ ATC">ATC→Checkout %</th></tr></thead>
+        <tbody id="pdpFunnelBody"></tbody>
+      </table>
+    </div>
+    <div class="card-take">Two different leaks: Hybrid Latex Mattress loses people before ATC (2.6% view→ATC — normal for a ₹15-20K item, but worth a PDP test given its traffic). Tri Fold and Aeroflow Topper lose people <b>after</b> ATC (under 5% ATC→Checkout) — likely thin reviews/content on cheaper SKUs, not a payment issue.</div>
+
+    <p class="section-title">Traffic quality — monthly</p>
+    <div class="explain-box">
+      <b>What "non-engaged" means:</b> GA4 marks a session "engaged" if it lasts 10+ seconds, has a conversion event, or has 2+ page views. A "non-engaged" session is someone who landed and left almost immediately — none of those three things happened. It's GA4's closest equivalent to classic "bounce rate," just inverted (non-engaged = bounced).
+    </div>
+    <div class="chart-card full">
+      <div class="card-title">Sessions & avg session duration</div>
+      <div class="chart-wrap" style="height:200px"><canvas id="engagementChart" role="img" aria-label="Sessions and session duration trend by month"></canvas></div>
+      <div class="card-take">March-May: high traffic (900K-1.1M sessions/mo), short sessions (~110s), ~4.5% non-engaged rate — high-volume, high-quality months. August: traffic dropped to 478K sessions, avg session length nearly doubled (185s), and the non-engaged rate tripled to 13.6%, the highest of the period. Fewer people are visiting, and more of them are landing and leaving without engaging — worth checking if a site change or ad-mix shift happened around late July/August.</div>
+    </div>
+
+    <p class="section-title">CRO opportunity matrix</p>
+    <table class="cro-matrix">
+      <thead><tr><th>Segment</th><th>Traffic</th><th>Problem</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td>Facebook BOFU (retargeting)</td><td>647,920 sessions</td><td>View→ATC 0.70% — lower than cold TOFU (1.13%)</td><td><span class="prio-pill prio-high">🔴 High</span></td></tr>
+        <tr><td>Cardless EMI checkout</td><td>6,532 attempts (90d)</td><td>79.7% failure rate — see Payment Health tab</td><td><span class="prio-pill prio-high">🔴 High</span></td></tr>
+        <tr><td>Google CPC</td><td>3.27M sessions (largest)</td><td>5.15% view→ATC — healthy, scale means small gains are large revenue</td><td><span class="prio-pill prio-med">🟡 Medium</span></td></tr>
+        <tr><td>Mobile vs Desktop split</td><td>Needs instrumentation</td><td>GA4 device dimension not yet synced</td><td><span class="prio-pill prio-med">🟡 Needs data</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- PAYMENT HEALTH (new) -->
+  <div class="content" id="page-payments">
+    <div class="insight-banner danger">
+      <div class="insight-label">The biggest finding in this dashboard</div>
+      <b>Cardless EMI has a 79.7% payment failure rate</b> (5,190 failed vs 1,327 captured, last 90 days) — and it's not a technical gateway problem. 2,046 failures are <code>payment_timed_out</code> and 1,803 are <code>payment_cancelled</code>; only 10 are genuine gateway errors. People are starting the EMI checkout and then abandoning it mid-flow — almost certainly because the lender redirect is slow, confusing, or feels untrustworthy. On a brand where EMI is core to converting ₹15-30K purchases, this is likely costing more revenue than any other single issue found in this dashboard.
+    </div>
+
+    <div class="analyst-note">
+      <div class="analyst-head"><div class="analyst-head-left"><div class="analyst-avatar">A</div><div class="analyst-title">What changed → Where → Why → Impact → Fix</div></div><span class="roadmap-ref">Roadmap: P0 "EMI checkout"</span></div>
+      <div class="analyst-body">
+        <b>Where:</b> Payment method selection screen, specifically the cardless EMI / "Buy now pay later" style lender redirect flow.<br>
+        <b>Why:</b> Timeout (39% of failures) + cancellation (35% of failures) together are 74% of all cardless EMI failures — this is a UX/trust/speed problem in the lender's redirect page, not a Sleepycat bug or a genuine card decline.<br>
+        <b>Impact:</b> ₹6.86Cr in failed cardless EMI attempts over 90 days (68.58L failed amount, scaled) vs ₹1.3Cr actually captured through that method — a huge share of high-ticket purchase intent is dying at this exact step.
+        <span class="rec">→ Fix: get session recordings of the cardless EMI flow this week. Check redirect load time, whether users understand what's happening, and whether the lender's OTP/verification step is the drop point.</span>
+      </div>
+    </div>
+
+    <p class="section-title">Payment method health — last 90 days (D2C online)</p>
+    <div class="explain-box">This is the actual UPI / Card / EMI / Netbanking / Wallet breakdown you asked for, sourced from Razorpay's raw payment attempts — not just the Shopify order-level Prepaid/COD flag shown on the Health Dashboard tab.</div>
+    <div class="table-scroll" style="max-height:340px">
+      <table class="data-table">
+        <thead><tr><th>Method</th><th>Captured</th><th>Failed</th><th>Refunded</th><th>Total attempts</th><th title="Captured ÷ (Captured+Failed+Created)">Success rate</th><th>Captured amount (₹)</th></tr></thead>
+        <tbody id="paymentMethodBody"></tbody>
+      </table>
+    </div>
+
+    <div class="grid-2">
+      <div class="chart-card">
+        <div class="card-title">Success rate by payment method</div><div class="card-sub">Higher is better — cardless EMI is the outlier</div>
+        <div class="chart-wrap" style="height:220px"><canvas id="methodSuccessChart" role="img" aria-label="Payment method success rate bar chart"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <div class="card-title">Cardless EMI failure reasons</div><div class="card-sub">5,190 failed attempts, last 90 days</div>
+        <div class="chart-wrap" style="height:220px"><canvas id="emiFailChart" role="img" aria-label="Cardless EMI failure reason breakdown"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MICRO-FUNNEL BACKLOG -->
+  <div class="content" id="page-microfunnel">
+    <div class="insight-banner warn">
+      <div class="insight-label">What this tab is — read this first</div>
+      This is a <b>build backlog</b>, not a live dashboard section. Sleepycat.in has a mattress quiz, pillow quiz, EMI calculator, and pincode checker already live — none fire analytics events today. Every card below is one thing to instrument, why it matters, and what question it answers once live.
+    </div>
+    <div class="gap-card"><div class="gap-title">1. Quiz completion → conversion</div><div class="gap-desc">Fire <code>quiz_started</code>, <code>quiz_completed</code>, <code>quiz_recommendation_shown</code>, <code>quiz_recommendation_purchased</code>. Strongest proxy for "considered purchase" intent you can build cheaply.</div></div>
+    <div class="gap-card"><div class="gap-title">2. On-site search term logging</div><div class="gap-desc">Log every search query and whether it returned zero results. You asked what people search for once on the site — this is the only way to answer that; channel-level source data (GA4 tab) tells you how they arrived, not what they typed once here.</div></div>
+    <div class="gap-card"><div class="gap-title">3. Pincode serviceability check</div><div class="gap-desc">Track <code>pincode_checked</code> with result. If PDP visitors are hitting "not serviceable," that's a silent conversion killer with zero current visibility.</div></div>
+    <div class="gap-card"><div class="gap-title">4. Size/variant toggle behaviour</div><div class="gap-desc">Track which size gets selected pre-ATC and whether visitors toggle between sizes (indecision signal). Cross with size distribution below.</div></div>
+
+    <p class="section-title">What we can already compute today (real data, not a gap)</p>
+    <div class="grid-2">
+      <div class="chart-card"><div class="card-title">Mattress orders by size (90d)</div><div class="card-sub">Parsed from SKU codes</div><div class="chart-wrap" style="height:200px"><canvas id="sizeChart" role="img" aria-label="Bar chart of mattress orders by size"></canvas></div></div>
+      <div class="chart-card"><div class="card-title">Mattress + accessory attach rate</div><div class="card-sub">Orders with mattress that also include bedding/pillow/case</div><div class="chart-wrap" style="height:200px"><canvas id="attachChart" role="img" aria-label="Donut chart of attach rate"></canvas></div></div>
+    </div>
+  </div>
+
+  <!-- CART RECOVERY -->
+  <div class="content" id="page-behaviour">
+    <div class="explain-box">
+      <b>What "recovery" means on this page:</b> Someone adds items to cart and reaches checkout on Shopify (a "checkout started" record is created), but doesn't complete payment — that's an <b>abandoned cart</b>. If they come back later (any channel — email, WhatsApp nudge, or just remembering) and complete the purchase, that's a <b>recovered</b> cart. Every chart below is measuring: out of everyone who abandoned, who came back, and how fast.
+    </div>
+    <div class="analyst-note">
+      <div class="analyst-head"><div class="analyst-head-left"><div class="analyst-avatar">A</div><div class="analyst-title">What changed → Where → Why → Impact → Fix</div></div><span class="roadmap-ref">Roadmap: P0 "Extend recovery flow"</span></div>
+      <div class="analyst-body">
+        86% of all recoveries happen within 24 hours, and the CleverTap flow already exits at 48 hours — so the flow works for the bulk of recoverable carts. The 14% recovering days 1-14 are the ones being missed, and they're disproportionately likely to be higher-value carts (bigger purchases take longer to decide on).
+        <span class="rec">→ extend the flow with day-3/5/7 touches using product-alternative content and reviews — not more discounts. Don't touch the 0-48hr flow, it's already working.</span>
+      </div>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi-card"><div class="kpi-label">Total abandoned (5 wks)</div><div class="kpi-value">5,728</div><div class="kpi-delta neu">Checkouts started, not completed</div></div>
+      <div class="kpi-card"><div class="kpi-label">Recovered (within 14d)</div><div class="kpi-value">2,016</div><div class="kpi-delta pos">35.2% came back and bought</div></div>
+      <div class="kpi-card neg-flag"><div class="kpi-label">Still abandoned</div><div class="kpi-value">3,712</div><div class="kpi-delta neg">64.8% never came back</div></div>
+      <div class="kpi-card"><div class="kpi-label">New/prospect share</div><div class="kpi-value">89%</div><div class="kpi-delta neg">First-time visitors abandon more</div></div>
+      <div class="kpi-card"><div class="kpi-label">Returning abandoners</div><div class="kpi-value">631</div><div class="kpi-delta pos">Higher intent — they've bought before</div></div>
+    </div>
+    <p class="section-title">Recovery by time bucket — when do people actually come back?</p>
+    <div class="chart-card full">
+      <div class="card-title">Of everyone who eventually recovered, when did they come back?</div><div class="card-sub">From abandon_purchase_behaviour, Aug 12 cohort sample</div>
+      <div class="chart-wrap" style="height:220px"><canvas id="recoveryBucketChart" role="img" aria-label="Recovery by time bucket"></canvas></div>
+      <div class="card-take">Half of all recoveries happen in the first 6 hours. If your recovery email/WhatsApp isn't firing within an hour of abandonment, you're already late for half your recoverable customers.</div>
+    </div>
+    <div class="grid-2">
+      <div class="chart-card"><div class="card-title">What they bought when they came back</div><div class="card-sub">Did they buy the same thing, more, or less than they abandoned?</div><div class="chart-wrap" style="height:200px"><canvas id="recoveryTypeChart" role="img" aria-label="Recovery behaviour donut"></canvas></div><div class="card-take">"Exact recovery" (21.5%) means they bought exactly what they left in cart — a straightforward reminder works. "Bought less" means price or a specific SKU was the blocker.</div></div>
+      <div class="chart-card"><div class="card-title">Is recovery getting better or worse over time?</div><div class="card-sub">Recovered vs still-abandoned count, by week</div><div class="chart-wrap" style="height:200px"><canvas id="recoveryTrendChart" role="img" aria-label="Weekly recovery trend"></canvas></div><div class="card-take">Both recovered and still-abandoned counts are growing with overall cart volume — recovery rate itself (35%) has stayed roughly flat, meaning the current flow isn't improving, just scaling with traffic.</div></div>
+    </div>
+  </div>
+
+  <!-- COHORTS -->
+  <div class="content" id="page-cohorts">
+    <div class="card-take" style="margin-bottom:14px">New = first-ever order. Returning = has bought before. Aug 3 week: new-customer AOV fell 9% while volume grew 24% — likely a discount push trading margin for volume, worth confirming against the promo calendar.</div>
+    <div class="kpi-row">
+      <div class="kpi-card"><div class="kpi-label">New customer orders (Aug 10)</div><div class="kpi-value">1,081</div><div class="kpi-delta neg">↓ −19% vs Aug 3</div></div>
+      <div class="kpi-card"><div class="kpi-label">Repeat orders (Aug 10)</div><div class="kpi-value">456</div><div class="kpi-delta neg">↓ −18% vs Aug 3</div></div>
+      <div class="kpi-card"><div class="kpi-label">New AOV (Aug 10)</div><div class="kpi-value">₹9,043</div><div class="kpi-delta pos">↑ +7.7% vs prev wk</div></div>
+      <div class="kpi-card neg-flag"><div class="kpi-label">Repeat AOV (Aug 10)</div><div class="kpi-value">₹6,553</div><div class="kpi-delta neg">↓ −22% vs prev wk</div></div>
+      <div class="kpi-card"><div class="kpi-label">New share of orders</div><div class="kpi-value">70.3%</div><div class="kpi-delta neu">Stable</div></div>
+    </div>
+
+    <p class="section-title">What new customers buy on order #1</p>
+    <div class="chart-card full">
+      <div class="chart-wrap" style="height:220px"><canvas id="newCustomerMixChart" role="img" aria-label="New customer first order product category mix"></canvas></div>
+      <div class="card-take">New customers' first order is 47% mattress by revenue — the rest (pillow, bedding, pet bed) is what actually pulls new-customer AOV down. Repeat customers only put 55% of spend into mattress — makes sense, most already own one.</div>
+    </div>
+
+    <p class="section-title">What returning customers bought first, then bought again</p>
+    <div class="table-scroll" style="max-height:320px">
+      <table class="data-table">
+        <thead><tr><th>First order category</th><th>Return order category</th><th>Customers</th><th>Share of repeat customers</th></tr></thead>
+        <tbody id="repeatSequenceBody"></tbody>
+      </table>
+    </div>
+    <div class="card-take">Mattress→Mattress is the single biggest repeat pattern — a second mattress, likely for another room or family member. Mattress→Bedding slightly outpaces the reverse, Bedding→Mattress — so it goes both ways: some buy the mattress and add bedding later, others test bedding/pillow first and come back for the mattress.</div>
+
+    <p class="section-title">New vs returning orders — last month</p>
+    <div class="chart-card full">
+      <div class="legend"><span class="legend-item"><span class="legend-dot" style="background:#6b4226"></span>New</span><span class="legend-item"><span class="legend-dot" style="background:#e0b64a"></span>Returning</span></div>
+      <div class="chart-wrap" style="height:220px"><canvas id="cohortOrderChart" role="img" aria-label="Stacked bar new vs returning"></canvas></div>
+    </div>
+    <div class="grid-2">
+      <div class="chart-card"><div class="card-title">AOV comparison — new vs repeat</div><div class="chart-wrap" style="height:200px"><canvas id="cohortAovChart" role="img" aria-label="AOV comparison line chart"></canvas></div></div>
+      <div class="chart-card"><div class="card-title">Revenue share — Aug 10 week</div><div class="chart-wrap" style="height:200px"><canvas id="cohortRevChart" role="img" aria-label="Revenue share donut"></canvas></div></div>
+    </div>
+  </div>
+
+  <!-- CROSS-SELL (new) -->
+  <div class="content" id="page-crosssell">
+    <p class="section-title">Top category pairs bought together (last 90 days)</p>
+    <div class="explain-box">
+      <b>Mattress</b> = all mattress SKUs. <b>Bedding</b> = toppers, protectors, bedsheets, duvet covers, comforters, throws. <b>Pillow</b> = pillow SKUs. <b>Case</b> = pillow cases specifically.
+    </div>
+    <div class="table-scroll" style="max-height:360px">
+      <table class="data-table">
+        <thead><tr><th>Category A</th><th>Category B</th><th>Orders with both</th><th title="This pair's orders ÷ total orders across all pairs listed">% of pairs</th></tr></thead>
+        <tbody id="crossSellBody"></tbody>
+      </table>
+    </div>
+
+    <div class="grid-2">
+      <div class="chart-card">
+        <div class="card-title">Top 8 cross-category pairs</div>
+        <div class="chart-wrap" style="height:260px"><canvas id="crossSellChart" role="img" aria-label="Cross-sell category pairs bar chart"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <div class="card-title">Mattress + accessory attach rate</div><div class="card-sub">39.7% of mattress orders include a second category</div>
+        <div class="chart-wrap" style="height:260px"><canvas id="attachChart2" role="img" aria-label="Attach rate donut"></canvas></div>
+        <div class="card-take">60.3% of mattress buyers add nothing else — the single largest untapped AOV lever on the site right now.</div>
+      </div>
+    </div>
+
+    <p class="section-title">Mattress orders, broken down further — how many accessory categories per order</p>
+    <div class="explain-box">
+      <b>Attach rate formula:</b> attach rate % = (orders with ≥1 accessory category) ÷ (total mattress orders) × 100. Same order set both tables — this table just splits "attached" into how many different categories (Bedding/Pillow/Case) landed in the same order, so every mattress order is counted exactly once, in exactly one column.
+    </div>
+    <div class="table-scroll" style="max-height:340px">
+      <table class="data-table">
+        <thead><tr><th>State</th><th>Mattress orders</th><th>0 accessories</th><th>1 category</th><th>2 categories</th><th>3 categories</th><th title="1+2+3 columns ÷ mattress orders">Attach rate %</th></tr></thead>
+        <tbody id="stateAttachBucketBody"></tbody>
+      </table>
+    </div>
+    <div class="card-take">Karnataka: 1,141 mattress orders → 645 attach nothing, 360 attach exactly one category, 118 attach two, 18 attach all three. 360+118+18 = 496 attached orders ÷ 1,141 = 43.5% — matches the attach rate exactly, no overlap or double-counting. The 13-point gap between states (43.5% Karnataka vs 30.4% Delhi) is entirely in the "0 accessories" column — it's about whether people attach at all, not what they attach with once they do.</div>
+  </div>
+
+  <!-- PRODUCTS -->
+  <div class="content" id="page-products">
+    <div class="analyst-note">
+      <div class="analyst-head"><div class="analyst-head-left"><div class="analyst-avatar">A</div><div class="analyst-title">Analyst read — product mix</div></div><span class="roadmap-ref">Roadmap: P1 "Ultima segment"</span></div>
+      <div class="analyst-body">
+        Hybrid Latex leads on revenue, but Ultima Natural Latex converts at nearly 2x the AOV (₹30,723 vs ₹17,062) on far lower volume — smaller but more profitable.
+        <span class="rec">→ Build a lookalike/retargeting segment off Ultima PDP visitors and test a dedicated campaign.</span>
+      </div>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi-card"><div class="kpi-label">Top SKU revenue (90d)</div><div class="kpi-value">₹3.1Cr</div><div class="kpi-delta neu">Hybrid Latex Mattress</div></div>
+      <div class="kpi-card"><div class="kpi-label">Highest AOV product</div><div class="kpi-value">₹46,303</div><div class="kpi-delta neu">Founder's Mattress</div></div>
+      <div class="kpi-card"><div class="kpi-label">Mattress category share</div><div class="kpi-value">~67%</div><div class="kpi-delta neu">Of total revenue</div></div>
+      <div class="kpi-card"><div class="kpi-label">Attach rate</div><div class="kpi-value">39.7%</div><div class="kpi-delta neg">Room to grow</div></div>
+      <div class="kpi-card"><div class="kpi-label">Bedding orders (90d)</div><div class="kpi-value">5,593</div><div class="kpi-delta pos">Cross-sell opportunity</div></div>
+    </div>
+    <div class="chart-card full">
+      <div class="card-title">Revenue by product sub-category (top 15)</div><div class="card-sub">D2C Shopify · last 90 days</div>
+      <div class="chart-wrap" style="height:380px"><canvas id="productRevChart" role="img" aria-label="Horizontal bar of revenue by product"></canvas></div>
+    </div>
+    <div class="grid-2">
+      <div class="chart-card"><div class="card-title">Category revenue mix</div><div class="card-sub">Mattress vs Bedding vs Pillow vs Other</div><div class="chart-wrap" style="height:200px"><canvas id="catMixChart" role="img" aria-label="Category mix donut"></canvas></div></div>
+      <div class="chart-card"><div class="card-title">AOV by product</div><div class="card-sub">Top 8 by revenue</div><div class="chart-wrap" style="height:200px"><canvas id="productAovChart" role="img" aria-label="AOV bar chart"></canvas></div></div>
+    </div>
+  </div>
+
+  <!-- GEO x PRODUCT -->
+  <div class="content" id="page-geo">
+    <div class="card-take" style="margin-bottom:14px">Tier 2's higher AOV isn't bigger baskets (units/order nearly identical across tiers) — it's product mix. Tier 1 (metros) has more accessory-only repeat orders dragging AOV down; Tier 2/3 skew toward first-time, full-price mattress buyers.</div>
+
+    <div class="insight-banner">
+      <div class="insight-label">City tier — where this comes from</div>
+      <code>CITY_TIER</code> is a pre-existing Snowflake field. Sample cities per tier: <b>Tier 1</b> = Bangalore, Mumbai, Hyderabad, Delhi, Chennai, Pune, Gurgaon, Kolkata. <b>Tier 2</b> = Coimbatore, Cochin, Lucknow, Jaipur, Nagpur, Dehradun, Bhubaneswar, Mysore. <b>Tier 3</b> = everything else (Aizawl, Baroda, Mohali, Srinagar, etc). Standard metro/state-capital/other classification.
+    </div>
+
+    <div class="kpi-row">
+      <div class="kpi-card"><div class="kpi-label">Top state revenue (90d)</div><div class="kpi-value">₹2.62Cr</div><div class="kpi-delta neu">Karnataka</div></div>
+      <div class="kpi-card"><div class="kpi-label">2nd state (corrected)</div><div class="kpi-value">₹2.21Cr</div><div class="kpi-delta pos">Maharashtra (+15% vs old cut)</div></div>
+      <div class="kpi-card"><div class="kpi-label">Tier 1 orders with mattress</div><div class="kpi-value">34.6%</div><div class="kpi-delta neg">Lower — more repeat/accessory orders</div></div>
+      <div class="kpi-card"><div class="kpi-label">Tier 3 orders with mattress</div><div class="kpi-value">45.5%</div><div class="kpi-delta pos">Higher — earlier-stage acquisition market</div></div>
+    </div>
+
+    <p class="section-title">Tier vs mattress split — the full order composition</p>
+    <div class="table-scroll" style="max-height:200px">
+      <table class="data-table">
+        <thead><tr><th>Tier</th><th>Total orders</th><th>Mattress orders</th><th>Mattress %</th><th>Non-mattress orders</th><th>Non-mattress %</th></tr></thead>
+        <tbody id="tierMattressSplitBody"></tbody>
+      </table>
+    </div>
+
+    <p class="section-title">Mattress orders, broken down by accessory attach — by tier</p>
+    <div class="explain-box">
+      Same mutually-exclusive logic as the state cut on the Cross-sell tab: every mattress order counted exactly once, by how many accessory categories (Bedding/Pillow/Case) landed in the same order.
+    </div>
+    <div class="table-scroll" style="max-height:280px">
+      <table class="data-table">
+        <thead><tr><th>Tier</th><th>Mattress orders</th><th>0 accessories</th><th>1 category</th><th>2 categories</th><th>3 categories</th><th title="1+2+3 columns ÷ mattress orders">Attach rate %</th></tr></thead>
+        <tbody id="tierMattressBucketBody"></tbody>
+      </table>
+    </div>
+    <div class="card-take">Tier 1: 3,054 mattress orders → 1,884 attach nothing (61.7%), the rest split across 1-3 categories. Tier 3: only 59.4% attach nothing — a meaningfully lower "walk away empty" rate despite Tier 3 being the more price-sensitive, earlier-stage market. Attach behavior doesn't track cleanly with tier sophistication.</div>
+
+    <p class="section-title">Mattress orders, broken down by product type — by tier</p>
+    <div class="explain-box">
+      This is the one you actually asked for: which specific mattress (Hybrid Latex, Original, Ultima Natural Latex, etc.) each tier is buying, not the accessory attach.
+    </div>
+    <div class="table-scroll" style="max-height:420px">
+      <table class="data-table">
+        <thead><tr><th>Tier</th><th>Mattress type</th><th>Orders</th><th>Revenue (₹)</th><th>Avg price (₹)</th><th title="This type's orders ÷ tier's total mattress orders">% of tier's mattress orders</th></tr></thead>
+        <tbody id="tierMattressTypeBody"></tbody>
+      </table>
+    </div>
+    <div class="card-take">Hybrid Latex is #1 by order count in every tier — the true flagship, not just a Tier-1 metro favorite. The real split shows up further down the list: Ultima Natural Latex (₹30-31K avg price) sells at nearly identical volume in Tier 1 and Tier 3 (278 vs 220 orders) despite Tier 3 having far fewer total mattress buyers — meaning Tier 3's premium-mattress buyers are proportionally a bigger slice of that market than Tier 1's. Founder's Mattress (₹39-52K, the most expensive SKU) sells in single digits everywhere — genuinely rare across all geography, not tier-specific.</div>
+
+    <p class="section-title">Non-mattress orders, broken down further</p>
+    <div class="table-scroll" style="max-height:280px">
+      <table class="data-table">
+        <thead><tr><th>Tier</th><th>Non-mattress orders</th><th>Pillow</th><th>Bedding</th><th>Pet Bed</th><th>Case</th></tr></thead>
+        <tbody id="tierCompositionBody"></tbody>
+      </table>
+    </div>
+    <div class="card-take">Same shape everywhere: Pillow leads, Bedding close behind, then a steep drop to Pet Bed/Case. The main story is Tier 1 has far more of these small orders relative to its mattress orders — not that it buys different things.</div>
+
+    <div class="chart-card full">
+      <div class="card-title">State revenue — top 15 (corrected)</div><div class="card-sub">D2C Shopify · last 90 days · normalized on STATE field (fixed Telangana/Maharashtra merge bug)</div>
+      <div class="chart-wrap" style="height:360px"><canvas id="stateRevChart" role="img" aria-label="Corrected state revenue bar chart"></canvas></div>
+    </div>
+
+    <p class="section-title">State × product category cross-tab</p>
+    <div class="insight-banner">
+      <div class="insight-label">Category definitions — hover any header or cell for the exact ₹ amount</div>
+      <b>Mattress</b> = all mattress SKUs. <b>Bedding</b> = toppers, protectors, bedsheets, duvet covers, comforters, throws. <b>Pillow</b> = all pillow SKUs. <b>Pet bed</b> = dog beds and covers. <b>Other</b> = pillow cases, recliners, beds (furniture), Ergoverse (seat/neck cushions), returns/covers.
+    </div>
+    <div class="table-scroll" style="max-height:340px">
+      <table class="cross-table">
+        <thead><tr><th>State</th><th title="Mattress SKUs only">Mattress ₹L</th><th title="Toppers, protectors, bedsheets, duvet covers, comforters, throws">Bedding ₹L</th><th title="Pillow SKUs">Pillow ₹L</th><th title="Dog beds and covers">Pet bed ₹L</th><th title="Pillow cases, recliners, beds, Ergoverse, returns">Other ₹L</th><th>Total ₹L</th></tr></thead>
+        <tbody id="crossTabBody"></tbody>
+      </table>
+    </div>
+
+    <div class="grid-2">
+      <div class="chart-card"><div class="card-title">City tier — revenue vs AOV</div><div class="chart-wrap" style="height:200px"><canvas id="tierChart" role="img" aria-label="City tier comparison"></canvas></div></div>
+      <div class="chart-card"><div class="card-title">State AOV — top 10</div><div class="card-sub">Premium buyer geography</div><div class="chart-wrap" style="height:200px"><canvas id="stateAovChart" role="img" aria-label="State AOV bar chart"></canvas></div></div>
+    </div>
+  </div>
+
+  <!-- ADS -->
+  <div class="content" id="page-ads">
+    <div class="card-take" style="margin-bottom:14px">Every week this quarter shows "Needs Attention" — spend is consistently trapped in Stop-status campaigns while Scaling campaigns exist that could absorb it. Aug 10: ₹1.59L/wk burning in 4 Stop-status campaigns vs 7 Scaling campaigns. Jul 27 was the worst week: ₹9.96L/wk in Stop-status — nearly half that week's total spend.</div>
+    <div class="table-scroll" style="max-height:460px">
+      <table class="data-table">
+        <thead><tr><th>Week</th><th>Spend (₹)</th><th>Purchases</th><th>Revenue (₹)</th><th>ROAS</th><th>CPA (₹)</th><th>Active Campaigns</th><th title="Campaigns with rising spend + strong ROAS">#Scaling</th><th title="Stable performers">#Working Fine</th><th title="Declining or inconsistent">#Watch</th><th title="Should be paused or reallocated">#Stop/At-Risk</th><th>Spend in Stop-Status (₹)</th><th>Health</th></tr></thead>
+        <tbody id="metaTableBody"></tbody>
+      </table>
+    </div>
+    <p class="section-title">Executive focus — per week</p>
+    <div class="table-scroll" style="max-height:380px">
+      <table class="data-table">
+        <thead><tr><th>Week</th><th>Executive focus</th></tr></thead>
+        <tbody id="metaFocusBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- COMPETITOR ANALYSIS -->
+  <div class="content" id="page-competitor">
+    <div class="insight-banner success">
+      <div class="insight-label">Source: your existing Competitor Intelligence Cockpit</div>
+      This tab summarizes the CI Cockpit tool already built for Sleepycat (scraper run 2026-08-11), benchmarking against 8 rivals: Sleep Company, Flo, Wakefit, Duroflex, Emma Sleep, Sleepyhead, Kurlon, Springtek. Full interactive tool has 5 sections (Homepage, PDP, PLP & Collections, Content & Tools, Offers/Trust/Delivery) tracking ~45 features. Below is the CRO-relevant summary, not a replacement for the full tool.
+    </div>
+    <div class="insight-banner warn">
+      <div class="insight-label">Important caveat before you act on this</div>
+      Many rows show Sleepycat's own status as <b>"unverified"</b> — the scraper's self-check wasn't run for several of these features. Where a gap looks concerning below, the first step is confirming manually whether Sleepycat actually has that feature before treating it as a real gap.
+    </div>
+
+    <p class="section-title">Highest-priority gaps — verified feature, multiple rivals ahead</p>
+    <div class="gap-card">
+      <div class="gap-title">Delivery estimate by pincode (PDP)</div>
+      <div class="gap-desc">3 of 8 rivals confirmed have it; Sleepycat's own status unverified in the scraper — but you already have a pincode checker live per the Micro-funnel tab. <b>Action: this is a data-quality issue in the CI tool, not a real product gap — update the scraper's self-check.</b> Reduces last-mile delivery anxiety at the exact moment of purchase intent, directly relevant to your cart-to-checkout drop.</div>
+    </div>
+    <div class="gap-card">
+      <div class="gap-title">Core-tech explainer (PDP)</div>
+      <div class="gap-desc">5 of 8 rivals have this (grid/foam/coil technology explainers like "SmartGRID", "XpertGRID"). Sleepycat unverified. Turns a generic "foam mattress" into a justified premium purchase — supports price anchoring, which matters given Sleepycat's premium AOV positioning (Ultima, Founder's Mattress).</div>
+    </div>
+    <div class="gap-card">
+      <div class="gap-title">Comparison table — own models or vs rivals (PDP)</div>
+      <div class="gap-desc">3 of 8 rivals have this. Keeps comparison-shoppers on-site instead of tab-switching to a rival to compare — directly protects against mid-funnel leakage, which pairs with the View→ATC data on the GA4 tab showing Hybrid Latex Mattress converts at only 2.64% of views.</div>
+    </div>
+    <div class="gap-card">
+      <div class="gap-title">Inline "help me choose" CTA on PLP/category pages</div>
+      <div class="gap-desc">3 of 8 rivals have this on listing pages specifically (not just homepage). Pre-qualifies indecisive browsers before they even reach a PDP — complements the quiz instrumentation gap already flagged on the Micro-funnel tab.</div>
+    </div>
+    <div class="gap-card">
+      <div class="gap-title">Logged-in / personalised offers (Homepage)</div>
+      <div class="gap-desc">Real whitespace — almost no rival has built this well either (mostly 'partial' or 'unknown' across the board). First-mover opportunity for repeat-visit conversion, ties directly to the New vs Returning cohort work already in this dashboard.</div>
+    </div>
+
+    <p class="section-title">Where Sleepycat is already at parity (basic/table-stakes features)</p>
+    <div class="insight-banner">
+      Firmness selector, size selector, price + discount display, warranty badges, WhatsApp support, 100-night trial messaging, free shipping, and marketplace presence (Amazon/Flipkart) — all confirmed at parity across essentially every tracked rival. No action needed here; these are solved problems.
+    </div>
+
+    <p class="section-title">What the full CI Cockpit tool covers (not duplicated here)</p>
+    <div class="explain-box">
+      The full tool is an interactive benchmark across all 5 sections with per-rival status (has/partial/none/unknown), a searchable feature list, and a live recommendations feed ranked by rival adoption count. This summary tab surfaces only the handful of items with clear CRO tie-ins to what's already in this dashboard. For the complete competitive picture, use the CI Cockpit directly.
+    </div>
+  </div>
+
+  <!-- ANOMALY LOG -->
+  <div class="content" id="page-anomalylog">
+    <div class="insight-banner warn">
+      <div class="insight-label">How this works — read this first</div>
+      This file is static — it does not check itself every day. What's below is every anomaly this analysis found across daily, weekly, monthly, and 90-day cuts, computed once at build time (Aug 15). To get a version that actually re-scans your data every day and adds new rows automatically, you need the same pipeline as the "when will git update this" answer: a script that re-runs these threshold checks against fresh Snowflake data on a schedule (e.g. GitHub Actions, like your competitor-intel cockpit already does) and appends new detections to a log table. That script doesn't exist yet — it's the build spec below.
+    </div>
+
+    <p class="section-title">Detection rules used (the logic, so your data team can automate it)</p>
+    <div class="table-scroll" style="max-height:280px">
+      <table class="data-table">
+        <thead><tr><th>Grain</th><th>Rule</th><th>Flags as</th></tr></thead>
+        <tbody>
+          <tr><td>Daily</td><td>CVR &lt; 0.4% (vs 75-day baseline median ~0.55%)</td><td class="cell-neg">Critical</td></tr>
+          <tr><td>Daily</td><td>CVR day-over-day swing &gt; ±0.3pt</td><td class="cell-warn">Watch</td></tr>
+          <tr><td>Weekly</td><td>Cart abandonment or checkout-drop % moves &gt; 5pt WoW</td><td class="cell-warn">Watch</td></tr>
+          <tr><td>Weekly</td><td>New or repeat AOV moves &gt; 15% WoW while order volume moves the opposite direction</td><td class="cell-neg">Critical</td></tr>
+          <tr><td>Monthly</td><td>Non-engaged session rate (bounce proxy) more than doubles vs 3-month trailing average</td><td class="cell-neg">Critical</td></tr>
+          <tr><td>90-day</td><td>Payment method success rate under 40%</td><td class="cell-neg">Critical</td></tr>
+          <tr><td>90-day</td><td>Retargeting (BOFU) view→ATC% lower than cold (TOFU) view→ATC%</td><td class="cell-neg">Critical</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="section-title">Anomalies detected — this build (Aug 15, 2026)</p>
+    <div class="table-scroll" style="max-height:600px">
+      <table class="data-table">
+        <thead><tr><th>Period</th><th>Area</th><th>What changed</th><th>Magnitude</th><th>Severity</th><th>Detail on</th></tr></thead>
+        <tbody id="anomalyLogBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ROADMAP -->
+  <div class="content" id="page-roadmap">
+    <div class="insight-banner"><div class="insight-label">🗺 PM signals — sprint recommendations</div>Every item below also appears inline on its source tab, tagged "Roadmap: [name]" — this page is the consolidated view for sprint planning.</div>
+
+    <p class="section-title">P0 — fix now</p>
+    <div class="sprint-card"><div class="sprint-priority p0">P0</div><div class="sprint-body">
+      <div class="sprint-title">Fix cardless EMI checkout flow</div>
+      <div class="sprint-desc">79.7% failure rate, dominated by timeouts (39%) and cancellations (35%) — not gateway errors. ₹6.86Cr in failed attempts vs ₹1.3Cr captured over 90 days. Get session recordings this week. See Payment Health tab.</div>
+      <div class="sprint-tags"><span class="tag">Razorpay</span><span class="tag">UX</span><span class="tag">~1 wk</span></div>
+    </div></div>
+    <div class="sprint-card"><div class="sprint-priority p0">P0</div><div class="sprint-body">
+      <div class="sprint-title">Audit Facebook BOFU retargeting audience</div>
+      <div class="sprint-desc">Converts worse (0.70%) than cold TOFU (1.13%) — backwards for retargeting. Check audience definition and exclusion lists.</div>
+      <div class="sprint-tags"><span class="tag">Meta Ads</span><span class="tag">GA4</span><span class="tag">~2 days</span></div>
+    </div></div>
+    <div class="sprint-card"><div class="sprint-priority p0">P0</div><div class="sprint-body">
+      <div class="sprint-title">Instrument click→checkout-creation gap</div>
+      <div class="sprint-desc">Intent/checkout ratio has widened to 10-15x in recent weeks. Instrument the actual time gap between click and checkout creation.</div>
+      <div class="sprint-tags"><span class="tag">Engineering</span><span class="tag">GA4</span><span class="tag">~3 days</span></div>
+    </div></div>
+    <div class="sprint-card"><div class="sprint-priority p0">P0</div><div class="sprint-body">
+      <div class="sprint-title">Fix state field data quality (MAPPED_STATE)</div>
+      <div class="sprint-desc">Merges Telangana into Andhra Pradesh, splits Maharashtra via a typo. Fix at the ETL layer.</div>
+      <div class="sprint-tags"><span class="tag">Snowflake</span><span class="tag">Data quality</span><span class="tag">~1 day</span></div>
+    </div></div>
+    <div class="sprint-card"><div class="sprint-priority p0">P0</div><div class="sprint-body">
+      <div class="sprint-title">Extend cart recovery flow to 7 days</div>
+      <div class="sprint-desc">86% of recoveries happen within 24hr, but 14% recover days 1-14 and are missed by the current 48hr flow. Add day-3/5/7 touches.</div>
+      <div class="sprint-tags"><span class="tag">CleverTap</span><span class="tag">~2 days</span></div>
+    </div></div>
+
+    <p class="section-title">P1 — high impact this quarter</p>
+    <div class="sprint-card"><div class="sprint-priority p1">P1</div><div class="sprint-body">
+      <div class="sprint-title">Mattress + accessory attach-rate campaign</div>
+      <div class="sprint-desc">39.7% attach rate — 60% of mattress buyers add nothing else. Cart-page prompt targeting the Bedding/Pillow pairing specifically (highest-converting pairs).</div>
+      <div class="sprint-tags"><span class="tag">CRO</span><span class="tag">Shopify theme</span></div>
+    </div></div>
+    <div class="sprint-card"><div class="sprint-priority p1">P1</div><div class="sprint-body">
+      <div class="sprint-title">Fix Meta ads Stop-status campaign reallocation</div>
+      <div class="sprint-desc">Campaign-level data now confirms every week for 14 weeks straight has spend trapped in Stop-status campaigns while Scaling campaigns exist. This isn't a data gap anymore — it's a live budget-reallocation process gap. Jul 27 alone: ₹9.96L stuck in Stop-status.</div>
+      <div class="sprint-tags"><span class="tag">Meta Ads</span><span class="tag">Budget ops</span></div>
+    </div></div>
+    <div class="sprint-card"><div class="sprint-priority p1">P1</div><div class="sprint-body">
+      <div class="sprint-title">Add GA4 device dimension</div>
+      <div class="sprint-desc">Needed to complete the CRO opportunity matrix (mobile vs desktop).</div>
+      <div class="sprint-tags"><span class="tag">Snowflake</span><span class="tag">GA4</span></div>
+    </div></div>
+    <div class="sprint-card"><div class="sprint-priority p1">P1</div><div class="sprint-body">
+      <div class="sprint-title">Confirm Aug 3 week new-customer SKU mix</div>
+      <div class="sprint-desc">New-customer AOV fell 9% while volume grew 24% — check if a discount push traded margin for volume as intended.</div>
+      <div class="sprint-tags"><span class="tag">Growth</span><span class="tag">Analytics</span></div>
+    </div></div>
+    <div class="sprint-card"><div class="sprint-priority p1">P1</div><div class="sprint-body">
+      <div class="sprint-title">On-site search term logging</div>
+      <div class="sprint-desc">What people search for once on the site is currently invisible. Log queries and zero-result terms for product-gap discovery.</div>
+      <div class="sprint-tags"><span class="tag">Frontend</span><span class="tag">Search</span></div>
+    </div></div>
+
+    <div class="sprint-card"><div class="sprint-priority p1">P1</div><div class="sprint-body">
+      <div class="sprint-title">Pull GA4 Pages and screens report manually (this week)</div>
+      <div class="sprint-desc">No engineering needed — export from GA4 UI (Reports → Engagement → Pages and screens), bucket by URL pattern into home/PLP/PDP. Unblocks the homepage/PLP behavior gap immediately while #2 below is in progress.</div>
+      <div class="sprint-tags"><span class="tag">GA4</span><span class="tag">Manual export</span></div>
+    </div></div>
+    <div class="sprint-card"><div class="sprint-priority p1">P1</div><div class="sprint-body">
+      <div class="sprint-title">Add page_path dimension to existing GA4 Airbyte connector</div>
+      <div class="sprint-desc">Config change on the connector already powering the other 3 GA4 tables — not new instrumentation. Makes the homepage/PLP/PDP breakdown permanent instead of a manual export.</div>
+      <div class="sprint-tags"><span class="tag">GA4</span><span class="tag">Snowflake</span><span class="tag">Airbyte</span></div>
+    </div></div>
+
+    <p class="section-title">P2 — strategic bets</p>
+    <div class="sprint-card"><div class="sprint-priority p2">P2</div><div class="sprint-body">
+      <div class="sprint-title">Custom GTM events for PLP/PDP click behavior</div>
+      <div class="sprint-desc">Filter/sort clicks, image gallery swipes, size-selector taps — not covered by page_view at any sync depth. Needs custom GA4 events via GTM. Same ticket as the quiz/EMI/pincode events on the Micro-funnel Backlog tab.</div>
+      <div class="sprint-tags"><span class="tag">GA4</span><span class="tag">GTM</span><span class="tag">Frontend</span></div>
+    </div></div>
+    <div class="sprint-card"><div class="sprint-priority p2">P2</div><div class="sprint-body">
+      <div class="sprint-title">Update CI Cockpit self-check for Sleepycat's own site</div>
+      <div class="sprint-desc">Several competitor gaps flagged as "unverified" for Sleepycat's own status turn out to already exist (e.g. pincode checker). Run the scraper against sleepycat.in itself, not just rivals.</div>
+      <div class="sprint-tags"><span class="tag">CI Cockpit</span><span class="tag">Data quality</span></div>
+    </div></div>
+    <div class="sprint-card"><div class="sprint-priority p2">P2</div><div class="sprint-body">
+      <div class="sprint-title">Store parity investigation</div>
+      <div class="sprint-desc">POS revenue runs 1.3-1.7x online revenue every week at consistently higher AOV (real data now on Health Dashboard, sourced from SHOPIFY_ALL_ORDERS.NAME). Investigate whether store is cannibalizing online or expanding total demand.</div>
+      <div class="sprint-tags"><span class="tag">Analytics</span><span class="tag">Offline</span></div>
+    </div></div>
+    <div class="sprint-card"><div class="sprint-priority p2">P2</div><div class="sprint-body">
+      <div class="sprint-title">Ultima Natural Latex dedicated ad segment</div>
+      <div class="sprint-desc">Nearly 2x AOV vs Hybrid Latex on lower volume — build a dedicated retargeting segment.</div>
+      <div class="sprint-tags"><span class="tag">Meta Ads</span><span class="tag">Creative</span></div>
+    </div></div>
+  </div>
+
+</div>
+</div>
+
+<script>
+const DAILY = [{"date": "2026-08-14", "sessions": 35717, "atc": 2137, "orders": 282, "sales": 2595199, "atc_pct": 5.98, "c2o_pct": 13.2, "cvr_pct": 0.79}, {"date": "2026-08-13", "sessions": 31320, "atc": 2132, "orders": 311, "sales": 2627221, "atc_pct": 6.81, "c2o_pct": 14.59, "cvr_pct": 0.99}, {"date": "2026-08-12", "sessions": 28810, "atc": 2011, "orders": 280, "sales": 2372774, "atc_pct": 6.98, "c2o_pct": 13.92, "cvr_pct": 0.97}, {"date": "2026-08-11", "sessions": 29660, "atc": 2008, "orders": 285, "sales": 2155083, "atc_pct": 6.77, "c2o_pct": 14.19, "cvr_pct": 0.96}, {"date": "2026-08-10", "sessions": 31047, "atc": 2154, "orders": 274, "sales": 2391560, "atc_pct": 6.94, "c2o_pct": 12.72, "cvr_pct": 0.88}, {"date": "2026-08-09", "sessions": 31951, "atc": 2596, "orders": 361, "sales": 2972318, "atc_pct": 8.12, "c2o_pct": 13.91, "cvr_pct": 1.13}, {"date": "2026-08-08", "sessions": 38834, "atc": 3152, "orders": 335, "sales": 2754570, "atc_pct": 8.12, "c2o_pct": 10.63, "cvr_pct": 0.86}, {"date": "2026-08-07", "sessions": 46212, "atc": 3829, "orders": 401, "sales": 3440665, "atc_pct": 8.29, "c2o_pct": 10.47, "cvr_pct": 0.87}, {"date": "2026-08-06", "sessions": 35590, "atc": 1732, "orders": 173, "sales": 1257658, "atc_pct": 4.87, "c2o_pct": 9.99, "cvr_pct": 0.49}, {"date": "2026-08-05", "sessions": 34646, "atc": 1937, "orders": 181, "sales": 1269329, "atc_pct": 5.59, "c2o_pct": 9.34, "cvr_pct": 0.52}, {"date": "2026-08-04", "sessions": 35093, "atc": 1976, "orders": 186, "sales": 1403528, "atc_pct": 5.63, "c2o_pct": 9.41, "cvr_pct": 0.53}, {"date": "2026-08-03", "sessions": 34346, "atc": 1051, "orders": 180, "sales": 1348719, "atc_pct": 3.06, "c2o_pct": 17.13, "cvr_pct": 0.52}, {"date": "2026-08-02", "sessions": 34793, "atc": 1148, "orders": 204, "sales": 1383988, "atc_pct": 3.3, "c2o_pct": 17.77, "cvr_pct": 0.59}, {"date": "2026-08-01", "sessions": 26908, "atc": 913, "orders": 160, "sales": 1241429, "atc_pct": 3.39, "c2o_pct": 17.52, "cvr_pct": 0.59}, {"date": "2026-07-31", "sessions": 40654, "atc": 1276, "orders": 170, "sales": 1134880, "atc_pct": 3.14, "c2o_pct": 13.32, "cvr_pct": 0.42}, {"date": "2026-07-30", "sessions": 49516, "atc": 1498, "orders": 172, "sales": 1340297, "atc_pct": 3.03, "c2o_pct": 11.48, "cvr_pct": 0.35}, {"date": "2026-07-29", "sessions": 44468, "atc": 2294, "orders": 152, "sales": 1367464, "atc_pct": 5.16, "c2o_pct": 6.63, "cvr_pct": 0.34}, {"date": "2026-07-28", "sessions": 45923, "atc": 3298, "orders": 137, "sales": 1188510, "atc_pct": 7.18, "c2o_pct": 4.15, "cvr_pct": 0.3}, {"date": "2026-07-27", "sessions": 22685, "atc": 1031, "orders": 129, "sales": 1009715, "atc_pct": 4.54, "c2o_pct": 12.51, "cvr_pct": 0.57}, {"date": "2026-07-26", "sessions": 27300, "atc": 1219, "orders": 168, "sales": 1568249, "atc_pct": 4.47, "c2o_pct": 13.78, "cvr_pct": 0.62}, {"date": "2026-07-25", "sessions": 18641, "atc": 899, "orders": 142, "sales": 1039707, "atc_pct": 4.82, "c2o_pct": 15.8, "cvr_pct": 0.76}, {"date": "2026-07-24", "sessions": 26776, "atc": 1286, "orders": 145, "sales": 1213806, "atc_pct": 4.8, "c2o_pct": 11.28, "cvr_pct": 0.54}, {"date": "2026-07-23", "sessions": 29716, "atc": 1236, "orders": 135, "sales": 1209371, "atc_pct": 4.16, "c2o_pct": 10.92, "cvr_pct": 0.45}, {"date": "2026-07-22", "sessions": 26362, "atc": 1264, "orders": 155, "sales": 1139905, "atc_pct": 4.79, "c2o_pct": 12.26, "cvr_pct": 0.59}, {"date": "2026-07-21", "sessions": 24965, "atc": 1196, "orders": 139, "sales": 1332160, "atc_pct": 4.79, "c2o_pct": 11.62, "cvr_pct": 0.56}, {"date": "2026-07-20", "sessions": 28738, "atc": 1118, "orders": 168, "sales": 1415428, "atc_pct": 3.89, "c2o_pct": 15.03, "cvr_pct": 0.58}, {"date": "2026-07-19", "sessions": 29063, "atc": 1503, "orders": 173, "sales": 1341667, "atc_pct": 5.17, "c2o_pct": 11.51, "cvr_pct": 0.6}, {"date": "2026-07-18", "sessions": 29526, "atc": 1384, "orders": 160, "sales": 1186417, "atc_pct": 4.69, "c2o_pct": 11.56, "cvr_pct": 0.54}, {"date": "2026-07-17", "sessions": 25803, "atc": 1145, "orders": 131, "sales": 1057458, "atc_pct": 4.44, "c2o_pct": 11.44, "cvr_pct": 0.51}, {"date": "2026-07-16", "sessions": 29502, "atc": 1394, "orders": 183, "sales": 1378213, "atc_pct": 4.73, "c2o_pct": 13.13, "cvr_pct": 0.62}, {"date": "2026-07-15", "sessions": 29171, "atc": 1220, "orders": 165, "sales": 1277959, "atc_pct": 4.18, "c2o_pct": 13.52, "cvr_pct": 0.57}, {"date": "2026-07-14", "sessions": 31797, "atc": 1182, "orders": 172, "sales": 1507283, "atc_pct": 3.72, "c2o_pct": 14.55, "cvr_pct": 0.54}, {"date": "2026-07-13", "sessions": 34879, "atc": 1409, "orders": 179, "sales": 1252907, "atc_pct": 4.04, "c2o_pct": 12.7, "cvr_pct": 0.51}, {"date": "2026-07-12", "sessions": 32290, "atc": 1410, "orders": 198, "sales": 1611307, "atc_pct": 4.37, "c2o_pct": 14.04, "cvr_pct": 0.61}, {"date": "2026-07-11", "sessions": 35655, "atc": 1337, "orders": 181, "sales": 1386960, "atc_pct": 3.75, "c2o_pct": 13.54, "cvr_pct": 0.51}, {"date": "2026-07-10", "sessions": 30961, "atc": 1314, "orders": 166, "sales": 1195112, "atc_pct": 4.24, "c2o_pct": 12.63, "cvr_pct": 0.54}, {"date": "2026-07-09", "sessions": 34160, "atc": 1487, "orders": 181, "sales": 1457566, "atc_pct": 4.35, "c2o_pct": 12.17, "cvr_pct": 0.53}, {"date": "2026-07-08", "sessions": 25970, "atc": 1184, "orders": 142, "sales": 1130758, "atc_pct": 4.56, "c2o_pct": 11.99, "cvr_pct": 0.55}, {"date": "2026-07-07", "sessions": 26255, "atc": 1331, "orders": 144, "sales": 1090832, "atc_pct": 5.07, "c2o_pct": 10.82, "cvr_pct": 0.55}, {"date": "2026-07-06", "sessions": 27403, "atc": 2313, "orders": 354, "sales": 2910088, "atc_pct": 8.44, "c2o_pct": 15.3, "cvr_pct": 1.29}, {"date": "2026-07-05", "sessions": 31107, "atc": 2710, "orders": 369, "sales": 3051250, "atc_pct": 8.71, "c2o_pct": 13.62, "cvr_pct": 1.19}, {"date": "2026-07-04", "sessions": 30699, "atc": 2876, "orders": 418, "sales": 3882638, "atc_pct": 9.37, "c2o_pct": 14.53, "cvr_pct": 1.36}, {"date": "2026-07-03", "sessions": 19001, "atc": 1127, "orders": 136, "sales": 1033338, "atc_pct": 5.93, "c2o_pct": 12.07, "cvr_pct": 0.72}, {"date": "2026-07-02", "sessions": 18875, "atc": 944, "orders": 113, "sales": 975752, "atc_pct": 5.0, "c2o_pct": 11.97, "cvr_pct": 0.6}, {"date": "2026-07-01", "sessions": 18284, "atc": 899, "orders": 145, "sales": 1211423, "atc_pct": 4.92, "c2o_pct": 16.13, "cvr_pct": 0.79}, {"date": "2026-06-30", "sessions": 17968, "atc": 1149, "orders": 128, "sales": 956927, "atc_pct": 6.39, "c2o_pct": 11.14, "cvr_pct": 0.71}, {"date": "2026-06-29", "sessions": 22817, "atc": 1023, "orders": 107, "sales": 1039577, "atc_pct": 4.48, "c2o_pct": 10.46, "cvr_pct": 0.47}, {"date": "2026-06-28", "sessions": 19367, "atc": 1091, "orders": 127, "sales": 995579, "atc_pct": 5.63, "c2o_pct": 11.64, "cvr_pct": 0.66}, {"date": "2026-06-27", "sessions": 20831, "atc": 1392, "orders": 115, "sales": 990541, "atc_pct": 6.68, "c2o_pct": 8.26, "cvr_pct": 0.55}, {"date": "2026-06-26", "sessions": 23047, "atc": 1185, "orders": 111, "sales": 1172449, "atc_pct": 5.14, "c2o_pct": 9.37, "cvr_pct": 0.48}, {"date": "2026-06-25", "sessions": 19657, "atc": 975, "orders": 117, "sales": 1385267, "atc_pct": 4.96, "c2o_pct": 12.0, "cvr_pct": 0.6}, {"date": "2026-06-24", "sessions": 19388, "atc": 1054, "orders": 112, "sales": 1003723, "atc_pct": 5.44, "c2o_pct": 10.63, "cvr_pct": 0.58}, {"date": "2026-06-23", "sessions": 20188, "atc": 1017, "orders": 140, "sales": 1194679, "atc_pct": 5.04, "c2o_pct": 13.77, "cvr_pct": 0.69}, {"date": "2026-06-22", "sessions": 19138, "atc": 1091, "orders": 129, "sales": 1209931, "atc_pct": 5.7, "c2o_pct": 11.82, "cvr_pct": 0.67}, {"date": "2026-06-21", "sessions": 22471, "atc": 1239, "orders": 143, "sales": 1384165, "atc_pct": 5.51, "c2o_pct": 11.54, "cvr_pct": 0.64}, {"date": "2026-06-20", "sessions": 21777, "atc": 1073, "orders": 122, "sales": 1097125, "atc_pct": 4.93, "c2o_pct": 11.37, "cvr_pct": 0.56}, {"date": "2026-06-19", "sessions": 20456, "atc": 999, "orders": 114, "sales": 879894, "atc_pct": 4.88, "c2o_pct": 11.41, "cvr_pct": 0.56}, {"date": "2026-06-18", "sessions": 22406, "atc": 1151, "orders": 114, "sales": 1102276, "atc_pct": 5.14, "c2o_pct": 9.9, "cvr_pct": 0.51}, {"date": "2026-06-17", "sessions": 24990, "atc": 1485, "orders": 116, "sales": 1296165, "atc_pct": 5.94, "c2o_pct": 7.81, "cvr_pct": 0.46}, {"date": "2026-06-16", "sessions": 21545, "atc": 1155, "orders": 129, "sales": 1242067, "atc_pct": 5.36, "c2o_pct": 11.17, "cvr_pct": 0.6}, {"date": "2026-06-15", "sessions": 17339, "atc": 947, "orders": 130, "sales": 1172264, "atc_pct": 5.46, "c2o_pct": 13.73, "cvr_pct": 0.75}, {"date": "2026-06-14", "sessions": 21283, "atc": 1245, "orders": 143, "sales": 1370731, "atc_pct": 5.85, "c2o_pct": 11.49, "cvr_pct": 0.67}, {"date": "2026-06-13", "sessions": 25274, "atc": 1225, "orders": 121, "sales": 1012028, "atc_pct": 4.85, "c2o_pct": 9.88, "cvr_pct": 0.48}, {"date": "2026-06-12", "sessions": 24209, "atc": 1005, "orders": 112, "sales": 1045866, "atc_pct": 4.15, "c2o_pct": 11.14, "cvr_pct": 0.46}, {"date": "2026-06-11", "sessions": 24157, "atc": 930, "orders": 116, "sales": 1176912, "atc_pct": 3.85, "c2o_pct": 12.47, "cvr_pct": 0.48}, {"date": "2026-06-10", "sessions": 36097, "atc": 1149, "orders": 103, "sales": 960591, "atc_pct": 3.18, "c2o_pct": 8.96, "cvr_pct": 0.29}, {"date": "2026-06-09", "sessions": 37171, "atc": 1621, "orders": 114, "sales": 1117246, "atc_pct": 4.36, "c2o_pct": 7.03, "cvr_pct": 0.31}, {"date": "2026-06-08", "sessions": 30103, "atc": 1909, "orders": 141, "sales": 1557588, "atc_pct": 6.34, "c2o_pct": 7.39, "cvr_pct": 0.47}, {"date": "2026-06-07", "sessions": 33119, "atc": 2483, "orders": 150, "sales": 1379968, "atc_pct": 7.5, "c2o_pct": 6.04, "cvr_pct": 0.45}, {"date": "2026-06-06", "sessions": 33549, "atc": 2409, "orders": 120, "sales": 1115596, "atc_pct": 7.18, "c2o_pct": 4.98, "cvr_pct": 0.36}, {"date": "2026-06-05", "sessions": 32676, "atc": 1212, "orders": 93, "sales": 740163, "atc_pct": 3.71, "c2o_pct": 7.67, "cvr_pct": 0.28}, {"date": "2026-06-04", "sessions": 36772, "atc": 1141, "orders": 123, "sales": 1056701, "atc_pct": 3.1, "c2o_pct": 10.78, "cvr_pct": 0.33}, {"date": "2026-06-03", "sessions": 34483, "atc": 1068, "orders": 118, "sales": 1207987, "atc_pct": 3.1, "c2o_pct": 11.05, "cvr_pct": 0.34}, {"date": "2026-06-02", "sessions": 40771, "atc": 1283, "orders": 134, "sales": 1316619, "atc_pct": 3.15, "c2o_pct": 10.44, "cvr_pct": 0.33}, {"date": "2026-06-01", "sessions": 28462, "atc": 954, "orders": 138, "sales": 1300520, "atc_pct": 3.35, "c2o_pct": 14.47, "cvr_pct": 0.48}];
+</script>
+<script>
+function showPage(id, btn) {
+  document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  btn.classList.add('active');
+  const titles = { daily:'Daily funnel table', healthdash:'Health dashboard', anomalylog:'Anomaly log', funnel:'Funnel & checkout', ga4cro:'GA4 & CRO diagnostics', payments:'Payment health', microfunnel:'Micro-funnel backlog', behaviour:'Cart recovery', cohorts:'New vs returning', crosssell:'Cross-sell & basket', products:'Product mix', geo:'State x product', ads:'Meta ads', competitor:'Competitor analysis (draft)', roadmap:'Roadmap signals' };
+  document.getElementById('page-title').textContent = titles[id] || id;
+}
+
+const isDark = matchMedia('(prefers-color-scheme: dark)').matches;
+const textMuted = '#948572';
+const textSecondary = isDark ? '#cbbfa9' : '#5e5040';
+const gridColor = isDark ? '#332a1f' : '#e9e0cf';
+const surface = isDark ? '#262019' : '#ffffff';
+const PLUM = isDark ? '#b08a5f' : '#6b4226';
+const MUSTARD = isDark ? '#dcbb63' : '#e0b64a';
+
+const baseOpts = {
+  responsive: true, maintainAspectRatio: false,
+  plugins: { legend: { display: false }, tooltip: { backgroundColor: surface, titleColor: isDark ? '#f3ede2' : '#2b2018', bodyColor: textSecondary, borderColor: gridColor, borderWidth: 1 } },
+  scales: { x: { grid: { color: gridColor }, ticks: { color: textMuted, font: { size: 11 } } }, y: { grid: { color: gridColor }, ticks: { color: textMuted, font: { size: 11 } } } }
+};
+
+function renderDailyTable() {
+  const tbody = document.getElementById('dailyTableBody');
+  let rows = '';
+  DAILY.forEach((d, i) => {
+    const cvr = d.cvr_pct;
+    let cvrClass = '';
+    if (cvr < 0.4) cvrClass = 'cell-neg'; else if (cvr < 0.55) cvrClass = 'cell-warn'; else if (cvr >= 0.9) cvrClass = 'cell-pos';
+    const rowClass = cvr < 0.4 ? 'row-flag' : '';
+    const prev = DAILY[i+1];
+    let deltaCell = '<td>—</td>';
+    if (prev && prev.cvr_pct) {
+      const delta = cvr - prev.cvr_pct;
+      const cls = delta >= 0 ? 'cell-pos' : 'cell-neg';
+      deltaCell = `<td class="${cls}" style="background:none">${delta>=0?'+':''}${delta.toFixed(2)}pt</td>`;
+    }
+    rows += `<tr class="${rowClass}"><td>${d.date}</td><td>${d.sessions.toLocaleString('en-IN')}</td><td>${d.atc.toLocaleString('en-IN')}</td><td>${d.atc_pct != null ? d.atc_pct.toFixed(2)+'%' : '-'}</td><td>${d.orders.toLocaleString('en-IN')}</td><td>₹${d.sales.toLocaleString('en-IN')}</td><td>₹${Math.round(d.sales/d.orders).toLocaleString('en-IN')}</td><td>${d.c2o_pct != null ? d.c2o_pct.toFixed(2)+'%' : '-'}</td><td class="${cvrClass}">${cvr != null ? cvr.toFixed(2)+'%' : '-'}</td>${deltaCell}</tr>`;
+  });
+  tbody.innerHTML = rows;
+}
+renderDailyTable();
+
+function renderAnomalyLog() {
+  const rows = [
+    {p:'Aug 2026', a:'Payment health', w:'Cardless EMI failure rate', m:'79.7% (2,046 timeouts + 1,803 cancellations of 6,532 attempts)', sev:'high', tab:'Payment Health'},
+    {p:'Jun 22 – Aug 10 (weekly)', a:'Funnel', w:'GA4 checkout-click vs Shopify checkout-created gap widened', m:'3.1x → 7.9x over 6 weeks (Signal 2, conservative measure)', sev:'high', tab:'Daily Funnel Table'},
+    {p:'Aug 2026', a:'GA4 traffic quality', w:'Non-engaged session rate (bounce proxy) spiked', m:'4.1-4.6% (Mar-May) → 13.6% (Aug), 3x the trailing average', sev:'high', tab:'GA4 & CRO Diagnostics'},
+    {p:'90-day', a:'GA4 traffic', w:'Facebook BOFU (retargeting) underperforms cold TOFU traffic', m:'0.70% view→ATC vs 1.13% — should be the reverse', sev:'high', tab:'GA4 & CRO Diagnostics'},
+    {p:'Aug 3 week', a:'Cohorts', w:'New-customer AOV fell while order volume rose', m:'AOV −9% WoW, volume +24% WoW — opposite directions', sev:'med', tab:'New vs Returning'},
+    {p:'Jul 27 week', a:'Meta Ads', w:'ROAS crashed on high spend', m:'2.06x ROAS on ₹2.07Cr spend — over ₹1Cr at sub-2x return', sev:'high', tab:'Meta Ads'},
+    {p:'May 11 – Aug 10 (all 14 weeks)', a:'Meta Ads', w:'Every week flagged "Needs Attention" — spend consistently trapped in Stop-status campaigns', m:"Jul 27 worst: ₹9.96L/wk in Stop-status campaigns, ~48% of that week's total spend", sev:'high', tab:'Meta Ads'},
+    {p:'90-day', a:'Data quality', w:'MAPPED_STATE field merges Telangana into Andhra Pradesh, splits Maharashtra via typo', m:'Maharashtra revenue undercounted by ~15% in the naive cut', sev:'high', tab:'State x Product'},
+    {p:'90-day', a:'Product mix', w:'Two PDPs leak carts after add-to-cart, not before', m:'Tri Fold & Aeroflow Topper: under 5% ATC→Checkout vs 7.3% for flagship mattress', sev:'med', tab:'GA4 & CRO Diagnostics'},
+    {p:'Jun 5–10 (daily)', a:'Daily funnel', w:'Sustained low-CVR stretch', m:'CVR under 0.35% for 6 consecutive days', sev:'med', tab:'Daily Funnel Table'},
+    {p:'90-day', a:'Cross-sell', w:'Attach rate spread by state', m:'Karnataka 43.5% vs Delhi 30.4% — 13pt gap, same catalog', sev:'low', tab:'Cross-sell & Basket'},
+    {p:'Ongoing', a:'Store vs D2C', w:'Store order volume approaching D2C parity at 76% higher AOV', m:'Aug 14: 275 POS orders vs 282 D2C orders', sev:'low', tab:'Health Dashboard'},
+  ];
+  const sevMap = {high:'prio-high', med:'prio-med', low:'prio-low'};
+  const sevLabel = {high:'🔴 High', med:'🟡 Medium', low:'🟢 Low'};
+  document.getElementById('anomalyLogBody').innerHTML = rows.map(r =>
+    `<tr><td>${r.p}</td><td>${r.a}</td><td>${r.w}</td><td>${r.m}</td><td><span class="prio-pill ${sevMap[r.sev]}">${sevLabel[r.sev]}</span></td><td>${r.tab}</td></tr>`
+  ).join('');
+}
+renderAnomalyLog();
+
+
+new Chart(document.getElementById('cvrTrendChart'), {
+  type: 'line',
+  data: {
+    labels: DAILY.slice().reverse().map(d => d.date.slice(5)),
+    datasets: [{ label: 'CVR %', data: DAILY.slice().reverse().map(d => d.cvr_pct), borderColor: '#c0392b', backgroundColor: 'rgba(192,57,43,0.06)', tension: 0.25, pointRadius: 0, borderWidth: 1.5 }]
+  },
+  options: { ...baseOpts, plugins: { ...baseOpts.plugins, legend: { display: false } }, scales: { x: { grid: { display: false }, ticks: { color: textMuted, font: { size: 9 }, maxTicksLimit: 12 } }, y: { grid: { color: gridColor }, ticks: { color: textMuted, font: { size: 11 }, callback: v => v + '%' } } } }
+});
+
+function renderTodayKpis() {
+  const today = DAILY[0], yest = DAILY[1];
+  const pct = (a,b) => b === 0 ? null : ((a-b)/b*100);
+  const fmtDelta = (v) => {
+    if (v === null) return `<span class="kpi-delta neu">—</span>`;
+    const cls = v >= 0 ? 'pos' : 'neg';
+    const arrow = v >= 0 ? '↑' : '↓';
+    return `<span class="kpi-delta ${cls}">${arrow} ${Math.abs(v).toFixed(1)}% vs ${yest.date}</span>`;
+  };
+  const aov = Math.round(today.sales/today.orders);
+  const aovY = Math.round(yest.sales/yest.orders);
+  const cards = [
+    { label: `Sessions (${today.date})`, value: today.sessions.toLocaleString('en-IN'), delta: fmtDelta(pct(today.sessions,yest.sessions)) },
+    { label: 'ATC', value: today.atc.toLocaleString('en-IN'), delta: `<span class="kpi-delta neu">ATC rate ${today.atc_pct.toFixed(2)}%</span>` },
+    { label: 'Orders (D2C online)', value: today.orders.toLocaleString('en-IN'), delta: fmtDelta(pct(today.orders,yest.orders)), flag: true },
+    { label: 'Revenue (D2C)', value: '₹' + (today.sales/100000).toFixed(1) + 'L', delta: fmtDelta(pct(today.sales,yest.sales)) },
+    { label: 'AOV (D2C)', value: '₹' + aov.toLocaleString('en-IN'), delta: fmtDelta(pct(aov,aovY)) },
+    { label: 'CVR = orders/sessions', value: today.cvr_pct.toFixed(2)+'%', delta: fmtDelta(pct(today.cvr_pct,yest.cvr_pct)), flag: today.cvr_pct < 0.55 }
+  ];
+  document.getElementById('todayKpiRow').innerHTML = cards.map(c => `<div class="kpi-card${c.flag?' neg-flag':''}"><div class="kpi-label">${c.label}</div><div class="kpi-value">${c.value}</div>${c.delta}</div>`).join('');
+  document.getElementById('topChip1').textContent = `CVR ${today.date.slice(5)} ${today.cvr_pct.toFixed(2)}%`;
+
+  const orderDelta = pct(today.orders, yest.orders);
+  const sessDelta = pct(today.sessions, yest.sessions);
+  const syncNote = Math.abs(orderDelta - sessDelta) > 5
+    ? "orders and sessions are moving out of sync, meaning conversion efficiency itself shifted, not just traffic volume."
+    : "orders and sessions are moving roughly together, meaning today's change is mostly a traffic-volume story rather than a conversion-efficiency story.";
+  document.getElementById('todayAnalystBody').innerHTML =
+    `${today.date} vs ${yest.date}: D2C orders ${orderDelta>=0?'up':'down'} ${Math.abs(orderDelta).toFixed(1)}% (${yest.orders} → ${today.orders}) while sessions ${sessDelta>=0?'up':'down'} ${Math.abs(sessDelta).toFixed(1)}% — ${syncNote}<span class="rec">→ Store orders same day: 275 (separate channel, see Store KPIs below) — D2C and store volumes are within ${Math.abs(today.orders-275)} orders of each other.</span>`;
+}
+renderTodayKpis();
+
+function renderWeeklyHealth() {
+  const weeks = [
+    {w:'Aug 10', orders:1451, revenue:12227186, pos:978, posRev:16594076},
+    {w:'Aug 3', orders:1817, revenue:14446787, pos:1422, posRev:21768081},
+    {w:'Jul 27', orders:1124, revenue:8666283, pos:1060, posRev:15046680},
+    {w:'Jul 20', orders:1052, revenue:8918627, pos:983, posRev:13316950},
+    {w:'Jul 13', orders:1163, revenue:9001903, pos:1008, posRev:14136535},
+    {w:'Jul 6', orders:1366, revenue:10782624, pos:1094, posRev:15667435},
+    {w:'Jun 29', orders:1416, revenue:12150905, pos:1149, posRev:19393803},
+    {w:'Jun 22', orders:851, revenue:7952169, pos:572, posRev:8986341},
+    {w:'Jun 15', orders:868, revenue:8173956, pos:262, posRev:4586273},
+    {w:'Jun 8', orders:850, revenue:8240963, pos:221, posRev:4511540},
+    {w:'Jun 1', orders:876, revenue:8117553, pos:141, posRev:1987656},
+  ];
+  const rows = weeks.map(wk => {
+    const onlineAov = Math.round(wk.revenue/wk.orders);
+    const posAov = wk.pos > 0 ? Math.round(wk.posRev/wk.pos) : 0;
+    return `<tr><td>${wk.w}</td><td>${wk.orders.toLocaleString('en-IN')}</td><td>₹${wk.revenue.toLocaleString('en-IN')}</td><td>₹${onlineAov.toLocaleString('en-IN')}</td><td>${wk.pos.toLocaleString('en-IN')}</td><td>₹${wk.posRev.toLocaleString('en-IN')}</td><td>₹${posAov.toLocaleString('en-IN')}</td></tr>`;
+  });
+  document.getElementById('weeklyHealthBody').innerHTML = rows.join('');
+}
+renderWeeklyHealth();
+
+function renderDailyOnlinePos() {
+  const days = [
+    {d:'Aug 14', on:282, onRev:2595199, pos:275, posRev:4451127},
+    {d:'Aug 13', on:311, onRev:2627221, pos:174, posRev:3053818},
+    {d:'Aug 12', on:280, onRev:2372774, pos:180, posRev:2790786},
+    {d:'Aug 11', on:285, onRev:2155083, pos:169, posRev:3297805},
+    {d:'Aug 10', on:274, onRev:2391560, pos:180, posRev:3000540},
+    {d:'Aug 9', on:361, onRev:2972318, pos:459, posRev:6863935},
+    {d:'Aug 8', on:335, onRev:2754570, pos:334, posRev:5385649},
+    {d:'Aug 7', on:401, onRev:3440665, pos:207, posRev:3680426},
+    {d:'Aug 6', on:173, onRev:1257658, pos:83, posRev:1125068},
+    {d:'Aug 5', on:181, onRev:1269329, pos:96, posRev:1414731},
+    {d:'Aug 4', on:186, onRev:1403528, pos:106, posRev:1543987},
+    {d:'Aug 3', on:180, onRev:1348719, pos:137, posRev:1754285},
+    {d:'Aug 2', on:204, onRev:1383988, pos:287, posRev:3934644},
+    {d:'Aug 1', on:160, onRev:1241429, pos:204, posRev:2544786},
+  ];
+  document.getElementById('dailyOnlinePosBody').innerHTML = days.map(x =>
+    `<tr><td>${x.d}</td><td>${x.on.toLocaleString('en-IN')}</td><td>₹${x.onRev.toLocaleString('en-IN')}</td><td>${x.pos.toLocaleString('en-IN')}</td><td>₹${x.posRev.toLocaleString('en-IN')}</td></tr>`
+  ).join('');
+  return days;
+}
+const _dailyOnlinePos = renderDailyOnlinePos();
+
+new Chart(document.getElementById('weeklyCombinedChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Jun 1','Jun 8','Jun 15','Jun 22','Jun 29','Jul 6','Jul 13','Jul 20','Jul 27','Aug 3','Aug 10'],
+    datasets: [
+      { label: 'Online revenue (₹L)', data: [81.2,82.7,81.7,79.5,121.5,107.8,90.0,89.2,86.7,144.5,122.3], backgroundColor: PLUM, borderRadius: 3 },
+      { label: 'POS revenue (₹L)', data: [19.9,45.1,45.9,89.9,193.9,156.7,141.4,133.2,150.5,217.7,165.9], backgroundColor: MUSTARD, borderRadius: 3 }
+    ]
+  },
+  options: { ...baseOpts, scales: { x: { stacked: true, grid: { display: false }, ticks: { color: textMuted, font: { size: 10 } } }, y: { stacked: true, grid: { color: gridColor }, ticks: { color: textMuted, font: { size: 11 }, callback: v => '₹'+v+'L' } } } }
+});
+
+
+function renderUtmRevenue() {
+  const rows = [
+    {m:'Aug 2026', src:'google / cpc', orders:1134, revenue:11040546},
+    {m:'Aug 2026', src:'google / organic', orders:579, revenue:5255741},
+    {m:'Aug 2026', src:'(direct) / (none)', orders:489, revenue:3653754},
+    {m:'Aug 2026', src:'Facebook / TOFU', orders:395, revenue:1667456},
+    {m:'Aug 2026', src:'Facebook / BOFU', orders:184, revenue:1045487},
+    {m:'Jul 2026', src:'google / cpc', orders:2020, revenue:19183905},
+    {m:'Jul 2026', src:'google / organic', orders:863, revenue:7355628},
+    {m:'Jul 2026', src:'(direct) / (none)', orders:663, revenue:4441975},
+    {m:'Jul 2026', src:'Facebook / TOFU', orders:456, revenue:1606379},
+    {m:'Jul 2026', src:'Facebook / BOFU', orders:105, revenue:673893},
+    {m:'Jun 2026', src:'google / cpc', orders:1664, revenue:16907061},
+    {m:'Jun 2026', src:'google / organic', orders:527, revenue:4216497},
+    {m:'Jun 2026', src:'(direct) / (none)', orders:424, revenue:3748507},
+    {m:'Jun 2026', src:'Facebook / TOFU', orders:127, revenue:540062},
+    {m:'Jun 2026', src:'Facebook / BOFU', orders:34, revenue:358710},
+    {m:'May 2026', src:'google / cpc', orders:1798, revenue:17362920},
+    {m:'May 2026', src:'google / organic', orders:646, revenue:5792634},
+    {m:'May 2026', src:'(direct) / (none)', orders:435, revenue:4054000},
+    {m:'May 2026', src:'Facebook / TOFU', orders:131, revenue:562253},
+    {m:'May 2026', src:'Facebook / BOFU', orders:37, revenue:474826},
+  ];
+  document.getElementById('utmRevenueBody').innerHTML = rows.map(d => {
+    const aov = Math.round(d.revenue/d.orders);
+    return `<tr><td>${d.m}</td><td>${d.src}</td><td>${d.orders.toLocaleString('en-IN')}</td><td>₹${d.revenue.toLocaleString('en-IN')}</td><td>₹${aov.toLocaleString('en-IN')}</td></tr>`;
+  }).join('');
+}
+renderUtmRevenue();
+
+function renderChannelNewRepeatMonthly() {
+  const data = [
+    {m:'Aug 2026', c:'Direct', newO:1450, newR:11282630, repO:494, repR:3022249},
+    {m:'Aug 2026', c:'Google', newO:566, newR:7174930, repO:240, repR:2176528},
+    {m:'Aug 2026', c:'Organic', newO:294, newR:2499997, repO:73, repR:362546},
+    {m:'Aug 2026', c:'Facebook', newO:326, newR:1595299, repO:108, repR:587942},
+    {m:'Jul 2026', c:'Google', newO:1430, newR:14949663, repO:601, repR:5287147},
+    {m:'Jul 2026', c:'Direct', newO:1680, newR:13562590, repO:581, repR:3485732},
+    {m:'Jul 2026', c:'Organic', newO:410, newR:3226914, repO:90, repR:452808},
+    {m:'Jul 2026', c:'Facebook', newO:484, newR:2252808, repO:103, repR:423282},
+    {m:'Jun 2026', c:'Google', newO:1203, newR:14185845, repO:486, repR:3973466},
+    {m:'Jun 2026', c:'Direct', newO:959, newR:8925642, repO:337, repR:2643495},
+    {m:'Jun 2026', c:'Organic', newO:325, newR:2413719, repO:74, repR:466277},
+    {m:'Jun 2026', c:'Facebook', newO:151, newR:822219, repO:40, repR:197404},
+    {m:'May 2026', c:'Direct', newO:1188, newR:12533850, repO:524, repR:3950367},
+    {m:'May 2026', c:'Google', newO:957, newR:10271449, repO:374, repR:2837306},
+    {m:'May 2026', c:'Organic', newO:642, newR:5475345, repO:151, repR:800971},
+    {m:'May 2026', c:'Facebook', newO:33, newR:317441, repO:16, repR:161921},
+    {m:'Apr 2026', c:'Direct', newO:555, newR:6184927, repO:234, repR:2009282},
+    {m:'Apr 2026', c:'Google', newO:397, newR:4759866, repO:167, repR:1488773},
+    {m:'Apr 2026', c:'Organic', newO:232, newR:2255834, repO:66, repR:440361},
+    {m:'Apr 2026', c:'Facebook', newO:10, newR:55323, repO:2, repR:28243},
+  ];
+  document.getElementById('channelNewRepeatMonthlyBody').innerHTML = data.map(d => {
+    const total = d.newR + d.repR;
+    const newShare = total > 0 ? (d.newR/total*100) : 0;
+    return `<tr><td>${d.m}</td><td>${d.c}</td><td>${d.newO.toLocaleString('en-IN')}</td><td>₹${d.newR.toLocaleString('en-IN')}</td><td>${d.repO.toLocaleString('en-IN')}</td><td>₹${d.repR.toLocaleString('en-IN')}</td><td>${newShare.toFixed(1)}%</td></tr>`;
+  }).join('');
+}
+renderChannelNewRepeatMonthly();
+
+function renderChannelNewRepeat() {
+  const data = [
+    {c:'Google', newO:3681, newR:41579613, repO:1513, repR:12816300},
+    {c:'Direct', newO:4613, newR:39285333, repO:1633, repR:10825113},
+    {c:'Organic', newO:1361, newR:10826353, repO:312, repR:1703083},
+    {c:'Facebook', newO:981, newR:4867915, repO:256, repR:1263674},
+    {c:'Social', newO:120, newR:687956, repO:36, repR:189233},
+  ];
+  document.getElementById('channelNewRepeatBody').innerHTML = data.map(d => {
+    const total = d.newR + d.repR;
+    const newShare = (d.newR/total*100);
+    return `<tr><td>${d.c}</td><td>${d.newO.toLocaleString('en-IN')}</td><td>₹${d.newR.toLocaleString('en-IN')}</td><td>${d.repO.toLocaleString('en-IN')}</td><td>₹${d.repR.toLocaleString('en-IN')}</td><td>${newShare.toFixed(1)}%</td></tr>`;
+  }).join('');
+}
+renderChannelNewRepeat();
+
+
+function renderPdpFunnel() {
+  const data = [
+    {p:'Hybrid Latex Mattress', v:1329544, a:35076, c:2568},
+    {p:'Original Mattress', v:1136759, a:25841, c:702},
+    {p:'Ultima Natural Latex Mattress', v:512232, a:12109, c:474},
+    {p:'Microfiber Mattress Topper', v:432847, a:5645, c:208},
+    {p:'The Latex Ortho', v:367930, a:18458, c:683},
+    {p:'Ultima Memory Foam Mattress', v:300391, a:9493, c:263},
+    {p:'Tri Fold Mattress', v:262848, a:5295, c:241},
+    {p:'Aeroflow Mattress Topper', v:182853, a:3363, c:103},
+    {p:'SoftTouch Memory Foam Pillow', v:163512, a:14314, c:556},
+    {p:'Mattress Protector', v:77770, a:19554, c:838},
+    {p:"The Founder's Mattress", v:73492, a:1365, c:44},
+    {p:'Cloud Pillow', v:72598, a:9245, c:349},
+    {p:'200 TC Percale Fitted Bedsheet Set', v:64585, a:6830, c:209},
+  ];
+  document.getElementById('pdpFunnelBody').innerHTML = data.map(d => {
+    const viewAtc = d.a/d.v*100;
+    const atcCheckout = d.c/d.a*100;
+    const cls1 = viewAtc < 2 ? 'cell-neg' : viewAtc >= 10 ? 'cell-pos' : '';
+    const cls2 = atcCheckout < 5 ? 'cell-neg' : atcCheckout >= 15 ? 'cell-pos' : '';
+    return `<tr><td>${d.p}</td><td>${d.v.toLocaleString('en-IN')}</td><td>${d.a.toLocaleString('en-IN')}</td><td>${d.c.toLocaleString('en-IN')}</td><td class="${cls1}">${viewAtc.toFixed(2)}%</td><td class="${cls2}">${atcCheckout.toFixed(1)}%</td></tr>`;
+  }).join('');
+}
+renderPdpFunnel();
+
+function renderPaymentMethods() {
+  const data = [
+    {m:'UPI', captured:8588, failed:3759, refunded:69, created:9, amt:48020761},
+    {m:'Cardless EMI', captured:1327, failed:5190, refunded:14, created:1, amt:13012467},
+    {m:'Card', captured:4561, failed:2358, refunded:30, created:1, amt:53806458},
+    {m:'EMI', captured:603, failed:496, refunded:7, created:0, amt:11129037},
+    {m:'Netbanking', captured:163, failed:319, refunded:1, created:0, amt:2334897},
+    {m:'Wallet', captured:90, failed:291, refunded:2, created:1, amt:642315},
+  ];
+  document.getElementById('paymentMethodBody').innerHTML = data.map(d => {
+    const total = d.captured + d.failed + d.created;
+    const rate = (d.captured/total*100);
+    const cls = rate < 40 ? 'cell-neg' : rate >= 65 ? 'cell-pos' : 'cell-warn';
+    return `<tr><td>${d.m}</td><td>${d.captured.toLocaleString('en-IN')}</td><td>${d.failed.toLocaleString('en-IN')}</td><td>${d.refunded.toLocaleString('en-IN')}</td><td>${total.toLocaleString('en-IN')}</td><td class="${cls}">${rate.toFixed(1)}%</td><td>₹${d.amt.toLocaleString('en-IN')}</td></tr>`;
+  }).join('');
+}
+renderPaymentMethods();
+
+function renderCrossSell() {
+  const data = [
+    {a:'Bedding', b:'Mattress', n:1116}, {a:'Pillow', b:'Mattress', n:946}, {a:'Case', b:'Pillow', n:719},
+    {a:'Mattress', b:'Bedding', n:715}, {a:'Bedding', b:'Pillow', n:681}, {a:'Pillow', b:'Pillow', n:673},
+    {a:'Pillow', b:'Bedding', n:556}, {a:'Bedding', b:'Bedding', n:448}, {a:'Mattress', b:'Pillow', n:416},
+    {a:'Pillow', b:'Case', n:238}, {a:'Case', b:'Bedding', n:190}, {a:'Bedding', b:'Case', n:126}, {a:'Case', b:'Mattress', n:123},
+  ];
+  document.getElementById('crossSellBody').innerHTML = (() => {
+    const total = data.reduce((s,d) => s+d.n, 0);
+    return data.map(d => `<tr><td>${d.a}</td><td>${d.b}</td><td>${d.n.toLocaleString('en-IN')}</td><td>${(d.n/total*100).toFixed(1)}%</td></tr>`).join('');
+  })();
+}
+renderCrossSell();
+
+function renderStateAttachBucket() {
+  const data = [
+    {s:'Karnataka', c0:645, c1:360, c2:118, c3:18},
+    {s:'Maharashtra', c0:627, c1:262, c2:87, c3:6},
+    {s:'Tamil Nadu', c0:381, c1:202, c2:77, c3:9},
+    {s:'Telangana', c0:265, c1:121, c2:48, c3:2},
+    {s:'Uttar Pradesh', c0:261, c1:101, c2:53, c3:4},
+    {s:'Haryana', c0:211, c1:69, c2:30, c3:5},
+    {s:'Delhi', c0:201, c1:56, c2:28, c3:4},
+    {s:'Kerala', c0:132, c1:62, c2:31, c3:5},
+    {s:'West Bengal', c0:140, c1:56, c2:16, c3:1},
+    {s:'Gujarat', c0:99, c1:52, c2:17, c3:0},
+  ];
+  document.getElementById('stateAttachBucketBody').innerHTML = data.map(d => {
+    const total = d.c0+d.c1+d.c2+d.c3;
+    const attached = d.c1+d.c2+d.c3;
+    const rate = attached/total*100;
+    const cls = rate >= 42 ? 'cell-pos' : rate < 33 ? 'cell-neg' : '';
+    return `<tr><td>${d.s}</td><td>${total.toLocaleString('en-IN')}</td><td>${d.c0.toLocaleString('en-IN')}</td><td>${d.c1.toLocaleString('en-IN')}</td><td>${d.c2.toLocaleString('en-IN')}</td><td>${d.c3.toLocaleString('en-IN')}</td><td class="${cls}">${rate.toFixed(1)}%</td></tr>`;
+  }).join('');
+}
+renderStateAttachBucket();
+
+new Chart(document.getElementById('crossSellChart'), { type: 'bar', data: { labels: ['Bedding+Mattress','Pillow+Mattress','Case+Pillow','Mattress+Bedding','Bedding+Pillow','Pillow+Pillow','Pillow+Bedding','Mattress+Pillow'], datasets: [{ data: [1116,946,719,715,681,673,556,416], backgroundColor: PLUM, borderRadius: 4 }] }, options: { ...baseOpts, indexAxis: 'y', scales: { x: baseOpts.scales.x, y: { ticks: { color: textMuted, font: { size: 10 } }, grid: { color: gridColor } } } } });
+
+function addLegend(canvasId, items) {
+  const total = items.reduce((s,i) => s + i.v, 0);
+  const html = '<div class="legend" style="margin-top:10px">' + items.map(i => {
+    const pct = total > 0 ? (i.v/total*100).toFixed(1) : '0';
+    return `<span class="legend-item"><span class="legend-dot" style="background:${i.c}"></span>${i.l} — ${pct}%</span>`;
+  }).join('') + '</div>';
+  document.getElementById(canvasId).parentElement.insertAdjacentHTML('afterend', html);
+}
+
+new Chart(document.getElementById('methodSuccessChart'), { type: 'bar', data: { labels: ['UPI','Card','EMI','Netbanking','Wallet','Cardless EMI'], datasets: [{ data: [69.5,65.9,54.6,33.8,23.4,20.3], backgroundColor: (ctx) => ctx.raw < 40 ? '#c0392b' : ctx.raw >= 65 ? '#3a8a6b' : '#d99a1b', borderRadius: 4 }] }, options: { ...baseOpts, plugins: { ...baseOpts.plugins, tooltip: { ...baseOpts.plugins.tooltip, callbacks: { label: v => v.raw + '% success' } } } } });
+document.getElementById('methodSuccessChart').parentElement.insertAdjacentHTML('afterend', '<div class="legend" style="margin-top:10px"><span class="legend-item"><span class="legend-dot" style="background:#3a8a6b"></span>Green = success rate ≥65% (healthy)</span><span class="legend-item"><span class="legend-dot" style="background:#d99a1b"></span>Amber = 40-65% (watch)</span><span class="legend-item"><span class="legend-dot" style="background:#c0392b"></span>Red = under 40% (broken)</span></div>');
+new Chart(document.getElementById('emiFailChart'), { type: 'doughnut', data: { labels: ['Payment timed out','Payment cancelled','Payment failed (declined)','Unknown','Gateway error'], datasets: [{ data: [2046,1803,1111,220,10], backgroundColor: ['#c0392b','#d99a1b','#a5401f','#948572','#3a8a6b'], borderWidth: 2, borderColor: surface }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } } });
+addLegend('emiFailChart', [{l:'Timed out',v:2046,c:'#c0392b'},{l:'Cancelled',v:1803,c:'#d99a1b'},{l:'Declined',v:1111,c:'#a5401f'},{l:'Unknown',v:220,c:'#948572'},{l:'Gateway error',v:10,c:'#3a8a6b'}]);
+
+new Chart(document.getElementById('dailyChart'), { type: 'bar', data: { labels: ['Aug 8','Aug 9','Aug 10','Aug 11','Aug 12','Aug 13','Aug 14'], datasets: [
+  { label: 'Orders', data: [349,372,293,297,296,342,301], backgroundColor: PLUM, borderRadius: 4, yAxisID: 'y' },
+  { label: 'Revenue (₹L)', data: [28.5,30.6,25.7,22.5,24.6,28.0,27.1], backgroundColor: MUSTARD, borderRadius: 4, yAxisID: 'y1' }
+] }, options: { ...baseOpts, scales: { ...baseOpts.scales, y: { ...baseOpts.scales.y, position: 'left' }, y1: { grid: { drawOnChartArea: false }, ticks: { color: textMuted, font: { size: 11 } }, position: 'right' } } } });
+
+new Chart(document.getElementById('channelChart'), { type: 'bar', data: { labels: ['D2C Online','Store (physical retail)'], datasets: [{ data: [282, 275], backgroundColor: [PLUM, MUSTARD], borderRadius: 4 }] }, options: { ...baseOpts, indexAxis: 'y' } });
+
+new Chart(document.getElementById('engagementChart'), { data: { labels: ['Feb','Mar','Apr','May','Jun','Jul','Aug'], datasets: [
+  { type: 'bar', label: 'Sessions', data: [391198,1099131,918669,1007300,709746,847720,477658], backgroundColor: 'rgba(74,37,69,0.35)', borderRadius: 4, yAxisID: 'y' },
+  { type: 'line', label: 'Avg session duration (sec)', data: [198,116,109,104,128,158,185], borderColor: MUSTARD, backgroundColor: 'transparent', tension: 0.3, pointRadius: 3, yAxisID: 'y1' },
+  { type: 'line', label: 'Non-engaged rate % (bounce proxy)', data: [4.6,4.4,4.6,4.1,5.7,6.7,13.6], borderColor: '#c0392b', backgroundColor: 'transparent', tension: 0.3, pointRadius: 3, borderDash: [4,2], yAxisID: 'y1' }
+] }, options: { ...baseOpts, scales: { x: { grid: { color: gridColor }, ticks: { color: textMuted, font: { size: 11 } } }, y: { ...baseOpts.scales.y, position: 'left' }, y1: { grid: { drawOnChartArea: false }, ticks: { color: textMuted, font: { size: 11 } }, position: 'right' } } } });
+document.getElementById('engagementChart').parentElement.insertAdjacentHTML('afterbegin', '<div class="legend"><span class="legend-item"><span class="legend-dot" style="background:rgba(74,37,69,0.35)"></span>Sessions</span><span class="legend-item"><span class="legend-dot" style="background:'+MUSTARD+'"></span>Avg session duration</span><span class="legend-item"><span class="legend-dot" style="background:#c0392b"></span>Non-engaged rate (bounce proxy)</span></div>');
+
+const wks = ['May 11','May 18','May 25','Jun 1','Jun 8','Jun 15','Jun 22','Jun 29','Jul 6','Jul 13','Jul 20','Jul 27','Aug 3','Aug 10'];
+new Chart(document.getElementById('sessionOutcomeChart'), {
+  type: 'bar',
+  data: {
+    labels: [''],
+    datasets: [
+      { label: 'Left without ATC (93.3%)', data: [93.3], backgroundColor: '#c0392b', borderRadius: 0 },
+      { label: 'ATC but no checkout (5.0%)', data: [5.0], backgroundColor: MUSTARD, borderRadius: 0 },
+      { label: 'Checkout but no order (0.7%)', data: [0.7], backgroundColor: '#d99a1b', borderRadius: 0 },
+      { label: 'Purchased (1.0%)', data: [1.0], backgroundColor: '#3a8a6b', borderRadius: 0 }
+    ]
+  },
+  options: {
+    indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false }, tooltip: { backgroundColor: surface, titleColor: isDark ? '#f3ede2' : '#2b2018', bodyColor: textSecondary, callbacks: { label: c => c.dataset.label } } },
+    scales: { x: { stacked: true, max: 100, grid: { display: false }, ticks: { display: false } }, y: { stacked: true, grid: { display: false }, ticks: { display: false } } }
+  }
+});
+document.getElementById('sessionOutcomeChart').parentElement.insertAdjacentHTML('afterend', '<div class="legend" style="margin-top:10px"><span class="legend-item"><span class="legend-dot" style="background:#c0392b"></span>Left without ATC — 93.3%</span><span class="legend-item"><span class="legend-dot" style="background:'+MUSTARD+'"></span>ATC, no checkout — 5.0%</span><span class="legend-item"><span class="legend-dot" style="background:#d99a1b"></span>Checkout, no order — 0.7%</span><span class="legend-item"><span class="legend-dot" style="background:#3a8a6b"></span>Purchased — 1.0%</span></div>');
+
+new Chart(document.getElementById('cartAbChart'), { type: 'line', data: { labels: wks, datasets: [{ label: 'Cart abandonment %', data: [90.81,87.12,85,89.83,87.39,88.99,88.99,84.79,85.03,82.02,77.25,81.61,76.85,70.12], borderColor: '#c0392b', backgroundColor: 'rgba(192,57,43,0.06)', tension: 0.3, pointRadius: 3 }] }, options: { ...baseOpts, scales: { ...baseOpts.scales, y: { ...baseOpts.scales.y, min: 60, max: 100 } } } });
+
+new Chart(document.getElementById('ga4Chart'), { type: 'bar', data: { labels: ['Jun22','Jun29','Jul6','Jul13','Jul20','Jul27','Aug3','Aug10'], datasets: [
+  { label: 'GA4 intent', data: [17464,25396,23866,19441,17970,30103,40584,23533], backgroundColor: MUSTARD, borderRadius: 4 },
+  { label: 'Shopify checkouts', data: [859,1632,1553,1661,1870,2107,3767,3120], backgroundColor: PLUM, borderRadius: 4 }
+] }, options: baseOpts });
+
+new Chart(document.getElementById('recoveryBucketChart'), { type: 'bar', data: { labels: ['<1 Hour','1-6 Hours','6-24 Hours','1-3 Days','3-7 Days','7-14 Days'], datasets: [{ data: [18, 32, 25, 15, 7, 3], backgroundColor: ['#3a8a6b','#3a8a6b','#d99a1b','#a5401f','#c0392b','#c0392b'], borderRadius: 4 }] }, options: { ...baseOpts, plugins: { ...baseOpts.plugins, tooltip: { ...baseOpts.plugins.tooltip, callbacks: { label: v => v.raw + '% of recoveries' } } } } });
+
+new Chart(document.getElementById('recoveryTypeChart'), { type: 'doughnut', data: { labels: ['Still abandoned','Exact recovery','Bought less','Bought more'], datasets: [{ data: [64.8, 21.5, 11.2, 2.5], backgroundColor: ['#c0392b','#3a8a6b','#d99a1b',PLUM], borderWidth: 2, borderColor: surface }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } } });
+addLegend('recoveryTypeChart', [{l:'Still abandoned',v:64.8,c:'#c0392b'},{l:'Exact recovery',v:21.5,c:'#3a8a6b'},{l:'Bought less',v:11.2,c:'#d99a1b'},{l:'Bought more',v:2.5,c:PLUM}]);
+
+new Chart(document.getElementById('recoveryTrendChart'), { type: 'bar', data: { labels: ['Jul 13','Jul 20','Jul 27','Aug 3','Aug 10'], datasets: [
+  { label: 'Recovered', data: [132,281,343,708,552], backgroundColor: '#3a8a6b', borderRadius: 4 },
+  { label: 'Still abandoned', data: [262,537,640,1241,1032], backgroundColor: '#c0392b', borderRadius: 4 }
+] }, options: baseOpts });
+
+const wks5 = ['Jul 13','Jul 20','Jul 27','Aug 3','Aug 10'];
+new Chart(document.getElementById('cohortOrderChart'), { type: 'bar', data: { labels: wks5, datasets: [
+  { label: 'New', data: [905,772,833,1339,1081], backgroundColor: PLUM, borderRadius: 4 },
+  { label: 'Returning', data: [370,402,412,555,456], backgroundColor: MUSTARD, borderRadius: 4 }
+] }, options: baseOpts });
+
+new Chart(document.getElementById('cohortAovChart'), { type: 'line', data: { labels: wks5, datasets: [
+  { label: 'New AOV', data: [8205,9008,7615,8394,9043], borderColor: PLUM, tension: 0.3, pointRadius: 3 },
+  { label: 'Repeat AOV', data: [7091,8077,8399,7009,6553], borderColor: MUSTARD, tension: 0.3, pointRadius: 3, borderDash: [4,2] }
+] }, options: baseOpts });
+
+new Chart(document.getElementById('cohortRevChart'), { type: 'doughnut', data: { labels: ['New customers','Returning','Pending'], datasets: [{ data: [9775753, 2988117, 123234], backgroundColor: [PLUM, MUSTARD, '#948572'], borderWidth: 2, borderColor: surface }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } } });
+addLegend('cohortRevChart', [{l:'New customers',v:9775753,c:PLUM},{l:'Returning',v:2988117,c:MUSTARD},{l:'Pending',v:123234,c:'#948572'}]);
+
+new Chart(document.getElementById('newCustomerMixChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Mattress','Bedding','Pillow','Pet Bed','Ergo/Other'],
+    datasets: [
+      { label: 'New customers', data: [72240932,11111965,7614248,2244029,2272728], backgroundColor: PLUM, borderRadius: 4 },
+      { label: 'Repeat customers', data: [27144905,5216249,3345416,759835,1663970], backgroundColor: MUSTARD, borderRadius: 4 }
+    ]
+  },
+  options: { ...baseOpts, plugins: { ...baseOpts.plugins, tooltip: { ...baseOpts.plugins.tooltip, callbacks: { label: c => c.dataset.label + ': ₹' + (c.raw/100000).toFixed(1) + 'L' } } } }
+});
+document.getElementById('newCustomerMixChart').parentElement.insertAdjacentHTML('afterbegin', '<div class="legend"><span class="legend-item"><span class="legend-dot" style="background:'+PLUM+'"></span>New customers</span><span class="legend-item"><span class="legend-dot" style="background:'+MUSTARD+'"></span>Repeat customers</span></div>');
+
+function renderRepeatSequence() {
+  const data = [
+    {f:'Mattress', r:'Mattress', n:2884}, {f:'Bedding', r:'Bedding', n:1803}, {f:'Mattress', r:'Bedding', n:1324},
+    {f:'Pillow', r:'Pillow', n:1323}, {f:'Bedding', r:'Mattress', n:1072}, {f:'Mattress', r:'Pillow', n:752},
+    {f:'Pillow', r:'Bedding', n:734}, {f:'Pillow', r:'Mattress', n:724}, {f:'Bedding', r:'Pillow', n:535},
+    {f:'Pillow', r:'Case', n:349}, {f:'Pet Bed', r:'Pet Bed', n:345}, {f:'Case', r:'Case', n:251},
+  ];
+  const total = data.reduce((s,d) => s+d.n, 0);
+  document.getElementById('repeatSequenceBody').innerHTML = data.map(d =>
+    `<tr><td>${d.f}</td><td>${d.r}</td><td>${d.n.toLocaleString('en-IN')}</td><td>${(d.n/total*100).toFixed(1)}%</td></tr>`
+  ).join('');
+}
+renderRepeatSequence();
+
+addLegend('cohortRevChart', [{l:'New customers',v:9775753,c:PLUM},{l:'Returning',v:2988117,c:MUSTARD},{l:'Pending',v:123234,c:'#948572'}]);
+
+new Chart(document.getElementById('productRevChart'), { type: 'bar', data: { labels: ['Hybrid Latex Mattress','Original Mattress','Ultima Natural Latex','Latex-Ortho Mattress','Ultima Memory Foam','Tri Fold Mattress','Microfiber Topper','Memory Foam Topper 2"','Mattress Protector','SoftTouch Pillow','Cloud Mattress','Cloud Pillow','Aeroflow Topper','Dog Bed Original','Latex Topper'], datasets: [{ data: [3146,2071,1641,1550,906,358,339,296,227,250,238,220,165,135,137], backgroundColor: PLUM, borderRadius: 4 }] }, options: { ...baseOpts, indexAxis: 'y', scales: { x: { ...baseOpts.scales.x, ticks: { callback: v => '₹' + v + 'L', color: textMuted } }, y: { ticks: { color: textMuted, font: { size: 10 } }, grid: { color: gridColor } } } } });
+
+new Chart(document.getElementById('catMixChart'), { type: 'doughnut', data: { labels: ['Mattress','Bedding','Pillow','Pet Bed','Other'], datasets: [{ data: [9969, 1476, 722, 268, 100], backgroundColor: [PLUM,'#3a8a6b',MUSTARD,'#c9962a','#948572'], borderWidth: 2, borderColor: surface }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } } });
+addLegend('catMixChart', [{l:'Mattress',v:9969,c:PLUM},{l:'Bedding',v:1476,c:'#3a8a6b'},{l:'Pillow',v:722,c:MUSTARD},{l:'Pet Bed',v:268,c:'#c9962a'},{l:'Other',v:100,c:'#948572'}]);
+
+new Chart(document.getElementById('productAovChart'), { type: 'bar', data: { labels: ["Founder's","Ultima NL","Cloud","Ultima MF","Hybrid Latex","Latex-Ortho","Original","Baby Mattress"], datasets: [{ data: [46303,30723,23366,21370,17062,14153,13762,2466], backgroundColor: MUSTARD, borderRadius: 4 }] }, options: { ...baseOpts, plugins: { ...baseOpts.plugins, tooltip: { ...baseOpts.plugins.tooltip, callbacks: { label: v => '₹' + v.raw.toLocaleString('en-IN') } } } } });
+
+new Chart(document.getElementById('sizeChart'), { type: 'bar', data: { labels: ['King','Queen','Other/Unspecified','Single'], datasets: [{ data: [2235,1939,1242,1008], backgroundColor: PLUM, borderRadius: 4 }] }, options: baseOpts });
+new Chart(document.getElementById('attachChart'), { type: 'doughnut', data: { labels: ['Attached (bedding/pillow/case)','Mattress only'], datasets: [{ data: [2487, 3779], backgroundColor: ['#3a8a6b', '#c0392b'], borderWidth: 2, borderColor: surface }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } } });
+addLegend('attachChart', [{l:'Attached (bedding/pillow/case)',v:2487,c:'#3a8a6b'},{l:'Mattress only',v:3779,c:'#c0392b'}]);
+new Chart(document.getElementById('attachChart2'), { type: 'doughnut', data: { labels: ['Attached (bedding/pillow/case)','Mattress only'], datasets: [{ data: [2487, 3779], backgroundColor: ['#3a8a6b', '#c0392b'], borderWidth: 2, borderColor: surface }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } } });
+addLegend('attachChart2', [{l:'Attached (bedding/pillow/case)',v:2487,c:'#3a8a6b'},{l:'Mattress only',v:3779,c:'#c0392b'}]);
+
+new Chart(document.getElementById('stateRevChart'), { type: 'bar', data: { labels: ['Karnataka','Maharashtra','Tamil Nadu','Telangana','Uttar Pradesh','Haryana','Delhi','West Bengal','Kerala','Andhra Pradesh','Gujarat','Mizoram','Punjab','Madhya Pradesh','Rajasthan'], datasets: [{ data: [262,221,148,93,89,72,68,52,50,49,40,34,26,25,24], backgroundColor: PLUM, borderRadius: 4 }] }, options: { ...baseOpts, indexAxis: 'y', scales: { x: { ...baseOpts.scales.x, ticks: { callback: v => '₹' + v + 'L', color: textMuted } }, y: { ticks: { color: textMuted, font: { size: 11 } }, grid: { color: gridColor } } } } });
+
+new Chart(document.getElementById('tierChart'), { type: 'bar', data: { labels: ['Tier 1','Tier 2','Tier 3'], datasets: [
+  { label: 'Revenue (₹L)', data: [697,144,564], backgroundColor: PLUM, borderRadius: 4, yAxisID: 'y' },
+  { label: 'AOV (₹)', data: [7901,8894,9887], backgroundColor: MUSTARD, borderRadius: 4, yAxisID: 'y1' }
+] }, options: { ...baseOpts, scales: { y: { ...baseOpts.scales.y, position: 'left' }, y1: { grid: { drawOnChartArea: false }, ticks: { color: textMuted, font: { size: 11 } }, position: 'right' } } } });
+
+new Chart(document.getElementById('stateAovChart'), { type: 'bar', data: { labels: ['Bihar','Mizoram','Andhra Pradesh','Odisha','Punjab','Tamil Nadu','Telangana','West Bengal','UP','MP'], datasets: [{ data: [11046,10697,9970,9841,9592,9837,9045,9216,9343,9575], backgroundColor: '#3a8a6b', borderRadius: 4 }] }, options: { ...baseOpts, indexAxis: 'y', scales: { x: { ticks: { callback: v => '₹' + (v/1000).toFixed(0) + 'K', color: textMuted, font: { size: 10 } }, grid: { color: gridColor } }, y: { ticks: { color: textMuted, font: { size: 10 } }, grid: { color: gridColor } } } } });
+
+const crossTabData = [
+  { state: 'Karnataka', mattress: 183.2, bedding: 32.7, pillow: 18.6, petbed: 7.4, other: 6.4, total: 261.9 },
+  { state: 'Maharashtra', mattress: 148.5, bedding: 30.7, pillow: 20.6, petbed: 5.4, other: 7.2, total: 221.0 },
+  { state: 'Tamil Nadu', mattress: 111.9, bedding: 13.4, pillow: 11.4, petbed: 2.2, other: 8.9, total: 147.7 },
+  { state: 'Telangana', mattress: 68.6, bedding: 9.6, pillow: 6.8, petbed: 1.9, other: 6.3, total: 93.3 },
+  { state: 'Uttar Pradesh', mattress: 65.3, bedding: 10.5, pillow: 7.9, petbed: 1.5, other: 4.2, total: 89.3 },
+  { state: 'Haryana', mattress: 53.5, bedding: 7.9, pillow: 5.4, petbed: 1.8, other: 3.4, total: 72.0 },
+  { state: 'Delhi', mattress: 44.2, bedding: 10.6, pillow: 5.8, petbed: 2.0, other: 5.4, total: 67.9 },
+  { state: 'West Bengal', mattress: 36.4, bedding: 6.1, pillow: 3.6, petbed: 1.1, other: 4.5, total: 51.7 },
+];
+function heatColor(val, max) {
+  const p = Math.min(val / max, 1); const alpha = 0.12 + p * 0.55;
+  return `background: rgba(74,37,69,${alpha.toFixed(2)}); color:${p>0.5 ? '#fff' : 'var(--text-primary)'}`;
+}
+function renderTierMattressSplit() {
+  const data = [
+    {tier:'Tier 1', mattress:3054, nonMattress:5768},
+    {tier:'Tier 2', mattress:612, nonMattress:1010},
+    {tier:'Tier 3', mattress:2594, nonMattress:3112},
+  ];
+  document.getElementById('tierMattressSplitBody').innerHTML = data.map(d => {
+    const total = d.mattress + d.nonMattress;
+    return `<tr><td>${d.tier}</td><td>${total.toLocaleString('en-IN')}</td><td>${d.mattress.toLocaleString('en-IN')}</td><td>${(d.mattress/total*100).toFixed(1)}%</td><td>${d.nonMattress.toLocaleString('en-IN')}</td><td>${(d.nonMattress/total*100).toFixed(1)}%</td></tr>`;
+  }).join('');
+}
+renderTierMattressSplit();
+
+function renderTierMattressBucket() {
+  const data = [
+    {tier:'Tier 1', c0:1884, c1:817, c2:318, c3:35},
+    {tier:'Tier 2', c0:356, c1:189, c2:59, c3:8},
+    {tier:'Tier 3', c0:1540, c1:751, c2:277, c3:26},
+  ];
+  document.getElementById('tierMattressBucketBody').innerHTML = data.map(d => {
+    const total = d.c0+d.c1+d.c2+d.c3;
+    const attached = d.c1+d.c2+d.c3;
+    const rate = attached/total*100;
+    return `<tr><td>${d.tier}</td><td>${total.toLocaleString('en-IN')}</td><td>${d.c0.toLocaleString('en-IN')}</td><td>${d.c1.toLocaleString('en-IN')}</td><td>${d.c2.toLocaleString('en-IN')}</td><td>${d.c3.toLocaleString('en-IN')}</td><td>${rate.toFixed(1)}%</td></tr>`;
+  }).join('');
+}
+renderTierMattressBucket();
+
+function renderTierMattressType() {
+  const data = [
+    {tier:'Tier 1', type:'Hybrid Latex', orders:816, revenue:13297307, avg:16296},
+    {tier:'Tier 1', type:'Original', orders:735, revenue:9754147, avg:13271},
+    {tier:'Tier 1', type:'Latex Ortho', orders:435, revenue:5963127, avg:13708},
+    {tier:'Tier 1', type:'Tri Fold', orders:358, revenue:2144068, avg:5989},
+    {tier:'Tier 1', type:'Ultima Natural Latex', orders:278, revenue:8499437, avg:30574},
+    {tier:'Tier 1', type:'Ultima Memory Foam', orders:234, revenue:4841233, avg:20689},
+    {tier:'Tier 1', type:'Baby Mattress', orders:148, revenue:369841, avg:2499},
+    {tier:'Tier 1', type:'Cloud Mattress', orders:62, revenue:1452778, avg:23432},
+    {tier:'Tier 1', type:"Founder's Mattress", orders:9, revenue:439594, avg:48844},
+    {tier:'Tier 2', type:'Hybrid Latex', orders:202, revenue:3699147, avg:18313},
+    {tier:'Tier 2', type:'Original', orders:138, revenue:2008018, avg:14551},
+    {tier:'Tier 2', type:'Latex Ortho', orders:115, revenue:1674566, avg:14561},
+    {tier:'Tier 2', type:'Tri Fold', orders:51, revenue:314273, avg:6162},
+    {tier:'Tier 2', type:'Ultima Memory Foam', orders:41, revenue:888601, avg:21673},
+    {tier:'Tier 2', type:'Ultima Natural Latex', orders:36, revenue:1063675, avg:29547},
+    {tier:'Tier 2', type:'Baby Mattress', orders:24, revenue:56389, avg:2350},
+    {tier:'Tier 2', type:'Cloud Mattress', orders:11, revenue:249177, avg:22652},
+    {tier:'Tier 2', type:"Founder's Mattress", orders:5, revenue:260773, avg:52155},
+    {tier:'Tier 3', type:'Hybrid Latex', orders:823, revenue:14407584, avg:17506},
+    {tier:'Tier 3', type:'Original', orders:630, revenue:8924387, avg:14166},
+    {tier:'Tier 3', type:'Latex Ortho', orders:544, revenue:7848991, avg:14428},
+    {tier:'Tier 3', type:'Ultima Natural Latex', orders:220, revenue:6843064, avg:31105},
+    {tier:'Tier 3', type:'Tri Fold', orders:190, revenue:1126528, avg:5929},
+    {tier:'Tier 3', type:'Ultima Memory Foam', orders:149, revenue:3330837, avg:22355},
+    {tier:'Tier 3', type:'Baby Mattress', orders:46, revenue:111383, avg:2421},
+    {tier:'Tier 3', type:'Cloud Mattress', orders:29, revenue:681365, avg:23495},
+    {tier:'Tier 3', type:"Founder's Mattress", orders:7, revenue:271997, avg:38857},
+  ];
+  document.getElementById('tierMattressTypeBody').innerHTML = (() => {
+    const tierTotals = {};
+    data.forEach(d => { tierTotals[d.tier] = (tierTotals[d.tier]||0) + d.orders; });
+    return data.map(d =>
+      `<tr><td>${d.tier}</td><td>${d.type}</td><td>${d.orders.toLocaleString('en-IN')}</td><td>₹${d.revenue.toLocaleString('en-IN')}</td><td>₹${d.avg.toLocaleString('en-IN')}</td><td>${(d.orders/tierTotals[d.tier]*100).toFixed(1)}%</td></tr>`
+    ).join('');
+  })();
+}
+renderTierMattressType();
+
+
+function renderTierComposition() {
+  const data = [
+    {tier:'Tier 1', total:5768, pillow:2392, bedding:2050, petbed:778, case_:640},
+    {tier:'Tier 2', total:1010, pillow:468, bedding:327, petbed:138, case_:96},
+    {tier:'Tier 3', total:3112, pillow:1383, bedding:1044, petbed:400, case_:274},
+  ];
+  document.getElementById('tierCompositionBody').innerHTML = data.map(d => {
+    const pct = v => (v/d.total*100).toFixed(1)+'%';
+    return `<tr><td>${d.tier}</td><td>${d.total.toLocaleString('en-IN')}</td><td>${pct(d.pillow)}</td><td>${pct(d.bedding)}</td><td>${pct(d.petbed)}</td><td>${pct(d.case_)}</td></tr>`;
+  }).join('');
+}
+renderTierComposition();
+
+document.getElementById('crossTabBody').innerHTML = crossTabData.map(r => `<tr>
+    <td>${r.state}</td>
+    <td><span class="heat-cell" title="₹${(r.mattress*100000).toLocaleString('en-IN')}" style="${heatColor(r.mattress,183)}">${r.mattress.toFixed(1)}</span></td>
+    <td><span class="heat-cell" title="₹${(r.bedding*100000).toLocaleString('en-IN')}" style="${heatColor(r.bedding,33)}">${r.bedding.toFixed(1)}</span></td>
+    <td><span class="heat-cell" title="₹${(r.pillow*100000).toLocaleString('en-IN')}" style="${heatColor(r.pillow,21)}">${r.pillow.toFixed(1)}</span></td>
+    <td><span class="heat-cell" title="₹${(r.petbed*100000).toLocaleString('en-IN')}" style="${heatColor(r.petbed,7.4)}">${r.petbed.toFixed(1)}</span></td>
+    <td><span class="heat-cell" title="₹${(r.other*100000).toLocaleString('en-IN')}" style="${heatColor(r.other,8.9)}">${r.other.toFixed(1)}</span></td>
+    <td style="font-weight:500;color:var(--text-primary)" title="₹${(r.total*100000).toLocaleString('en-IN')}">${r.total.toFixed(1)}</td>
+  </tr>`).join('');
+
+function renderMetaTable() {
+  const rows = [
+    {w:'Aug 10',spend:1760698.29,purch:1065,rev:8298349,roas:4.71,cpa:1653,active:20,scale:7,working:3,watch:3,stop:4,stopSpend:159178,health:'🔴 Needs Attention',focus:'4 campaigns in Stop-status burning ₹159.2k/wk with no return. Reallocate to the 7 campaigns currently scaling.'},
+    {w:'Aug 3',spend:2463309.49,purch:1352,rev:9042452,roas:3.67,cpa:1822,active:21,scale:6,working:6,watch:6,stop:3,stopSpend:127100,health:'🔴 Needs Attention',focus:'3 campaigns in Stop-status burning ₹127.1k/wk with no return. Reallocate to the 6 campaigns currently scaling.'},
+    {w:'Jul 27',spend:2072959.68,purch:622,rev:4275458,roas:2.06,cpa:3333,active:17,scale:2,working:3,watch:4,stop:5,stopSpend:995693,health:'🔴 Needs Attention',focus:'5 campaigns in Stop-status burning ₹995.7k/wk with no return. Reallocate to the 2 campaigns currently scaling.'},
+    {w:'Jul 20',spend:1641660.41,purch:499,rev:3748581,roas:2.28,cpa:3290,active:16,scale:3,working:1,watch:6,stop:4,stopSpend:655827,health:'🔴 Needs Attention',focus:'4 campaigns in Stop-status burning ₹655.8k/wk with no return. Reallocate to the 3 campaigns currently scaling.'},
+    {w:'Jul 13',spend:1735245.94,purch:548,rev:3345458,roas:1.93,cpa:3167,active:18,scale:2,working:2,watch:4,stop:3,stopSpend:719196,health:'🔴 Needs Attention',focus:'3 campaigns in Stop-status burning ₹719.2k/wk with no return. Reallocate to the 2 campaigns currently scaling.'},
+    {w:'Jul 6',spend:1540105.45,purch:715,rev:4586546,roas:2.98,cpa:2154,active:17,scale:5,working:3,watch:1,stop:7,stopSpend:771577,health:'🔴 Needs Attention',focus:'7 campaigns in Stop-status burning ₹771.6k/wk with no return. Reallocate to the 5 campaigns currently scaling.'},
+    {w:'Jun 29',spend:1055251.62,purch:671,rev:4632821,roas:4.39,cpa:1573,active:14,scale:3,working:5,watch:0,stop:2,stopSpend:73799,health:'🔴 Needs Attention',focus:'2 campaigns in Stop-status burning ₹73.8k/wk with no return. Reallocate to the 3 campaigns currently scaling.'},
+    {w:'Jun 22',spend:688168.56,purch:324,rev:2710917,roas:3.94,cpa:2124,active:22,scale:7,working:1,watch:1,stop:3,stopSpend:392146,health:'🔴 Needs Attention',focus:'3 campaigns in Stop-status burning ₹392.1k/wk with no return. Reallocate to the 7 campaigns currently scaling.'},
+    {w:'Jun 15',spend:851514.44,purch:369,rev:4038050,roas:4.74,cpa:2308,active:27,scale:8,working:1,watch:2,stop:10,stopSpend:249898,health:'🔴 Needs Attention',focus:'10 campaigns in Stop-status burning ₹249.9k/wk with no return. Reallocate to the 8 campaigns currently scaling.'},
+    {w:'Jun 8',spend:955814.84,purch:298,rev:2982720,roas:3.12,cpa:3207,active:23,scale:6,working:2,watch:3,stop:6,stopSpend:234549,health:'🔴 Needs Attention',focus:'6 campaigns in Stop-status burning ₹234.5k/wk with no return. Reallocate to the 6 campaigns currently scaling.'},
+    {w:'Jun 1',spend:833121.06,purch:277,rev:2621675,roas:3.15,cpa:3008,active:25,scale:4,working:2,watch:3,stop:7,stopSpend:237971,health:'🔴 Needs Attention',focus:'7 campaigns in Stop-status burning ₹238k/wk with no return. Reallocate to the 4 campaigns currently scaling.'},
+    {w:'May 25',spend:803462.68,purch:247,rev:2357712,roas:2.93,cpa:3253,active:29,scale:7,working:3,watch:3,stop:9,stopSpend:244563,health:'🔴 Needs Attention',focus:'9 campaigns in Stop-status burning ₹244.6k/wk with no return. Reallocate to the 7 campaigns currently scaling.'},
+    {w:'May 18',spend:805793.03,purch:252,rev:2229349,roas:2.77,cpa:3198,active:26,scale:5,working:2,watch:9,stop:6,stopSpend:212130,health:'🔴 Needs Attention',focus:'6 campaigns in Stop-status burning ₹212.1k/wk with no return. Reallocate to the 5 campaigns currently scaling.'},
+    {w:'May 11',spend:332721.53,purch:232,rev:2498076,roas:7.51,cpa:1434,active:20,scale:12,working:0,watch:1,stop:4,stopSpend:69747,health:'🔴 Needs Attention',focus:'4 campaigns in Stop-status burning ₹69.7k/wk with no return. Reallocate to the 12 campaigns currently scaling.'},
+  ];
+  document.getElementById('metaTableBody').innerHTML = rows.map(r => `<tr>
+    <td>${r.w}</td><td>₹${Math.round(r.spend).toLocaleString('en-IN')}</td><td>${r.purch.toLocaleString('en-IN')}</td><td>₹${Math.round(r.rev).toLocaleString('en-IN')}</td>
+    <td class="${r.roas<2.5?'cell-neg':r.roas>=4?'cell-pos':''}">${r.roas.toFixed(2)}x</td><td>₹${r.cpa.toLocaleString('en-IN')}</td>
+    <td>${r.active}</td><td class="cell-pos">${r.scale}</td><td>${r.working}</td><td class="cell-warn">${r.watch}</td><td class="cell-neg">${r.stop}</td>
+    <td>₹${r.stopSpend.toLocaleString('en-IN')}</td><td>${r.health}</td>
+  </tr>`).join('');
+  document.getElementById('metaFocusBody').innerHTML = rows.map(r => `<tr><td>${r.w}</td><td>${r.focus}</td></tr>`).join('');
+}
+renderMetaTable();
+</script>
+</body>
+</html>
