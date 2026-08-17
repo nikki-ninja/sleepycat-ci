@@ -1,5 +1,689 @@
 [
   {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "offer",
+    "text": "headline offer now 8% off"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Hybrid Latex Mattress' Rs 8,799 ↑ Rs 10,099"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'SoftTouch Memory Foam Pillow' Rs 949 ↑ Rs 999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Contour SoftTouch Memory Foam Pillow' Rs 949 ↑ Rs 1,099"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Ultima Memory Foam Mattress' Rs 11,399 ↑ Rs 13,299"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Ultima Natural Latex Mattress' Rs 16,199 ↑ Rs 18,399"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Memory Foam Mattress Topper' Rs 3,149 ↑ Rs 3,595"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Cloud Mattress' Rs 14,399 ↑ Rs 16,199"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Baby Mattress' Rs 1,999 ↑ Rs 2,249"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Mattress Protector' Rs 710 ↓ Rs 649"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Cuddle Pillow' Rs 1,499 ↑ Rs 1,699"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Dual Comfort Pillow' Rs 1,999 ↑ Rs 2,149"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Marshmallow Pillow' Rs 1,599 ↑ Rs 1,699"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Cloud Pillow' Rs 948 ↑ Rs 999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Natural Latex Pillow' Rs 2,071 ↑ Rs 2,330"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Contour Natural Latex Pillow' Rs 2,279 ↑ Rs 2,399"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'CoolTEC Memory Foam Pillow' Rs 2,184 ↑ Rs 2,299"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Contour CoolTEC Memory Foam Pillow' Rs 1,799 ↑ Rs 1,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Travel Neck Pillow' Rs 949 ↑ Rs 999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'200 TC Percale Fitted Bedsheet Set' Rs 1,042 ↑ Rs 1,199"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'300 TC Sateen Duvet Cover' Rs 2,159 ↑ Rs 2,399"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'200 TC Percale Duvet Cover' Rs 1,671 ↑ Rs 1,799"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Jersey Duvet Cover' Rs 1,462 ↑ Rs 1,799"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Summer Luxe Comforter' Rs 3,059 ↑ Rs 3,299"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'All Season Reversible Comforter' Rs 1,597 ↑ Rs 1,699"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Winter Reversible Comforter' Rs 2,799 ↓ Rs 2,499"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Jersey Fitted Sheets' Rs 1,042 ↑ Rs 1,249"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Microfiber Slim pillow' Rs 899 ↑ Rs 949"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Memory Foam Slim Pillow' Rs 1,299 ↓ Rs 999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Grid pillow' Rs 2,499 ↑ Rs 2,599"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Winter Luxe Comforter' Rs 3,391 ↑ Rs 3,699"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Summer Comforter' Rs 1,359 ↑ Rs 1,399"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'300 TC Sateen Pillow Cases' Rs 764 ↑ Rs 809"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Satin Pillow Cases' Rs 764 ↑ Rs 799"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Jersey Pillow Cases' Rs 412 ↑ Rs 499"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'2 Inch Memory Foam Mattress Topper' Rs 3,699 ↑ Rs 4,199"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Tri Fold Mattress' Rs 4,499 ↑ Rs 5,399"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Wedge Pillow' Rs 1,874 ↑ Rs 1,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'The Founder's Mattress' Rs 28,690 ↑ Rs 30,200"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'The Latex Ortho' Rs 6,199 ↑ Rs 6,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Car Neck Pillow' Rs 999 ↓ Rs 899"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Aeroflow Mattress Topper' Rs 2,969 ↑ Rs 3,399"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Natural Latex Mattress Topper' Rs 7,199 ↑ Rs 7,224"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Original Mattress' Rs 5,199 ↑ Rs 6,399"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Quilted Mattress Protector' Rs 899 ↑ Rs 949"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Noa Recliner' Rs 15,999 ↑ Rs 19,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Dreamer Orthopedic Memory Foam Mattress' Rs 6,277 ↑ Rs 7,699"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Euro Top Hybrid Latex Pocket Spring' Rs 8,839 ↑ Rs 10,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Springtek Ortho Pocket Memory Foam Spring Mattress' Rs 6,944 ↑ Rs 8,199"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Wavemax Spine Support Orthopedic Mattress' Rs 10,114 ↑ Rs 12,571"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'SuperNova Latex & Memory' Rs 8,074 ↑ Rs 10,049"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Dreamer Bonnel Spring Mattress' Rs 6,034 ↑ Rs 7,099"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Memory & Bonded Foam, Spine Support Orthoapedic' Rs 5,099 ↑ Rs 6,299"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'100% Organic Waterproof Protector' Rs 1,153 ↑ Rs 1,441"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'2\" Luxe Micro Fibre Mattress Topper' Rs 2,899 ↑ Rs 2,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Folding Rollaway Bed With 6\" Mattress' Rs 12,599 ↑ Rs 15,749"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'100% Water Proof Mattress Protector' Rs 576 ↑ Rs 720"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'2\" Memory Foam Gel Mattress Topper' Rs 3,399 ↑ Rs 3,604"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Micro Fibre Sleeping Pillow' Rs 799 ↑ Rs 999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'2\" Natural Latex Mattress Topper' Rs 10,399 ↑ Rs 11,026"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Charcoal Infused 100% Natural Molded Latex Dunlop Pillows With Organic Cotton Cover' Rs 2,142 ↑ Rs 2,649"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Dual Comfort Reversible Mattress' Rs 3,909 ↑ Rs 4,949"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Tri Folding Mattress' Rs 4,202 ↑ Rs 4,943"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Springtek Joy Solid Wood High Chair for Baby Toddler, Foldable Wooden Highchair' Rs 7,352 ↑ Rs 8,649"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "duroflex",
+    "type": "offer",
+    "text": "headline offer now 33% off"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Hybrid Mattress' Rs 22,290 ↑ Rs 23,290"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Mattress' Rs 12,390 ↑ Rs 13,790"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Ortho Pro Seat Cushion' Rs 1,699 ↑ Rs 1,799"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Ortho Pro Back Cushion' Rs 1,799 ↑ Rs 1,899"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Onyx Orthopedic Office Chair' Rs 9,990 ↑ Rs 10,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Elev8 Smart Recliner Bed with Italia Frame' Rs 52,999 ↑ Rs 56,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Elev8 Smart Recliner Bed' Rs 34,999 ↑ Rs 38,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'All Weather Comforter' Rs 1,399 ↑ Rs 1,499"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Cervical Pillow' Rs 1,999 ↑ Rs 2,199"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Mattress - Custom' Rs 14,190 ↑ Rs 15,690"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro Mattress' Rs 15,590 ↑ Rs 17,990"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Hybrid Mattress - Custom' Rs 23,590 ↑ Rs 24,690"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro Mattress-Custom' Rs 16,490 ↑ Rs 18,990"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'SnowTec Adjustable Plush Pillow' Rs 1,799 ↑ Rs 1,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Revlax Reversible Pillow' Rs 2,799 ↑ Rs 2,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Royale Mattress' Rs 39,390 ↑ Rs 40,990"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho SnowTec Cooling Technology' Rs 14,890 ↑ Rs 16,790"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Royale Mattress - Custom' Rs 41,790 ↑ Rs 43,490"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho SnowTec Cooling Technology-Custom' Rs 15,790 ↑ Rs 17,790"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Royale Mattress' Rs 39,390 ↑ Rs 40,990"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Elev8 Smart Recliner Bed with Leather Frame' Rs 53,999 ↑ Rs 57,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart ErgoRelief Pillow' Rs 2,399 ↑ Rs 2,599"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Neck Massager Pillow' Rs 2,299 ↑ Rs 2,499"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Royale Mattress-Custom' Rs 41,790 ↑ Rs 43,490"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'The Sleep Company Luxe Motorised Recliner Sofa' Rs 27,990 ↑ Rs 30,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Thin Pillow' Rs 1,799 ↑ Rs 1,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Hybrid Pillow' Rs 1,999 ↑ Rs 2,199"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'AeroPlus Adjustable Desk' Rs 16,999 ↑ Rs 17,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Luxe Motorised Recliner Sofa (2-seater)' Rs 64,990 ↑ Rs 67,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Luxe Pro Massager Recliner Sofa' Rs 54,990 ↑ Rs 57,990"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Ortho Pro Max Seat Cushion' Rs 1,999 ↑ Rs 2,199"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro SnowTec Cooling Technology' Rs 18,090 ↑ Rs 20,990"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro SnowTec Cooling Technology - Custom' Rs 19,190 ↑ Rs 22,290"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Wedge Cushion' Rs 1,799 ↑ Rs 1,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro SnowTec Mattress - Custom' Rs 19,190 ↑ Rs 22,290"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro SnowTec Mattress' Rs 18,090 ↑ Rs 20,990"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro Mattress - Custom' Rs 16,490 ↑ Rs 18,990"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro Mattress' Rs 15,590 ↑ Rs 17,990"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'XGen Pro Gaming Chair' Rs 17,490 ↑ Rs 20,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Elev8 Smart Recliner Storage Bed with Italia Frame' Rs 99,499 ↑ Rs 108,499"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Pregnancy Pillow' Rs 1,799 ↑ Rs 1,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'WaveX Foot Massager' Rs 24,999 ↑ Rs 25,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Travel Neck Pillow' Rs 1,399 ↑ Rs 1,499"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Relief Pillow' Rs 2,499 ↑ Rs 2,699"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Neck Comfort Pillow' Rs 1,799 ↑ Rs 1,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Stylux Ergonomic Office Chair' Rs 15,001 ↑ Rs 15,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'AeroMini Adjustable Desk' Rs 13,999 ↑ Rs 14,499"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Ultron Premium Ergonomic Office Chair' Rs 34,990 ↑ Rs 36,999"
+  },
+  {
+    "date": "2026-08-17",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Elite Premium Office Chair' Rs 42,990 ↑ Rs 44,999"
+  },
+  {
     "date": "2026-08-16",
     "brand": "duroflex",
     "type": "price",
