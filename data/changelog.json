@@ -1,5 +1,221 @@
 [
   {
+    "date": "2026-08-18",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Dreamer Orthopedic Memory Foam Mattress' Rs 7,699 ↓ Rs 7,314"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Euro Top Hybrid Latex Pocket Spring' Rs 10,999 ↓ Rs 10,449"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Springtek Ortho Pocket Memory Foam Spring Mattress' Rs 8,199 ↓ Rs 7,789"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Wavemax Spine Support Orthopedic Mattress' Rs 12,571 ↓ Rs 11,942"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'SuperNova Latex & Memory' Rs 10,049 ↓ Rs 9,547"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Dreamer Bonnel Spring Mattress' Rs 7,099 ↓ Rs 6,744"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Memory & Bonded Foam, Spine Support Orthoapedic' Rs 6,299 ↓ Rs 5,984"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'100% Organic Waterproof Protector' Rs 1,441 ↓ Rs 1,369"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'2\" Luxe Micro Fibre Mattress Topper' Rs 2,999 ↓ Rs 2,849"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Folding Rollaway Bed With 6\" Mattress' Rs 15,749 ↓ Rs 14,962"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'100% Water Proof Mattress Protector' Rs 720 ↓ Rs 684"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'2\" Memory Foam Gel Mattress Topper' Rs 3,604 ↓ Rs 3,424"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Micro Fibre Sleeping Pillow' Rs 999 ↓ Rs 949"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'2\" Natural Latex Mattress Topper' Rs 11,026 ↓ Rs 10,475"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Charcoal Infused 100% Natural Molded Latex Dunlop Pillows With Organic Cotton Cover' Rs 2,649 ↓ Rs 2,517"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Dual Comfort Reversible Mattress' Rs 4,949 ↓ Rs 4,702"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Tri Folding Mattress' Rs 4,943 ↓ Rs 4,696"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Springtek Joy Solid Wood High Chair for Baby Toddler, Foldable Wooden Highchair' Rs 8,649 ↓ Rs 8,217"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "sleepyhead",
+    "type": "offer",
+    "text": "headline offer now 24% off"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Technic Hybrid - 3 Zone 6D Hexagon Grid Mattress with 3 Zone Pocket Springs #FutureofSleep' Rs 16,149 ↑ Rs 16,799"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Technic - 3 Zone 6D Hexagon Grid Mattress #FutureofSleep' Rs 13,299 ↑ Rs 13,829"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey' Rs 7,109 ↑ Rs 7,399"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Laxe - Pincore Latex Mattress with BodyIQ Orthopedic Memory Foam - Ivory White' Rs 8,589 ↑ Rs 8,939"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Sense - BodyIQ Orthopedic Memory Foam Mattress with Cooling Tech - Pearl White' Rs 8,579 ↑ Rs 8,929"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Boing - 3 Zone Pocket Spring Mattress with HR Foam, Zero Partner Disturbance & Spinal Support - Black' Rs 6,889 ↑ Rs 7,169"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Laxe - Pincore Latex Mattress with BodyIQ Orthopedic Memory Foam - Grey' Rs 8,589 ↑ Rs 8,939"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Sense - BodyIQ Orthopedic Memory Foam Mattress with Cooling Tech - Ivory White' Rs 8,579 ↑ Rs 8,929"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - White' Rs 7,109 ↑ Rs 7,399"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'LiveIn  Memory Foam Mattress' Rs 7,969 ↑ Rs 8,289"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'LiveIn Bounce Pocket Spring Mattress' Rs 8,499 ↑ Rs 8,839"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'LiveIn Orthopedic Memory Foam Mattress' Rs 8,399 ↑ Rs 8,739"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Avalon Posture Pro Rocking & Rotating Single Seater Fabric Recliner, Grey, Motorized' Rs 31,999 ↑ Rs 35,625"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Avalon Posture Pro Rocking & Rotating Single Seater Fabric Recliner, Brown, Motorized' Rs 31,999 ↑ Rs 35,625"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Avalon Posture Pro Rocking & Rotating Single Seater Premium Leatherette Recliner, Tan, Motorized' Rs 32,999 ↑ Rs 35,625"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Avalon Posture Pro Rocking & Rotating Single Seater Premium Leatherette Recliner, Beige, Motorized' Rs 32,999 ↑ Rs 35,625"
+  },
+  {
+    "date": "2026-08-18",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'LiveIn 100% Latex Mattress' Rs 11,339 ↑ Rs 11,799"
+  },
+  {
     "date": "2026-08-17",
     "brand": "sleepycat",
     "type": "offer",
