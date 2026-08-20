@@ -1,5 +1,353 @@
 [
   {
+    "date": "2026-08-20",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Noa Recliner' Rs 19,999 ↓ Rs 17,999"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "sleepycat",
+    "type": "new-product",
+    "text": "new SKU live - '150 GSM Cotton-soft Microfiber Sheet Set' at Rs 1,025"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'New Ortho Coir Mattress' Rs 14,642 ↑ Rs 15,301"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Spine Comfort Foam Mattress' Rs 18,338 ↑ Rs 19,163"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Spine Therapy Foam Mattress' Rs 19,093 ↑ Rs 19,953"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Mermaid Foam Mattress' Rs 21,059 ↑ Rs 22,007"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Desire Top Spring Mattress' Rs 16,202 ↑ Rs 16,931"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Diamond Foam Mattress' Rs 9,957 ↑ Rs 10,405"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Convenio Foam Mattress' Rs 11,681 ↑ Rs 12,207"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Chimera Pillow' Rs 1,349 ↑ Rs 1,441"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Petalz Pillow' Rs 1,349 ↑ Rs 1,441"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Sleepzz Pillow' Rs 719 ↑ Rs 768"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Hosta Pillow' Rs 899 ↑ Rs 960"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Fombed Foam Mattress' Rs 9,840 ↑ Rs 10,282"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Activ 3 Zone Foam Mattress' Rs 19,512 ↑ Rs 20,389"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'OrthoMagic Essential Latex Mattress' Rs 14,930 ↑ Rs 15,603"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Klassic Essential Coir Mattress' Rs 9,765 ↑ Rs 10,204"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'OrthoMagic Elite Latex Mattress' Rs 35,045 ↑ Rs 36,622"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'OrthoMagic Premium Latex Mattress' Rs 24,884 ↑ Rs 26,004"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'OrthoMagic Popular Latex Mattress' Rs 19,907 ↑ Rs 20,803"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Klassic Premium Coir Mattress' Rs 18,392 ↑ Rs 19,220"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Klassic Popular Coir Mattress' Rs 12,697 ↑ Rs 13,268"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Angelica Box Top Spring Mattress' Rs 24,257 ↑ Rs 25,348"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Activ 5 Zone Foam Mattress' Rs 26,720 ↑ Rs 27,923"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'DuoRest Essential Foam Mattress' Rs 8,058 ↑ Rs 8,421"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'DuoRest Popular Foam Mattress' Rs 9,523 ↑ Rs 9,951"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'DuoRest Premium Foam Mattress' Rs 13,408 ↑ Rs 14,011"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Duplex Foam Mattress' Rs 14,057 ↑ Rs 14,689"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Easy Plus Foam Mattress' Rs 5,714 ↑ Rs 5,971"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Ever Firm Foam Mattress' Rs 7,329 ↑ Rs 7,659"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Luxurino Spring Mattress' Rs 38,274 ↑ Rs 39,996"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Pure Coir Mattress' Rs 6,543 ↑ Rs 6,837"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Pure Coir STR8 Mattress' Rs 8,317 ↑ Rs 8,691"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'SpringRest Bonnell Popular Spring Mattress' Rs 12,697 ↑ Rs 13,268"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'SpringRest Bonnell Essential Spring Mattress' Rs 9,767 ↑ Rs 10,206"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'SpringRest Bonnell Premium Spring Mattress' Rs 18,069 ↑ Rs 18,882"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'SpringRest Pocket Premium Spring Mattress' Rs 20,213 ↑ Rs 21,123"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'SpringRest Pocket Popular Spring Mattress' Rs 14,648 ↑ Rs 15,307"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'SpringRest Pocket Essential Spring Mattress' Rs 11,719 ↑ Rs 12,246"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Spinekare Coir Mattress' Rs 21,050 ↑ Rs 21,997"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'KurloBond Premium Coir Mattress' Rs 18,546 ↑ Rs 19,381"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Teensy Essential Foam Mattress' Rs 4,186 ↑ Rs 4,374"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Teensy Ortho Foam Mattress' Rs 4,417 ↑ Rs 4,616"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'KurloBond Popular Coir Mattress' Rs 14,087 ↑ Rs 14,721"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'KurloBond Essential Coir Mattress' Rs 11,034 ↑ Rs 11,531"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Grazel Ortho Contour Pillow' Rs 2,339 ↑ Rs 2,499"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Grazel Classic Memory Foam Pillow' Rs 2,249 ↑ Rs 2,403"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Snow Fiber Pillow' Rs 539 ↑ Rs 576"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Easy Star Foam Mattress' Rs 4,573 ↑ Rs 4,778"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Kurlocoir Essential Coir Mattress' Rs 4,885 ↑ Rs 5,105"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Aaram Trifold Mattress' Rs 3,649 ↓ Rs 0"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Inspire Coir Mattress' Rs 13,164 ↑ Rs 13,757"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'🎁 Grazel Classic Memory Foam Pillow (Discount)' Rs 901 ↓ Rs 0"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Ortho Plus Natural Grid' Rs 6,532 ↑ Rs 9,661"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'SafeX Mattress Protector' Rs 899 ↑ Rs 960"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'SafeX Pro Mattress Protector' Rs 1,619 ↑ Rs 1,730"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "emma",
+    "type": "new-product",
+    "text": "new SKU live - 'Emma Storage Pods - Set of 2' at Rs 7,999"
+  },
+  {
+    "date": "2026-08-20",
+    "brand": "emma",
+    "type": "new-product",
+    "text": "new SKU live - 'Emma Storage Pods - Set of 4' at Rs 15,999"
+  },
+  {
     "date": "2026-08-19",
     "brand": "sleepyhead",
     "type": "price",
