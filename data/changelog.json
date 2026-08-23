@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-08-23",
+    "brand": "kurlon",
+    "type": "sale",
+    "text": "site-wide sale OFF"
+  },
+  {
     "date": "2026-08-22",
     "brand": "sleepycat",
     "type": "price",
