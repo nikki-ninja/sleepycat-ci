@@ -1,5 +1,95 @@
 [
   {
+    "date": "2026-08-24",
+    "brand": "kurlon",
+    "type": "offer",
+    "text": "headline offer now 10% off"
+  },
+  {
+    "date": "2026-08-24",
+    "brand": "kurlon",
+    "type": "new-product",
+    "text": "new SKU live - 'Ortho Plus Latex' at Rs 7,131"
+  },
+  {
+    "date": "2026-08-24",
+    "brand": "kurlon",
+    "type": "new-product",
+    "text": "new SKU live - 'Ortho Plus Spring' at Rs 7,354"
+  },
+  {
+    "date": "2026-08-24",
+    "brand": "kurlon",
+    "type": "new-product",
+    "text": "new SKU live - 'Dual Roll Pack' at Rs 3,507"
+  },
+  {
+    "date": "2026-08-24",
+    "brand": "kurlon",
+    "type": "new-product",
+    "text": "new SKU live - 'SafeX Mattress Protector' at Rs 899"
+  },
+  {
+    "date": "2026-08-24",
+    "brand": "kurlon",
+    "type": "new-product",
+    "text": "new SKU live - 'SafeX Pro Mattress Protector' at Rs 1,619"
+  },
+  {
+    "date": "2026-08-24",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Mattress' Rs 13,790 ↑ Rs 13,990"
+  },
+  {
+    "date": "2026-08-24",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho SnowTec Cooling Technology' Rs 16,790 ↑ Rs 16,990"
+  },
+  {
+    "date": "2026-08-24",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Hybrid Pillow' Rs 2,199 ↑ Rs 2,399"
+  },
+  {
+    "date": "2026-08-24",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'AeroPlus Adjustable Desk' Rs 17,999 ↑ Rs 18,999"
+  },
+  {
+    "date": "2026-08-24",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Luxe Motorised Recliner Sofa (2-seater)' Rs 67,999 ↑ Rs 70,999"
+  },
+  {
+    "date": "2026-08-24",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Luxe Recliner Mattress' Rs 135,000 ↑ Rs 145,000"
+  },
+  {
+    "date": "2026-08-24",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Relief Pillow' Rs 2,699 ↑ Rs 2,899"
+  },
+  {
+    "date": "2026-08-24",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Luxe Royale Massager Sofa' Rs 99,999 ↑ Rs 109,999"
+  },
+  {
+    "date": "2026-08-24",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'AeroMini Adjustable Desk' Rs 14,499 ↑ Rs 14,999"
+  },
+  {
     "date": "2026-08-23",
     "brand": "kurlon",
     "type": "sale",
