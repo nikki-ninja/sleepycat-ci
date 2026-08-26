@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-08-26",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'The Latex Ortho' Rs 6,999 ↑ Rs 7,346"
+  },
+  {
+    "date": "2026-08-26",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Original Mattress' Rs 6,399 ↑ Rs 6,549"
+  },
+  {
+    "date": "2026-08-26",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'Smart Luxe Flexi SnowTec Pillow' at Rs 1,999"
+  },
+  {
+    "date": "2026-08-26",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'Smart Luxe Ergo Pillow' at Rs 2,599"
+  },
+  {
     "date": "2026-08-25",
     "brand": "tsc",
     "type": "new-product",
