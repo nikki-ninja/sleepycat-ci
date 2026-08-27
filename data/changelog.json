@@ -1,5 +1,89 @@
 [
   {
+    "date": "2026-08-27",
+    "brand": "sleepycat",
+    "type": "offer",
+    "text": "headline offer now 15% off"
+  },
+  {
+    "date": "2026-08-27",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'150 GSM Cotton-soft Microfiber Sheet Set' Rs 1,128 ↓ Rs 1,029"
+  },
+  {
+    "date": "2026-08-27",
+    "brand": "emma",
+    "type": "price",
+    "text": "'Emma Storage Pods - Set of 2' Rs 7,999 ↑ Rs 11,990"
+  },
+  {
+    "date": "2026-08-27",
+    "brand": "emma",
+    "type": "price",
+    "text": "'Emma Storage Pods - Set of 4' Rs 15,999 ↑ Rs 22,990"
+  },
+  {
+    "date": "2026-08-27",
+    "brand": "emma",
+    "type": "new-product",
+    "text": "new SKU live - 'Emma Storage Pods - Set of 1' at Rs 7,999"
+  },
+  {
+    "date": "2026-08-27",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Wave Twin Adjustable Bed with Split Arctic Ice Quboid mattress Individual Headside Control & 2 Fitted Bedsheets' Rs 101,520 ↑ Rs 106,596"
+  },
+  {
+    "date": "2026-08-27",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Wave Plus Adjustable Bed with Wave Kinect Strength Mattress' Rs 78,162 ↑ Rs 82,070"
+  },
+  {
+    "date": "2026-08-27",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Wave Plus Adjustable Bed with Wave Kinect Reva Mattress' Rs 79,528 ↑ Rs 83,504"
+  },
+  {
+    "date": "2026-08-27",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Wave Plus Adjustable Bed with Arctic Ice Wave Kinect Propel Mattress' Rs 74,093 ↑ Rs 77,797"
+  },
+  {
+    "date": "2026-08-27",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Wave Plus Adjustable Bed with Arctic Ice Quboid 8\" Mattress' Rs 86,040 ↑ Rs 90,342"
+  },
+  {
+    "date": "2026-08-27",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'Smart Luxe Flexi Pillow' at Rs 999"
+  },
+  {
+    "date": "2026-08-27",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'Smart Ortho Cervical Pillow' at Rs 2,199"
+  },
+  {
+    "date": "2026-08-27",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'Smart Luxe Royale Pillow' at Rs 2,999"
+  },
+  {
+    "date": "2026-08-27",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'Smart Luxe Hybrid Pillow' at Rs 2,399"
+  },
+  {
     "date": "2026-08-26",
     "brand": "sleepycat",
     "type": "price",
