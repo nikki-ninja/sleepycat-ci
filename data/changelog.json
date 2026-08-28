@@ -1,5 +1,107 @@
 [
   {
+    "date": "2026-08-28",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Sofa BITE - 3 Seater (Fabric, Arrowwood Yellow)' Rs 26,999 ↑ Rs 27,999"
+  },
+  {
+    "date": "2026-08-28",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Sofa BITE - 3 Seater (Fabric, Firedbrick Red)' Rs 26,999 ↑ Rs 27,999"
+  },
+  {
+    "date": "2026-08-28",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Sofa BITE - 3 Seater (Fabric, Gunmetal Grey)' Rs 26,999 ↑ Rs 27,999"
+  },
+  {
+    "date": "2026-08-28",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Sofa BITE - 2 Seater (Fabric, Arrowwood Yellow)' Rs 20,145 ↑ Rs 21,999"
+  },
+  {
+    "date": "2026-08-28",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Sofa BITE - 2 Seater (Fabric, Firedbrick Red)' Rs 20,145 ↑ Rs 21,999"
+  },
+  {
+    "date": "2026-08-28",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Sofa BITE - 2 Seater (Fabric, Gunmetal Grey)' Rs 20,145 ↑ Rs 21,999"
+  },
+  {
+    "date": "2026-08-28",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Sofa Bubbles - 3 Seater Sofa (Fabric, Flint Grey)' Rs 29,999 ↑ Rs 35,999"
+  },
+  {
+    "date": "2026-08-28",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Sofa Bubbles - 3 Seater Sofa (Fabric, Canyon Rose)' Rs 29,999 ↑ Rs 35,999"
+  },
+  {
+    "date": "2026-08-28",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Sofa Bubbles - 3 Seater Sofa (Fabric, Teal Blue)' Rs 29,999 ↑ Rs 35,999"
+  },
+  {
+    "date": "2026-08-28",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Sofa Bubbles - 2 Seater Sofa (Fabric, Flint Grey)' Rs 22,575 ↑ Rs 26,999"
+  },
+  {
+    "date": "2026-08-28",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Sofa Bubbles - 2 Seater Sofa (Fabric, Canyon Rose)' Rs 22,575 ↑ Rs 26,999"
+  },
+  {
+    "date": "2026-08-28",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Sofa Bubbles - 2 Seater Sofa (Fabric, Teal Blue)' Rs 22,575 ↑ Rs 26,999"
+  },
+  {
+    "date": "2026-08-28",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'SnowTec Adjustable Plush Pillow' at Rs 1,999"
+  },
+  {
+    "date": "2026-08-28",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'Revlax Reversible Pillow' at Rs 2,999"
+  },
+  {
+    "date": "2026-08-28",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'Smart ErgoRelief Pillow' at Rs 2,599"
+  },
+  {
+    "date": "2026-08-28",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'Smart Hybrid Pillow' at Rs 2,399"
+  },
+  {
+    "date": "2026-08-28",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'Smart Neck Comfort Pillow' at Rs 1,999"
+  },
+  {
     "date": "2026-08-27",
     "brand": "sleepycat",
     "type": "offer",
