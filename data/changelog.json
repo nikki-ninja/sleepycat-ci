@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-09-03",
+    "brand": "emma",
+    "type": "new-product",
+    "text": "new SKU live - 'Bundle Mattress Protector' at Rs 1,999"
+  },
+  {
     "date": "2026-09-01",
     "brand": "duroflex",
     "type": "offer",
@@ -2392,11 +2398,5 @@
     "brand": "flo",
     "type": "new-product",
     "text": "new SKU live - 'Flo Wave™ Mattress' at Rs 3,416"
-  },
-  {
-    "date": "2026-08-11",
-    "brand": "flo",
-    "type": "new-product",
-    "text": "new SKU live - 'Flo Anti-Gravity™ Natural Latex Mattress' at Rs 6,228"
   }
 ]

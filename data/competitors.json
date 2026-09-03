@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-02T07:45:36.683217Z",
-  "date": "2026-09-02",
+  "generated": "2026-09-03T07:54:01.632134Z",
+  "date": "2026-09-03",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -595,7 +595,7 @@
         "Set of 2 Hybrid Pillow": 3499,
         "Emma Memory Foam Pillow": 1399,
         "Emma Teak Bed": 48990,
-        "Free Size Mattress Protector": 1999,
+        "Bundle Mattress Protector": 1999,
         "Emma Mattress Protector": 1499,
         "Emma Black Mattress": 6999,
         "Set of 2 Foam Pillow": 2449,
@@ -980,7 +980,6 @@
         "Spinel Ortho Foam Mattress": 6561,
         "Natural Coir Mattress": 4502,
         "Klassic Premium Coir Mattress": 18703,
-        "OrthoMagic Popular Latex Mattress": 20803,
         "Klassic Essential Coir Mattress": 10204,
         "Activ 3 Zone Foam Mattress": 20389,
         "Fombed Foam Mattress": 10281,
@@ -994,7 +993,7 @@
         "New Ortho Coir Mattress": 15301
       },
       "on_sale": true,
-      "count": 57,
+      "count": 56,
       "offer": 10,
       "signals": {
         "quiz": false,
