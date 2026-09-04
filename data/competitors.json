@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-03T07:54:01.632134Z",
-  "date": "2026-09-03",
+  "generated": "2026-09-04T07:50:06.372655Z",
+  "date": "2026-09-04",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -905,8 +905,6 @@
         "Footsie - Shoe Rack Combo with Cushion Seat": 12899,
         "Footsie - Engineered Wood Vertical Shoe Rack, (1 Door, 10 Pair, Dark Walnut)": 5599,
         "Footsie - Horizontal Shoe Rack with Cushion Seat, (2 Door, 15 Pair, Dark Walnut)": 7899,
-        "SofaBed Two - Foldable 3 Seater Sofa Cum Bed, (Fabric, Sunshine Yellow)": 22399,
-        "SofaBed Two - Foldable 3 Seater Sofa Cum Bed, (Fabric, Sangria Purple)": 22399,
         "SofaBed Two - Foldable 3 Seater Sofa Cum Bed, (Fabric, Ink Blue)": 22399,
         "SofaBed Two - Foldable 3 Seater Sofa Cum Bed, (Fabric, Ash Grey)": 22399,
         "Switch - 2-in-1 Dual Comfort High-Density Foam Mattress": 8986,
@@ -920,7 +918,7 @@
         "Technic Hybrid - 3 Zone 6D Hexagon Grid Mattress with 3 Zone Pocket Springs #FutureofSleep": 16799
       },
       "on_sale": true,
-      "count": 299,
+      "count": 297,
       "offer": 24,
       "signals": {
         "quiz": true,
