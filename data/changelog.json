@@ -1,5 +1,95 @@
 [
   {
+    "date": "2026-09-05",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Mattress' Rs 13,990 ↓ Rs 12,890"
+  },
+  {
+    "date": "2026-09-05",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Mattress - Custom' Rs 15,690 ↓ Rs 14,690"
+  },
+  {
+    "date": "2026-09-05",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro Mattress' Rs 17,990 ↓ Rs 16,390"
+  },
+  {
+    "date": "2026-09-05",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro Mattress-Custom' Rs 18,990 ↓ Rs 17,390"
+  },
+  {
+    "date": "2026-09-05",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho SnowTec Cooling Technology' Rs 16,990 ↓ Rs 15,890"
+  },
+  {
+    "date": "2026-09-05",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho SnowTec Cooling Technology-Custom' Rs 17,790 ↓ Rs 16,890"
+  },
+  {
+    "date": "2026-09-05",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'The Sleep Company Luxe Motorised Recliner Sofa' Rs 30,999 ↓ Rs 28,999"
+  },
+  {
+    "date": "2026-09-05",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'AeroPlus Adjustable Desk' Rs 18,999 ↓ Rs 17,999"
+  },
+  {
+    "date": "2026-09-05",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro SnowTec Cooling Technology' Rs 20,990 ↓ Rs 19,390"
+  },
+  {
+    "date": "2026-09-05",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro SnowTec Cooling Technology - Custom' Rs 22,290 ↓ Rs 20,590"
+  },
+  {
+    "date": "2026-09-05",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro SnowTec Mattress - Custom' Rs 22,290 ↓ Rs 20,590"
+  },
+  {
+    "date": "2026-09-05",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro SnowTec Mattress' Rs 20,990 ↓ Rs 19,390"
+  },
+  {
+    "date": "2026-09-05",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro Mattress - Custom' Rs 18,990 ↓ Rs 17,390"
+  },
+  {
+    "date": "2026-09-05",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro Mattress' Rs 17,990 ↓ Rs 16,390"
+  },
+  {
+    "date": "2026-09-05",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Stylux Ergonomic Office Chair' Rs 15,999 ↓ Rs 15,001"
+  },
+  {
     "date": "2026-09-03",
     "brand": "emma",
     "type": "new-product",
@@ -2308,95 +2398,5 @@
     "brand": "sleepycat",
     "type": "ux",
     "text": "added homepage 'reviews' signal"
-  },
-  {
-    "date": "2026-08-11",
-    "brand": "sleepycat",
-    "type": "ux",
-    "text": "added homepage 'trial' signal"
-  },
-  {
-    "date": "2026-08-11",
-    "brand": "sleepycat",
-    "type": "ux",
-    "text": "added homepage 'emi' signal"
-  },
-  {
-    "date": "2026-08-11",
-    "brand": "sleepycat",
-    "type": "ux",
-    "text": "added homepage 'quiz' signal"
-  },
-  {
-    "date": "2026-08-11",
-    "brand": "sleepycat",
-    "type": "offer",
-    "text": "headline offer now 20% off"
-  },
-  {
-    "date": "2026-08-11",
-    "brand": "springtek",
-    "type": "ux",
-    "text": "added homepage 'finance' signal"
-  },
-  {
-    "date": "2026-08-11",
-    "brand": "springtek",
-    "type": "ux",
-    "text": "added homepage 'whatsapp' signal"
-  },
-  {
-    "date": "2026-08-11",
-    "brand": "springtek",
-    "type": "ux",
-    "text": "added homepage 'reviews' signal"
-  },
-  {
-    "date": "2026-08-11",
-    "brand": "springtek",
-    "type": "ux",
-    "text": "added homepage 'emi' signal"
-  },
-  {
-    "date": "2026-08-11",
-    "brand": "springtek",
-    "type": "offer",
-    "text": "headline offer now 70% off"
-  },
-  {
-    "date": "2026-08-11",
-    "brand": "flo",
-    "type": "ux",
-    "text": "added homepage 'finance' signal"
-  },
-  {
-    "date": "2026-08-11",
-    "brand": "flo",
-    "type": "ux",
-    "text": "added homepage 'whatsapp' signal"
-  },
-  {
-    "date": "2026-08-11",
-    "brand": "flo",
-    "type": "ux",
-    "text": "added homepage 'trial' signal"
-  },
-  {
-    "date": "2026-08-11",
-    "brand": "flo",
-    "type": "ux",
-    "text": "added homepage 'emi' signal"
-  },
-  {
-    "date": "2026-08-11",
-    "brand": "flo",
-    "type": "offer",
-    "text": "headline offer now 40% off"
-  },
-  {
-    "date": "2026-08-11",
-    "brand": "flo",
-    "type": "new-product",
-    "text": "new SKU live - 'Flo Wave™ Mattress' at Rs 3,416"
   }
 ]
