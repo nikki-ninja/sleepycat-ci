@@ -1,5 +1,137 @@
 [
   {
+    "date": "2026-09-07",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Neuma Ottoman Thermo Leg Massager' Rs 16,000 ↑ Rs 17,499"
+  },
+  {
+    "date": "2026-09-07",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Neuma Roller Back Massager' Rs 6,999 ↑ Rs 7,150"
+  },
+  {
+    "date": "2026-09-07",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Verve mov.E Silver Grey Fabric 2 Seater Sofa (New)' at Rs 66,506"
+  },
+  {
+    "date": "2026-09-07",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Verve mov.E Peacock Blue Fabric 2 Seater Sofa (New)' at Rs 66,506"
+  },
+  {
+    "date": "2026-09-07",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Verve mov.E Coffee Brown Fabric 3 Seater Sofa (New)' at Rs 78,750"
+  },
+  {
+    "date": "2026-09-07",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Verve mov.E Silver Grey Fabric 3 Seater Sofa (New)' at Rs 78,750"
+  },
+  {
+    "date": "2026-09-07",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Verve mov.E Peacock Blue Fabric 3 Seater Sofa (New)' at Rs 78,750"
+  },
+  {
+    "date": "2026-09-07",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Mattress' Rs 12,890 ↑ Rs 14,590"
+  },
+  {
+    "date": "2026-09-07",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Mattress - Custom' Rs 14,690 ↑ Rs 16,490"
+  },
+  {
+    "date": "2026-09-07",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro Mattress' Rs 16,390 ↑ Rs 18,490"
+  },
+  {
+    "date": "2026-09-07",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro Mattress-Custom' Rs 17,390 ↑ Rs 19,590"
+  },
+  {
+    "date": "2026-09-07",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho SnowTec Cooling Technology' Rs 15,890 ↑ Rs 17,590"
+  },
+  {
+    "date": "2026-09-07",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho SnowTec Cooling Technology-Custom' Rs 16,890 ↑ Rs 18,690"
+  },
+  {
+    "date": "2026-09-07",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'The Sleep Company Luxe Motorised Recliner Sofa' Rs 28,999 ↑ Rs 30,999"
+  },
+  {
+    "date": "2026-09-07",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'AeroPlus Adjustable Desk' Rs 17,999 ↑ Rs 18,999"
+  },
+  {
+    "date": "2026-09-07",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro SnowTec Cooling Technology' Rs 19,390 ↑ Rs 21,490"
+  },
+  {
+    "date": "2026-09-07",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro SnowTec Cooling Technology - Custom' Rs 20,590 ↑ Rs 22,790"
+  },
+  {
+    "date": "2026-09-07",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro SnowTec Mattress - Custom' Rs 20,590 ↑ Rs 22,790"
+  },
+  {
+    "date": "2026-09-07",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro SnowTec Mattress' Rs 19,390 ↑ Rs 21,490"
+  },
+  {
+    "date": "2026-09-07",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro Mattress - Custom' Rs 17,390 ↑ Rs 19,590"
+  },
+  {
+    "date": "2026-09-07",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro Mattress' Rs 16,390 ↑ Rs 18,490"
+  },
+  {
+    "date": "2026-09-07",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Stylux Ergonomic Office Chair' Rs 15,001 ↑ Rs 15,999"
+  },
+  {
     "date": "2026-09-05",
     "brand": "tsc",
     "type": "price",
@@ -2266,137 +2398,5 @@
     "brand": "duroflex",
     "type": "price",
     "text": "'Back Magic Orthopedic Coir Mattress - Blue' Rs 11,236 ↑ Rs 11,797"
-  },
-  {
-    "date": "2026-08-16",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Up Right Orthopedic Mattress' Rs 8,853 ↑ Rs 9,295"
-  },
-  {
-    "date": "2026-08-16",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Propel Plus Arctic Ice Pocket Spring Mattress With Euro Top' Rs 12,541 ↑ Rs 13,168"
-  },
-  {
-    "date": "2026-08-16",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Propel Arctic Ice Pocket Spring Mattress' Rs 10,688 ↑ Rs 11,221"
-  },
-  {
-    "date": "2026-08-16",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Boltt Arctic Ice Spring Mattress' Rs 9,809 ↑ Rs 10,299"
-  },
-  {
-    "date": "2026-08-16",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Boltt Plus Arctic Ice Spring Mattress with Euro Top' Rs 11,455 ↑ Rs 12,026"
-  },
-  {
-    "date": "2026-08-16",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Back Magic Orthopedic Coir Mattress - White' Rs 11,236 ↑ Rs 11,797"
-  },
-  {
-    "date": "2026-08-16",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Balance Plus Orthopedic Memory Foam Mattress With Euro Top' Rs 19,786 ↑ Rs 20,774"
-  },
-  {
-    "date": "2026-08-16",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Durobond Pro Dual Side Coir Mattress' Rs 7,742 ↑ Rs 8,128"
-  },
-  {
-    "date": "2026-08-16",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Reva Mattress' Rs 16,304 ↑ Rs 17,117"
-  },
-  {
-    "date": "2026-08-16",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Back Magic Pro Plus Orthopedic Mattress' Rs 11,942 ↑ Rs 12,539"
-  },
-  {
-    "date": "2026-08-16",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Essential Duo Memory Foam Mattress' Rs 9,176 ↑ Rs 9,634"
-  },
-  {
-    "date": "2026-08-16",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Duropedic SpineX Mattress' Rs 13,781 ↑ Rs 14,468"
-  },
-  {
-    "date": "2026-08-16",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Duropedic Airboost 3.8 Bionix Ice Pro Mattress | 1 lakh+ Airknit fibres and ortho support  | 100 nights trial' Rs 22,594 ↑ Rs 23,611"
-  },
-  {
-    "date": "2026-08-16",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Duropedic Airboost 3.6 Mattress | 1 lakh+ adaptive fibres and ortho support' Rs 13,294 ↑ Rs 13,958"
-  },
-  {
-    "date": "2026-08-15",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'AeroPro Adjustable Desk' Rs 16,999 ↑ Rs 21,999"
-  },
-  {
-    "date": "2026-08-13",
-    "brand": "sleepycat",
-    "type": "new-product",
-    "text": "new SKU live - 'child sku' at Rs 0"
-  },
-  {
-    "date": "2026-08-12",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'The Founder's Mattress' Rs 30,200 ↓ Rs 28,690"
-  },
-  {
-    "date": "2026-08-12",
-    "brand": "emma",
-    "type": "price",
-    "text": "'Emma Teak Bed' Rs 31,999 ↑ Rs 48,990"
-  },
-  {
-    "date": "2026-08-11",
-    "brand": "sleepycat",
-    "type": "ux",
-    "text": "added homepage 'finance' signal"
-  },
-  {
-    "date": "2026-08-11",
-    "brand": "sleepycat",
-    "type": "ux",
-    "text": "added homepage 'store' signal"
-  },
-  {
-    "date": "2026-08-11",
-    "brand": "sleepycat",
-    "type": "ux",
-    "text": "added homepage 'whatsapp' signal"
-  },
-  {
-    "date": "2026-08-11",
-    "brand": "sleepycat",
-    "type": "ux",
-    "text": "added homepage 'reviews' signal"
   }
 ]
