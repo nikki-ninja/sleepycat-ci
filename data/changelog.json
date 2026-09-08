@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-09-08",
+    "brand": "kurlon",
+    "type": "new-product",
+    "text": "new SKU live - 'Diamond Foam Mattress new' at Rs 10,404"
+  },
+  {
+    "date": "2026-09-08",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey' Rs 7,399 ↑ Rs 7,619"
+  },
+  {
+    "date": "2026-09-08",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - White' Rs 7,399 ↑ Rs 7,619"
+  },
+  {
+    "date": "2026-09-08",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'LiveIn  Memory Foam Mattress' Rs 8,289 ↑ Rs 8,539"
+  },
+  {
     "date": "2026-09-07",
     "brand": "duroflex",
     "type": "price",
@@ -2374,29 +2398,5 @@
     "brand": "duroflex",
     "type": "price",
     "text": "'Back Magic Pro Orthopedic Mattress' Rs 11,236 ↑ Rs 11,797"
-  },
-  {
-    "date": "2026-08-16",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Spine Rest Orthopedic Mattress' Rs 10,129 ↑ Rs 10,634"
-  },
-  {
-    "date": "2026-08-16",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Strength Memory Foam Coir Orthopedic Mattress-White' Rs 15,704 ↑ Rs 16,489"
-  },
-  {
-    "date": "2026-08-16",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Strength Plus Memory Foam Coir Orthopedic Mattress With Euro Top' Rs 19,962 ↑ Rs 20,959"
-  },
-  {
-    "date": "2026-08-16",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Back Magic Orthopedic Coir Mattress - Blue' Rs 11,236 ↑ Rs 11,797"
   }
 ]
