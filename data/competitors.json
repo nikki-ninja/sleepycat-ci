@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-08T07:55:48.402002Z",
-  "date": "2026-09-08",
+  "generated": "2026-09-09T07:58:34.145184Z",
+  "date": "2026-09-09",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -160,6 +160,7 @@
     "duroflex": {
       "platform": "shopify",
       "products": {
+        "Memory Foam Topper": 5999,
         "Cocoon Mustard Yellow Fabric 1 Seater Sofa": 28070,
         "Cocoon Cool Grey Fabric 1 Seater Sofa": 28070,
         "Cocoon Mustard Yellow Fabric 2 Seater Sofa": 42235,
@@ -571,7 +572,7 @@
         "LiveIn  Memory Foam Mattress": 8539
       },
       "on_sale": true,
-      "count": 409,
+      "count": 410,
       "offer": 10,
       "signals": {
         "quiz": true,
@@ -933,7 +934,7 @@
     "kurlon": {
       "platform": "shopify",
       "products": {
-        "Diamond Foam Mattress new": 10404,
+        "Diamond Foam Mattress new": 8482,
         "SafeX Pro Mattress Protector": 1619,
         "SafeX Mattress Protector": 899,
         "Dual Roll Pack": 3507,
@@ -1033,6 +1034,7 @@
     "sleepycat": {
       "platform": "shopify",
       "products": {
+        "200 TC Flat Bedsheets": 1700,
         "Lycra Mattress Protector": 799,
         "150 GSM Cotton-soft Microfiber Sheet Set": 1029,
         "Noa Recliner": 17999,
@@ -1114,7 +1116,7 @@
         "Hybrid Latex Mattress": 10099
       },
       "on_sale": true,
-      "count": 79,
+      "count": 80,
       "offer": 15,
       "signals": {
         "quiz": true,

@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-09-09",
+    "brand": "sleepycat",
+    "type": "new-product",
+    "text": "new SKU live - '200 TC Flat Bedsheets' at Rs 1,700"
+  },
+  {
+    "date": "2026-09-09",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Diamond Foam Mattress new' Rs 10,404 ↓ Rs 8,482"
+  },
+  {
+    "date": "2026-09-09",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Memory Foam Topper' at Rs 5,999"
+  },
+  {
     "date": "2026-09-08",
     "brand": "kurlon",
     "type": "new-product",
@@ -2380,23 +2398,5 @@
     "brand": "tsc",
     "type": "price",
     "text": "'Ultron Premium Ergonomic Office Chair' Rs 34,990 ↑ Rs 36,999"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Elite Premium Office Chair' Rs 42,990 ↑ Rs 44,999"
-  },
-  {
-    "date": "2026-08-16",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Balance Orthopedic Memory Foam Mattress' Rs 15,357 ↑ Rs 16,124"
-  },
-  {
-    "date": "2026-08-16",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Back Magic Pro Orthopedic Mattress' Rs 11,236 ↑ Rs 11,797"
   }
 ]
