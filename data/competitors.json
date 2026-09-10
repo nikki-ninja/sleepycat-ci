@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-09T07:58:34.145184Z",
-  "date": "2026-09-09",
+  "generated": "2026-09-10T07:58:19.390220Z",
+  "date": "2026-09-10",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -609,7 +609,7 @@
       "offer": 40,
       "signals": {
         "quiz": true,
-        "emi": false,
+        "emi": true,
         "trial": true,
         "reviews": true,
         "whatsapp": true,
@@ -934,7 +934,8 @@
     "kurlon": {
       "platform": "shopify",
       "products": {
-        "Diamond Foam Mattress new": 8482,
+        "Kurlocoir Essential Coir Mattress": 4883,
+        "Diamond Foam Mattress (HYD & BLR)": 8482,
         "SafeX Pro Mattress Protector": 1619,
         "SafeX Mattress Protector": 899,
         "Dual Roll Pack": 3507,
@@ -950,7 +951,6 @@
         "🎁 Grazel Classic Memory Foam Pillow (Discount)": 0,
         "Inspire Coir Mattress": 13756,
         "Aaram Trifold Mattress": 3649,
-        "Kurlocoir Essential Coir Mattress": 4883,
         "Easy Star Foam Mattress": 4571,
         "Snow Fiber Pillow": 539,
         "Grazel Classic Memory Foam Pillow": 2249,
@@ -1034,7 +1034,7 @@
     "sleepycat": {
       "platform": "shopify",
       "products": {
-        "200 TC Flat Bedsheets": 1700,
+        "200 TC Percale Flat Bedsheets": 1700,
         "Lycra Mattress Protector": 799,
         "150 GSM Cotton-soft Microfiber Sheet Set": 1029,
         "Noa Recliner": 17999,
