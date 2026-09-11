@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-10T07:58:19.390220Z",
-  "date": "2026-09-10",
+  "generated": "2026-09-11T07:54:28.710139Z",
+  "date": "2026-09-11",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -24,7 +24,7 @@
         "Luxe Royale Massager Sofa": 109999,
         "Stylux Ergonomic Office Chair": 15999,
         "Smart Ortho GRID Mattress": 9990,
-        "Smart Neck Comfort Pillow": 1999,
+        "Smart Ortho Neck Pillow": 1999,
         "Smart Ortho Relief Pillow": 2899,
         "Travel Neck Pillow": 1499,
         "Smart Ortho GRID Mattress - Custom": 10590,
@@ -66,7 +66,7 @@
         "The Sleep Company Luxe Motorised Recliner Sofa": 30999,
         "Smart Ortho Royale Mattress-Custom": 43490,
         "Smart Neck Massager Pillow": 2499,
-        "Smart ErgoRelief Pillow": 2599,
+        "Smart Luxe Ergo Pillow": 2599,
         "Elev8 Smart Recliner Bed with Leather Frame": 57999,
         "Smart Ortho Royale Mattress": 40990,
         "Smart Ortho SnowTec Cooling Technology-Custom": 18690,
@@ -74,7 +74,7 @@
         "Smart Ortho SnowTec Cooling Technology": 17590,
         "Smart Luxe Royale Mattress": 40990,
         "Revlax Reversible Pillow": 2999,
-        "SnowTec Adjustable Plush Pillow": 1999,
+        "Smart Luxe Flexi SnowTec Pillow": 1999,
         "Smart Ortho Pro Mattress-Custom": 19590,
         "Smart Ortho Hybrid Mattress - Custom": 24690,
         "Smart Ortho Pro Mattress": 18490,
@@ -587,6 +587,7 @@
     "emma": {
       "platform": "shopify",
       "products": {
+        "Test Emma Memory Foam Pillow": 1999,
         "Emma Storage Pods - Set of 1": 7999,
         "Emma Storage Pods - Set of 4": 22990,
         "Emma Storage Pods - Set of 2": 11990,
@@ -605,7 +606,7 @@
         "Emma Hybrid Pillow": 1999
       },
       "on_sale": true,
-      "count": 16,
+      "count": 17,
       "offer": 40,
       "signals": {
         "quiz": true,
@@ -716,8 +717,8 @@
         "Premium Fiber Cushion Fillers (Grey, Set of 5)": 999,
         "Premium Fiber Cushion Fillers (Ocean Blue, Set of 5)": 999,
         "The Purr-fect Couch 2 Seater - Made for Cats & Humans": 30000,
-        "Napster Sofa Cum Bed 3 seater (Fabric, Indigo Blue)": 9499,
-        "Napster Sofa Cum Bed 3 seater (Fabric, Graphite Grey)": 9499,
+        "Napster Sofa Cum Bed 3 seater (Fabric, Indigo Blue)": 9999,
+        "Napster Sofa Cum Bed 3 seater (Fabric, Graphite Grey)": 9999,
         "Sofa Yolo - 3 Seater Sofa (Fabric, Avocado Green)": 22399,
         "Sofa Bae - 4 Seater Interchangeable L Shape Sofa Set (Fabric, Copper Brown)": 24699,
         "Sofa Bae - 4 Seater Interchangeable L Shape Sofa Set (Fabric, Stone Grey)": 24699,
@@ -952,8 +953,8 @@
         "Inspire Coir Mattress": 13756,
         "Aaram Trifold Mattress": 3649,
         "Easy Star Foam Mattress": 4571,
-        "Snow Fiber Pillow": 539,
-        "Grazel Classic Memory Foam Pillow": 2249,
+        "Snow Fiber Pillow": 1078,
+        "Grazel Classic Memory Foam Pillow": 4948,
         "Grazel Ortho Contour Pillow": 2339,
         "KurloBond Essential Coir Mattress": 10420,
         "Teensy Ortho Foam Mattress": 4417,
@@ -977,9 +978,9 @@
         "Klassic Essential Coir Mattress": 10204,
         "Fombed Foam Mattress": 10281,
         "Hosta Pillow": 899,
-        "Sleepzz Pillow": 719,
+        "Sleepzz Pillow": 1438,
         "Petalz Pillow": 1349,
-        "Chimera Pillow": 1349,
+        "Chimera Pillow": 2968,
         "Diamond Foam Mattress": 10404,
         "New Ortho Coir Mattress": 15301
       },
@@ -1002,8 +1003,6 @@
         "Springtek Joy Solid Wood High Chair for Baby Toddler, Foldable Wooden Highchair": 8217,
         "Tri Folding Mattress": 4696,
         "Dual Comfort Reversible Mattress": 4702,
-        "Charcoal Infused 100% Natural Molded Latex Dunlop Pillows With Organic Cotton Cover": 2517,
-        "2\" Natural Latex Mattress Topper": 10475,
         "Micro Fibre Sleeping Pillow": 949,
         "2\" Memory Foam Gel Mattress Topper": 3424,
         "100% Water Proof Mattress Protector": 684,
@@ -1019,7 +1018,7 @@
         "Dreamer Orthopedic Memory Foam Mattress": 7314
       },
       "on_sale": true,
-      "count": 18,
+      "count": 16,
       "offer": 70,
       "signals": {
         "quiz": false,
@@ -1034,6 +1033,7 @@
     "sleepycat": {
       "platform": "shopify",
       "products": {
+        "Katachi Bed with Storage": 39999,
         "200 TC Percale Flat Bedsheets": 1700,
         "Lycra Mattress Protector": 799,
         "150 GSM Cotton-soft Microfiber Sheet Set": 1029,
@@ -1116,7 +1116,7 @@
         "Hybrid Latex Mattress": 10099
       },
       "on_sale": true,
-      "count": 80,
+      "count": 81,
       "offer": 15,
       "signals": {
         "quiz": true,
