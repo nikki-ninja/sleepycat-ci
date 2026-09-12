@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-11T07:54:28.710139Z",
-  "date": "2026-09-11",
+  "generated": "2026-09-12T07:47:00.606270Z",
+  "date": "2026-09-12",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -24,7 +24,7 @@
         "Luxe Royale Massager Sofa": 109999,
         "Stylux Ergonomic Office Chair": 15999,
         "Smart Ortho GRID Mattress": 9990,
-        "Smart Ortho Neck Pillow": 1999,
+        "Smart Neck Comfort Pillow": 1999,
         "Smart Ortho Relief Pillow": 2899,
         "Travel Neck Pillow": 1499,
         "Smart Ortho GRID Mattress - Custom": 10590,
@@ -66,7 +66,7 @@
         "The Sleep Company Luxe Motorised Recliner Sofa": 30999,
         "Smart Ortho Royale Mattress-Custom": 43490,
         "Smart Neck Massager Pillow": 2499,
-        "Smart Luxe Ergo Pillow": 2599,
+        "Smart ErgoRelief Pillow": 2599,
         "Elev8 Smart Recliner Bed with Leather Frame": 57999,
         "Smart Ortho Royale Mattress": 40990,
         "Smart Ortho SnowTec Cooling Technology-Custom": 18690,
@@ -74,7 +74,7 @@
         "Smart Ortho SnowTec Cooling Technology": 17590,
         "Smart Luxe Royale Mattress": 40990,
         "Revlax Reversible Pillow": 2999,
-        "Smart Luxe Flexi SnowTec Pillow": 1999,
+        "SnowTec Adjustable Plush Pillow": 1999,
         "Smart Ortho Pro Mattress-Custom": 19590,
         "Smart Ortho Hybrid Mattress - Custom": 24690,
         "Smart Ortho Pro Mattress": 18490,
@@ -587,7 +587,6 @@
     "emma": {
       "platform": "shopify",
       "products": {
-        "Test Emma Memory Foam Pillow": 1999,
         "Emma Storage Pods - Set of 1": 7999,
         "Emma Storage Pods - Set of 4": 22990,
         "Emma Storage Pods - Set of 2": 11990,
@@ -606,7 +605,7 @@
         "Emma Hybrid Pillow": 1999
       },
       "on_sale": true,
-      "count": 17,
+      "count": 16,
       "offer": 40,
       "signals": {
         "quiz": true,
@@ -935,6 +934,24 @@
     "kurlon": {
       "platform": "shopify",
       "products": {
+        "Kurlocoir Essential Coir Mattress (HYD & BLR)": 3981,
+        "Klassic Essential Coir Mattress (HYD & BLR)": 8318,
+        "Inspire Coir Mattress (HYD & BLR)": 11214,
+        "Pure Coir Mattress (HYD & BLR)": 5574,
+        "SpringRest Bonnell Essential Spring Mattress (HYD & BLR)": 8320,
+        "Pure Coir STR8 Mattress (HYD & BLR)": 7085,
+        "Fombed Foam Mattress (HYD & BLR)": 8381,
+        "New Ortho Coir Mattress (HYD & BLR)": 12473,
+        "DuoRest Essential Foam Mattress (HYD & BLR)": 6864,
+        "DuoRest Popular Foam Mattress (HYD & BLR)": 8113,
+        "Klassic Premium Coir Mattress (HYD & BLR)": 15247,
+        "KurloBond Premium Coir Mattress (HYD & BLR)": 13722,
+        "SpringRest Pocket Essential Spring Mattress (HYD & BLR)": 9983,
+        "DuoRest Premium Foam Mattress (HYD & BLR)": 11423,
+        "Activ 5 Zone Foam Mattress (HYD & BLR)": 22763,
+        "SpringRest Bonnell Premium Spring Mattress (HYD & BLR)": 15392,
+        "SpringRest Pocket Premium Spring Mattress (HYD & BLR)": 17219,
+        "KurloBond Essential Coir Mattress (HYD & BLR)": 8495,
         "Kurlocoir Essential Coir Mattress": 4883,
         "Diamond Foam Mattress (HYD & BLR)": 8482,
         "SafeX Pro Mattress Protector": 1619,
@@ -985,7 +1002,7 @@
         "New Ortho Coir Mattress": 15301
       },
       "on_sale": true,
-      "count": 48,
+      "count": 66,
       "offer": 10,
       "signals": {
         "quiz": false,

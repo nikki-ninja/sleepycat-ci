@@ -1,5 +1,53 @@
 [
   {
+    "date": "2026-09-12",
+    "brand": "kurlon",
+    "type": "new-product",
+    "text": "new SKU live - 'SpringRest Bonnell Essential Spring Mattress (HYD & BLR)' at Rs 8,320"
+  },
+  {
+    "date": "2026-09-12",
+    "brand": "kurlon",
+    "type": "new-product",
+    "text": "new SKU live - 'Pure Coir Mattress (HYD & BLR)' at Rs 5,574"
+  },
+  {
+    "date": "2026-09-12",
+    "brand": "kurlon",
+    "type": "new-product",
+    "text": "new SKU live - 'Inspire Coir Mattress (HYD & BLR)' at Rs 11,214"
+  },
+  {
+    "date": "2026-09-12",
+    "brand": "kurlon",
+    "type": "new-product",
+    "text": "new SKU live - 'Klassic Essential Coir Mattress (HYD & BLR)' at Rs 8,318"
+  },
+  {
+    "date": "2026-09-12",
+    "brand": "kurlon",
+    "type": "new-product",
+    "text": "new SKU live - 'Kurlocoir Essential Coir Mattress (HYD & BLR)' at Rs 3,981"
+  },
+  {
+    "date": "2026-09-12",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'SnowTec Adjustable Plush Pillow' at Rs 1,999"
+  },
+  {
+    "date": "2026-09-12",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'Smart ErgoRelief Pillow' at Rs 2,599"
+  },
+  {
+    "date": "2026-09-12",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'Smart Neck Comfort Pillow' at Rs 1,999"
+  },
+  {
     "date": "2026-09-11",
     "brand": "sleepycat",
     "type": "new-product",
@@ -2350,53 +2398,5 @@
     "brand": "tsc",
     "type": "price",
     "text": "'Smart Thin Pillow' Rs 1,799 ↑ Rs 1,999"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Hybrid Pillow' Rs 1,999 ↑ Rs 2,199"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'AeroPlus Adjustable Desk' Rs 16,999 ↑ Rs 17,999"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Luxe Motorised Recliner Sofa (2-seater)' Rs 64,990 ↑ Rs 67,999"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Luxe Pro Massager Recliner Sofa' Rs 54,990 ↑ Rs 57,990"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Ortho Pro Max Seat Cushion' Rs 1,999 ↑ Rs 2,199"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Ortho Pro SnowTec Cooling Technology' Rs 18,090 ↑ Rs 20,990"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Ortho Pro SnowTec Cooling Technology - Custom' Rs 19,190 ↑ Rs 22,290"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Wedge Cushion' Rs 1,799 ↑ Rs 1,999"
   }
 ]
