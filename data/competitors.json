@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-13T08:07:57.248556Z",
-  "date": "2026-09-13",
+  "generated": "2026-09-14T08:42:21.519051Z",
+  "date": "2026-09-14",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -620,6 +620,12 @@
     "sleepyhead": {
       "platform": "shopify",
       "products": {
+        "Sofa Drip - 1 Seater Sofa (Fabric, Pine Green)": 10399,
+        "Sofa Drip - 2 Seater Sofa (Fabric, Pine Green)": 14799,
+        "Sofa Drip - 3 Seater Sofa (Fabric, Pine Green)": 18499,
+        "Sofa Drip - 1 Seater Sofa (Fabric, Sandstone Beige)": 10399,
+        "Sofa Drip - 2 Seater Sofa (Fabric, Sandstone Beige)": 14799,
+        "Sofa Drip - 3 Seater Sofa (Fabric, Sandstone Beige)": 18499,
         "Flip - Dual Sided Foam Mattress with Firm & Soft Sides - White": 5529,
         "Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - White": 7619,
         "Sense - BodyIQ Orthopedic Memory Foam Mattress with Cooling Tech - Ivory White": 8929,
@@ -759,10 +765,6 @@
         "Sofa Bae - 1 Seater Sofa (Fabric, Pebble Brown)": 10099,
         "Sofa Bae - 1 Seater Sofa (Fabric, Ember Orange)": 10099,
         "Sofa Bae - 1 Seater Sofa (Fabric, Ocean Blue)": 10099,
-        "Sofa Vibe - 3 Seater Motion Sofa - Rust Orange": 58666,
-        "Sofa Vibe - 2 Seater Motion Sofa - Rust Orange": 48694,
-        "Sofa Vibe - 1 Seater Motion Sofa - Slate Grey": 24999,
-        "Sofa Vibe - 1 Seater Motion Sofa - Rust Orange": 24999,
         "Yawn Laxe Pincore Hybrid Latex Pillow Medium - White": 1499,
         "Sofa Mojo - 3 Seater Sofa (Fabric, Berry Blush Pink)": 33000,
         "Sofa Mojo - 2 Seater Sofa (Fabric, Berry Blush Pink)": 25000,
@@ -903,9 +905,7 @@
         "Spring - Cushion Covers with Cushion Fillers (Blue-Ocean Blue, Set of 5 Combo)": 1699,
         "Spring - Cushion Covers with Premium Cushion Fillers (Blue-Grey, Set of 5 Combo)": 1699,
         "Premium Soft Chenille Throw for Sofa, Bed & Couch-Apple Green": 999,
-        "Footsie - Shoe Rack Combo with Cushion Seat": 12899,
         "Footsie - Engineered Wood Vertical Shoe Rack, (1 Door, 10 Pair, Dark Walnut)": 5599,
-        "Footsie - Horizontal Shoe Rack with Cushion Seat, (2 Door, 15 Pair, Dark Walnut)": 7899,
         "SofaBed Two - Foldable 3 Seater Sofa Cum Bed, (Fabric, Ink Blue)": 22399,
         "SofaBed Two - Foldable 3 Seater Sofa Cum Bed, (Fabric, Ash Grey)": 22399,
         "Switch - 2-in-1 Dual Comfort High-Density Foam Mattress": 8986,
@@ -1050,6 +1050,9 @@
     "sleepycat": {
       "platform": "shopify",
       "products": {
+        "Katachi Bedside Table": 8999,
+        "Ohayo Bed With Storage": 33999,
+        "Ohayo Bedside Table": 7999,
         "Katachi Bed with Storage": 39999,
         "200 TC Percale Flat Bedsheets": 1700,
         "Lycra Mattress Protector": 799,
@@ -1133,7 +1136,7 @@
         "Hybrid Latex Mattress": 10099
       },
       "on_sale": true,
-      "count": 81,
+      "count": 84,
       "offer": 15,
       "signals": {
         "quiz": true,
