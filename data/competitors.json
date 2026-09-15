@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-14T08:42:21.519051Z",
-  "date": "2026-09-14",
+  "generated": "2026-09-15T08:30:45.766298Z",
+  "date": "2026-09-15",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -1050,6 +1050,7 @@
     "sleepycat": {
       "platform": "shopify",
       "products": {
+        "Carbon Mattress": 6749,
         "Katachi Bedside Table": 8999,
         "Ohayo Bed With Storage": 33999,
         "Ohayo Bedside Table": 7999,
@@ -1136,7 +1137,7 @@
         "Hybrid Latex Mattress": 10099
       },
       "on_sale": true,
-      "count": 84,
+      "count": 85,
       "offer": 15,
       "signals": {
         "quiz": true,

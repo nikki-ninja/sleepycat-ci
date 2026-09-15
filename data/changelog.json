@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-09-15",
+    "brand": "sleepycat",
+    "type": "new-product",
+    "text": "new SKU live - 'Carbon Mattress' at Rs 6,749"
+  },
+  {
     "date": "2026-09-14",
     "brand": "sleepycat",
     "type": "new-product",
@@ -2392,11 +2398,5 @@
     "brand": "tsc",
     "type": "price",
     "text": "'Smart Ortho SnowTec Cooling Technology' Rs 14,890 ↑ Rs 16,790"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Luxe Royale Mattress - Custom' Rs 41,790 ↑ Rs 43,490"
   }
 ]
