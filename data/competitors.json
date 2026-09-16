@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-15T08:30:45.766298Z",
-  "date": "2026-09-15",
+  "generated": "2026-09-16T08:24:32.586002Z",
+  "date": "2026-09-16",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -236,15 +236,15 @@
         "Rhapsody mov.E Beige Leatherette 2 Seater Sofa": 95953,
         "Rhapsody move.E Beige Leatherette 1 Seater Sofa": 55900,
         "Duropedic Airboost 3.10 Bionix Ice Pro Mattress | 1 lakh+ Airknit fibres and ortho support | 100 nights trial": 24152,
-        "Opus mov.E Green Fabric 3 Seater Sofa": 65600,
-        "Opus mov.E Blue Fabric 3 Seater Sofa": 65600,
-        "Opus mov.E Cream Fabric 3 Seater Sofa": 65600,
-        "Opus mov.E Cream Fabric 2 Seater Sofa": 55799,
-        "Opus mov.E Blue Fabric 2 Seater Sofa": 55799,
-        "Opus mov.E Green Fabric 2 Seater Sofa": 55799,
-        "Opus mov.E Green Fabric 1 Seater Sofa": 33882,
-        "Opus mov.E Blue Fabric 1 Seater Sofa": 33882,
-        "Opus mov.E Cream Fabric 1 Seater Sofa": 33882,
+        "Opus mov.E Green Fabric 3 Seater Sofa": 69999,
+        "Opus mov.E Blue Fabric 3 Seater Sofa": 69999,
+        "Opus mov.E Cream Fabric 3 Seater Sofa": 69999,
+        "Opus mov.E Cream Fabric 2 Seater Sofa": 59499,
+        "Opus mov.E Blue Fabric 2 Seater Sofa": 59499,
+        "Opus mov.E Green Fabric 2 Seater Sofa": 59499,
+        "Opus mov.E Green Fabric 1 Seater Sofa": 36199,
+        "Opus mov.E Blue Fabric 1 Seater Sofa": 36199,
+        "Opus mov.E Cream Fabric 1 Seater Sofa": 36199,
         "Flexi -Lightweight Travel Friendly Slim Mattress (Grey)": 1499,
         "Zuri Hydraulic Upholstered Bed with Storage - Moonmist Grey": 41499,
         "Zuri Hydraulic Upholstered Bed with Storage - Sepia Tint Brown": 41499,
@@ -573,7 +573,7 @@
       },
       "on_sale": true,
       "count": 410,
-      "offer": 10,
+      "offer": 33,
       "signals": {
         "quiz": true,
         "emi": false,
@@ -620,6 +620,12 @@
     "sleepyhead": {
       "platform": "shopify",
       "products": {
+        "Sofa Drip Pro - 1 Seater Sofa (Fabric, Charcoal Grey)": 11399,
+        "Sofa Drip Pro - 2 Seater Sofa (Fabric, Charcoal Grey)": 15799,
+        "Sofa Drip Pro - 3 Seater Sofa (Fabric, Charcoal Grey)": 19499,
+        "Sofa Drip Pro - 1 Seater Sofa (Fabric, Coco Brown)": 11399,
+        "Sofa Drip Pro - 2 Seater Sofa (Fabric, Coco Brown)": 15799,
+        "Sofa Drip Pro - 3 Seater Sofa (Fabric, Coco Brown)": 19499,
         "Sofa Drip - 1 Seater Sofa (Fabric, Pine Green)": 10399,
         "Sofa Drip - 2 Seater Sofa (Fabric, Pine Green)": 14799,
         "Sofa Drip - 3 Seater Sofa (Fabric, Pine Green)": 18499,
@@ -919,7 +925,7 @@
         "Technic Hybrid - 3 Zone 6D Hexagon Grid Mattress with 3 Zone Pocket Springs #FutureofSleep": 16799
       },
       "on_sale": true,
-      "count": 297,
+      "count": 303,
       "offer": 24,
       "signals": {
         "quiz": true,

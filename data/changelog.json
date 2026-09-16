@@ -1,5 +1,95 @@
 [
   {
+    "date": "2026-09-16",
+    "brand": "sleepyhead",
+    "type": "new-product",
+    "text": "new SKU live - 'Sofa Drip Pro - 2 Seater Sofa (Fabric, Coco Brown)' at Rs 15,799"
+  },
+  {
+    "date": "2026-09-16",
+    "brand": "sleepyhead",
+    "type": "new-product",
+    "text": "new SKU live - 'Sofa Drip Pro - 1 Seater Sofa (Fabric, Coco Brown)' at Rs 11,399"
+  },
+  {
+    "date": "2026-09-16",
+    "brand": "sleepyhead",
+    "type": "new-product",
+    "text": "new SKU live - 'Sofa Drip Pro - 3 Seater Sofa (Fabric, Charcoal Grey)' at Rs 19,499"
+  },
+  {
+    "date": "2026-09-16",
+    "brand": "sleepyhead",
+    "type": "new-product",
+    "text": "new SKU live - 'Sofa Drip Pro - 2 Seater Sofa (Fabric, Charcoal Grey)' at Rs 15,799"
+  },
+  {
+    "date": "2026-09-16",
+    "brand": "sleepyhead",
+    "type": "new-product",
+    "text": "new SKU live - 'Sofa Drip Pro - 1 Seater Sofa (Fabric, Charcoal Grey)' at Rs 11,399"
+  },
+  {
+    "date": "2026-09-16",
+    "brand": "duroflex",
+    "type": "offer",
+    "text": "headline offer now 33% off"
+  },
+  {
+    "date": "2026-09-16",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Opus mov.E Cream Fabric 1 Seater Sofa' Rs 33,882 ↑ Rs 36,199"
+  },
+  {
+    "date": "2026-09-16",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Opus mov.E Blue Fabric 1 Seater Sofa' Rs 33,882 ↑ Rs 36,199"
+  },
+  {
+    "date": "2026-09-16",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Opus mov.E Green Fabric 1 Seater Sofa' Rs 33,882 ↑ Rs 36,199"
+  },
+  {
+    "date": "2026-09-16",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Opus mov.E Green Fabric 2 Seater Sofa' Rs 55,799 ↑ Rs 59,499"
+  },
+  {
+    "date": "2026-09-16",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Opus mov.E Blue Fabric 2 Seater Sofa' Rs 55,799 ↑ Rs 59,499"
+  },
+  {
+    "date": "2026-09-16",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Opus mov.E Cream Fabric 2 Seater Sofa' Rs 55,799 ↑ Rs 59,499"
+  },
+  {
+    "date": "2026-09-16",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Opus mov.E Cream Fabric 3 Seater Sofa' Rs 65,600 ↑ Rs 69,999"
+  },
+  {
+    "date": "2026-09-16",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Opus mov.E Blue Fabric 3 Seater Sofa' Rs 65,600 ↑ Rs 69,999"
+  },
+  {
+    "date": "2026-09-16",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Opus mov.E Green Fabric 3 Seater Sofa' Rs 65,600 ↑ Rs 69,999"
+  },
+  {
     "date": "2026-09-15",
     "brand": "sleepycat",
     "type": "new-product",
@@ -2308,95 +2398,5 @@
     "brand": "tsc",
     "type": "price",
     "text": "'Smart Ortho Mattress' Rs 12,390 ↑ Rs 13,790"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Ortho Pro Seat Cushion' Rs 1,699 ↑ Rs 1,799"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Ortho Pro Back Cushion' Rs 1,799 ↑ Rs 1,899"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Onyx Orthopedic Office Chair' Rs 9,990 ↑ Rs 10,999"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Elev8 Smart Recliner Bed with Italia Frame' Rs 52,999 ↑ Rs 56,999"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Elev8 Smart Recliner Bed' Rs 34,999 ↑ Rs 38,999"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'All Weather Comforter' Rs 1,399 ↑ Rs 1,499"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Cervical Pillow' Rs 1,999 ↑ Rs 2,199"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Ortho Mattress - Custom' Rs 14,190 ↑ Rs 15,690"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Ortho Pro Mattress' Rs 15,590 ↑ Rs 17,990"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Ortho Hybrid Mattress - Custom' Rs 23,590 ↑ Rs 24,690"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Ortho Pro Mattress-Custom' Rs 16,490 ↑ Rs 18,990"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'SnowTec Adjustable Plush Pillow' Rs 1,799 ↑ Rs 1,999"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Revlax Reversible Pillow' Rs 2,799 ↑ Rs 2,999"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Luxe Royale Mattress' Rs 39,390 ↑ Rs 40,990"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Ortho SnowTec Cooling Technology' Rs 14,890 ↑ Rs 16,790"
   }
 ]
