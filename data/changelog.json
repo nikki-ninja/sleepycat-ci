@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-09-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Ohayo Bedside Table' Rs 7,999 ↓ Rs 6,999"
+  },
+  {
+    "date": "2026-09-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Katachi Bedside Table' Rs 8,999 ↓ Rs 7,999"
+  },
+  {
+    "date": "2026-09-17",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Carbon Mattress' Rs 6,749 ↓ Rs 6,374"
+  },
+  {
+    "date": "2026-09-17",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Memory Foam Topper' Rs 5,999 ↑ Rs 6,749"
+  },
+  {
     "date": "2026-09-16",
     "brand": "sleepyhead",
     "type": "new-product",
@@ -2374,29 +2398,5 @@
     "brand": "springtek",
     "type": "price",
     "text": "'Tri Folding Mattress' Rs 4,202 ↑ Rs 4,943"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "springtek",
-    "type": "price",
-    "text": "'Springtek Joy Solid Wood High Chair for Baby Toddler, Foldable Wooden Highchair' Rs 7,352 ↑ Rs 8,649"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "duroflex",
-    "type": "offer",
-    "text": "headline offer now 33% off"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Ortho Hybrid Mattress' Rs 22,290 ↑ Rs 23,290"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Ortho Mattress' Rs 12,390 ↑ Rs 13,790"
   }
 ]
