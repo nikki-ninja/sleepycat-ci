@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-18T08:05:06.100520Z",
-  "date": "2026-09-18",
+  "generated": "2026-09-19T07:54:48.253537Z",
+  "date": "2026-09-19",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -1047,7 +1047,7 @@
       "signals": {
         "quiz": false,
         "emi": true,
-        "trial": false,
+        "trial": true,
         "reviews": true,
         "whatsapp": true,
         "store": false,

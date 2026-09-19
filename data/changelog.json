@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-09-19",
+    "brand": "springtek",
+    "type": "ux",
+    "text": "added homepage 'trial' signal"
+  },
+  {
     "date": "2026-09-18",
     "brand": "emma",
     "type": "new-product",
@@ -2392,11 +2398,5 @@
     "brand": "sleepycat",
     "type": "price",
     "text": "'Natural Latex Mattress Topper' Rs 7,199 ↑ Rs 7,224"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'Original Mattress' Rs 5,199 ↑ Rs 6,399"
   }
 ]
