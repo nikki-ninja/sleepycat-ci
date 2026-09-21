@@ -1,5 +1,95 @@
 [
   {
+    "date": "2026-09-21",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Mattress' Rs 13,490 ↑ Rs 14,590"
+  },
+  {
+    "date": "2026-09-21",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Mattress - Custom' Rs 15,390 ↑ Rs 16,490"
+  },
+  {
+    "date": "2026-09-21",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro Mattress' Rs 16,890 ↑ Rs 18,490"
+  },
+  {
+    "date": "2026-09-21",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro Mattress-Custom' Rs 17,890 ↑ Rs 19,590"
+  },
+  {
+    "date": "2026-09-21",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho SnowTec Cooling Technology' Rs 16,490 ↑ Rs 17,590"
+  },
+  {
+    "date": "2026-09-21",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho SnowTec Cooling Technology-Custom' Rs 17,490 ↑ Rs 18,690"
+  },
+  {
+    "date": "2026-09-21",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'The Sleep Company Luxe Motorised Recliner Sofa' Rs 28,999 ↑ Rs 30,999"
+  },
+  {
+    "date": "2026-09-21",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'AeroPlus Adjustable Desk' Rs 17,999 ↑ Rs 18,999"
+  },
+  {
+    "date": "2026-09-21",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro SnowTec Cooling Technology' Rs 19,890 ↑ Rs 21,490"
+  },
+  {
+    "date": "2026-09-21",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro SnowTec Cooling Technology - Custom' Rs 20,990 ↑ Rs 22,790"
+  },
+  {
+    "date": "2026-09-21",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro SnowTec Mattress - Custom' Rs 20,990 ↑ Rs 22,790"
+  },
+  {
+    "date": "2026-09-21",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro SnowTec Mattress' Rs 19,890 ↑ Rs 21,490"
+  },
+  {
+    "date": "2026-09-21",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro Mattress - Custom' Rs 17,890 ↑ Rs 19,590"
+  },
+  {
+    "date": "2026-09-21",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro Mattress' Rs 16,890 ↑ Rs 18,490"
+  },
+  {
+    "date": "2026-09-21",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Stylux Ergonomic Office Chair' Rs 15,001 ↑ Rs 15,999"
+  },
+  {
     "date": "2026-09-19",
     "brand": "springtek",
     "type": "ux",
@@ -2308,95 +2398,5 @@
     "brand": "sleepycat",
     "type": "price",
     "text": "'Microfiber Slim pillow' Rs 899 ↑ Rs 949"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'Memory Foam Slim Pillow' Rs 1,299 ↓ Rs 999"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'Grid pillow' Rs 2,499 ↑ Rs 2,599"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'Winter Luxe Comforter' Rs 3,391 ↑ Rs 3,699"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'Summer Comforter' Rs 1,359 ↑ Rs 1,399"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'300 TC Sateen Pillow Cases' Rs 764 ↑ Rs 809"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'Satin Pillow Cases' Rs 764 ↑ Rs 799"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'Jersey Pillow Cases' Rs 412 ↑ Rs 499"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'2 Inch Memory Foam Mattress Topper' Rs 3,699 ↑ Rs 4,199"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'Tri Fold Mattress' Rs 4,499 ↑ Rs 5,399"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'Wedge Pillow' Rs 1,874 ↑ Rs 1,999"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'The Founder's Mattress' Rs 28,690 ↑ Rs 30,200"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'The Latex Ortho' Rs 6,199 ↑ Rs 6,999"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'Car Neck Pillow' Rs 999 ↓ Rs 899"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'Aeroflow Mattress Topper' Rs 2,969 ↑ Rs 3,399"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'Natural Latex Mattress Topper' Rs 7,199 ↑ Rs 7,224"
   }
 ]
