@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-09-23",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Enso Recliner' Rs 35,999 ↓ Rs 32,999"
+  },
+  {
     "date": "2026-09-21",
     "brand": "tsc",
     "type": "price",
@@ -2392,11 +2398,5 @@
     "brand": "sleepycat",
     "type": "price",
     "text": "'Jersey Fitted Sheets' Rs 1,042 ↑ Rs 1,249"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'Microfiber Slim pillow' Rs 899 ↑ Rs 949"
   }
 ]
