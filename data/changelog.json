@@ -1,5 +1,53 @@
 [
   {
+    "date": "2026-09-24",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Chimera Pillow' Rs 2,968 ↓ Rs 1,484"
+  },
+  {
+    "date": "2026-09-24",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Sleepzz Pillow' Rs 1,438 ↓ Rs 719"
+  },
+  {
+    "date": "2026-09-24",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Hosta Pillow' Rs 899 ↑ Rs 944"
+  },
+  {
+    "date": "2026-09-24",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Grazel Ortho Contour Pillow' Rs 2,339 ↑ Rs 2,564"
+  },
+  {
+    "date": "2026-09-24",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Grazel Classic Memory Foam Pillow' Rs 4,948 ↓ Rs 2,474"
+  },
+  {
+    "date": "2026-09-24",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Snow Fiber Pillow' Rs 1,078 ↓ Rs 539"
+  },
+  {
+    "date": "2026-09-24",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Valencia Recliner Sofa' Rs 65,999 ↓ Rs 60,999"
+  },
+  {
+    "date": "2026-09-24",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Emperia Recliner Sofa' Rs 116,999 ↓ Rs 104,999"
+  },
+  {
     "date": "2026-09-23",
     "brand": "sleepycat",
     "type": "price",
@@ -2350,53 +2398,5 @@
     "brand": "sleepycat",
     "type": "price",
     "text": "'Travel Neck Pillow' Rs 949 ↑ Rs 999"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'200 TC Percale Fitted Bedsheet Set' Rs 1,042 ↑ Rs 1,199"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'300 TC Sateen Duvet Cover' Rs 2,159 ↑ Rs 2,399"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'200 TC Percale Duvet Cover' Rs 1,671 ↑ Rs 1,799"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'Jersey Duvet Cover' Rs 1,462 ↑ Rs 1,799"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'Summer Luxe Comforter' Rs 3,059 ↑ Rs 3,299"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'All Season Reversible Comforter' Rs 1,597 ↑ Rs 1,699"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'Winter Reversible Comforter' Rs 2,799 ↓ Rs 2,499"
-  },
-  {
-    "date": "2026-08-17",
-    "brand": "sleepycat",
-    "type": "price",
-    "text": "'Jersey Fitted Sheets' Rs 1,042 ↑ Rs 1,249"
   }
 ]
