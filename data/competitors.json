@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-24T08:16:44.685629Z",
-  "date": "2026-09-24",
+  "generated": "2026-09-25T08:38:58.857558Z",
+  "date": "2026-09-25",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -24,7 +24,7 @@
         "Luxe Royale Massager Sofa": 109999,
         "Stylux Ergonomic Office Chair": 15999,
         "Smart Ortho GRID Mattress": 9990,
-        "Smart Neck Comfort Pillow": 1999,
+        "Smart Ortho Neck Pillow": 1999,
         "Smart Ortho Relief Pillow": 2899,
         "Travel Neck Pillow": 1499,
         "Smart Ortho GRID Mattress - Custom": 10590,
@@ -66,15 +66,15 @@
         "The Sleep Company Luxe Motorised Recliner Sofa": 30999,
         "Smart Ortho Royale Mattress-Custom": 43490,
         "Smart Neck Massager Pillow": 2499,
-        "Smart ErgoRelief Pillow": 2599,
+        "Smart Luxe Ergo Pillow": 2599,
         "Elev8 Smart Recliner Bed with Leather Frame": 57999,
         "Smart Ortho Royale Mattress": 40990,
         "Smart Ortho SnowTec Cooling Technology-Custom": 18690,
         "Smart Luxe Royale Mattress - Custom": 43490,
         "Smart Ortho SnowTec Cooling Technology": 17590,
         "Smart Luxe Royale Mattress": 40990,
-        "Revlax Reversible Pillow": 2999,
-        "SnowTec Adjustable Plush Pillow": 1999,
+        "Smart Luxe Royale Pillow": 2999,
+        "Smart Luxe Flexi SnowTec Pillow": 1999,
         "Smart Ortho Pro Mattress-Custom": 19590,
         "Smart Ortho Hybrid Mattress - Custom": 24690,
         "Smart Ortho Pro Mattress": 18490,
@@ -86,7 +86,7 @@
         "Onyx Orthopedic Office Chair": 10999,
         "Ortho Pro Back Cushion": 1899,
         "Ortho Pro Seat Cushion": 1799,
-        "Smart Adjustable Plush Pillow": 999,
+        "Smart Luxe Flexi Pillow": 999,
         "Smart Ortho Mattress": 14590,
         "Smart Ortho Hybrid Mattress": 23290,
         "Bamboo Mattress Protector": 2399
@@ -617,6 +617,7 @@
     "sleepyhead": {
       "platform": "shopify",
       "products": {
+        "Memory Foam Topper": 6186,
         "Sofa Drip Pro - 1 Seater Sofa (Fabric, Charcoal Grey)": 11399,
         "Sofa Drip Pro - 2 Seater Sofa (Fabric, Charcoal Grey)": 15799,
         "Sofa Drip Pro - 3 Seater Sofa (Fabric, Charcoal Grey)": 19499,
@@ -922,7 +923,7 @@
         "Technic Hybrid - 3 Zone 6D Hexagon Grid Mattress with 3 Zone Pocket Springs #FutureofSleep": 16799
       },
       "on_sale": true,
-      "count": 303,
+      "count": 304,
       "offer": 24,
       "signals": {
         "quiz": true,
@@ -1124,7 +1125,7 @@
         "Fiber Lite Pillow": 799,
         "Dual Comfort Pillow": 2149,
         "Cuddle Pillow": 1699,
-        "Mattress Protector": 649,
+        "Mattress Protector": 648,
         "Baby Mattress": 2249,
         "Microfiber Mattress Topper": 3599,
         "Cloud Mattress": 16199,
