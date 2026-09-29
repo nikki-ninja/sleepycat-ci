@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-09-29",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Duropedic Airboost 3.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres and ortho support' at Rs 18,964"
+  },
+  {
+    "date": "2026-09-29",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Valencia Recliner Sofa' Rs 60,999 ↓ Rs 55,999"
+  },
+  {
+    "date": "2026-09-29",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Emperia Recliner Sofa' Rs 104,999 ↑ Rs 116,999"
+  },
+  {
+    "date": "2026-09-29",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'Grand Elite Mattress' at Rs 97,980"
+  },
+  {
     "date": "2026-09-28",
     "brand": "emma",
     "type": "new-product",
@@ -2374,29 +2398,5 @@
     "brand": "springtek",
     "type": "price",
     "text": "'Folding Rollaway Bed With 6\" Mattress' Rs 15,749 ↓ Rs 14,962"
-  },
-  {
-    "date": "2026-08-18",
-    "brand": "springtek",
-    "type": "price",
-    "text": "'100% Water Proof Mattress Protector' Rs 720 ↓ Rs 684"
-  },
-  {
-    "date": "2026-08-18",
-    "brand": "springtek",
-    "type": "price",
-    "text": "'2\" Memory Foam Gel Mattress Topper' Rs 3,604 ↓ Rs 3,424"
-  },
-  {
-    "date": "2026-08-18",
-    "brand": "springtek",
-    "type": "price",
-    "text": "'Micro Fibre Sleeping Pillow' Rs 999 ↓ Rs 949"
-  },
-  {
-    "date": "2026-08-18",
-    "brand": "springtek",
-    "type": "price",
-    "text": "'2\" Natural Latex Mattress Topper' Rs 11,026 ↓ Rs 10,475"
   }
 ]
