@@ -1,10 +1,11 @@
 {
-  "generated": "2026-09-29T09:36:15.981088Z",
-  "date": "2026-09-29",
+  "generated": "2026-09-30T09:28:31.460935Z",
+  "date": "2026-09-30",
   "brands": {
     "tsc": {
       "platform": "shopify",
       "products": {
+        "Brooklyn Recliner Sofa": 116999,
         "Grand Elite Mattress": 97980,
         "Palm and Finger Massager": 7999,
         "SnowTec Quilted Flat Sheet": 5999,
@@ -49,7 +50,6 @@
         "Smart Luxe Pro SnowTec Mattress - Custom": 22790,
         "SensAI Mattress": 259000,
         "Wedge Cushion": 1999,
-        "Emperia Recliner Sofa": 116999,
         "Valencia Recliner Sofa": 55999,
         "SensAI Sleep Analyzer": 6999,
         "SensAI Sleep Analyzer Pillow": 8500,
@@ -161,6 +161,7 @@
     "duroflex": {
       "platform": "shopify",
       "products": {
+        "Neuma Feet Air Massager": 11999,
         "Duropedic Airboost 3.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres and ortho support": 18964,
         "Memory Foam Topper": 6749,
         "Cocoon Mustard Yellow Fabric 1 Seater Sofa": 28070,
@@ -564,8 +565,8 @@
         "LiveIn  Memory Foam Mattress": 8539
       },
       "on_sale": true,
-      "count": 401,
-      "offer": 33,
+      "count": 402,
+      "offer": 10,
       "signals": {
         "quiz": true,
         "emi": false,
@@ -579,7 +580,7 @@
     "emma": {
       "platform": "shopify",
       "products": {
-        "Emma Hybrid Bundle": 2449,
+        "Emma Hybrid Bundle": 14947,
         "Emma Storage Pods - Set of 1": 7999,
         "Emma Storage Pods - Set of 4": 22990,
         "Emma Storage Pods - Set of 2": 11990,
@@ -940,7 +941,6 @@
         "Pure Coir Mattress (HYD & BLR)": 5574,
         "SpringRest Bonnell Essential Spring Mattress (HYD & BLR)": 8320,
         "Pure Coir STR8 Mattress (HYD & BLR)": 7085,
-        "Fombed Foam Mattress (HYD & BLR)": 8381,
         "New Ortho Coir Mattress (HYD & BLR)": 12473,
         "DuoRest Essential Foam Mattress (HYD & BLR)": 6864,
         "DuoRest Popular Foam Mattress (HYD & BLR)": 8113,
@@ -993,7 +993,6 @@
         "Natural Coir Mattress": 4502,
         "Klassic Premium Coir Mattress": 18703,
         "Klassic Essential Coir Mattress": 10204,
-        "Fombed Foam Mattress": 10281,
         "Hosta Pillow": 944,
         "Sleepzz Pillow": 719,
         "Petalz Pillow": 1349,
@@ -1002,7 +1001,7 @@
         "New Ortho Coir Mattress": 15301
       },
       "on_sale": true,
-      "count": 66,
+      "count": 64,
       "offer": 10,
       "signals": {
         "quiz": false,

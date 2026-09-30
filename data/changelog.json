@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-09-30",
+    "brand": "emma",
+    "type": "price",
+    "text": "'Emma Hybrid Bundle' Rs 2,449 ↑ Rs 14,947"
+  },
+  {
+    "date": "2026-09-30",
+    "brand": "duroflex",
+    "type": "offer",
+    "text": "headline offer now 10% off"
+  },
+  {
+    "date": "2026-09-30",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Neuma Feet Air Massager' at Rs 11,999"
+  },
+  {
+    "date": "2026-09-30",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'Brooklyn Recliner Sofa' at Rs 116,999"
+  },
+  {
     "date": "2026-09-29",
     "brand": "duroflex",
     "type": "new-product",
@@ -2374,29 +2398,5 @@
     "brand": "springtek",
     "type": "price",
     "text": "'Dreamer Bonnel Spring Mattress' Rs 7,099 ↓ Rs 6,744"
-  },
-  {
-    "date": "2026-08-18",
-    "brand": "springtek",
-    "type": "price",
-    "text": "'Memory & Bonded Foam, Spine Support Orthoapedic' Rs 6,299 ↓ Rs 5,984"
-  },
-  {
-    "date": "2026-08-18",
-    "brand": "springtek",
-    "type": "price",
-    "text": "'100% Organic Waterproof Protector' Rs 1,441 ↓ Rs 1,369"
-  },
-  {
-    "date": "2026-08-18",
-    "brand": "springtek",
-    "type": "price",
-    "text": "'2\" Luxe Micro Fibre Mattress Topper' Rs 2,999 ↓ Rs 2,849"
-  },
-  {
-    "date": "2026-08-18",
-    "brand": "springtek",
-    "type": "price",
-    "text": "'Folding Rollaway Bed With 6\" Mattress' Rs 15,749 ↓ Rs 14,962"
   }
 ]
