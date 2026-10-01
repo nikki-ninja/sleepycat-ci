@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-10-01",
+    "brand": "duroflex",
+    "type": "offer",
+    "text": "headline offer now 33% off"
+  },
+  {
+    "date": "2026-10-01",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Grand Elite Mattress' Rs 97,980 ↑ Rs 119,000"
+  },
+  {
+    "date": "2026-10-01",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Valencia Recliner Sofa' Rs 55,999 ↑ Rs 99,999"
+  },
+  {
+    "date": "2026-10-01",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'Toronto Recliner Sofa' at Rs 94,999"
+  },
+  {
     "date": "2026-09-30",
     "brand": "emma",
     "type": "price",
@@ -2374,29 +2398,5 @@
     "brand": "springtek",
     "type": "price",
     "text": "'Euro Top Hybrid Latex Pocket Spring' Rs 10,999 ↓ Rs 10,449"
-  },
-  {
-    "date": "2026-08-18",
-    "brand": "springtek",
-    "type": "price",
-    "text": "'Springtek Ortho Pocket Memory Foam Spring Mattress' Rs 8,199 ↓ Rs 7,789"
-  },
-  {
-    "date": "2026-08-18",
-    "brand": "springtek",
-    "type": "price",
-    "text": "'Wavemax Spine Support Orthopedic Mattress' Rs 12,571 ↓ Rs 11,942"
-  },
-  {
-    "date": "2026-08-18",
-    "brand": "springtek",
-    "type": "price",
-    "text": "'SuperNova Latex & Memory' Rs 10,049 ↓ Rs 9,547"
-  },
-  {
-    "date": "2026-08-18",
-    "brand": "springtek",
-    "type": "price",
-    "text": "'Dreamer Bonnel Spring Mattress' Rs 7,099 ↓ Rs 6,744"
   }
 ]
