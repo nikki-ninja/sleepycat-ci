@@ -1,5 +1,137 @@
 [
   {
+    "date": "2026-10-02",
+    "brand": "duroflex",
+    "type": "offer",
+    "text": "headline offer now 10% off"
+  },
+  {
+    "date": "2026-10-02",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial' Rs 27,416 ↑ Rs 29,908"
+  },
+  {
+    "date": "2026-10-02",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Duropedic Airboost 3.8 Bionix Ice Pro Mattress | 1 lakh+ Airknit fibres and ortho support  | 100 nights trial' Rs 23,611 ↑ Rs 24,174"
+  },
+  {
+    "date": "2026-10-02",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Duropedic Airboost 6.10 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial' Rs 29,447 ↑ Rs 31,985"
+  },
+  {
+    "date": "2026-10-02",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Duropedic Airboost 3.10 Bionix Ice Pro Mattress | 1 lakh+ Airknit fibres and ortho support | 100 nights trial' Rs 24,152 ↑ Rs 24,610"
+  },
+  {
+    "date": "2026-10-02",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Duropedic Airboost 3.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres and ortho support' Rs 18,964 ↓ Rs 18,755"
+  },
+  {
+    "date": "2026-10-02",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'All Weather Comforter - White & Grey' at Rs 2,699"
+  },
+  {
+    "date": "2026-10-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Elev8 Smart Recliner Bed with Italia Frame' Rs 56,999 ↓ Rs 52,999"
+  },
+  {
+    "date": "2026-10-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Elev8 Smart Recliner Bed' Rs 38,999 ↓ Rs 34,999"
+  },
+  {
+    "date": "2026-10-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro Mattress' Rs 18,490 ↓ Rs 16,890"
+  },
+  {
+    "date": "2026-10-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro Mattress-Custom' Rs 19,590 ↓ Rs 17,890"
+  },
+  {
+    "date": "2026-10-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Elev8 Smart Recliner Bed with Leather Frame' Rs 57,999 ↓ Rs 53,999"
+  },
+  {
+    "date": "2026-10-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'The Sleep Company Luxe Motorised Recliner Sofa' Rs 30,999 ↓ Rs 28,999"
+  },
+  {
+    "date": "2026-10-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'AeroPlus Adjustable Desk' Rs 18,999 ↓ Rs 17,999"
+  },
+  {
+    "date": "2026-10-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro SnowTec Cooling Technology' Rs 21,490 ↓ Rs 19,890"
+  },
+  {
+    "date": "2026-10-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro SnowTec Cooling Technology - Custom' Rs 22,790 ↓ Rs 20,990"
+  },
+  {
+    "date": "2026-10-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro SnowTec Mattress - Custom' Rs 22,790 ↓ Rs 20,990"
+  },
+  {
+    "date": "2026-10-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro SnowTec Mattress' Rs 21,490 ↓ Rs 19,890"
+  },
+  {
+    "date": "2026-10-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro Mattress - Custom' Rs 19,590 ↓ Rs 17,890"
+  },
+  {
+    "date": "2026-10-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro Mattress' Rs 18,490 ↓ Rs 16,890"
+  },
+  {
+    "date": "2026-10-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Elev8 Smart Recliner Storage Bed with Italia Frame' Rs 108,499 ↓ Rs 99,499"
+  },
+  {
+    "date": "2026-10-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Stylux Ergonomic Office Chair' Rs 15,999 ↓ Rs 15,001"
+  },
+  {
     "date": "2026-10-01",
     "brand": "duroflex",
     "type": "offer",
@@ -2266,137 +2398,5 @@
     "brand": "duroflex",
     "type": "price",
     "text": "'LiveIn 2 in 1 Dual Sided Roll Pack Mattress' Rs 6,169 ↑ Rs 6,799"
-  },
-  {
-    "date": "2026-08-19",
-    "brand": "flo",
-    "type": "price",
-    "text": "'Flo Adjustable Pillow (Fibre)' Rs 974 ↑ Rs 1,049"
-  },
-  {
-    "date": "2026-08-19",
-    "brand": "flo",
-    "type": "price",
-    "text": "'Flo Aloe Vera Gel Infused Waterproof Mattress Protector' Rs 682 ↑ Rs 734"
-  },
-  {
-    "date": "2026-08-19",
-    "brand": "flo",
-    "type": "price",
-    "text": "'Set of 2 Eye Masks' Rs 454 ↑ Rs 489"
-  },
-  {
-    "date": "2026-08-19",
-    "brand": "flo",
-    "type": "price",
-    "text": "'Flo Adjustable Pillow (Memory Foam)' Rs 1,624 ↑ Rs 1,749"
-  },
-  {
-    "date": "2026-08-19",
-    "brand": "flo",
-    "type": "price",
-    "text": "'Ottoman (Foot Stool)' Rs 968 ↑ Rs 1,042"
-  },
-  {
-    "date": "2026-08-19",
-    "brand": "flo",
-    "type": "price",
-    "text": "'Oyashe Sheesham Wood Bed - With Storage' Rs 30,712 ↑ Rs 33,074"
-  },
-  {
-    "date": "2026-08-19",
-    "brand": "flo",
-    "type": "price",
-    "text": "'Flo Baby Mattress' Rs 1,943 ↑ Rs 2,092"
-  },
-  {
-    "date": "2026-08-19",
-    "brand": "flo",
-    "type": "price",
-    "text": "'Flo Super Soft Bedsheet' Rs 1,592 ↑ Rs 1,714"
-  },
-  {
-    "date": "2026-08-19",
-    "brand": "flo",
-    "type": "price",
-    "text": "'Flo Super Soft Fitted Bedsheet' Rs 1,429 ↑ Rs 1,539"
-  },
-  {
-    "date": "2026-08-19",
-    "brand": "flo",
-    "type": "price",
-    "text": "'Oyashe Sheesham Wood Bed' Rs 20,312 ↑ Rs 21,874"
-  },
-  {
-    "date": "2026-08-19",
-    "brand": "flo",
-    "type": "price",
-    "text": "'Boho Bed (Acacia Wood)' Rs 26,649 ↑ Rs 28,699"
-  },
-  {
-    "date": "2026-08-19",
-    "brand": "flo",
-    "type": "price",
-    "text": "'Boho Bed (Acacia Wood) - With Storage' Rs 37,699 ↑ Rs 40,599"
-  },
-  {
-    "date": "2026-08-19",
-    "brand": "flo",
-    "type": "price",
-    "text": "'The Flo Mattress Ergo' Rs 4,839 ↑ Rs 5,212"
-  },
-  {
-    "date": "2026-08-19",
-    "brand": "flo",
-    "type": "price",
-    "text": "'The Flo Mattress Ortho' Rs 4,839 ↑ Rs 5,212"
-  },
-  {
-    "date": "2026-08-19",
-    "brand": "flo",
-    "type": "price",
-    "text": "'Flo Float™ Mattress' Rs 9,806 ↑ Rs 10,560"
-  },
-  {
-    "date": "2026-08-19",
-    "brand": "flo",
-    "type": "price",
-    "text": "'Flo Wave™ Mattress' Rs 3,416 ↑ Rs 3,679"
-  },
-  {
-    "date": "2026-08-19",
-    "brand": "flo",
-    "type": "price",
-    "text": "'Flo Anti-Gravity™ Natural Latex Mattress' Rs 6,228 ↑ Rs 6,707"
-  },
-  {
-    "date": "2026-08-19",
-    "brand": "flo",
-    "type": "price",
-    "text": "'Back Support Cushion' Rs 1,299 ↑ Rs 1,399"
-  },
-  {
-    "date": "2026-08-19",
-    "brand": "flo",
-    "type": "price",
-    "text": "'Ergonomic Seat Cushion' Rs 1,624 ↑ Rs 1,749"
-  },
-  {
-    "date": "2026-08-19",
-    "brand": "flo",
-    "type": "price",
-    "text": "'360° Neck Support Pillow' Rs 877 ↑ Rs 944"
-  },
-  {
-    "date": "2026-08-18",
-    "brand": "springtek",
-    "type": "price",
-    "text": "'Dreamer Orthopedic Memory Foam Mattress' Rs 7,699 ↓ Rs 7,314"
-  },
-  {
-    "date": "2026-08-18",
-    "brand": "springtek",
-    "type": "price",
-    "text": "'Euro Top Hybrid Latex Pocket Spring' Rs 10,999 ↓ Rs 10,449"
   }
 ]
