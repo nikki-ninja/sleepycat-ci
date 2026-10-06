@@ -1,5 +1,149 @@
 [
   {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Edge Dual Sided Foam Mattress' Rs 7,035 ↑ Rs 7,755"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Quboid Arctic Ice Qube Cell Technology Mattress' Rs 23,915 ↑ Rs 25,110"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Back Magic Pro Orthopedic Mattress' Rs 11,797 ↑ Rs 12,387"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Spine Rest Orthopedic Mattress' Rs 10,634 ↑ Rs 11,725"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Strength Plus Memory Foam Coir Orthopedic Mattress With Euro Top' Rs 20,959 ↑ Rs 22,007"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Back Magic Orthopedic Coir Mattress - Blue' Rs 11,797 ↑ Rs 12,387"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Up Right Orthopedic Mattress' Rs 9,295 ↑ Rs 9,760"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Propel Plus Arctic Ice Pocket Spring Mattress With Euro Top' Rs 13,168 ↑ Rs 13,965"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Propel Arctic Ice Pocket Spring Mattress' Rs 11,221 ↑ Rs 11,782"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Boltt Arctic Ice Spring Mattress' Rs 10,299 ↑ Rs 10,814"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Boltt Plus Arctic Ice Spring Mattress with Euro Top' Rs 12,026 ↑ Rs 12,628"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Posture Perfect Pocket Spring Orthopedic Mattress' Rs 28,763 ↑ Rs 30,201"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Back Magic Orthopedic Coir Mattress - White' Rs 11,797 ↑ Rs 12,387"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Durobond Pro Dual Side Coir Mattress' Rs 8,128 ↑ Rs 8,791"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Tatva Natural Latex and Coir Mattress' Rs 26,493 ↑ Rs 27,817"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Prana Pocket Spring Latex Mattress' Rs 27,758 ↑ Rs 29,146"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Reva Mattress' Rs 17,117 ↑ Rs 17,974"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Back Magic Pro Plus Orthopedic Mattress' Rs 12,539 ↑ Rs 13,166"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Essential Duo Memory Foam Mattress' Rs 9,634 ↑ Rs 10,419"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Duropedic SpineX Mattress' Rs 14,468 ↑ Rs 15,192"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Duropedic Airboost 6.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial' Rs 29,908 ↑ Rs 31,403"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Duropedic Airboost 3.8 Bionix Ice Pro Mattress | 1 lakh+ Airknit fibres and ortho support  | 100 nights trial' Rs 24,174 ↑ Rs 25,382"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Duropedic Airboost 6.10 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial' Rs 31,985 ↑ Rs 33,584"
+  },
+  {
+    "date": "2026-10-06",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Duropedic Airboost 3.10 Bionix Ice Pro Mattress | 1 lakh+ Airknit fibres and ortho support | 100 nights trial' Rs 24,610 ↑ Rs 25,839"
+  },
+  {
     "date": "2026-10-05",
     "brand": "sleepycat",
     "type": "price",
@@ -2254,149 +2398,5 @@
     "brand": "kurlon",
     "type": "price",
     "text": "'Klassic Premium Coir Mattress' Rs 18,392 ↑ Rs 19,220"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'Klassic Popular Coir Mattress' Rs 12,697 ↑ Rs 13,268"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'Angelica Box Top Spring Mattress' Rs 24,257 ↑ Rs 25,348"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'Activ 5 Zone Foam Mattress' Rs 26,720 ↑ Rs 27,923"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'DuoRest Essential Foam Mattress' Rs 8,058 ↑ Rs 8,421"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'DuoRest Popular Foam Mattress' Rs 9,523 ↑ Rs 9,951"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'DuoRest Premium Foam Mattress' Rs 13,408 ↑ Rs 14,011"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'Duplex Foam Mattress' Rs 14,057 ↑ Rs 14,689"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'Easy Plus Foam Mattress' Rs 5,714 ↑ Rs 5,971"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'Ever Firm Foam Mattress' Rs 7,329 ↑ Rs 7,659"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'Luxurino Spring Mattress' Rs 38,274 ↑ Rs 39,996"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'Pure Coir Mattress' Rs 6,543 ↑ Rs 6,837"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'Pure Coir STR8 Mattress' Rs 8,317 ↑ Rs 8,691"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'SpringRest Bonnell Popular Spring Mattress' Rs 12,697 ↑ Rs 13,268"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'SpringRest Bonnell Essential Spring Mattress' Rs 9,767 ↑ Rs 10,206"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'SpringRest Bonnell Premium Spring Mattress' Rs 18,069 ↑ Rs 18,882"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'SpringRest Pocket Premium Spring Mattress' Rs 20,213 ↑ Rs 21,123"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'SpringRest Pocket Popular Spring Mattress' Rs 14,648 ↑ Rs 15,307"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'SpringRest Pocket Essential Spring Mattress' Rs 11,719 ↑ Rs 12,246"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'Spinekare Coir Mattress' Rs 21,050 ↑ Rs 21,997"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'KurloBond Premium Coir Mattress' Rs 18,546 ↑ Rs 19,381"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'Teensy Essential Foam Mattress' Rs 4,186 ↑ Rs 4,374"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'Teensy Ortho Foam Mattress' Rs 4,417 ↑ Rs 4,616"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'KurloBond Popular Coir Mattress' Rs 14,087 ↑ Rs 14,721"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'KurloBond Essential Coir Mattress' Rs 11,034 ↑ Rs 11,531"
   }
 ]
