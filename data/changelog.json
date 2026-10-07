@@ -1,5 +1,53 @@
 [
   {
+    "date": "2026-10-07",
+    "brand": "kurlon",
+    "type": "new-product",
+    "text": "new SKU live - 'SNUGZ ALL SEASON COMFORTER' at Rs 0"
+  },
+  {
+    "date": "2026-10-07",
+    "brand": "kurlon",
+    "type": "new-product",
+    "text": "new SKU live - 'Trendy Bedsheet King' at Rs 525"
+  },
+  {
+    "date": "2026-10-07",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Duropedic Airboost Livein Mattress | 1 lakh+ Adaptive Nano fibres | Medium Firm | 10 yr warranty | 100 nights trial' Rs 10,049 ↑ Rs 10,489"
+  },
+  {
+    "date": "2026-10-07",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Verve mov.E Silver Grey Fabric 2 Seater Sofa' at Rs 66,506"
+  },
+  {
+    "date": "2026-10-07",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Verve mov.E Coffee Brown Fabric 2 Seater Sofa' at Rs 66,506"
+  },
+  {
+    "date": "2026-10-07",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Verve mov.E Peacock Blue Fabric 1 Seater Sofa' at Rs 37,291"
+  },
+  {
+    "date": "2026-10-07",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Verve mov.E Coffee Brown Fabric 1 Seater Sofa' at Rs 37,291"
+  },
+  {
+    "date": "2026-10-07",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Verve mov.E Silver Grey Fabric 1 Seater Sofa' at Rs 37,291"
+  },
+  {
     "date": "2026-10-06",
     "brand": "duroflex",
     "type": "price",
@@ -2350,53 +2398,5 @@
     "brand": "kurlon",
     "type": "price",
     "text": "'Hosta Pillow' Rs 899 ↑ Rs 960"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'Fombed Foam Mattress' Rs 9,840 ↑ Rs 10,282"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'Activ 3 Zone Foam Mattress' Rs 19,512 ↑ Rs 20,389"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'OrthoMagic Essential Latex Mattress' Rs 14,930 ↑ Rs 15,603"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'Klassic Essential Coir Mattress' Rs 9,765 ↑ Rs 10,204"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'OrthoMagic Elite Latex Mattress' Rs 35,045 ↑ Rs 36,622"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'OrthoMagic Premium Latex Mattress' Rs 24,884 ↑ Rs 26,004"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'OrthoMagic Popular Latex Mattress' Rs 19,907 ↑ Rs 20,803"
-  },
-  {
-    "date": "2026-08-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'Klassic Premium Coir Mattress' Rs 18,392 ↑ Rs 19,220"
   }
 ]

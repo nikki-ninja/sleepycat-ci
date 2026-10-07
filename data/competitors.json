@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-06T09:55:12.327800Z",
-  "date": "2026-10-06",
+  "generated": "2026-10-07T10:01:19.142293Z",
+  "date": "2026-10-07",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -58,7 +58,6 @@
         "Smart Ortho Pro SnowTec Cooling Technology": 21490,
         "Ortho Pro Max Seat Cushion": 2199,
         "Luxe Pro Massager Recliner Sofa": 57990,
-        "Grand Elite Mattress - Custom": 108790,
         "Bamboo Mattress Protector  - Custom": 2099,
         "Luxe Motorised Recliner Sofa (2-seater)": 70999,
         "AeroPlus Adjustable Desk": 18999,
@@ -94,7 +93,7 @@
         "Bamboo Mattress Protector": 2399
       },
       "on_sale": true,
-      "count": 87,
+      "count": 86,
       "offer": 30,
       "signals": {
         "quiz": true,
@@ -162,6 +161,15 @@
     "duroflex": {
       "platform": "shopify",
       "products": {
+        "Verve mov.E Silver Grey Fabric 1 Seater Sofa": 37291,
+        "Verve mov.E Coffee Brown Fabric 1 Seater Sofa": 37291,
+        "Verve mov.E Peacock Blue Fabric 1 Seater Sofa": 37291,
+        "Verve mov.E Coffee Brown Fabric 2 Seater Sofa": 66506,
+        "Verve mov.E Silver Grey Fabric 2 Seater Sofa": 66506,
+        "Verve mov.E Peacock Blue Fabric 2 Seater Sofa": 66506,
+        "Verve mov.E Coffee Brown Fabric 3 Seater Sofa": 78750,
+        "Verve mov.E Silver Grey Fabric 3 Seater Sofa": 78750,
+        "Verve mov.E Peacock Blue Fabric 3 Seater Sofa": 78750,
         "All Weather Comforter - White & Grey": 2699,
         "Neuma Feet Air Massager": 11999,
         "Duropedic Airboost 3.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres and ortho support": 18755,
@@ -249,17 +257,12 @@
         "Zuri Hydraulic Upholstered Bed with Storage - Sepia Tint Brown": 41499,
         "Halo Upholstered Bed - Sleet Grey": 32500,
         "Halo Upholstered Bed - Breen Brown": 32500,
-        "Verve mov.E Grey Fabric 3 Seater Sofa": 78750,
-        "Verve mov.E Brown Fabric 3 Seater Sofa": 78750,
-        "Verve mov.E Blue Fabric 2 Seater Sofa": 66506,
-        "Verve mov.E Grey Fabric 2 Seater Sofa": 66506,
-        "Verve mov.E Blue Fabric 1 Seater Sofa": 37291,
         "Symphony 3 Seater Boucle Fabric - Dusty rose": 56663,
         "Elise Upholstered Platform Bed - Belgian Block Grey": 32000,
         "Elise Upholstered Platform Bed - Sepia Tint Brown": 32000,
         "Orra Upholstered Bed - Baked Clay Rust": 36800,
         "Orra Upholstered Bed - Smoked Pine Green": 36800,
-        "Duropedic Airboost Livein Mattress | 1 lakh+ Adaptive Nano fibres | Medium Firm | 10 yr warranty | 100 nights trial": 10049,
+        "Duropedic Airboost Livein Mattress | 1 lakh+ Adaptive Nano fibres | Medium Firm | 10 yr warranty | 100 nights trial": 10489,
         "Duropedic Airboost 3.6 Mattress | 1 lakh+ adaptive fibres and ortho support": 13958,
         "Duropedic Airboost 6.10 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial": 33584,
         "Duropedic Airboost 3.8 Bionix Ice Pro Mattress | 1 lakh+ Airknit fibres and ortho support  | 100 nights trial": 25382,
@@ -567,7 +570,7 @@
         "LiveIn  Memory Foam Mattress": 8539
       },
       "on_sale": true,
-      "count": 403,
+      "count": 407,
       "offer": 10,
       "signals": {
         "quiz": true,
@@ -936,6 +939,8 @@
     "kurlon": {
       "platform": "shopify",
       "products": {
+        "Trendy Bedsheet King": 525,
+        "SNUGZ ALL SEASON COMFORTER": 0,
         "Kurlocoir Essential Coir Mattress": 4883,
         "SafeX Pro Mattress Protector": 1619,
         "SafeX Mattress Protector": 899,
@@ -984,7 +989,7 @@
         "New Ortho Coir Mattress": 15301
       },
       "on_sale": true,
-      "count": 46,
+      "count": 48,
       "offer": 10,
       "signals": {
         "quiz": false,
