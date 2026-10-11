@@ -1,11 +1,10 @@
 {
-  "generated": "2026-10-10T09:35:55.699264Z",
-  "date": "2026-10-10",
+  "generated": "2026-10-11T09:48:37.342653Z",
+  "date": "2026-10-11",
   "brands": {
     "tsc": {
       "platform": "shopify",
       "products": {
-        "Grand Elite Mattress - Custom": 108790,
         "Valencia Recliner Sofa": 99999,
         "Toronto Recliner Sofa": 94999,
         "Grand Elite Mattress": 119000,
@@ -80,7 +79,7 @@
         "Smart Ortho Hybrid Mattress - Custom": 24690,
         "Smart Ortho Pro Mattress": 15990,
         "Smart Ortho Mattress - Custom": 14490,
-        "Smart Cervical Pillow": 2199,
+        "Smart Ortho Cervical Pillow": 2199,
         "All Weather Comforter": 1499,
         "Elev8 Smart Recliner Bed": 34999,
         "Elev8 Smart Recliner Bed with Italia Frame": 52999,
@@ -93,7 +92,7 @@
         "Bamboo Mattress Protector": 2399
       },
       "on_sale": true,
-      "count": 86,
+      "count": 85,
       "offer": 30,
       "signals": {
         "quiz": true,
@@ -111,9 +110,9 @@
         "360° Neck Support Pillow": 809,
         "Ergonomic Seat Cushion": 1499,
         "Back Support Cushion": 1199,
-        "Flo Anti-Gravity™ Natural Latex Mattress": 5941,
+        "Flo Anti-Gravity™ Natural Latex Mattress": 5749,
         "Flo Wave™ Mattress": 3259,
-        "Flo Float™ Mattress": 9655,
+        "Flo Float™ Mattress": 9052,
         "The Flo Mattress Ortho": 4467,
         "The Flo Mattress Ergo": 4765,
         "Boho Bed (Acacia Wood) - With Storage": 34799,

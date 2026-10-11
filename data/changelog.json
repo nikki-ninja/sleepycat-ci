@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-10-11",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Flo Float™ Mattress' Rs 9,655 ↓ Rs 9,052"
+  },
+  {
+    "date": "2026-10-11",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Flo Anti-Gravity™ Natural Latex Mattress' Rs 5,941 ↓ Rs 5,749"
+  },
+  {
+    "date": "2026-10-11",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'Smart Ortho Cervical Pillow' at Rs 2,199"
+  },
+  {
     "date": "2026-10-09",
     "brand": "sleepyhead",
     "type": "offer",
@@ -2380,23 +2398,5 @@
     "brand": "duroflex",
     "type": "price",
     "text": "'Ease Iconic Beige Fabric Sofa cum Bed' Rs 47,299 ↓ Rs 38,785"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Sap Green Fabric Sofa cum Bed' Rs 47,299 ↓ Rs 38,785"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plaster Brown Fabric Sofa cum Bed' Rs 47,299 ↓ Rs 38,785"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Utopia Green Fabric 2 seater sofa' Rs 20,799 ↓ Rs 17,679"
   }
 ]
