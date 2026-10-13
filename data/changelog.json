@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-10-13",
+    "brand": "kurlon",
+    "type": "new-product",
+    "text": "new SKU live - 'OrthoMagic Essential Mattress' at Rs 16,030"
+  },
+  {
+    "date": "2026-10-13",
+    "brand": "kurlon",
+    "type": "new-product",
+    "text": "new SKU live - 'OrthoMagic Elite' at Rs 27,051"
+  },
+  {
+    "date": "2026-10-13",
+    "brand": "kurlon",
+    "type": "new-product",
+    "text": "new SKU live - 'OrthoMagic Premium  Mattress' at Rs 22,242"
+  },
+  {
+    "date": "2026-10-13",
+    "brand": "kurlon",
+    "type": "new-product",
+    "text": "new SKU live - 'Duorest Latex' at Rs 11,221"
+  },
+  {
     "date": "2026-10-12",
     "brand": "kurlon",
     "type": "new-product",
@@ -2374,29 +2398,5 @@
     "brand": "duroflex",
     "type": "price",
     "text": "'Ease Plus Blue Fabric 2 seater sofa' Rs 14,999 ↓ Rs 11,999"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Green Fabric 2 seater sofa' Rs 14,999 ↓ Rs 11,999"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Grey Fabric 2 seater sofa' Rs 14,999 ↓ Rs 11,999"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Beige Fabric 2 seater sofa' Rs 14,999 ↓ Rs 11,999"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Blue Fabric 3 seater sofa' Rs 19,999 ↓ Rs 15,999"
   }
 ]

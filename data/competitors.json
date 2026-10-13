@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-12T10:28:41.900380Z",
-  "date": "2026-10-12",
+  "generated": "2026-10-13T10:18:41.272769Z",
+  "date": "2026-10-13",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -937,6 +937,10 @@
     "kurlon": {
       "platform": "shopify",
       "products": {
+        "Duorest Latex": 11221,
+        "OrthoMagic Premium  Mattress": 22242,
+        "OrthoMagic Elite": 27051,
+        "OrthoMagic Essential Mattress": 16030,
         "SOLACE BEDSHEET KING": 0,
         "Trendy Bedsheet King": 525,
         "SNUGZ ALL SEASON COMFORTER": 0,
@@ -988,7 +992,7 @@
         "New Ortho Coir Mattress": 15301
       },
       "on_sale": true,
-      "count": 49,
+      "count": 53,
       "offer": 10,
       "signals": {
         "quiz": false,
