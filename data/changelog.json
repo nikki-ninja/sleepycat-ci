@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-10-14",
+    "brand": "kurlon",
+    "type": "new-product",
+    "text": "new SKU live - 'Element Bedsheet King' at Rs 400"
+  },
+  {
+    "date": "2026-10-14",
+    "brand": "emma",
+    "type": "new-product",
+    "text": "new SKU live - 'Emma Hybrid Combo' at Rs 19,797"
+  },
+  {
+    "date": "2026-10-14",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Travel Neck Pillow' Rs 999 ↑ Rs 1,499"
+  },
+  {
     "date": "2026-10-13",
     "brand": "kurlon",
     "type": "new-product",
@@ -2380,23 +2398,5 @@
     "brand": "duroflex",
     "type": "price",
     "text": "'Ease Plus Grey Fabric 1 seater sofa' Rs 10,099 ↓ Rs 8,079"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Beige Fabric 1 seater sofa' Rs 10,099 ↓ Rs 8,079"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Brown Fabric 2 seater sofa' Rs 14,999 ↓ Rs 11,999"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Blue Fabric 2 seater sofa' Rs 14,999 ↓ Rs 11,999"
   }
 ]

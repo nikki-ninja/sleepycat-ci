@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-13T10:18:41.272769Z",
-  "date": "2026-10-13",
+  "generated": "2026-10-14T08:31:24.713386Z",
+  "date": "2026-10-14",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -31,7 +31,7 @@
         "Smart Ortho GRID Mattress": 8990,
         "Smart Ortho Neck Pillow": 1999,
         "Smart Ortho Relief Pillow": 2899,
-        "Travel Neck Pillow": 999,
+        "Travel Neck Pillow": 1499,
         "Smart Ortho GRID Mattress - Custom": 9490,
         "Tranquo Massager Chair": 22999,
         "Aura Executive Chair": 19999,
@@ -583,6 +583,7 @@
     "emma": {
       "platform": "shopify",
       "products": {
+        "Emma Hybrid Combo": 19797,
         "Emma Storage Pods - Set of 1": 7999,
         "Emma Storage Pods - Set of 4": 22990,
         "Emma Storage Pods - Set of 2": 11990,
@@ -601,7 +602,7 @@
         "Emma Hybrid Pillow": 1999
       },
       "on_sale": true,
-      "count": 16,
+      "count": 17,
       "offer": 40,
       "signals": {
         "quiz": true,
@@ -937,6 +938,7 @@
     "kurlon": {
       "platform": "shopify",
       "products": {
+        "Element Bedsheet King": 400,
         "Duorest Latex": 11221,
         "OrthoMagic Premium  Mattress": 22242,
         "OrthoMagic Elite": 27051,
@@ -992,7 +994,7 @@
         "New Ortho Coir Mattress": 15301
       },
       "on_sale": true,
-      "count": 53,
+      "count": 54,
       "offer": 10,
       "signals": {
         "quiz": false,
