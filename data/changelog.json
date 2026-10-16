@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-10-16",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Duropedic Airboost 3.6 Mattress | 1 lakh+ adaptive fibres and ortho support' Rs 13,958 ↑ Rs 15,388"
+  },
+  {
+    "date": "2026-10-16",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Duropedic Airboost 3.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres and Ortho Support' Rs 18,755 ↑ Rs 20,678"
+  },
+  {
     "date": "2026-10-14",
     "brand": "kurlon",
     "type": "new-product",
@@ -2386,17 +2398,5 @@
     "brand": "duroflex",
     "type": "price",
     "text": "'Ease Plus Blue Fabric 1 seater sofa' Rs 10,099 ↓ Rs 8,079"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Green Fabric 1 seater sofa' Rs 10,099 ↓ Rs 8,079"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Grey Fabric 1 seater sofa' Rs 10,099 ↓ Rs 8,079"
   }
 ]
