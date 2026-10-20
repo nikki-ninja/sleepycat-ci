@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-10-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Ortho Plus Natural Grid' Rs 6,029 ↑ Rs 7,499"
+  },
+  {
+    "date": "2026-10-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Ortho Plus Latex' Rs 6,599 ↑ Rs 7,943"
+  },
+  {
     "date": "2026-10-16",
     "brand": "duroflex",
     "type": "price",
@@ -2386,17 +2398,5 @@
     "brand": "duroflex",
     "type": "price",
     "text": "'LiveIn 100% Latex Mattress' Rs 11,799 ↓ Rs 8,495"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Brown Fabric 1 seater sofa' Rs 10,099 ↓ Rs 8,079"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Blue Fabric 1 seater sofa' Rs 10,099 ↓ Rs 8,079"
   }
 ]
