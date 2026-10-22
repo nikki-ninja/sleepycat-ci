@@ -1,5 +1,377 @@
 [
   {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Contour SoftTouch Memory Foam Pillow' Rs 799 ↑ Rs 849"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Ultima Memory Foam Mattress' Rs 10,999 ↑ Rs 11,499"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Memory Foam Mattress Topper' Rs 2,879 ↑ Rs 3,049"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Cuddle Pillow' Rs 1,399 ↑ Rs 1,499"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Travel Neck Pillow' Rs 849 ↑ Rs 899"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Dog Bed Orthopedic' Rs 1,549 ↑ Rs 1,899"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'300 TC Sateen Duvet Cover' Rs 2,049 ↑ Rs 2,149"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'200 TC Percale Duvet Cover' Rs 1,549 ↑ Rs 1,599"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Jersey Duvet Cover' Rs 1,549 ↑ Rs 1,599"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Weighted Blanket' Rs 3,949 ↑ Rs 4,199"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'All Season Reversible Comforter' Rs 1,449 ↑ Rs 1,549"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Winter Reversible Comforter' Rs 2,099 ↑ Rs 2,249"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Muslin Throw' Rs 2,049 ↑ Rs 2,149"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Knitted Throw' Rs 1,699 ↑ Rs 1,799"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'200 TC Percale Pillow Cases' Rs 449 ↑ Rs 499"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Summer Comforter' Rs 1,199 ↑ Rs 1,249"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'300 TC Sateen Pillow Cases' Rs 699 ↑ Rs 749"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Jersey Pillow Cases' Rs 399 ↑ Rs 449"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Enso Recliner' Rs 29,499 ↑ Rs 33,649"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Seika Recliner' Rs 19,499 ↑ Rs 20,099"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'2 Inch Memory Foam Mattress Topper' Rs 3,349 ↑ Rs 3,549"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Wedge Pillow' Rs 1,199 ↑ Rs 1,499"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Slim Back Cushion' Rs 849 ↑ Rs 1,049"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Pro Neck pillow' Rs 849 ↑ Rs 1,049"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Pro Seat Cushion' Rs 1,149 ↑ Rs 1,399"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Pro Back Cushion' Rs 899 ↑ Rs 1,099"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Slim Seat Cushion' Rs 899 ↑ Rs 1,099"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'The Founder's Mattress' Rs 25,431 ↑ Rs 28,610"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Aeroflow Mattress Topper' Rs 2,899 ↑ Rs 3,049"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Natural Latex Mattress Topper' Rs 5,799 ↑ Rs 6,499"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Original Mattress' Rs 4,999 ↑ Rs 5,399"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Baby Natural Latex Mattress' Rs 5,649 ↓ Rs 3,649"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Quilted Mattress Protector' Rs 799 ↑ Rs 849"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Pet Mat' Rs 799 ↑ Rs 999"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Diamond Foam Mattress' Rs 10,404 ↑ Rs 11,237"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Klassic Essential Coir Mattress' Rs 10,204 ↑ Rs 11,020"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Klassic Premium Coir Mattress' Rs 18,703 ↑ Rs 20,200"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Activ 5 Zone Foam Mattress' Rs 27,923 ↑ Rs 29,319"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'DuoRest Essential Foam Mattress' Rs 8,420 ↑ Rs 9,093"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'DuoRest Popular Foam Mattress' Rs 9,952 ↑ Rs 10,449"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'DuoRest Premium Foam Mattress' Rs 14,012 ↑ Rs 14,713"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Easy Plus Foam Mattress' Rs 5,714 ↑ Rs 6,400"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'SpringRest Bonnell Essential Spring Mattress' Rs 10,206 ↑ Rs 11,022"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'SpringRest Bonnell Premium Spring Mattress' Rs 18,881 ↑ Rs 20,392"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'SpringRest Pocket Premium Spring Mattress' Rs 21,122 ↑ Rs 22,812"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'SpringRest Pocket Essential Spring Mattress' Rs 12,245 ↑ Rs 13,225"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'KurloBond Premium Coir Mattress' Rs 16,832 ↑ Rs 17,673"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Teensy Essential Foam Mattress' Rs 4,184 ↑ Rs 4,519"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Teensy Ortho Foam Mattress' Rs 4,417 ↑ Rs 4,770"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Easy Star Foam Mattress' Rs 4,571 ↑ Rs 5,120"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Inspire Coir Mattress' Rs 13,756 ↑ Rs 14,444"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Kurlocoir Essential Coir Mattress' Rs 4,883 ↑ Rs 5,274"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'OrthoMagic Essential Mattress' Rs 16,030 ↑ Rs 16,831"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'OrthoMagic Elite' Rs 27,051 ↑ Rs 28,403"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'OrthoMagic Premium  Mattress' Rs 22,242 ↑ Rs 23,354"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Duorest Latex' Rs 11,221 ↑ Rs 12,119"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Avalon Grande Brown Fabric Recliner - Manual' Rs 16,999 ↑ Rs 17,999"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Avalon Grande Grey Fabric Recliner - Manual' Rs 16,999 ↑ Rs 17,999"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Avalon Grande Teal Fabric Recliner - Manual' Rs 16,999 ↑ Rs 17,999"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Avalon Grande Brown Fabric Recliner - Rock, Rotate & Recline' Rs 21,249 ↑ Rs 22,499"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Avalon Grande Grey Fabric Recliner - Rock, Rotate & Recline' Rs 21,249 ↑ Rs 22,499"
+  },
+  {
+    "date": "2026-10-22",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Avalon Grande Teal Fabric Recliner - Rock, Rotate & Recline' Rs 21,249 ↑ Rs 22,499"
+  },
+  {
     "date": "2026-10-21",
     "brand": "sleepyhead",
     "type": "offer",
@@ -2026,377 +2398,5 @@
     "brand": "duroflex",
     "type": "price",
     "text": "'Ease Iconic Beige Fabric Sofa cum Bed' Rs 38,785 ↑ Rs 41,149"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Sap Green Fabric Sofa cum Bed' Rs 38,785 ↑ Rs 41,149"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plaster Brown Fabric Sofa cum Bed' Rs 38,785 ↑ Rs 41,149"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Grande Brown Fabric Recliner - Manual' Rs 15,999 ↑ Rs 16,999"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Grande Grey Fabric Recliner - Manual' Rs 15,999 ↑ Rs 16,999"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Grande Teal Fabric Recliner - Manual' Rs 15,999 ↑ Rs 16,999"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Grande Brown Fabric Recliner - Rock, Rotate & Recline' Rs 19,999 ↑ Rs 21,249"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Grande Grey Fabric Recliner - Rock, Rotate & Recline' Rs 19,999 ↑ Rs 21,249"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Grande Teal Fabric Recliner - Rock, Rotate & Recline' Rs 19,999 ↑ Rs 21,249"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Memory Foam Topper' Rs 6,412 ↓ Rs 6,389"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Ortho Mattress' Rs 13,390 ↑ Rs 13,490"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Onyx Orthopedic Office Chair' Rs 9,990 ↑ Rs 10,999"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Ortho Mattress - Custom' Rs 14,790 ↑ Rs 15,390"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Ortho SnowTec Cooling Technology' Rs 16,390 ↑ Rs 16,490"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Ortho SnowTec Cooling Technology-Custom' Rs 17,390 ↑ Rs 17,490"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'The Sleep Company Luxe Motorised Recliner Sofa' Rs 27,990 ↑ Rs 28,999"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Luxe Motorised Recliner Sofa (2-seater)' Rs 70,499 ↑ Rs 70,999"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'WaveX Foot Massager' Rs 24,999 ↑ Rs 25,999"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Ortho GRID Mattress - Custom' Rs 9,490 ↑ Rs 9,990"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Ortho GRID Mattress' Rs 8,990 ↑ Rs 9,490"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Stylux Ergonomic Office Chair' Rs 14,999 ↑ Rs 15,000"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Elite Premium Office Chair' Rs 42,999 ↑ Rs 44,999"
-  },
-  {
-    "date": "2026-10-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'Ortho Plus Natural Grid' Rs 6,029 ↑ Rs 7,499"
-  },
-  {
-    "date": "2026-10-20",
-    "brand": "kurlon",
-    "type": "price",
-    "text": "'Ortho Plus Latex' Rs 6,599 ↑ Rs 7,943"
-  },
-  {
-    "date": "2026-10-16",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Duropedic Airboost 3.6 Mattress | 1 lakh+ adaptive fibres and ortho support' Rs 13,958 ↑ Rs 15,388"
-  },
-  {
-    "date": "2026-10-16",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Duropedic Airboost 3.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres and Ortho Support' Rs 18,755 ↑ Rs 20,678"
-  },
-  {
-    "date": "2026-10-14",
-    "brand": "kurlon",
-    "type": "new-product",
-    "text": "new SKU live - 'Element Bedsheet King' at Rs 400"
-  },
-  {
-    "date": "2026-10-14",
-    "brand": "emma",
-    "type": "new-product",
-    "text": "new SKU live - 'Emma Hybrid Combo' at Rs 19,797"
-  },
-  {
-    "date": "2026-10-14",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Travel Neck Pillow' Rs 999 ↑ Rs 1,499"
-  },
-  {
-    "date": "2026-10-13",
-    "brand": "kurlon",
-    "type": "new-product",
-    "text": "new SKU live - 'OrthoMagic Essential Mattress' at Rs 16,030"
-  },
-  {
-    "date": "2026-10-13",
-    "brand": "kurlon",
-    "type": "new-product",
-    "text": "new SKU live - 'OrthoMagic Elite' at Rs 27,051"
-  },
-  {
-    "date": "2026-10-13",
-    "brand": "kurlon",
-    "type": "new-product",
-    "text": "new SKU live - 'OrthoMagic Premium  Mattress' at Rs 22,242"
-  },
-  {
-    "date": "2026-10-13",
-    "brand": "kurlon",
-    "type": "new-product",
-    "text": "new SKU live - 'Duorest Latex' at Rs 11,221"
-  },
-  {
-    "date": "2026-10-12",
-    "brand": "kurlon",
-    "type": "new-product",
-    "text": "new SKU live - 'SOLACE BEDSHEET KING' at Rs 0"
-  },
-  {
-    "date": "2026-10-12",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Ortho Mattress' Rs 12,690 ↑ Rs 13,390"
-  },
-  {
-    "date": "2026-10-12",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Ortho Mattress - Custom' Rs 14,490 ↑ Rs 14,790"
-  },
-  {
-    "date": "2026-10-12",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Ortho SnowTec Cooling Technology' Rs 15,690 ↑ Rs 16,390"
-  },
-  {
-    "date": "2026-10-12",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Ortho SnowTec Cooling Technology-Custom' Rs 16,590 ↑ Rs 17,390"
-  },
-  {
-    "date": "2026-10-12",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Luxe Pro Massager Recliner Sofa' Rs 56,990 ↓ Rs 54,990"
-  },
-  {
-    "date": "2026-10-12",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'WaveX Foot Massager' Rs 25,999 ↓ Rs 24,999"
-  },
-  {
-    "date": "2026-10-12",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Ortho GRID Mattress - Custom' Rs 8,990 ↑ Rs 9,490"
-  },
-  {
-    "date": "2026-10-12",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Smart Ortho GRID Mattress' Rs 8,490 ↑ Rs 8,990"
-  },
-  {
-    "date": "2026-10-12",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Ultron Premium Ergonomic Office Chair' Rs 36,999 ↓ Rs 34,999"
-  },
-  {
-    "date": "2026-10-12",
-    "brand": "tsc",
-    "type": "price",
-    "text": "'Elite Premium Office Chair' Rs 44,999 ↓ Rs 42,999"
-  },
-  {
-    "date": "2026-10-12",
-    "brand": "tsc",
-    "type": "new-product",
-    "text": "new SKU live - 'Smart Luxe Flexi Pillow' at Rs 999"
-  },
-  {
-    "date": "2026-10-12",
-    "brand": "tsc",
-    "type": "new-product",
-    "text": "new SKU live - 'Smart Luxe Royale Pillow' at Rs 2,999"
-  },
-  {
-    "date": "2026-10-12",
-    "brand": "tsc",
-    "type": "new-product",
-    "text": "new SKU live - 'Smart Luxe Hybrid Pillow 2\"' at Rs 1,999"
-  },
-  {
-    "date": "2026-10-12",
-    "brand": "tsc",
-    "type": "new-product",
-    "text": "new SKU live - 'Smart Luxe Hybrid Pillow' at Rs 2,399"
-  },
-  {
-    "date": "2026-10-11",
-    "brand": "flo",
-    "type": "price",
-    "text": "'Flo Float™ Mattress' Rs 9,655 ↓ Rs 9,052"
-  },
-  {
-    "date": "2026-10-11",
-    "brand": "flo",
-    "type": "price",
-    "text": "'Flo Anti-Gravity™ Natural Latex Mattress' Rs 5,941 ↓ Rs 5,749"
-  },
-  {
-    "date": "2026-10-11",
-    "brand": "tsc",
-    "type": "new-product",
-    "text": "new SKU live - 'Smart Ortho Cervical Pillow' at Rs 2,199"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "sleepyhead",
-    "type": "offer",
-    "text": "headline offer now 39% off"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Technic Hybrid - 3 Zone 6D Hexagon Grid Mattress with 3 Zone Pocket Springs #FutureofSleep' Rs 16,799 ↓ Rs 12,095"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Technic - 3 Zone 6D Hexagon Grid Mattress #FutureofSleep' Rs 13,829 ↓ Rs 9,957"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Napster Mini Mattress' Rs 3,399 ↓ Rs 3,059"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sense Ortho Ultra Mattress - Ivory White' Rs 9,692 ↓ Rs 9,207"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'SofaBed Two - Foldable 3 Seater Sofa Cum Bed, (Fabric, Ash Grey)' Rs 22,399 ↓ Rs 17,919"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'SofaBed Two - Foldable 3 Seater Sofa Cum Bed, (Fabric, Ink Blue)' Rs 22,399 ↓ Rs 17,919"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Footsie - Engineered Wood Vertical Shoe Rack, (1 Door, 10 Pair, Dark Walnut)' Rs 5,599 ↓ Rs 5,039"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Premium Soft Chenille Throw for Sofa, Bed & Couch-Apple Green' Rs 999 ↓ Rs 849"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Spring - Cushion Covers with Premium Cushion Fillers (Blue-Grey, Set of 5 Combo)' Rs 1,699 ↓ Rs 1,444"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Spring - Cushion Covers with Cushion Fillers (Blue-Ocean Blue, Set of 5 Combo)' Rs 1,699 ↓ Rs 1,444"
-  },
-  {
-    "date": "2026-10-09",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Spring - Cushion Covers with Cushion Fillers (Blue-White, Set of 5 Combo)' Rs 1,699 ↓ Rs 1,444"
   }
 ]
