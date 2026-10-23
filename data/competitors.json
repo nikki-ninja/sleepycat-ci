@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-22T08:25:56.583809Z",
-  "date": "2026-10-22",
+  "generated": "2026-10-23T08:21:53.565389Z",
+  "date": "2026-10-23",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -42,7 +42,6 @@
         "Smart Pregnancy Pillow": 1499,
         "Elev8 Smart Recliner Storage Bed with Italia Frame": 99499,
         "XGen Pro Gaming Chair": 18490,
-        "Ortho Car Comfort Combo": 4599,
         "Ortho Travel Support Combo": 2899,
         "Ortho Spine Protector Combo": 2999,
         "Smart Luxe Pro Mattress": 15990,
@@ -91,7 +90,7 @@
         "Bamboo Mattress Protector": 2399
       },
       "on_sale": true,
-      "count": 84,
+      "count": 83,
       "offer": 30,
       "signals": {
         "quiz": true,
@@ -159,6 +158,12 @@
     "duroflex": {
       "platform": "shopify",
       "products": {
+        "Maestro mov.E Oatmeal Beige Fabric 3 Seater Sofa": 129499,
+        "Maestro mov.E Dove Grey Fabric 3 Seater Sofa": 129499,
+        "Maestro mov.E Oatmeal Beige Fabric 2 Seater Sofa": 114999,
+        "Maestro mov.E Dove Grey Fabric 2 Seater Sofa": 114999,
+        "Maestro mov.E Oatmeal Beige Fabric 1 Seater Sofa": 69999,
+        "Maestro mov.E Dove Grey Fabric 1 Seater Sofa": 69999,
         "Verve mov.E Silver Grey Fabric 1 Seater Sofa": 37291,
         "Verve mov.E Coffee Brown Fabric 1 Seater Sofa": 37291,
         "Verve mov.E Peacock Blue Fabric 1 Seater Sofa": 37291,
@@ -172,15 +177,15 @@
         "Neuma Feet Air Massager": 11999,
         "Duropedic Airboost 3.8 Arctic Ice Mattress | 1 lakh+ Airknit fibres and Ortho Support": 20678,
         "Memory Foam Topper": 6389,
-        "Cocoon Mustard Yellow Fabric 1 Seater Sofa": 28070,
-        "Cocoon Cool Grey Fabric 1 Seater Sofa": 28070,
-        "Cocoon Mustard Yellow Fabric 2 Seater Sofa": 42235,
-        "Cocoon Cool Grey Fabric 2 Seater Sofa": 42235,
-        "Cocoon Mustard Yellow Fabric 3 Seater Sofa": 56138,
-        "Cocoon Cool Grey Fabric 3 Seater Sofa": 56138,
-        "Cocoon Olive Green Fabric 1 Seater Sofa": 28070,
-        "Cocoon Olive Green Fabric 2 Seater Sofa": 42235,
-        "Cocoon Olive Green Fabric 3 Seater Sofa": 56138,
+        "Cocoon Mustard Yellow Fabric 1 Seater Sofa": 23205,
+        "Cocoon Cool Grey Fabric 1 Seater Sofa": 23205,
+        "Cocoon Mustard Yellow Fabric 2 Seater Sofa": 34915,
+        "Cocoon Cool Grey Fabric 2 Seater Sofa": 34915,
+        "Cocoon Mustard Yellow Fabric 3 Seater Sofa": 45000,
+        "Cocoon Cool Grey Fabric 3 Seater Sofa": 45000,
+        "Cocoon Olive Green Fabric 1 Seater Sofa": 23205,
+        "Cocoon Olive Green Fabric 2 Seater Sofa": 34915,
+        "Cocoon Olive Green Fabric 3 Seater Sofa": 45000,
         "Neuma Roller Back Massager": 7150,
         "Neuma Ottoman Thermo Leg Massager": 17499,
         "Neuma Thermo Neck Massager Pillow": 2500,
@@ -567,7 +572,7 @@
         "LiveIn  Memory Foam Mattress": 6489
       },
       "on_sale": true,
-      "count": 406,
+      "count": 412,
       "offer": 5,
       "signals": {
         "quiz": true,

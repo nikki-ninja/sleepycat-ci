@@ -1,5 +1,89 @@
 [
   {
+    "date": "2026-10-23",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Cocoon Olive Green Fabric 3 Seater Sofa' Rs 56,138 ↓ Rs 45,000"
+  },
+  {
+    "date": "2026-10-23",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Cocoon Olive Green Fabric 2 Seater Sofa' Rs 42,235 ↓ Rs 34,915"
+  },
+  {
+    "date": "2026-10-23",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Cocoon Olive Green Fabric 1 Seater Sofa' Rs 28,070 ↓ Rs 23,205"
+  },
+  {
+    "date": "2026-10-23",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Cocoon Cool Grey Fabric 3 Seater Sofa' Rs 56,138 ↓ Rs 45,000"
+  },
+  {
+    "date": "2026-10-23",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Cocoon Mustard Yellow Fabric 3 Seater Sofa' Rs 56,138 ↓ Rs 45,000"
+  },
+  {
+    "date": "2026-10-23",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Cocoon Cool Grey Fabric 2 Seater Sofa' Rs 42,235 ↓ Rs 34,915"
+  },
+  {
+    "date": "2026-10-23",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Cocoon Mustard Yellow Fabric 2 Seater Sofa' Rs 42,235 ↓ Rs 34,915"
+  },
+  {
+    "date": "2026-10-23",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Cocoon Cool Grey Fabric 1 Seater Sofa' Rs 28,070 ↓ Rs 23,205"
+  },
+  {
+    "date": "2026-10-23",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Cocoon Mustard Yellow Fabric 1 Seater Sofa' Rs 28,070 ↓ Rs 23,205"
+  },
+  {
+    "date": "2026-10-23",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Maestro mov.E Oatmeal Beige Fabric 1 Seater Sofa' at Rs 69,999"
+  },
+  {
+    "date": "2026-10-23",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Maestro mov.E Dove Grey Fabric 2 Seater Sofa' at Rs 114,999"
+  },
+  {
+    "date": "2026-10-23",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Maestro mov.E Oatmeal Beige Fabric 2 Seater Sofa' at Rs 114,999"
+  },
+  {
+    "date": "2026-10-23",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Maestro mov.E Dove Grey Fabric 3 Seater Sofa' at Rs 129,499"
+  },
+  {
+    "date": "2026-10-23",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Maestro mov.E Oatmeal Beige Fabric 3 Seater Sofa' at Rs 129,499"
+  },
+  {
     "date": "2026-10-22",
     "brand": "sleepycat",
     "type": "price",
@@ -2314,89 +2398,5 @@
     "brand": "duroflex",
     "type": "price",
     "text": "'Ease Plus Blue Fabric 3 seater sofa' Rs 15,999 ↑ Rs 16,999"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Green Fabric 3 seater sofa' Rs 15,999 ↑ Rs 16,999"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Grey Fabric 3 seater sofa' Rs 15,999 ↑ Rs 16,999"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Beige Fabric 3 seater sofa' Rs 15,999 ↑ Rs 16,999"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Brown Fabric 3 seater sofa' Rs 15,999 ↑ Rs 16,999"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Spine Contour Pillow' Rs 1,759 ↑ Rs 1,799"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Core balance Pillow' Rs 1,583 ↑ Rs 1,619"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Dual Support Pillow' Rs 1,451 ↑ Rs 1,479"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Core Align Wedge Pillow' Rs 1,451 ↑ Rs 1,479"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Energise 100% Latex Pillow' Rs 2,199 ↑ Rs 2,249"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Duropedic Airboost Livein Mattress | 1 lakh+ Adaptive Nano fibres | Medium Firm | 10 yr warranty | 100 nights trial' Rs 7,552 ↑ Rs 7,759"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Flexi -Lightweight Travel Friendly Slim Mattress (Grey)' Rs 1,319 ↑ Rs 1,349"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Graphite Grey Fabric Sofa cum Bed' Rs 38,785 ↑ Rs 41,150"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Saddle Brown Fabric Sofa cum Bed' Rs 38,785 ↑ Rs 41,149"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Iconic Beige Fabric Sofa cum Bed' Rs 38,785 ↑ Rs 41,149"
   }
 ]
