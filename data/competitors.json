@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-23T08:21:53.565389Z",
-  "date": "2026-10-23",
+  "generated": "2026-10-24T07:58:09.601395Z",
+  "date": "2026-10-24",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -31,7 +31,7 @@
         "Smart Ortho GRID Mattress": 9490,
         "Smart Ortho Neck Pillow": 1999,
         "Smart Ortho Relief Pillow": 2899,
-        "Travel Neck Pillow": 1499,
+        "Travel Neck Pillow": 599,
         "Smart Ortho GRID Mattress - Custom": 9990,
         "Tranquo Massager Chair": 22999,
         "Aura Executive Chair": 19999,
@@ -587,6 +587,8 @@
     "emma": {
       "platform": "shopify",
       "products": {
+        "Set of 2 Hybrid Pillow - Bundle": 3249,
+        "Emma Mattress Protector - Bundle": 1349,
         "Emma Hybrid Combo": 19797,
         "Emma Storage Pods - Set of 1": 7999,
         "Emma Storage Pods - Set of 4": 22990,
@@ -597,7 +599,6 @@
         "Set of 2 Hybrid Pillow": 3499,
         "Emma Memory Foam Pillow": 1399,
         "Emma Teak Bed": 48990,
-        "Bundle Mattress Protector": 1999,
         "Emma Mattress Protector": 1499,
         "Emma Black Mattress": 6999,
         "Set of 2 Foam Pillow": 2449,
@@ -606,7 +607,7 @@
         "Emma Hybrid Pillow": 1999
       },
       "on_sale": true,
-      "count": 17,
+      "count": 18,
       "offer": 40,
       "signals": {
         "quiz": true,

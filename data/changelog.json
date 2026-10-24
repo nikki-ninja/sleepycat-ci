@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-10-24",
+    "brand": "emma",
+    "type": "new-product",
+    "text": "new SKU live - 'Emma Mattress Protector - Bundle' at Rs 1,349"
+  },
+  {
+    "date": "2026-10-24",
+    "brand": "emma",
+    "type": "new-product",
+    "text": "new SKU live - 'Set of 2 Hybrid Pillow - Bundle' at Rs 3,249"
+  },
+  {
+    "date": "2026-10-24",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Travel Neck Pillow' Rs 1,499 ↓ Rs 599"
+  },
+  {
     "date": "2026-10-23",
     "brand": "duroflex",
     "type": "price",
@@ -2380,23 +2398,5 @@
     "brand": "duroflex",
     "type": "price",
     "text": "'Ease Plus Green Fabric 2 seater sofa' Rs 11,999 ↑ Rs 12,749"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Grey Fabric 2 seater sofa' Rs 11,999 ↑ Rs 12,749"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Beige Fabric 2 seater sofa' Rs 11,999 ↑ Rs 12,749"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Blue Fabric 3 seater sofa' Rs 15,999 ↑ Rs 16,999"
   }
 ]
