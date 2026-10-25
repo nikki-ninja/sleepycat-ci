@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-10-25",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Stylux Ergonomic Office Chair' Rs 15,000 ↑ Rs 15,001"
+  },
+  {
     "date": "2026-10-24",
     "brand": "emma",
     "type": "new-product",
@@ -2392,11 +2398,5 @@
     "brand": "duroflex",
     "type": "price",
     "text": "'Ease Plus Blue Fabric 2 seater sofa' Rs 11,999 ↑ Rs 12,749"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Green Fabric 2 seater sofa' Rs 11,999 ↑ Rs 12,749"
   }
 ]
