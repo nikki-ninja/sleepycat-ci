@@ -1,5 +1,53 @@
 [
   {
+    "date": "2026-10-26",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro Mattress' Rs 15,990 ↑ Rs 16,590"
+  },
+  {
+    "date": "2026-10-26",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro Mattress-Custom' Rs 16,990 ↑ Rs 17,590"
+  },
+  {
+    "date": "2026-10-26",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro SnowTec Cooling Technology' Rs 18,990 ↑ Rs 19,590"
+  },
+  {
+    "date": "2026-10-26",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro SnowTec Cooling Technology - Custom' Rs 19,990 ↑ Rs 20,790"
+  },
+  {
+    "date": "2026-10-26",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro SnowTec Mattress - Custom' Rs 19,990 ↑ Rs 20,790"
+  },
+  {
+    "date": "2026-10-26",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro SnowTec Mattress' Rs 18,990 ↑ Rs 19,590"
+  },
+  {
+    "date": "2026-10-26",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro Mattress - Custom' Rs 16,990 ↑ Rs 17,590"
+  },
+  {
+    "date": "2026-10-26",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro Mattress' Rs 15,990 ↑ Rs 16,590"
+  },
+  {
     "date": "2026-10-25",
     "brand": "tsc",
     "type": "price",
@@ -2350,53 +2398,5 @@
     "brand": "duroflex",
     "type": "price",
     "text": "'Avalon Posture Pro Rocking & Rotating Single Seater Premium Leatherette Recliner, Beige, Motorized' Rs 30,281 ↑ Rs 32,059"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'LiveIn 100% Latex Mattress' Rs 8,495 ↑ Rs 8,729"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Brown Fabric 1 seater sofa' Rs 8,079 ↑ Rs 8,579"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Blue Fabric 1 seater sofa' Rs 8,079 ↑ Rs 8,579"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Green Fabric 1 seater sofa' Rs 8,079 ↑ Rs 8,579"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Grey Fabric 1 seater sofa' Rs 8,079 ↑ Rs 8,579"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Beige Fabric 1 seater sofa' Rs 8,079 ↑ Rs 8,579"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Brown Fabric 2 seater sofa' Rs 11,999 ↑ Rs 12,749"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Ease Plus Blue Fabric 2 seater sofa' Rs 11,999 ↑ Rs 12,749"
   }
 ]
