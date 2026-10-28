@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-10-28",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Onyx Orthopedic Office Chair' Rs 10,999 ↓ Rs 10,990"
+  },
+  {
     "date": "2026-10-26",
     "brand": "tsc",
     "type": "price",
@@ -2392,11 +2398,5 @@
     "brand": "duroflex",
     "type": "price",
     "text": "'Avalon Posture Pro Rocking & Rotating Single Seater Premium Leatherette Recliner, Tan, Motorized' Rs 30,281 ↑ Rs 32,059"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Posture Pro Rocking & Rotating Single Seater Premium Leatherette Recliner, Beige, Motorized' Rs 30,281 ↑ Rs 32,059"
   }
 ]
