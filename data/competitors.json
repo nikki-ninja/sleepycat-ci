@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-28T09:26:52.910621Z",
-  "date": "2026-10-28",
+  "generated": "2026-10-29T09:39:17.311980Z",
+  "date": "2026-10-29",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -909,7 +909,6 @@
         "Hollow Fiber Pillow (Grey & White) set of 2": 769,
         "Headboard Cushion For Back Rest On Bed/ Sofa": 2849,
         "Maze - Premium Geometric Dhurrie (48 x 72 inches, 4 x 6 ft, Grey)": 1799,
-        "Aztec - Premium Geometric Dhurrie (Blue)": 1799,
         "Spring - Cushion Covers with Cushion Fillers (Maroon-White, Set of 5 Combo)": 1529,
         "Spring - Cushion Covers with Cushion Fillers (Maroon-Ocean Blue, Set of 5 Combo)": 1529,
         "Spring - Cushion Covers with Cushion Fillers (Maroon-Grey, Set of 5 Combo)": 1529,
@@ -934,7 +933,7 @@
         "Technic Hybrid - 3 Zone 6D Hexagon Grid Mattress with 3 Zone Pocket Springs #FutureofSleep": 12429
       },
       "on_sale": true,
-      "count": 310,
+      "count": 309,
       "offer": 36,
       "signals": {
         "quiz": true,
@@ -972,7 +971,6 @@
         "SofaBed 1 Seater": 9106,
         "🎁 Grazel Classic Memory Foam Pillow (Discount)": 0,
         "Inspire Coir Mattress": 14444,
-        "Aaram Trifold Mattress": 3649,
         "Easy Star Foam Mattress": 5120,
         "Snow Fiber Pillow": 539,
         "Grazel Classic Memory Foam Pillow": 2474,
@@ -1005,7 +1003,7 @@
         "New Ortho Coir Mattress": 15301
       },
       "on_sale": true,
-      "count": 54,
+      "count": 53,
       "offer": 10,
       "signals": {
         "quiz": false,
