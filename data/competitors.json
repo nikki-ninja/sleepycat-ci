@@ -1,13 +1,13 @@
 {
-  "generated": "2026-10-29T09:39:17.311980Z",
-  "date": "2026-10-29",
+  "generated": "2026-10-30T09:45:37.118459Z",
+  "date": "2026-10-30",
   "brands": {
     "tsc": {
       "platform": "shopify",
       "products": {
         "Valencia Recliner Sofa": 99999,
         "Toronto Recliner Sofa": 94999,
-        "Grand Elite Mattress": 119000,
+        "Grand Elite Mattress": 103900,
         "Brooklyn Recliner Sofa": 116999,
         "Palm and Finger Massager": 7999,
         "SnowTec Quilted Flat Sheet": 5999,
@@ -158,6 +158,7 @@
     "duroflex": {
       "platform": "shopify",
       "products": {
+        "Airboost Duo Topper": 7999,
         "Maestro mov.E Oatmeal Beige Fabric 3 Seater Sofa": 129499,
         "Maestro mov.E Dove Grey Fabric 3 Seater Sofa": 129499,
         "Maestro mov.E Oatmeal Beige Fabric 2 Seater Sofa": 114999,
@@ -215,11 +216,6 @@
         "Avalon Grande Teal Fabric Recliner - Manual": 17999,
         "Avalon Grande Grey Fabric Recliner - Manual": 17999,
         "Avalon Grande Brown Fabric Recliner - Manual": 17999,
-        "Utopia Yellow Fabric 1 seater sofa": 11559,
-        "Utopia Green Fabric 1 seater sofa": 11559,
-        "Utopia Grey Fabric 1 seater sofa": 11559,
-        "Utopia Grey Fabric 2 Seater Sofa": 17679,
-        "Utopia Green Fabric 2 seater sofa": 17679,
         "Ease Plaster Brown Fabric Sofa cum Bed": 41149,
         "Ease Sap Green Fabric Sofa cum Bed": 41149,
         "Ease Iconic Beige Fabric Sofa cum Bed": 41149,
@@ -572,7 +568,7 @@
         "LiveIn  Memory Foam Mattress": 6489
       },
       "on_sale": true,
-      "count": 412,
+      "count": 408,
       "offer": 5,
       "signals": {
         "quiz": true,

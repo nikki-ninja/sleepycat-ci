@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-10-30",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Airboost Duo Topper' at Rs 7,999"
+  },
+  {
+    "date": "2026-10-30",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Grand Elite Mattress' Rs 119,000 ↓ Rs 103,900"
+  },
+  {
     "date": "2026-10-28",
     "brand": "tsc",
     "type": "price",
@@ -2386,17 +2398,5 @@
     "brand": "duroflex",
     "type": "price",
     "text": "'Avalon Posture Pro Rocking & Rotating Single Seater Fabric Recliner, Grey, Motorized' Rs 30,281 ↑ Rs 32,059"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Posture Pro Rocking & Rotating Single Seater Fabric Recliner, Brown, Motorized' Rs 30,281 ↑ Rs 32,059"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Posture Pro Rocking & Rotating Single Seater Premium Leatherette Recliner, Tan, Motorized' Rs 30,281 ↑ Rs 32,059"
   }
 ]
