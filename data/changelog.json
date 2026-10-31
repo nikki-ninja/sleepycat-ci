@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-10-31",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'200 TC Percale Pillow Cases' Rs 499 ↓ Rs 494"
+  },
+  {
     "date": "2026-10-30",
     "brand": "duroflex",
     "type": "new-product",
@@ -2392,11 +2398,5 @@
     "brand": "duroflex",
     "type": "price",
     "text": "'Duro Safe - Waterproof Mattress Protector' Rs 968 ↑ Rs 989"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Posture Pro Rocking & Rotating Single Seater Fabric Recliner, Grey, Motorized' Rs 30,281 ↑ Rs 32,059"
   }
 ]
