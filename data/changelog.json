@@ -1,5 +1,125 @@
 [
   {
+    "date": "2026-11-01",
+    "brand": "flo",
+    "type": "offer",
+    "text": "headline offer now 40% off"
+  },
+  {
+    "date": "2026-11-01",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Flo Adjustable Pillow (Fibre)' Rs 899 ↑ Rs 929"
+  },
+  {
+    "date": "2026-11-01",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Flo Aloe Vera Gel Infused Waterproof Mattress Protector' Rs 629 ↑ Rs 650"
+  },
+  {
+    "date": "2026-11-01",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Set of 2 Eye Masks' Rs 419 ↑ Rs 433"
+  },
+  {
+    "date": "2026-11-01",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Flo Adjustable Pillow (Memory Foam)' Rs 1,499 ↑ Rs 1,549"
+  },
+  {
+    "date": "2026-11-01",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Ottoman (Foot Stool)' Rs 893 ↑ Rs 923"
+  },
+  {
+    "date": "2026-11-01",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Oyashe Sheesham Wood Bed - With Storage' Rs 28,349 ↑ Rs 29,294"
+  },
+  {
+    "date": "2026-11-01",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Flo Baby Mattress' Rs 1,793 ↑ Rs 1,853"
+  },
+  {
+    "date": "2026-11-01",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Flo Super Soft Bedsheet' Rs 1,469 ↑ Rs 1,518"
+  },
+  {
+    "date": "2026-11-01",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Flo Super Soft Fitted Bedsheet' Rs 1,319 ↑ Rs 1,363"
+  },
+  {
+    "date": "2026-11-01",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Oyashe Sheesham Wood Bed' Rs 18,749 ↑ Rs 19,374"
+  },
+  {
+    "date": "2026-11-01",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Boho Bed (Acacia Wood)' Rs 24,599 ↑ Rs 25,419"
+  },
+  {
+    "date": "2026-11-01",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Boho Bed (Acacia Wood) - With Storage' Rs 34,799 ↑ Rs 35,959"
+  },
+  {
+    "date": "2026-11-01",
+    "brand": "flo",
+    "type": "price",
+    "text": "'The Flo Mattress Ergo' Rs 4,765 ↑ Rs 4,914"
+  },
+  {
+    "date": "2026-11-01",
+    "brand": "flo",
+    "type": "price",
+    "text": "'The Flo Mattress Ortho' Rs 4,467 ↑ Rs 4,616"
+  },
+  {
+    "date": "2026-11-01",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Flo Float™ Mattress' Rs 9,052 ↑ Rs 9,353"
+  },
+  {
+    "date": "2026-11-01",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Flo Anti-Gravity™ Natural Latex Mattress' Rs 5,749 ↑ Rs 5,941"
+  },
+  {
+    "date": "2026-11-01",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Back Support Cushion' Rs 1,199 ↑ Rs 1,239"
+  },
+  {
+    "date": "2026-11-01",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Ergonomic Seat Cushion' Rs 1,499 ↑ Rs 1,549"
+  },
+  {
+    "date": "2026-11-01",
+    "brand": "flo",
+    "type": "price",
+    "text": "'360° Neck Support Pillow' Rs 809 ↑ Rs 836"
+  },
+  {
     "date": "2026-10-31",
     "brand": "sleepycat",
     "type": "price",
@@ -2278,125 +2398,5 @@
     "brand": "duroflex",
     "type": "price",
     "text": "'Avalon Motorized Electric Powered Midnight Blue Suede Recliner' Rs 22,399 ↑ Rs 23,799"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Motorized Electric Powered Crimson Red Suede Recliner' Rs 22,399 ↑ Rs 23,799"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Motorized Electric Powered Desert Orange Suede Recliner' Rs 22,399 ↑ Rs 23,799"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Meadow Mustard Palm Loveseat' Rs 13,775 ↑ Rs 14,619"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Meadow Tangerine Interlace Loveseat' Rs 13,775 ↑ Rs 14,619"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon E Twin Motorized Graphite Grey Recliner' Rs 53,804 ↑ Rs 57,169"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon E Twin Motorized Sap Green Recliner' Rs 53,804 ↑ Rs 57,169"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon E Twin Motorized Iconic Beige Recliner' Rs 53,804 ↑ Rs 57,169"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon E Twin Motorized Plaster Brown Recliner' Rs 53,804 ↑ Rs 57,169"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon E Twin Motorized Saddle Brown Recliner' Rs 53,804 ↑ Rs 57,169"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Meadow Kale Green Palm Loveseat' Rs 13,775 ↑ Rs 14,619"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Zivo Plus Dusky Pink Fabric 1 seater Sofa' Rs 11,151 ↓ Rs 11,149"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Zivo Plus Cloudy Gray Fabric 1 Seater Sofa' Rs 11,151 ↓ Rs 11,149"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Zivo Plus Twilight Blue Fabric Sofa Set 3 Seater Sofa' Rs 22,303 ↓ Rs 22,299"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Crimson Red Suede Recliner' Rs 15,679 ↑ Rs 16,659"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Neck Rest Orthopedic Memory Foam' Rs 1,230 ↑ Rs 1,259"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon - Rocking & Rotating Single Seater Fabric Recliner in Twilight Blue Colour' Rs 19,759 ↑ Rs 20,989"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Bliss High Quality Fibre Pillow' Rs 836 ↑ Rs 859"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Happy Soft Lightweight High Quality Fibre Pillow' Rs 1,003 ↓ Rs 999"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'LiveIn 2 in 1 Dual Sided Roll Pack Mattress' Rs 4,839 ↑ Rs 4,969"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Duro Safe - Waterproof Mattress Protector' Rs 968 ↑ Rs 989"
   }
 ]
