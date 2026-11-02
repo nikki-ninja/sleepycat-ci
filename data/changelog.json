@@ -1,5 +1,53 @@
 [
   {
+    "date": "2026-11-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro Mattress' Rs 16,590 ↑ Rs 17,590"
+  },
+  {
+    "date": "2026-11-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro Mattress-Custom' Rs 17,590 ↑ Rs 18,690"
+  },
+  {
+    "date": "2026-11-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro SnowTec Cooling Technology' Rs 19,590 ↑ Rs 20,590"
+  },
+  {
+    "date": "2026-11-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro SnowTec Cooling Technology - Custom' Rs 20,790 ↑ Rs 21,790"
+  },
+  {
+    "date": "2026-11-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro SnowTec Mattress - Custom' Rs 20,790 ↑ Rs 21,790"
+  },
+  {
+    "date": "2026-11-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro SnowTec Mattress' Rs 19,590 ↑ Rs 20,590"
+  },
+  {
+    "date": "2026-11-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro Mattress - Custom' Rs 17,590 ↑ Rs 18,690"
+  },
+  {
+    "date": "2026-11-02",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro Mattress' Rs 16,590 ↑ Rs 17,590"
+  },
+  {
     "date": "2026-11-01",
     "brand": "flo",
     "type": "offer",
@@ -2350,53 +2398,5 @@
     "brand": "duroflex",
     "type": "price",
     "text": "'Avalon Pink Fabric Recliner' Rs 15,199 ↑ Rs 16,149"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Blue Fabric Recliner' Rs 15,199 ↑ Rs 16,149"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Zivo Plus Cloudy Gray Fabric 2 Seater Sofa' Rs 17,137 ↑ Rs 17,139"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Zivo Plus Cloudy Gray Fabric Sofa Set 3 Seater Sofa' Rs 22,303 ↓ Rs 22,299"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Zivo Plus Dusky Pink Fabric 2 Seater Sofa' Rs 17,137 ↑ Rs 17,139"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Zivo Plus Dusky Pink Fabric Sofa Set 3 Seater Sofa' Rs 22,303 ↓ Rs 22,299"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Zivo Plus Twilight Blue Fabric 2 Seater Sofa' Rs 17,137 ↑ Rs 17,139"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Meadow Light Cyan Interlace Loveseat' Rs 13,775 ↑ Rs 14,619"
-  },
-  {
-    "date": "2026-10-21",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Motorized Electric Powered Midnight Blue Suede Recliner' Rs 22,399 ↑ Rs 23,799"
   }
 ]
