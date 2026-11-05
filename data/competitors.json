@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-03T10:36:30.984220Z",
-  "date": "2026-11-03",
+  "generated": "2026-11-05T10:33:07.887203Z",
+  "date": "2026-11-05",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -189,7 +189,6 @@
         "Cocoon Olive Green Fabric 3 Seater Sofa": 45000,
         "Neuma Roller Back Massager": 7150,
         "Neuma Ottoman Thermo Leg Massager": 17499,
-        "Neuma Thermo Neck Massager Pillow": 2500,
         "Cove Brushed Nickel Grey Leatherette + Rock Ridge Grey Fabric 2 Seater Sofa + Lounger": 52220,
         "Cove Brushed Nickel Grey Leatherette + Rock Ridge Grey Fabric 3 Seater Sofa + Lounger": 62613,
         "Cove Brushed Nickel Grey Leatherette + Rock Ridge Grey Fabric 1 Seater Sofa": 21500,
@@ -498,19 +497,15 @@
         "Boltt Arctic Ice Spring Mattress": 10814,
         "Propel Arctic Ice Pocket Spring Mattress": 11782,
         "Propel Plus Arctic Ice Pocket Spring Mattress With Euro Top": 13965,
-        "Meadow Kale Green Palm Loveseat": 14619,
         "Avalon E Twin Motorized Saddle Brown Recliner": 57169,
         "Avalon E Twin Motorized Plaster Brown Recliner": 57169,
         "Avalon E Twin Motorized Iconic Beige Recliner": 57169,
         "Avalon E Twin Motorized Sap Green Recliner": 57169,
         "Avalon E Twin Motorized Graphite Grey Recliner": 57169,
-        "Meadow Tangerine Interlace Loveseat": 14619,
-        "Meadow Mustard Palm Loveseat": 14619,
         "Wave Twin Adjustable Bed with Split Arctic Ice Quboid mattress Individual Headside Control & 2 Fitted Bedsheets": 106596,
         "Avalon Motorized Electric Powered Desert Orange Suede Recliner": 23799,
         "Avalon Motorized Electric Powered Crimson Red Suede Recliner": 23799,
         "Avalon Motorized Electric Powered Midnight Blue Suede Recliner": 23799,
-        "Meadow Light Cyan Interlace Loveseat": 14619,
         "Up Right Orthopedic Mattress": 9760,
         "Back Magic Orthopedic Coir Mattress - Blue": 12387,
         "Zivo Plus Twilight Blue Fabric 2 Seater Sofa with Lounger": 31159,
@@ -568,7 +563,7 @@
         "LiveIn  Memory Foam Mattress": 6489
       },
       "on_sale": true,
-      "count": 408,
+      "count": 403,
       "offer": 5,
       "signals": {
         "quiz": true,
