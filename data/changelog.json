@@ -1,5 +1,35 @@
 [
   {
+    "date": "2026-11-07",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Noa Recliner' Rs 14,399 ↑ Rs 17,999"
+  },
+  {
+    "date": "2026-11-07",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'150 GSM Cotton-soft Microfiber Sheet Set' Rs 849 ↑ Rs 999"
+  },
+  {
+    "date": "2026-11-07",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Lycra Mattress Protector' Rs 699 ↑ Rs 799"
+  },
+  {
+    "date": "2026-11-07",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'200 TC Percale Flat Bedsheets' Rs 1,449 ↑ Rs 1,699"
+  },
+  {
+    "date": "2026-11-07",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Carbon Mattress' Rs 4,499 ↑ Rs 6,499"
+  },
+  {
     "date": "2026-11-06",
     "brand": "sleepycat",
     "type": "offer",
@@ -2368,35 +2398,5 @@
     "brand": "duroflex",
     "type": "price",
     "text": "'Avalon - Rocking & Rotating Single Seater Fabric Recliner In Green Colour' Rs 20,989 ↑ Rs 24,699"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon - Rocking & Rotating Single Seater Fabric Recliner In Pink Colour' Rs 20,989 ↑ Rs 24,699"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Motorized Electric Powered Pink Fabric Recliner' Rs 23,799 ↑ Rs 27,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Pink Fabric Recliner' Rs 16,149 ↑ Rs 18,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Blue Fabric Recliner' Rs 16,149 ↑ Rs 18,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Zivo Plus Twilight Blue Fabric Sofa Set 3 Seater Sofa with Lounger' Rs 36,079 ↑ Rs 43,999"
   }
 ]
