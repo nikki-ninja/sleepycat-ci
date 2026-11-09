@@ -1,5 +1,233 @@
 [
   {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "offer",
+    "text": "headline offer now 40% off"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Mattress' Rs 13,490 ↑ Rs 14,590"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Onyx Orthopedic Office Chair' Rs 10,990 ↑ Rs 11,499"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Elev8 Smart Recliner Bed with Italia Frame' Rs 52,999 ↑ Rs 60,999"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Elev8 Smart Recliner Bed' Rs 34,999 ↑ Rs 42,999"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Mattress - Custom' Rs 15,390 ↑ Rs 16,490"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro Mattress' Rs 17,590 ↑ Rs 18,490"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro Mattress-Custom' Rs 18,690 ↑ Rs 19,590"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho SnowTec Cooling Technology' Rs 16,490 ↑ Rs 17,590"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho SnowTec Cooling Technology-Custom' Rs 17,490 ↑ Rs 18,690"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Elev8 Smart Recliner Bed with Leather Frame' Rs 53,999 ↑ Rs 61,999"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'The Sleep Company Luxe Motorised Recliner Sofa' Rs 28,999 ↑ Rs 32,499"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'AeroPlus Adjustable Desk' Rs 17,990 ↑ Rs 18,999"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Luxe Pro Massager Recliner Sofa' Rs 54,990 ↑ Rs 57,990"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Ortho Pro Max Seat Cushion' Rs 1,999 ↑ Rs 2,199"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro SnowTec Cooling Technology' Rs 20,590 ↑ Rs 21,490"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho Pro SnowTec Cooling Technology - Custom' Rs 21,790 ↑ Rs 22,790"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Wedge Cushion' Rs 1,099 ↑ Rs 1,999"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro SnowTec Mattress - Custom' Rs 21,790 ↑ Rs 22,790"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro SnowTec Mattress' Rs 20,590 ↑ Rs 21,490"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro Mattress - Custom' Rs 18,690 ↑ Rs 19,590"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Luxe Pro Mattress' Rs 17,590 ↑ Rs 18,490"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'XGen Pro Gaming Chair' Rs 18,490 ↑ Rs 21,999"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Elev8 Smart Recliner Storage Bed with Italia Frame' Rs 99,499 ↑ Rs 117,499"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Pregnancy Pillow' Rs 1,499 ↑ Rs 1,999"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Sunrise Thermo Fitted Sheet' Rs 1,699 ↑ Rs 1,850"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho GRID Mattress - Custom' Rs 9,990 ↑ Rs 10,590"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Travel Neck Pillow' Rs 599 ↑ Rs 1,499"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Ortho GRID Mattress' Rs 9,490 ↑ Rs 9,990"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Stylux Ergonomic Office Chair' Rs 15,001 ↑ Rs 16,999"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'AeroMini Adjustable Desk' Rs 13,490 ↑ Rs 15,999"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Vienna Recliner Sofa' Rs 99,999 ↑ Rs 103,999"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Milano Recliner Sofa' Rs 99,999 ↑ Rs 103,999"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Ultron Premium Ergonomic Office Chair' Rs 34,999 ↑ Rs 37,999"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Seattle Recliner Sofa' Rs 119,999 ↑ Rs 121,999"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'WaveX Full Body Massager' Rs 189,900 ↑ Rs 199,990"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'AeroPro Adjustable Desk' Rs 21,499 ↑ Rs 21,999"
+  },
+  {
+    "date": "2026-11-09",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Grand Elite Mattress' Rs 103,900 ↑ Rs 119,000"
+  },
+  {
     "date": "2026-11-07",
     "brand": "sleepycat",
     "type": "price",
@@ -2170,233 +2398,5 @@
     "brand": "sleepyhead",
     "type": "price",
     "text": "'Sofa Drip Pro - 1 Seater Sofa (Fabric, Coco Brown)' Rs 9,689 ↑ Rs 11,399"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Drip Pro - 3 Seater Sofa (Fabric, Charcoal Grey)' Rs 16,569 ↑ Rs 19,499"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Drip Pro - 2 Seater Sofa (Fabric, Charcoal Grey)' Rs 13,429 ↑ Rs 15,799"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Drip Pro - 1 Seater Sofa (Fabric, Charcoal Grey)' Rs 9,689 ↑ Rs 11,399"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Memory Foam Topper' Rs 5,877 ↑ Rs 6,186"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "emma",
-    "type": "new-product",
-    "text": "new SKU live - 'Emma Original Combo' at Rs 14,897"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "emma",
-    "type": "new-product",
-    "text": "new SKU live - 'Emma Eden Combo' at Rs 32,588"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "emma",
-    "type": "new-product",
-    "text": "new SKU live - 'Emma Performance Combo' at Rs 26,497"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'LiveIn  Memory Foam Mattress' Rs 6,489 ↑ Rs 8,539"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Beige Fabric Recliner' Rs 16,149 ↑ Rs 18,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Brown Fabric Recliner' Rs 16,149 ↑ Rs 18,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Grey Fabric Recliner' Rs 16,149 ↑ Rs 18,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Snuggle High Quality Fibre Pillow' Rs 679 ↑ Rs 760"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon - Rocking & Rotating Single Seater Fabric Recliner in Graphite Grey Colour' Rs 20,989 ↑ Rs 24,699"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon - Rocking & Rotating Single Seater Fabric Recliner in Plaster Brown Colour' Rs 20,989 ↑ Rs 24,699"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Dusky Pink Ottoman' Rs 5,489 ↑ Rs 6,099"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Twilight Blue Ottoman' Rs 5,489 ↑ Rs 6,099"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Sap Green Fabric Recliner' Rs 16,149 ↑ Rs 18,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Dark Brown Fabric Recliner' Rs 16,149 ↑ Rs 18,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'LiveIn Bounce Pocket Spring Mattress' Rs 6,539 ↑ Rs 8,839"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'LiveIn Orthopedic Memory Foam Mattress' Rs 6,639 ↑ Rs 8,739"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Motorized Electric Powered Beige Fabric Recliner' Rs 23,799 ↑ Rs 27,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Motorized Electric Powered Brown Fabric Recliner' Rs 23,799 ↑ Rs 27,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Motorized Electric Powered Saddle Brown Fabric Recliner' Rs 23,799 ↑ Rs 27,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Motorized Electric Powered Sap Green Fabric Recliner' Rs 23,799 ↑ Rs 27,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Motorized Electric Powered Grey Fabric Recliner' Rs 23,799 ↑ Rs 27,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Midnight Blue Suede Recliner' Rs 16,659 ↑ Rs 19,599"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Desert Orange Suede Recliner' Rs 16,659 ↑ Rs 19,599"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Zivo Plus Twilight Blue Fabric 1 Seater Sofa' Rs 11,149 ↑ Rs 13,599"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Twin Iconic Beige Fabric Recliner 2 Seater' Rs 38,419 ↑ Rs 45,199"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Twin Plaster Brown Fabric Recliner 2 Seater' Rs 38,419 ↑ Rs 45,199"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Twin Saddle Brown Fabric Recliner 2 Seater' Rs 38,419 ↑ Rs 45,199"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Twin Graphite Grey Fabric Recliner 2 Seater' Rs 38,419 ↑ Rs 45,199"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Twin Sap Green Fabric Recliner 2 Seater' Rs 38,419 ↑ Rs 45,199"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Rocking & Rotating Crimson Red Single Seater Suede Fabric Recliner' Rs 21,419 ↑ Rs 25,199"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Rocking & Rotating Desert Orange Single Seater Suede Fabric Recliner' Rs 21,419 ↑ Rs 25,199"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon Rocking & Rotating Midnight Blue Single Seater Suede Fabric Recliner' Rs 21,419 ↑ Rs 25,199"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon - Rocking & Rotating Single Seater Fabric Recliner In Dark Brown Colour' Rs 20,989 ↑ Rs 24,699"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "duroflex",
-    "type": "price",
-    "text": "'Avalon - Rocking & Rotating Single Seater Fabric Recliner In Green Colour' Rs 20,989 ↑ Rs 24,699"
   }
 ]
