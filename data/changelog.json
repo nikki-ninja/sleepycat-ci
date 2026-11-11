@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-11",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'200 TC Percale Duvet Cover' Rs 1,799 ↓ Rs 1,610"
+  },
+  {
     "date": "2026-11-09",
     "brand": "tsc",
     "type": "offer",
@@ -2392,11 +2398,5 @@
     "brand": "sleepyhead",
     "type": "price",
     "text": "'Sofa Drip Pro - 2 Seater Sofa (Fabric, Coco Brown)' Rs 13,429 ↑ Rs 15,799"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Drip Pro - 1 Seater Sofa (Fabric, Coco Brown)' Rs 9,689 ↑ Rs 11,399"
   }
 ]
