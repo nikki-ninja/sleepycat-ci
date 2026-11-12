@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-11T10:32:31.947353Z",
-  "date": "2026-11-11",
+  "generated": "2026-11-12T10:46:56.706159Z",
+  "date": "2026-11-12",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -616,6 +616,7 @@
     "sleepyhead": {
       "platform": "shopify",
       "products": {
+        "Sense Ortho Ultra Mattress - Pearl White": 9692,
         "Lyft - Height Adjustable Table (White Base and Oak Top) With Spin - Office Chair (Cement Grey)": 14999,
         "Lyft - Height Adjustable Table (White Base and Oak Top) With Spin - Office Chair (Jet Black)": 14999,
         "Lyft - Height Adjustable Table (Black Base and Walnut Top) With Spin - Office Chair (Cement Grey)": 14999,
@@ -927,7 +928,7 @@
         "Technic Hybrid - 3 Zone 6D Hexagon Grid Mattress with 3 Zone Pocket Springs #FutureofSleep": 16799
       },
       "on_sale": true,
-      "count": 309,
+      "count": 310,
       "offer": 24,
       "signals": {
         "quiz": true,
@@ -1012,22 +1013,22 @@
     "springtek": {
       "platform": "shopify",
       "products": {
-        "Springtek Joy Solid Wood High Chair for Baby Toddler, Foldable Wooden Highchair": 6435,
-        "Tri Folding Mattress": 3677,
-        "Dual Comfort Reversible Mattress": 3742,
+        "Springtek Joy Solid Wood High Chair for Baby Toddler, Foldable Wooden Highchair": 8217,
+        "Tri Folding Mattress": 4696,
+        "Dual Comfort Reversible Mattress": 4702,
         "Micro Fibre Sleeping Pillow": 743,
-        "2\" Memory Foam Gel Mattress Topper": 2681,
-        "100% Water Proof Mattress Protector": 536,
-        "Folding Rollaway Bed With 6\" Mattress": 11999,
-        "2\" Luxe Micro Fibre Mattress Topper": 2175,
-        "100% Organic Waterproof Protector": 1072,
-        "Memory & Bonded Foam, Spine Support Orthoapedic": 4635,
-        "Dreamer Bonnel Spring Mattress": 5281,
-        "SuperNova Latex & Memory": 7424,
-        "Wavemax Spine Support Orthopedic Mattress": 9302,
-        "Springtek Ortho Pocket Memory Foam Spring Mattress": 6049,
-        "Euro Top Hybrid Latex Pocket Spring": 8132,
-        "Dreamer Orthopedic Memory Foam Mattress": 5778
+        "2\" Memory Foam Gel Mattress Topper": 3424,
+        "100% Water Proof Mattress Protector": 684,
+        "Folding Rollaway Bed With 6\" Mattress": 14961,
+        "2\" Luxe Micro Fibre Mattress Topper": 2849,
+        "100% Organic Waterproof Protector": 1369,
+        "Memory & Bonded Foam, Spine Support Orthoapedic": 5984,
+        "Dreamer Bonnel Spring Mattress": 6744,
+        "SuperNova Latex & Memory": 9547,
+        "Wavemax Spine Support Orthopedic Mattress": 11942,
+        "Springtek Ortho Pocket Memory Foam Spring Mattress": 7789,
+        "Euro Top Hybrid Latex Pocket Spring": 10449,
+        "Dreamer Orthopedic Memory Foam Mattress": 7314
       },
       "on_sale": true,
       "count": 16,

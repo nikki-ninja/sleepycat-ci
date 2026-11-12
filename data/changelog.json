@@ -1,5 +1,101 @@
 [
   {
+    "date": "2026-11-12",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Dreamer Orthopedic Memory Foam Mattress' Rs 5,778 ↑ Rs 7,314"
+  },
+  {
+    "date": "2026-11-12",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Euro Top Hybrid Latex Pocket Spring' Rs 8,132 ↑ Rs 10,449"
+  },
+  {
+    "date": "2026-11-12",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Springtek Ortho Pocket Memory Foam Spring Mattress' Rs 6,049 ↑ Rs 7,789"
+  },
+  {
+    "date": "2026-11-12",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Wavemax Spine Support Orthopedic Mattress' Rs 9,302 ↑ Rs 11,942"
+  },
+  {
+    "date": "2026-11-12",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'SuperNova Latex & Memory' Rs 7,424 ↑ Rs 9,547"
+  },
+  {
+    "date": "2026-11-12",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Dreamer Bonnel Spring Mattress' Rs 5,281 ↑ Rs 6,744"
+  },
+  {
+    "date": "2026-11-12",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Memory & Bonded Foam, Spine Support Orthoapedic' Rs 4,635 ↑ Rs 5,984"
+  },
+  {
+    "date": "2026-11-12",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'100% Organic Waterproof Protector' Rs 1,072 ↑ Rs 1,369"
+  },
+  {
+    "date": "2026-11-12",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'2\" Luxe Micro Fibre Mattress Topper' Rs 2,175 ↑ Rs 2,849"
+  },
+  {
+    "date": "2026-11-12",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Folding Rollaway Bed With 6\" Mattress' Rs 11,999 ↑ Rs 14,961"
+  },
+  {
+    "date": "2026-11-12",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'100% Water Proof Mattress Protector' Rs 536 ↑ Rs 684"
+  },
+  {
+    "date": "2026-11-12",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'2\" Memory Foam Gel Mattress Topper' Rs 2,681 ↑ Rs 3,424"
+  },
+  {
+    "date": "2026-11-12",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Dual Comfort Reversible Mattress' Rs 3,742 ↑ Rs 4,702"
+  },
+  {
+    "date": "2026-11-12",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Tri Folding Mattress' Rs 3,677 ↑ Rs 4,696"
+  },
+  {
+    "date": "2026-11-12",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Springtek Joy Solid Wood High Chair for Baby Toddler, Foldable Wooden Highchair' Rs 6,435 ↑ Rs 8,217"
+  },
+  {
+    "date": "2026-11-12",
+    "brand": "sleepyhead",
+    "type": "new-product",
+    "text": "new SKU live - 'Sense Ortho Ultra Mattress - Pearl White' at Rs 9,692"
+  },
+  {
     "date": "2026-11-11",
     "brand": "sleepycat",
     "type": "price",
@@ -2302,101 +2398,5 @@
     "brand": "sleepyhead",
     "type": "price",
     "text": "'Laxe - Pincore Latex Mattress with BodyIQ Orthopedic Memory Foam - Ivory White' Rs 6,879 ↑ Rs 8,939"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sense - BodyIQ Orthopedic Memory Foam Mattress with Cooling Tech - Pearl White' Rs 6,609 ↑ Rs 8,929"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Recliner RX5 - Fabric (Grey, One Seater)' Rs 13,069 ↑ Rs 15,499"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Laxe Nature Ultra Mattress - Ivory White' Rs 8,471 ↑ Rs 8,917"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Boing - 3 Zone Pocket Spring Mattress with HR Foam, Zero Partner Disturbance & Spinal Support - Black' Rs 5,309 ↑ Rs 7,169"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Laxe - Pincore Latex Mattress with BodyIQ Orthopedic Memory Foam - Grey' Rs 6,879 ↑ Rs 8,939"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sense - BodyIQ Orthopedic Memory Foam Mattress with Cooling Tech - Ivory White' Rs 6,609 ↑ Rs 8,929"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - White' Rs 5,789 ↑ Rs 7,619"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Flip - Dual Sided Foam Mattress with Firm & Soft Sides - White' Rs 4,199 ↑ Rs 5,529"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Drip - 3 Seater Sofa (Fabric, Sandstone Beige)' Rs 15,719 ↑ Rs 18,499"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Drip - 2 Seater Sofa (Fabric, Sandstone Beige)' Rs 12,579 ↑ Rs 14,799"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Drip - 1 Seater Sofa (Fabric, Sandstone Beige)' Rs 8,839 ↑ Rs 10,399"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Drip - 3 Seater Sofa (Fabric, Pine Green)' Rs 15,719 ↑ Rs 18,499"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Drip - 2 Seater Sofa (Fabric, Pine Green)' Rs 12,579 ↑ Rs 14,799"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Drip - 1 Seater Sofa (Fabric, Pine Green)' Rs 8,839 ↑ Rs 10,399"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Drip Pro - 3 Seater Sofa (Fabric, Coco Brown)' Rs 16,569 ↑ Rs 19,499"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Drip Pro - 2 Seater Sofa (Fabric, Coco Brown)' Rs 13,429 ↑ Rs 15,799"
   }
 ]
