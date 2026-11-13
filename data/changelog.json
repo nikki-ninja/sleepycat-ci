@@ -1,5 +1,89 @@
 [
   {
+    "date": "2026-11-13",
+    "brand": "sleepycat",
+    "type": "new-product",
+    "text": "new SKU live - 'Kairo Recliner' at Rs 19,999"
+  },
+  {
+    "date": "2026-11-13",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Natural Coir Mattress' Rs 3,695 ↑ Rs 4,031"
+  },
+  {
+    "date": "2026-11-13",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Spinel Ortho Foam Mattress' Rs 5,155 ↑ Rs 5,624"
+  },
+  {
+    "date": "2026-11-13",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Rutile Coir Mattress' Rs 5,451 ↑ Rs 6,056"
+  },
+  {
+    "date": "2026-11-13",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'SofaBed 1 Seater' Rs 9,106 ↑ Rs 9,956"
+  },
+  {
+    "date": "2026-11-13",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'SofaBed 3 Seater' Rs 18,213 ↑ Rs 19,427"
+  },
+  {
+    "date": "2026-11-13",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Ortho Plus Natural Grid' Rs 6,029 ↑ Rs 6,833"
+  },
+  {
+    "date": "2026-11-13",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Ortho Plus' Rs 4,909 ↑ Rs 5,400"
+  },
+  {
+    "date": "2026-11-13",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Ortho Comfort' Rs 4,502 ↑ Rs 4,922"
+  },
+  {
+    "date": "2026-11-13",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Dual Plus' Rs 5,129 ↑ Rs 5,536"
+  },
+  {
+    "date": "2026-11-13",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Orthopedic Roll Pack' Rs 4,134 ↑ Rs 4,685"
+  },
+  {
+    "date": "2026-11-13",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Ortho Plus Latex' Rs 6,599 ↑ Rs 7,451"
+  },
+  {
+    "date": "2026-11-13",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Ortho Plus Spring' Rs 7,029 ↑ Rs 7,894"
+  },
+  {
+    "date": "2026-11-13",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'Dual Roll Pack' Rs 3,297 ↑ Rs 3,716"
+  },
+  {
     "date": "2026-11-12",
     "brand": "springtek",
     "type": "price",
@@ -2314,89 +2398,5 @@
     "brand": "sleepyhead",
     "type": "price",
     "text": "'Boba Bed WS - Upholstered Bed with Hydraulic Storage Queen Size (Baked Clay Rust)' Rs 34,913 ↑ Rs 36,750"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Boba Move - Adjustable Bed Orra Upholstered Bed Queen Size (Rust) + Sense Mattress 8\" (20.3 cm)' Rs 55,859 ↑ Rs 58,799"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Boba Move - Adjustable Bed Orra Upholstered Bed Queen Size (Green) + Sense Mattress 8\" (20.3 cm)' Rs 55,859 ↑ Rs 58,799"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Boba Move - Adjustable Bed Elise Upholstered Bed Queen Size (Brown) + Sense Mattress 8\" (20.3 cm)' Rs 55,859 ↑ Rs 58,799"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Boba Move - Adjustable Bed Elise Upholstered Bed Queen Size (Grey) + Sense Mattress 8\" (20.3 cm)' Rs 55,859 ↑ Rs 58,799"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Boba Move - Adjustable Bed Elise Upholstered Bed King Size (Grey) + Sense Mattress 8\" (20.3 cm)' Rs 62,842 ↑ Rs 66,149"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Boba Move - Adjustable Bed Elise Upholstered Bed King Size (Brown) + Sense Mattress 8\" (20.3 cm)' Rs 62,842 ↑ Rs 66,149"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Boba Move - Adjustable Bed Orra Upholstered Bed King Size (Green) + Sense Mattress 8\" (20.3 cm)' Rs 62,842 ↑ Rs 66,149"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Boba Move - Adjustable Bed Orra Upholstered Bed King Size (Rust) + Sense Mattress 8\" (20.3 cm)' Rs 62,842 ↑ Rs 66,149"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Recliner RX5 Ultra - One Seater (Brush Brown)' Rs 13,509 ↑ Rs 15,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Recliner RX5 Ultra - One Seater (Monument Grey)' Rs 13,509 ↑ Rs 15,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Recliner RX5 Ultra - One Seater (Classic Blue)' Rs 13,509 ↑ Rs 15,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Flip - Dual Sided Foam Mattress with Firm & Soft Sides - Grey' Rs 4,199 ↑ Rs 5,529"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey' Rs 5,789 ↑ Rs 7,619"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Laxe - Pincore Latex Mattress with BodyIQ Orthopedic Memory Foam - Ivory White' Rs 6,879 ↑ Rs 8,939"
   }
 ]
