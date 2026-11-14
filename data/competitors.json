@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-13T10:43:11.573028Z",
-  "date": "2026-11-13",
+  "generated": "2026-11-14T09:57:06.033552Z",
+  "date": "2026-11-14",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -999,7 +999,7 @@
       },
       "on_sale": true,
       "count": 53,
-      "offer": 10,
+      "offer": 25,
       "signals": {
         "quiz": false,
         "emi": false,

@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-14",
+    "brand": "kurlon",
+    "type": "offer",
+    "text": "headline offer now 25% off"
+  },
+  {
     "date": "2026-11-13",
     "brand": "sleepycat",
     "type": "new-product",
@@ -2392,11 +2398,5 @@
     "brand": "sleepyhead",
     "type": "price",
     "text": "'Boba Bed WS - Upholstered Bed with Hydraulic Storage Queen Size (Sepia Tint Brown)' Rs 34,913 ↑ Rs 36,750"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Boba Bed WS - Upholstered Bed with Hydraulic Storage Queen Size (Baked Clay Rust)' Rs 34,913 ↑ Rs 36,750"
   }
 ]
