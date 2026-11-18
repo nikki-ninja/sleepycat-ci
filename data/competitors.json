@@ -1,10 +1,11 @@
 {
-  "generated": "2026-11-17T11:36:13.755885Z",
-  "date": "2026-11-17",
+  "generated": "2026-11-18T11:21:00.077259Z",
+  "date": "2026-11-18",
   "brands": {
     "tsc": {
       "platform": "shopify",
       "products": {
+        "Foot and Calf Massager": 32999,
         "Valencia Recliner Sofa": 99999,
         "Toronto Recliner Sofa": 94999,
         "Grand Elite Mattress": 119000,
@@ -90,7 +91,7 @@
         "Bamboo Mattress Protector": 2399
       },
       "on_sale": true,
-      "count": 83,
+      "count": 84,
       "offer": 40,
       "signals": {
         "quiz": true,
@@ -259,7 +260,7 @@
         "Elise Upholstered Platform Bed - Sepia Tint Brown": 32000,
         "Orra Upholstered Bed - Baked Clay Rust": 36800,
         "Orra Upholstered Bed - Smoked Pine Green": 36800,
-        "Duropedic Airboost Livein Mattress | 1 lakh+ Adaptive Nano fibres | Medium Firm | 10 yr warranty | 100 nights trial": 10489,
+        "Duropedic Airboost Livein Mattress | 1 lakh+ Adaptive Nano fibres | Medium Firm | 10 yr warranty | 100 nights trial": 10799,
         "Duropedic Airboost 3.6 Mattress | 1 lakh+ adaptive fibres and ortho support": 15388,
         "Duropedic Airboost 6.10 Arctic Ice Mattress | 1 lakh+ Airknit fibres with latex and adjustable firmness | 100 nights trial": 33584,
         "Duropedic Airboost 3.8 Bionix Ice Pro Mattress | 1 lakh+ Airknit fibres and ortho support  | 100 nights trial": 25382,
@@ -1059,7 +1060,7 @@
         "Pet Mat": 1124,
         "Quilted Mattress Protector": 989,
         "Baby Natural Latex Mattress": 3953,
-        "Original Mattress": 6499,
+        "Original Mattress": 6549,
         "Natural Latex Mattress Topper": 7224,
         "Aeroflow Mattress Topper": 3399,
         "Car Bundle": 3478,
@@ -1067,7 +1068,7 @@
         "Ergo Chair Bundle": 3448,
         "Pro Car Bundle": 3442,
         "The Latex Ortho": 7699,
-        "The Founder's Mattress": 28610,
+        "The Founder's Mattress": 30199,
         "Slim Seat Cushion": 1499,
         "Pro Back Cushion": 1499,
         "Pro Seat Cushion": 1899,

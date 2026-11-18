@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-11-18",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'The Founder's Mattress' Rs 28,610 ↑ Rs 30,199"
+  },
+  {
+    "date": "2026-11-18",
+    "brand": "sleepycat",
+    "type": "price",
+    "text": "'Original Mattress' Rs 6,499 ↑ Rs 6,549"
+  },
+  {
+    "date": "2026-11-18",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'Duropedic Airboost Livein Mattress | 1 lakh+ Adaptive Nano fibres | Medium Firm | 10 yr warranty | 100 nights trial' Rs 10,489 ↑ Rs 10,799"
+  },
+  {
+    "date": "2026-11-18",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'Foot and Calf Massager' at Rs 32,999"
+  },
+  {
     "date": "2026-11-14",
     "brand": "kurlon",
     "type": "offer",
@@ -2374,29 +2398,5 @@
     "brand": "sleepyhead",
     "type": "price",
     "text": "'Lyft - Height Adjustable Table (Black Base and Black Top)' Rs 12,009 ↑ Rs 13,499"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Boba Move - Adjustable Bed With Sense Mattress' Rs 39,899 ↑ Rs 41,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Boba Bed WS - Upholstered Bed with Hydraulic Storage King Size (Baked Clay Rust)' Rs 40,150 ↑ Rs 42,263"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Boba Bed WS - Upholstered Bed with Hydraulic Storage King Size (Sepia Tint Brown)' Rs 40,150 ↑ Rs 42,263"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Boba Bed WS - Upholstered Bed with Hydraulic Storage Queen Size (Sepia Tint Brown)' Rs 34,913 ↑ Rs 36,750"
   }
 ]
