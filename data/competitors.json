@@ -1,10 +1,11 @@
 {
-  "generated": "2026-11-18T11:21:00.077259Z",
-  "date": "2026-11-18",
+  "generated": "2026-11-19T11:19:14.380689Z",
+  "date": "2026-11-19",
   "brands": {
     "tsc": {
       "platform": "shopify",
       "products": {
+        "Luxe Motorised Recliner Sofa (PowerLift)": 49990,
         "Foot and Calf Massager": 32999,
         "Valencia Recliner Sofa": 99999,
         "Toronto Recliner Sofa": 94999,
@@ -91,7 +92,7 @@
         "Bamboo Mattress Protector": 2399
       },
       "on_sale": true,
-      "count": 84,
+      "count": 85,
       "offer": 40,
       "signals": {
         "quiz": true,

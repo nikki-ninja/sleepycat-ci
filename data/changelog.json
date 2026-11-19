@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-19",
+    "brand": "tsc",
+    "type": "new-product",
+    "text": "new SKU live - 'Luxe Motorised Recliner Sofa (PowerLift)' at Rs 49,990"
+  },
+  {
     "date": "2026-11-18",
     "brand": "sleepycat",
     "type": "price",
@@ -2392,11 +2398,5 @@
     "brand": "sleepyhead",
     "type": "price",
     "text": "'Lyft - Height Adjustable Table (Black Base and Walnut Top)' Rs 12,009 ↑ Rs 13,499"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Lyft - Height Adjustable Table (Black Base and Black Top)' Rs 12,009 ↑ Rs 13,499"
   }
 ]
