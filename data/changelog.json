@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-20",
+    "brand": "kurlon",
+    "type": "price",
+    "text": "'KurloBond Essential Coir Mattress' Rs 10,420 ↑ Rs 10,941"
+  },
+  {
     "date": "2026-11-19",
     "brand": "tsc",
     "type": "new-product",
@@ -2392,11 +2398,5 @@
     "brand": "sleepyhead",
     "type": "price",
     "text": "'Lyft - Height Adjustable Table (White Base and Oak Top)' Rs 12,009 ↑ Rs 13,499"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Lyft - Height Adjustable Table (Black Base and Walnut Top)' Rs 12,009 ↑ Rs 13,499"
   }
 ]
