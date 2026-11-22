@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-22",
+    "brand": "sleepycat",
+    "type": "new-product",
+    "text": "new SKU live - 'Tote Bag' at Rs 199"
+  },
+  {
     "date": "2026-11-20",
     "brand": "kurlon",
     "type": "price",
@@ -2392,11 +2398,5 @@
     "brand": "sleepyhead",
     "type": "price",
     "text": "'Spin - Office Chair (Jet Black)' Rs 9,263 ↑ Rs 9,750"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Lyft - Height Adjustable Table (White Base and Oak Top)' Rs 12,009 ↑ Rs 13,499"
   }
 ]

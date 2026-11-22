@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-21T10:47:04.430779Z",
-  "date": "2026-11-21",
+  "generated": "2026-11-22T10:55:28.075352Z",
+  "date": "2026-11-22",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -1048,6 +1048,7 @@
     "sleepycat": {
       "platform": "shopify",
       "products": {
+        "Tote Bag": 199,
         "Kairo Recliner": 19999,
         "Carbon Mattress": 6499,
         "Katachi Bedside Table": 6999,
@@ -1136,7 +1137,7 @@
         "Hybrid Latex Mattress": 10099
       },
       "on_sale": true,
-      "count": 86,
+      "count": 87,
       "offer": 15,
       "signals": {
         "quiz": true,
