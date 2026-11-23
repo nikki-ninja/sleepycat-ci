@@ -1,5 +1,149 @@
 [
   {
+    "date": "2026-11-23",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Flo Adjustable Pillow (Fibre)' Rs 929 ↑ Rs 959"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Flo Aloe Vera Gel Infused Waterproof Mattress Protector' Rs 650 ↑ Rs 671"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Set of 2 Eye Masks' Rs 433 ↑ Rs 447"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Flo Adjustable Pillow (Memory Foam)' Rs 1,549 ↑ Rs 1,599"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Ottoman (Foot Stool)' Rs 923 ↑ Rs 953"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Oyashe Sheesham Wood Bed - With Storage' Rs 29,294 ↑ Rs 30,239"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Flo Baby Mattress' Rs 1,853 ↑ Rs 1,913"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Flo Super Soft Bedsheet' Rs 1,518 ↑ Rs 1,567"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Flo Super Soft Fitted Bedsheet' Rs 1,363 ↑ Rs 1,407"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Oyashe Sheesham Wood Bed' Rs 19,374 ↑ Rs 19,999"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Boho Bed (Acacia Wood)' Rs 25,419 ↑ Rs 26,239"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Boho Bed (Acacia Wood) - With Storage' Rs 35,959 ↑ Rs 37,119"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "flo",
+    "type": "price",
+    "text": "'The Flo Mattress Ergo' Rs 4,914 ↑ Rs 5,063"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "flo",
+    "type": "price",
+    "text": "'The Flo Mattress Ortho' Rs 4,616 ↑ Rs 4,765"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Flo Float™ Mattress' Rs 9,353 ↑ Rs 9,655"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Flo Wave™ Mattress' Rs 3,259 ↑ Rs 3,364"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Flo Anti-Gravity™ Natural Latex Mattress' Rs 5,941 ↑ Rs 6,132"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Back Support Cushion' Rs 1,239 ↑ Rs 1,279"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "flo",
+    "type": "price",
+    "text": "'Ergonomic Seat Cushion' Rs 1,549 ↑ Rs 1,599"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "flo",
+    "type": "price",
+    "text": "'360° Neck Support Pillow' Rs 836 ↑ Rs 863"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Wedge Cushion' Rs 1,999 ↓ Rs 1,099"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Smart Pregnancy Pillow' Rs 1,999 ↓ Rs 1,499"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Sunrise Thermo Fitted Sheet' Rs 1,850 ↓ Rs 1,699"
+  },
+  {
+    "date": "2026-11-23",
+    "brand": "tsc",
+    "type": "price",
+    "text": "'Travel Neck Pillow' Rs 1,499 ↓ Rs 599"
+  },
+  {
     "date": "2026-11-22",
     "brand": "sleepycat",
     "type": "new-product",
@@ -2254,149 +2398,5 @@
     "brand": "sleepyhead",
     "type": "price",
     "text": "'Bamboo Feel Terry Fabric Waterproof Mattress Protector,(78 x 36 inches, Single Size, Deep Teal)' Rs 669 ↑ Rs 749"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Yolo Ottoman (Fabric, Berry Blue)' Rs 4,759 ↑ Rs 5,599"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Bamboo Terry Waterproof Mattress Protector, (78 X 60 inches, Queen Size, Grey)' Rs 1,259 ↑ Rs 1,399"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Bamboo Feel Terry Fabric Waterproof Mattress Protector, (72 x 60 inches, Queen Size, Deep Teal)' Rs 809 ↑ Rs 899"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Bamboo Feel Terry Fabric Waterproof Mattress Protector, (72 x 72 inches, King Size, Deep Teal)' Rs 899 ↑ Rs 999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Yolo - 3 Seater RHS L Shape Sofa Set with Ottoman (Fabric, Berry Blue)' Rs 36,209 ↑ Rs 42,599"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Bamboo Feel Terry Fabric Waterproof Mattress Protector, (78 x 48 inches, Double Size, Deep Teal)' Rs 759 ↑ Rs 849"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Yolo - 3 Seater LHS L Shape Sofa Set (Fabric, Coco Brown)' Rs 31,449 ↑ Rs 36,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Yolo - 3 Seater RHS L Shape Sofa Set (Fabric, Avocado Green)' Rs 31,449 ↑ Rs 36,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Yolo Ottoman (Fabric, Sesame Grey)' Rs 4,759 ↑ Rs 5,599"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Yolo - 3 Seater Sofa (Fabric, Coco Brown)' Rs 19,039 ↑ Rs 22,399"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Bamboo Terry Waterproof Mattress Protector, (75 X 60 inches, Queen Size, White)' Rs 1,169 ↑ Rs 1,299"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Bamboo Terry Waterproof Mattress Protector, (78 X 72 inches, King Size, Grey)' Rs 1,349 ↑ Rs 1,499"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Bamboo Feel Terry Fabric Waterproof Mattress Protector, (72 x 48 inches, Double Size, Deep Teal)' Rs 759 ↑ Rs 849"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Bamboo Feel Terry Fabric Waterproof Mattress Protector, (75 x 60 inches, Queen Size, Beetroot)' Rs 809 ↑ Rs 899"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Bamboo Terry Waterproof Mattress Protector, (75 X 60 inches, Queen Size, Grey)' Rs 1,259 ↑ Rs 1,399"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Bamboo Terry Waterproof Mattress Protector, (75 x 72 inches, King Size, Grey)' Rs 1,349 ↑ Rs 1,499"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Yolo - 3 Seater RHS L Shape Sofa Set with Ottoman (Fabric, Coco Brown)' Rs 36,209 ↑ Rs 42,599"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Yolo - 3 Seater LHS L Shape Sofa Set (Fabric, Avocado Green)' Rs 31,449 ↑ Rs 36,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Boba Bed NS - Upholstered Bed Without Storage, King Size (Mirage Blue)' Rs 22,662 ↑ Rs 23,855"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Boba Bed NS - Upholstered Bed Without Storage, King Size (Frost Grey)' Rs 22,662 ↑ Rs 23,855"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Boba Bed NS - Upholstered Bed Without Storage, Queen Size (Mirage Blue)' Rs 20,234 ↑ Rs 21,299"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Boba Bed NS - Upholstered Bed Without Storage, Queen Size (Frost Grey)' Rs 20,234 ↑ Rs 21,299"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Spin - Office Chair (Cement Grey)' Rs 9,263 ↑ Rs 9,750"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Spin - Office Chair (Jet Black)' Rs 9,263 ↑ Rs 9,750"
   }
 ]
