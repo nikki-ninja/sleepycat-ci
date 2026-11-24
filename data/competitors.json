@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-23T12:00:18.449520Z",
-  "date": "2026-11-23",
+  "generated": "2026-11-24T13:26:02.444596Z",
+  "date": "2026-11-24",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -160,6 +160,15 @@
     "duroflex": {
       "platform": "shopify",
       "products": {
+        "Pebble Yam Yellow Fabric 3 Seater Sofa": 47999,
+        "Pebble Steel Grey Fabric 3 Seater Sofa": 47999,
+        "Pebble Oatmeal Beige Fabric 3 Seater Sofa": 47999,
+        "Pebble Yam Yellow Fabric 2 Seater Sofa": 41299,
+        "Pebble Steel Grey Fabric 2 Seater Sofa": 41299,
+        "Pebble Oatmeal Beige Fabric 2 Seater Sofa": 41299,
+        "Pebble Yam Yellow Fabric 1 Seater Sofa": 33499,
+        "Pebble Steel Grey Fabric 1 Seater Sofa": 33499,
+        "Pebble Oatmeal Beige Fabric 1 Seater Sofa": 33499,
         "Airboost Duo Topper": 7999,
         "Maestro mov.E Oatmeal Beige Fabric 3 Seater Sofa": 129499,
         "Maestro mov.E Dove Grey Fabric 3 Seater Sofa": 129499,
@@ -565,7 +574,7 @@
         "LiveIn  Memory Foam Mattress": 8539
       },
       "on_sale": true,
-      "count": 403,
+      "count": 412,
       "offer": 5,
       "signals": {
         "quiz": true,

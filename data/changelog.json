@@ -1,5 +1,35 @@
 [
   {
+    "date": "2026-11-24",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Pebble Steel Grey Fabric 2 Seater Sofa' at Rs 41,299"
+  },
+  {
+    "date": "2026-11-24",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Pebble Yam Yellow Fabric 2 Seater Sofa' at Rs 41,299"
+  },
+  {
+    "date": "2026-11-24",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Pebble Oatmeal Beige Fabric 3 Seater Sofa' at Rs 47,999"
+  },
+  {
+    "date": "2026-11-24",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Pebble Steel Grey Fabric 3 Seater Sofa' at Rs 47,999"
+  },
+  {
+    "date": "2026-11-24",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'Pebble Yam Yellow Fabric 3 Seater Sofa' at Rs 47,999"
+  },
+  {
     "date": "2026-11-23",
     "brand": "flo",
     "type": "price",
@@ -2368,35 +2398,5 @@
     "brand": "sleepyhead",
     "type": "price",
     "text": "'Sofa Yolo - 3 Seater LHS L Shape Sofa Set (Fabric, Sesame Grey)' Rs 31,449 ↑ Rs 36,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Yolo - 3 Seater LHS L Shape Sofa Set with Ottoman (Fabric, Coco Brown)' Rs 36,209 ↑ Rs 42,599"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Yolo Ottoman (Fabric, Coco Brown)' Rs 4,759 ↑ Rs 5,599"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Bamboo Feel Terry Fabric Waterproof Mattress Protector, (75 x 48 inches, Double Size, Deep Teal)' Rs 759 ↑ Rs 849"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Yolo - 3 Seater RHS L Shape Sofa Set (Fabric, Coco Brown)' Rs 31,449 ↑ Rs 36,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Bamboo Feel Terry Fabric Waterproof Mattress Protector,(78 x 36 inches, Single Size, Deep Teal)' Rs 669 ↑ Rs 749"
   }
 ]
