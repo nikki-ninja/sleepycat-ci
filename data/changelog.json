@@ -1,5 +1,107 @@
 [
   {
+    "date": "2026-11-26",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Dreamer Orthopedic Memory Foam Mattress' Rs 7,314 ↓ Rs 6,253"
+  },
+  {
+    "date": "2026-11-26",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Euro Top Hybrid Latex Pocket Spring' Rs 10,449 ↓ Rs 8,934"
+  },
+  {
+    "date": "2026-11-26",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Springtek Ortho Pocket Memory Foam Spring Mattress' Rs 7,789 ↓ Rs 6,660"
+  },
+  {
+    "date": "2026-11-26",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Wavemax Spine Support Orthopedic Mattress' Rs 11,942 ↓ Rs 10,210"
+  },
+  {
+    "date": "2026-11-26",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'SuperNova Latex & Memory' Rs 9,547 ↓ Rs 8,163"
+  },
+  {
+    "date": "2026-11-26",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Dreamer Bonnel Spring Mattress' Rs 6,744 ↓ Rs 5,766"
+  },
+  {
+    "date": "2026-11-26",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Memory & Bonded Foam, Spine Support Orthoapedic' Rs 5,984 ↓ Rs 5,116"
+  },
+  {
+    "date": "2026-11-26",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'100% Organic Waterproof Protector' Rs 1,369 ↓ Rs 1,170"
+  },
+  {
+    "date": "2026-11-26",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'2\" Luxe Micro Fibre Mattress Topper' Rs 2,849 ↓ Rs 2,436"
+  },
+  {
+    "date": "2026-11-26",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Folding Rollaway Bed With 6\" Mattress' Rs 14,961 ↓ Rs 12,792"
+  },
+  {
+    "date": "2026-11-26",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'100% Water Proof Mattress Protector' Rs 684 ↓ Rs 585"
+  },
+  {
+    "date": "2026-11-26",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'2\" Memory Foam Gel Mattress Topper' Rs 3,424 ↓ Rs 2,928"
+  },
+  {
+    "date": "2026-11-26",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Micro Fibre Sleeping Pillow' Rs 743 ↑ Rs 811"
+  },
+  {
+    "date": "2026-11-26",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Dual Comfort Reversible Mattress' Rs 4,702 ↓ Rs 4,020"
+  },
+  {
+    "date": "2026-11-26",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Tri Folding Mattress' Rs 4,696 ↓ Rs 4,015"
+  },
+  {
+    "date": "2026-11-26",
+    "brand": "springtek",
+    "type": "price",
+    "text": "'Springtek Joy Solid Wood High Chair for Baby Toddler, Foldable Wooden Highchair' Rs 8,217 ↓ Rs 7,026"
+  },
+  {
+    "date": "2026-11-26",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'COCO -  Airboost 6.8 AI Pro' at Rs 86,724"
+  },
+  {
     "date": "2026-11-25",
     "brand": "sleepycat",
     "type": "price",
@@ -2296,107 +2398,5 @@
     "brand": "sleepyhead",
     "type": "price",
     "text": "'Sofa Yolo - 3 Seater Sofa (Fabric, Avocado Green)' Rs 19,039 ↑ Rs 22,399"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Napster Sofa Cum Bed 3 seater (Fabric, Graphite Grey)' Rs 8,999 ↑ Rs 9,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Napster Sofa Cum Bed 3 seater (Fabric, Indigo Blue)' Rs 8,999 ↑ Rs 9,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Premium Fiber Cushion Fillers (Ocean Blue, Set of 5)' Rs 899 ↑ Rs 999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Premium Fiber Cushion Fillers (Grey, Set of 5)' Rs 899 ↑ Rs 999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Premium Fiber Cushion Fillers (White, Set of 5)' Rs 899 ↑ Rs 999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Nooks - Cushion Cover with Premium Cushion Fillers (Maroon-White, Set of 5)' Rs 1,349 ↑ Rs 1,499"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Nooks - Cushion Cover with Cushion Fillers ( Blue-Grey, Set of 5 )' Rs 1,349 ↑ Rs 1,499"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Nooks - Cushion Cover with Premium Cushion Fillers ( Blue-White, Set of 5 )' Rs 1,349 ↑ Rs 1,499"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Nooks - Cushion Cover with Premium Cushion Fillers ( Maroon-Grey, Set of 5 )' Rs 1,349 ↑ Rs 1,499"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Nooks - Cushion Cover with Premium Ocean Cushion Fillers ( Maroon-Ocean Blue, Set of 5 )' Rs 1,349 ↑ Rs 1,499"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Nooks - Cushion Cover with Cushion Fillers ( Blue-Ocean Blue, Set of 5 )' Rs 1,349 ↑ Rs 1,499"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Yolo - 3 Seater RHS L Shape Sofa Set (Fabric, Berry Blue)' Rs 31,449 ↑ Rs 36,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Yolo - 3 Seater RHS L Shape Sofa Set with Ottoman (Fabric, Avocado Green)' Rs 36,209 ↑ Rs 42,599"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Yolo - 3 Seater Sofa (Fabric, Sesame Grey)' Rs 19,039 ↑ Rs 22,399"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Yolo - 3 Seater RHS L Shape Sofa Set with Ottoman (Fabric, Sesame Grey)' Rs 36,209 ↑ Rs 42,599"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Yolo - 3 Seater LHS L Shape Sofa Set (Fabric, Berry Blue)' Rs 31,449 ↑ Rs 36,999"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Bamboo Terry Waterproof Mattress Protector, (78 x 60 inches, Queen Size, White)' Rs 1,169 ↑ Rs 1,299"
   }
 ]

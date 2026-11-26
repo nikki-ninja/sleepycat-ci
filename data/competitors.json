@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-25T12:21:04.399136Z",
-  "date": "2026-11-25",
+  "generated": "2026-11-26T12:03:50.357670Z",
+  "date": "2026-11-26",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -21,7 +21,6 @@
         "Seattle Recliner Sofa": 121999,
         "Ultron Premium Ergonomic Office Chair": 37999,
         "Milano Recliner Sofa": 103999,
-        "AeroFlip Adjustable Desk": 25999,
         "Luxe Grande Recliner Sofa": 40999,
         "Vienna Recliner Sofa": 103999,
         "AeroMini Adjustable Desk": 15999,
@@ -92,7 +91,7 @@
         "Bamboo Mattress Protector": 2399
       },
       "on_sale": true,
-      "count": 85,
+      "count": 84,
       "offer": null,
       "signals": {
         "quiz": true,
@@ -160,6 +159,7 @@
     "duroflex": {
       "platform": "shopify",
       "products": {
+        "COCO -  Airboost 6.8 AI Pro": 86724,
         "Pebble Yam Yellow Fabric 3 Seater Sofa": 47999,
         "Pebble Steel Grey Fabric 3 Seater Sofa": 47999,
         "Pebble Oatmeal Beige Fabric 3 Seater Sofa": 47999,
@@ -574,7 +574,7 @@
         "LiveIn  Memory Foam Mattress": 8539
       },
       "on_sale": true,
-      "count": 412,
+      "count": 413,
       "offer": 5,
       "signals": {
         "quiz": true,
@@ -1024,22 +1024,22 @@
     "springtek": {
       "platform": "shopify",
       "products": {
-        "Springtek Joy Solid Wood High Chair for Baby Toddler, Foldable Wooden Highchair": 8217,
-        "Tri Folding Mattress": 4696,
-        "Dual Comfort Reversible Mattress": 4702,
-        "Micro Fibre Sleeping Pillow": 743,
-        "2\" Memory Foam Gel Mattress Topper": 3424,
-        "100% Water Proof Mattress Protector": 684,
-        "Folding Rollaway Bed With 6\" Mattress": 14961,
-        "2\" Luxe Micro Fibre Mattress Topper": 2849,
-        "100% Organic Waterproof Protector": 1369,
-        "Memory & Bonded Foam, Spine Support Orthoapedic": 5984,
-        "Dreamer Bonnel Spring Mattress": 6744,
-        "SuperNova Latex & Memory": 9547,
-        "Wavemax Spine Support Orthopedic Mattress": 11942,
-        "Springtek Ortho Pocket Memory Foam Spring Mattress": 7789,
-        "Euro Top Hybrid Latex Pocket Spring": 10449,
-        "Dreamer Orthopedic Memory Foam Mattress": 7314
+        "Springtek Joy Solid Wood High Chair for Baby Toddler, Foldable Wooden Highchair": 7026,
+        "Tri Folding Mattress": 4015,
+        "Dual Comfort Reversible Mattress": 4020,
+        "Micro Fibre Sleeping Pillow": 811,
+        "2\" Memory Foam Gel Mattress Topper": 2928,
+        "100% Water Proof Mattress Protector": 585,
+        "Folding Rollaway Bed With 6\" Mattress": 12792,
+        "2\" Luxe Micro Fibre Mattress Topper": 2436,
+        "100% Organic Waterproof Protector": 1170,
+        "Memory & Bonded Foam, Spine Support Orthoapedic": 5116,
+        "Dreamer Bonnel Spring Mattress": 5766,
+        "SuperNova Latex & Memory": 8163,
+        "Wavemax Spine Support Orthopedic Mattress": 10210,
+        "Springtek Ortho Pocket Memory Foam Spring Mattress": 6660,
+        "Euro Top Hybrid Latex Pocket Spring": 8934,
+        "Dreamer Orthopedic Memory Foam Mattress": 6253
       },
       "on_sale": true,
       "count": 16,
