@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-26T12:03:50.357670Z",
-  "date": "2026-11-26",
+  "generated": "2026-11-27T11:54:36.575576Z",
+  "date": "2026-11-27",
   "brands": {
     "tsc": {
       "platform": "shopify",
@@ -159,6 +159,7 @@
     "duroflex": {
       "platform": "shopify",
       "products": {
+        "COCO-Prana Custom Size": 80575,
         "COCO -  Airboost 6.8 AI Pro": 86724,
         "Pebble Yam Yellow Fabric 3 Seater Sofa": 47999,
         "Pebble Steel Grey Fabric 3 Seater Sofa": 47999,
@@ -491,7 +492,7 @@
         "Duro Safe - Waterproof Mattress Protector": 1100,
         "Prana Pocket Spring Latex Mattress": 29146,
         "Tatva Natural Latex and Coir Mattress": 27817,
-        "LiveIn 2 in 1 Dual Sided Roll Pack Mattress": 6539,
+        "LiveIn 2 in 1 Dual Sided Roll Pack Mattress": 5889,
         "Happy Soft Lightweight High Quality Fibre Pillow": 1140,
         "Bliss High Quality Fibre Pillow": 950,
         "Avalon - Rocking & Rotating Single Seater Fabric Recliner in Twilight Blue Colour": 24699,
@@ -558,7 +559,7 @@
         "Avalon Motorized Electric Powered Brown Fabric Recliner": 27999,
         "Avalon Motorized Electric Powered Beige Fabric Recliner": 27999,
         "LiveIn Orthopedic Memory Foam Mattress": 8739,
-        "LiveIn Bounce Pocket Spring Mattress": 8839,
+        "LiveIn Bounce Pocket Spring Mattress": 7959,
         "Avalon Dark Brown Fabric Recliner": 18999,
         "Avalon Sap Green Fabric Recliner": 18999,
         "Twilight Blue Ottoman": 6099,
@@ -571,10 +572,10 @@
         "Avalon Grey Fabric Recliner": 18999,
         "Avalon Brown Fabric Recliner": 18999,
         "Avalon Beige Fabric Recliner": 18999,
-        "LiveIn  Memory Foam Mattress": 8539
+        "LiveIn  Memory Foam Mattress": 7689
       },
       "on_sale": true,
-      "count": 413,
+      "count": 414,
       "offer": 5,
       "signals": {
         "quiz": true,
@@ -647,17 +648,17 @@
         "Sofa Drip - 1 Seater Sofa (Fabric, Sandstone Beige)": 10399,
         "Sofa Drip - 2 Seater Sofa (Fabric, Sandstone Beige)": 14799,
         "Sofa Drip - 3 Seater Sofa (Fabric, Sandstone Beige)": 18499,
-        "Flip - Dual Sided Foam Mattress with Firm & Soft Sides - White": 5529,
-        "Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - White": 7619,
-        "Sense - BodyIQ Orthopedic Memory Foam Mattress with Cooling Tech - Ivory White": 8929,
-        "Laxe - Pincore Latex Mattress with BodyIQ Orthopedic Memory Foam - Grey": 8939,
-        "Boing - 3 Zone Pocket Spring Mattress with HR Foam, Zero Partner Disturbance & Spinal Support - Black": 7169,
+        "Flip - Dual Sided Foam Mattress with Firm & Soft Sides - White": 4979,
+        "Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - White": 6859,
+        "Sense - BodyIQ Orthopedic Memory Foam Mattress with Cooling Tech - Ivory White": 8039,
+        "Laxe - Pincore Latex Mattress with BodyIQ Orthopedic Memory Foam - Grey": 8049,
+        "Boing - 3 Zone Pocket Spring Mattress with HR Foam, Zero Partner Disturbance & Spinal Support - Black": 6449,
         "Laxe Nature Ultra Mattress - Ivory White": 8917,
         "Recliner RX5 - Fabric (Grey, One Seater)": 15499,
-        "Sense - BodyIQ Orthopedic Memory Foam Mattress with Cooling Tech - Pearl White": 8929,
-        "Laxe - Pincore Latex Mattress with BodyIQ Orthopedic Memory Foam - Ivory White": 8939,
-        "Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey": 7619,
-        "Flip - Dual Sided Foam Mattress with Firm & Soft Sides - Grey": 5529,
+        "Sense - BodyIQ Orthopedic Memory Foam Mattress with Cooling Tech - Pearl White": 8039,
+        "Laxe - Pincore Latex Mattress with BodyIQ Orthopedic Memory Foam - Ivory White": 8049,
+        "Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey": 6859,
+        "Flip - Dual Sided Foam Mattress with Firm & Soft Sides - Grey": 4979,
         "Premium Soft Chenille Throw for Sofa, Bed & Couch-Grey": 999,
         "Recliner RX5 Ultra - One Seater (Classic Blue)": 15999,
         "Recliner RX5 Ultra - One Seater (Monument Grey)": 15999,
@@ -935,8 +936,8 @@
         "Luna Euro Top - 3 Zone Pocket Spring Mattress with Zero Partner Disturbance": 15407,
         "Sense Ortho Ultra Mattress - Ivory White": 9692,
         "Napster Mini Mattress": 3399,
-        "Technic - 3 Zone 6D Hexagon Grid Mattress #FutureofSleep": 13829,
-        "Technic Hybrid - 3 Zone 6D Hexagon Grid Mattress with 3 Zone Pocket Springs #FutureofSleep": 16799
+        "Technic - 3 Zone 6D Hexagon Grid Mattress #FutureofSleep": 12449,
+        "Technic Hybrid - 3 Zone 6D Hexagon Grid Mattress with 3 Zone Pocket Springs #FutureofSleep": 15119
       },
       "on_sale": true,
       "count": 310,

@@ -1,5 +1,95 @@
 [
   {
+    "date": "2026-11-27",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Technic Hybrid - 3 Zone 6D Hexagon Grid Mattress with 3 Zone Pocket Springs #FutureofSleep' Rs 16,799 ↓ Rs 15,119"
+  },
+  {
+    "date": "2026-11-27",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Technic - 3 Zone 6D Hexagon Grid Mattress #FutureofSleep' Rs 13,829 ↓ Rs 12,449"
+  },
+  {
+    "date": "2026-11-27",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Flip - Dual Sided Foam Mattress with Firm & Soft Sides - Grey' Rs 5,529 ↓ Rs 4,979"
+  },
+  {
+    "date": "2026-11-27",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - Grey' Rs 7,619 ↓ Rs 6,859"
+  },
+  {
+    "date": "2026-11-27",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Laxe - Pincore Latex Mattress with BodyIQ Orthopedic Memory Foam - Ivory White' Rs 8,939 ↓ Rs 8,049"
+  },
+  {
+    "date": "2026-11-27",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Sense - BodyIQ Orthopedic Memory Foam Mattress with Cooling Tech - Pearl White' Rs 8,929 ↓ Rs 8,039"
+  },
+  {
+    "date": "2026-11-27",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Boing - 3 Zone Pocket Spring Mattress with HR Foam, Zero Partner Disturbance & Spinal Support - Black' Rs 7,169 ↓ Rs 6,449"
+  },
+  {
+    "date": "2026-11-27",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Laxe - Pincore Latex Mattress with BodyIQ Orthopedic Memory Foam - Grey' Rs 8,939 ↓ Rs 8,049"
+  },
+  {
+    "date": "2026-11-27",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Sense - BodyIQ Orthopedic Memory Foam Mattress with Cooling Tech - Ivory White' Rs 8,929 ↓ Rs 8,039"
+  },
+  {
+    "date": "2026-11-27",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Original - 3 Layered BodyIQ Orthopedic Memory Foam Mattress - White' Rs 7,619 ↓ Rs 6,859"
+  },
+  {
+    "date": "2026-11-27",
+    "brand": "sleepyhead",
+    "type": "price",
+    "text": "'Flip - Dual Sided Foam Mattress with Firm & Soft Sides - White' Rs 5,529 ↓ Rs 4,979"
+  },
+  {
+    "date": "2026-11-27",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'LiveIn  Memory Foam Mattress' Rs 8,539 ↓ Rs 7,689"
+  },
+  {
+    "date": "2026-11-27",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'LiveIn Bounce Pocket Spring Mattress' Rs 8,839 ↓ Rs 7,959"
+  },
+  {
+    "date": "2026-11-27",
+    "brand": "duroflex",
+    "type": "price",
+    "text": "'LiveIn 2 in 1 Dual Sided Roll Pack Mattress' Rs 6,539 ↓ Rs 5,889"
+  },
+  {
+    "date": "2026-11-27",
+    "brand": "duroflex",
+    "type": "new-product",
+    "text": "new SKU live - 'COCO-Prana Custom Size' at Rs 80,575"
+  },
+  {
     "date": "2026-11-26",
     "brand": "springtek",
     "type": "price",
@@ -2308,95 +2398,5 @@
     "brand": "sleepyhead",
     "type": "price",
     "text": "'Sofa Bae - 2+1+1 Seater Sofa Set (Fabric, Ember Orange)' Rs 29,579 ↑ Rs 34,799"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Bae - 2+1+1 Seater Sofa Set (Fabric, Ocean Blue)' Rs 29,579 ↑ Rs 34,799"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Bae - 2+1+1 Seater Sofa Set (Fabric, Pebble Brown)' Rs 29,579 ↑ Rs 34,799"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Bae - 2+1+1 Seater Sofa Set (Fabric, Stone Grey)' Rs 29,579 ↑ Rs 34,799"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Bae - 2+1+1 Seater Sofa Set (Fabric, Copper Brown)' Rs 29,579 ↑ Rs 34,799"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Bae - 3+2 Seater Sofa Set (Fabric, Ember Orange)' Rs 29,579 ↑ Rs 34,799"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Bae - 3+2 Seater Sofa Set (Fabric, Ocean Blue)' Rs 29,579 ↑ Rs 34,799"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Bae - 3+2 Seater Sofa Set (Fabric, Pebble Brown)' Rs 29,579 ↑ Rs 34,799"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Bae - 3+2 Seater Sofa Set (Fabric, Stone Grey)' Rs 29,579 ↑ Rs 34,799"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Bae - 3+2 Seater Sofa Set (Fabric, Copper Brown)' Rs 29,579 ↑ Rs 34,799"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Bae - 4 Seater Interchangeable L Shape Sofa Set (Fabric, Ocean Blue)' Rs 20,989 ↑ Rs 24,699"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Bae - 4 Seater Interchangeable L Shape Sofa Set (Fabric, Ember Orange)' Rs 20,989 ↑ Rs 24,699"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Bae - 4 Seater Interchangeable L Shape Sofa Set (Fabric, Pebbel Brown)' Rs 20,989 ↑ Rs 24,699"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Bae - 4 Seater Interchangeable L Shape Sofa Set (Fabric, Stone Grey)' Rs 20,989 ↑ Rs 24,699"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Bae - 4 Seater Interchangeable L Shape Sofa Set (Fabric, Copper Brown)' Rs 20,989 ↑ Rs 24,699"
-  },
-  {
-    "date": "2026-11-06",
-    "brand": "sleepyhead",
-    "type": "price",
-    "text": "'Sofa Yolo - 3 Seater Sofa (Fabric, Avocado Green)' Rs 19,039 ↑ Rs 22,399"
   }
 ]
